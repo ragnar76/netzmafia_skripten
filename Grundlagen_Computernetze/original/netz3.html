@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-;W3C;DTD HTML 4.01 Transitional;EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta NAME="robots" CONTENT="all">
+<meta NAME="revisit-after" CONTENT="10 days">
+<meta NAME="Reply-To" CONTENT="webmaster@netzmafia.de">
+
+<meta NAME="keywords" CONTENT="LAN WAN TCP/IP Computernetze Ethernet Vernetzung Router Hub Switch Protokolle">
+<meta NAME="description" CONTENT="Praxisorientierte Einf&uuml;hrung in den Aufbau und die Funktionsweise von Computernetzen.">
+<title>Grundlagen Computernetze</title>
+</head>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" ALINK="#FF0000" VLINK="#FF00FF">
+<CENTER><TABLE BORDER=0 WIDTH="90%" >
+<TR><TD ALIGN=LEFT><IMG SRC="eyes.gif"></TD>
+<TD ALIGN=RIGHT><H3>Grundlagen Computernetze</H3>
+<BR><B><I>Prof. J&uuml;rgen Plate</I></B></TD></TR>
+</TABLE></CENTER>
+<HR>
+
+
+<h1 align=center>&Uuml;bertragungsverfahren</h1>
+
+Bei der &Uuml;bertragung von Daten in lokalen Netzen verwendet man generell
+Basisband&uuml;bertragung. Die &Uuml;bertragungsleitung nimmt zwei (manchmal
+auch drei) Zust&auml;nde (Pegel) abh&auml;ngig von den zu &uuml;bertragenden
+Bin&auml;rwerten an.<BR>
+Bei Weitverkehrsnetzen wird teilweise auch modulierte &Uuml;bertragung verwendet,
+wobei die Bin&auml;rwerte einem h&ouml;herfrequenten Signal (Sinustr&auml;ger)
+aufmoduliert werden. Modulierte &Uuml;bertragung findet man beispielsweise
+beim Datentransfer &uuml;ber die Telefonleitung, bei Satellitenverbindungen
+oder bei Breitband-Kabelnetzen.<BR>
+In diesem Text betrachten wir nur Netze mit Basisband-&Uuml;bertragung.
+Die Leitungscodierung erfolgt grunds&auml;zlich auch zwei Arten: Entweder
+werden die einzelnen Bits codiert (z. B. 0 V f&uuml;r "0" und 5 V f&uuml;r "1")
+oder es erfolgt die Codierung der Bit-&Uuml;berg&auml;nge (z. B. bei
+NRZI, wo das Signal f&uuml;r eine "0" konstant bleibt und sich bei
+einer "1" &auml;ndert).
+
+Im Netzwerkbereich wird eine Codierung verwendet, die eine R&uuml;ckgewinnung des Taktes
+aus dem Signal erlaubt. Bei lokalen Netzen kommen haupts&auml;chlich drei
+Codes zur Abbildung der Bin&auml;rwerte auf die Leitungszust&auml;nde zum
+Einsatz:<BR>
+<P>
+<B>Ethernet: Manchester-Code</B><BR>
+"1": 0-&gt;1-&Uuml;bergang in Bitmitte<BR>
+"0": 1-&gt;0-&Uuml;bergang in Bitmitte<BR>
+Abh&auml;ngig vom Wechsel der Zust&auml;nde ist noch ein zus&auml;tzlicher
+&Uuml;bergang am Anfang jedes Bits n&ouml;tig. &Uuml;ber die Zeit gemittelt
+hat das Signal keinen Gleichstromanteil. Eine R&uuml;ckgewinnung des Taktes
+aus dem Signal ist m&ouml;glich.
+<P>
+<B>FDDI (Glasfaser, Fiber Distributed Data Interface): NRZI (non return to zero inverted)-Code</B><BR>
+"0": Zu Beginn der Bitperiode Zustandswechsel (0-&gt;1 oder 1-&gt;0)<br>
+"1": keine &Auml;nderung des Pegels.<br>
+Der NRZI-Code erlaubt keine Taktr&uuml;ckgewinnung, da bei 
+ung&uuml;nstigen Bit-Folgen unter Umst&auml;nden lange Zeit kein Zustandswechsel 
+eintritt. <br>
+Um trotzdem auch hier den Takt zu halten, erfolgt eine Codewandlung.
+Dies leistet zum Beispiel bei FDDI die <B>4B/5B-Umwandlung (4 binary 5 binary)</B>, bei der jeweils
+ein 4-Bit-Block (Nibble) in einen 5-Bit-Block derart umgewandelt wird, da&szlig; in
+jedem 5-Bit-Block maximal zwei aufeinanderfolgende Nullen vorkommen.
+<P>
+<center><IMG SRC="b1-8.gif" ALT=""></center>
+<BR>
+Das Bild zeigt Kodierung eines Signals mit verschiedenen Ethernet-Normen: 
+Bei 10 Base T: Manchester-Code, bei Fast Ethernet: zuerst 4B5B-Code (siehe unten), 
+dann Umwandlung auf dreiwertigen Code (–/0/+) mit fünf Schritten, was zur Reduzierung 
+der oberen Grenzfrequenz f&uuml;hrt.
+<P>
+<center>
+<table border=1 cellspacing=0 cellpadding=2 bgcolor="#DDDDDD">
+<tr>
+<th>Urspr&uuml;ngliche<br>Bitfolge<br>(4-Bit-Block)</th>
+<th>Umgewandelte<br>Bitfolge<br>(5-Bit-Block)</th>
+</tr>
+<tr><td align=center><TT>0000</TT></td><td align=center><TT>11110</TT></td></tr>
+<tr><td align=center><TT>0001</TT></td><td align=center><TT>01001</TT></td></tr>
+<tr><td align=center><TT>0010</TT></td><td align=center><TT>10100</TT></td></tr>
+<tr><td align=center><TT>0011</TT></td><td align=center><TT>10101</TT></td></tr>
+<tr><td align=center><TT>0100</TT></td><td align=center><TT>01010</TT></td></tr>
+<tr><td align=center><TT>0101</TT></td><td align=center><TT>01011</TT></td></tr>
+<tr><td align=center><TT>0110</TT></td><td align=center><TT>01110</TT></td></tr>
+<tr><td align=center><TT>0111</TT></td><td align=center><TT>01111</TT></td></tr>
+<tr><td align=center><TT>1000</TT></td><td align=center><TT>10010</TT></td></tr>
+<tr><td align=center><TT>1001</TT></td><td align=center><TT>10011</TT></td></tr>
+<tr><td align=center><TT>1010</TT></td><td align=center><TT>10110</TT></td></tr>
+<tr><td align=center><TT>1011</TT></td><td align=center><TT>10111</TT></td></tr>
+<tr><td align=center><TT>1100</TT></td><td align=center><TT>11010</TT></td></tr>
+<tr><td align=center><TT>1101</TT></td><td align=center><TT>11011</TT></td></tr>
+<tr><td align=center><TT>1110</TT></td><td align=center><TT>11100</TT></td></tr>
+<tr><td align=center><TT>1111</TT></td><td align=center><TT>11101</TT></td></tr>
+</table>
+</center>
+<P>
+Die <B>8B/10B-Umwandlung (8 binary 10 binary)</B> sieht &auml;hnlich
+aus wie die 4B/5B-Umwandlung. Hier werden jedoch 8-Bit-Bl&ouml;cke
+in 10-Bit-Bl&ouml;cke umgewandelt. Die 8B/10B-Umwandlung wird bei
+Gigabit-Ethernet 1000Base-CX, -SX, -LX und beim Fibre-Channel eingesetzt.
+Alle f&uuml;r die &Uuml;bertragung g&uuml;ltigen Kombinationen sind derart aufgebaut,
+dass 5 mal die "<TT>0</TT>" und 5 mal die "<TT>1</TT>" vorkommt, um Gleichstromfreiheit
+zu garantieren. Au&szlig;erdem weisen diese Kombinationen mindestens 3 Zustandswechsel auf
+(von "<TT>0</TT>" nach "<TT>1</TT>" oder
+umgekehrt), um auf Empf&auml;ngerseite die Taktr&uuml;ckgewinnung zu gew&auml;hrleisten.
+<P>
+Bei der <B>8B/6T-Kodierung (8 binary 6 ternary)</B> wird ein 8-Bit-Block in einen 6T-Code umgewandelt.
+Jeder 6T-Code besteht aus 6 sogenannten"Tri-State-Symbolen", die als "-", "0" und "+" notiert
+werden. &Uuml;bertragungstechnisch verbirgt sich hinter jedem der drei
+Symbole ein entsprechender elektrischer Pegel. Die Kodierung wird anhand einer Tabelle
+durchgef&uuml;hrt, die s&auml;mtliche 256 m&ouml;glichen 8-Bit-Kombinationen enth&auml;lt.
+W&auml;hrend 4B/5B nur eine Bit-Umwandlung darstellt, die noch eine anschlie&szlig;ende
+Kodierung (NRZI oder MLT-3) erforderlich macht, beinhaltet 8B/6T
+bereits die komplette Kodierungsvorschrift.
+Die folgende Tabelle zeigt einen kleinen Ausschnitt der 8B/6T-Codes.
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=2 bgcolor="#DDDDDD">
+<tr><th width="50%">Bitfolge</th><th width="50%">8B6T-Code</th></tr>
+<tr><td align=center><TT>0 0 0 0  0 0 0 0</TT></td><td align=center><TT>+ - 0 0 + -</TT></td></tr>
+<tr><td align=center><TT>0 0 0 0  0 0 0 1</TT></td><td align=center><TT>0 + - + - 0</TT></td></tr>
+<tr><td align=center><TT>. . . .  . . . .</TT></td><td align=center><TT>. . . . . .</TT></td></tr>
+<tr><td align=center><TT>0 0 0 0  1 1 1 0</TT></td><td align=center><TT>- + 0 - 0 +</TT></td></tr>
+<tr><td align=center><TT>. . . .  . . . .</TT></td><td align=center><TT>. . . . . .</TT></td></tr>
+<tr><td align=center><TT>1 1 1 1  1 1 1 0</TT></td><td align=center><TT>- + 0 + 0 0</TT></td></tr>
+<tr><td align=center><TT>1 1 1 1  1 1 1 1</TT></td><td align=center><TT>+ 0 - + 0 0</TT></td></tr>
+</table>
+</center>
+<p>
+Derzeit ist Fast-Ethernet 100BASE-T4 das einzige Verfahren, bei dem die 8B/6T-Kodierung
+eingesetzt wird.
+</p>
+
+Beim Kodierungsverfahren <B>5-Level Pulse Amplitude Modulation (PAM5)</B>
+wird pro Takt ein Symbol &uuml;bermittelt, das einen von f&uuml;nf
+verschiedenen Zust&auml;nden (-2, -1, 0, +1, +2) darstellt.
+Mit jedem Symbol werden zwei Bits &uuml;bertragen. Da es vier verschiedene
+2-Bit-Grupen ("<TT>00</TT>", "<TT>01</TT>", "<TT>10</TT>" und "<TT>11</TT>") gibt,
+bleibt noch ein Symbol &uuml;brig, das f&uuml;r Fehlerbehandlung eingesetzt werden kann.
+Die PAM5-Kodierung wird bei Fast-Ethernet 100Base-T2 und bei
+Gigabit-Ethernet 1000Base-T verwendet.
+<p>
+
+<CENTER><TABLE BORDER=0 WIDTH="100%">
+<TR>
+<TD ALIGN=LEFT VALIGN=BOTTOM><IMG SRC="left.gif" BORDER=0> <A HREF="netz2.html">Zum vorhergehenden Abschnitt</A></TD>
+<TD ALIGN=CENTER VALIGN=BOTTOM><IMG SRC="up.gif" BORDER=0> <A HREF="index.html">Zum Inhaltsverzeichnis</A></TD>
+<TD ALIGN=RIGHT VALIGN=BOTTOM><IMG SRC="right.gif" BORDER=0> <A HREF="netz4.html">Zum n&auml;chsten Abschnitt</A></TD>
+</TR></TABLE></CENTER>
+<P><HR>
+<h6><i>Copyright &copy; Hochschule M&uuml;nchen, FK 04, Prof. J&uuml;rgen Plate</i><br>
+Letzte Aktualisierung: <SCRIPT LANGUAGE="JavaScript">document.write(document.lastModified);</SCRIPT></I></H6>
+</BODY>
+</HTML>

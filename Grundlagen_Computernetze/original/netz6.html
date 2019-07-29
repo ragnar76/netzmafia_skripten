@@ -1,0 +1,473 @@
+<!DOCTYPE HTML PUBLIC "-;W3C;DTD HTML 4.01 Transitional;EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta NAME="robots" CONTENT="all">
+<meta NAME="revisit-after" CONTENT="10 days">
+<meta NAME="Reply-To" CONTENT="webmaster@netzmafia.de">
+
+<meta NAME="keywords" CONTENT="LAN WAN TCP/IP Computernetze Ethernet Vernetzung Router Hub Switch Protokolle">
+<meta NAME="description" CONTENT="Praxisorientierte Einf&uuml;hrung in den Aufbau und die Funktionsweise von Computernetzen.">
+<title>Grundlagen Computernetze</title>
+</head>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" ALINK="#FF0000" VLINK="#FF00FF">
+<CENTER><TABLE BORDER=0 WIDTH="90%" >
+<TR><TD ALIGN=LEFT><IMG SRC="eyes.gif"></TD>
+<TD ALIGN=RIGHT><H2>Grundlagen Computernetze</H2> 
+<BR><B><I>Prof. J&uuml;rgen Plate</I></B></TD></TR>
+</TABLE></CENTER>
+<HR>
+
+
+<h1 align=center>St&ouml;rquellen</h1>
+Auf die Verkabelung eines Netzes wirken die mannigfachsten elektromagnetischen 
+St&ouml;rquellen ein, z. B. elektrisch angetriebene Maschinen, Leuchtstofflampen, 
+die Computer, Kopierer, und vieles andere. Aber auch die Kabel selbst ver&auml;ndern 
+das Signal durch ihren ohmschen Widerstand und die Tiefpa&szlig;charakteristik. 
+Alle Einfl&uuml;sse &auml;ndern das eingespeiste digitale Signal - unter 
+Umst&auml;nden bis hin zu Fehlern auf Empf&auml;ngerseite. Das Bild zeigt 
+die wichtigsten St&ouml;reinfl&uuml;sse und deren Auswirkungen. 
+<P>
+<center><IMG SRC="b1-21.gif" ALT=""></center>
+<P>
+
+<H2><A NAME="6.1">D&auml;mpfung</A></H2>
+Wie schon erw&auml;hnt, wirkt die Leitung wie ein Tiefpa&szlig;filter: sie 
+l&auml;&szlig;t nur niedrige Frequenzen durch, hohe werden herausgefiltert. 
+Diese Tiefpa&szlig;eigenschaft der Leitung zwingt dazu, nach einer gewissen 
+Leitungsl&auml;nge Verst&auml;rker (Repeater) einzubauen, um das Signal 
+wieder zu regenerieren. Das Verh&auml;ltnis von Aus- zu Eingangsspannung 
+wird D&auml;mpfung genannt und in Dezibel (dB) angegeben. Dabei gilt:
+<P><PRE>  
+     1 dB = 20 * log(Eingangsspannung/Ausgangsspannung)
+</PRE><P>
+Ideal ist nat&uuml;rlich ein Verh&auml;ltnis von 1:1 zwischen Ein- und Ausgangsspannung, 
+also eine D&auml;mpfung von 0 dB. Das bleibt aber ein Ideal, da jede Leitung 
+einen gewissen Widerstand hat. Die naheliegendste Abhilfe liegt im Einsatz 
+der Zwischenverst&auml;rker. Doch auch diesen sind prinzipielle Grenzen 
+gesetzt.
+<P>
+Auch mit Verst&auml;rkerelementen, sogenannten Repeatern, sind nicht beliebig 
+lange Leitungen realisierbar. Auf jede Leitung wirken St&ouml;rungen ein. 
+Diese elektrischen Signale weisen meist ein zuf&auml;llig verteiltes Frequenzspektrum 
+auf. Alle m&ouml;glichen Nutzfrequenzen werden also mehr oder weniger stark 
+gest&ouml;rt. Wichtig ist dabei,da&szlig; das Nutzsignal noch eindeutig 
+erkennbar bleibt. Das Amplitudenverh&auml;ltnis von Nutz- und Rauschsignal 
+(in dB) nennt man St&ouml;rabstand oder auch Signal-Rausch-Abstand. Repeater 
+k&ouml;nnen aber in der Regel nicht zwischen Nutz- und St&ouml;rsignal unterscheiden, 
+sondern verst&auml;rken das gesamte Eingangssignal. Damit hat zwar das Ausgangssignal 
+einen hohen Pegel, aber der Signal-Rausch-Abstand hat sich dabei nicht verbessert. 
+Auf der n&auml;chsten Leitungsstrecke kommt zwangsl&auml;ufig wieder Rauschen 
+dazu, so da&szlig; mit wachsender Leitungsl&auml;nge das Nutzsignal von 
+immer mehr Rauschen &uuml;berlagert wird.
+<P>
+Wenn der Rauschpegel genauso gro&szlig; ist wie der Nutzpegel, kann kein 
+Empf&auml;nger mehr Nutz- und St&ouml;rsignal voneinander unterscheiden.
+Einige Tricks gibt es doch, der einfachste ist nat&uuml;rlich eine m&ouml;glichst 
+undurchl&auml;ssige Abschirmung der Leitung, um das Eindringen des Rauschens 
+zu verringern. Sonst w&auml;re das weltumspannende Telefonnetz &uuml;berhaupt 
+nicht funktionsf&auml;hig.
+<P>
+Bei der Verlegung von Datenleitungen kommt es aber nicht allein auf eine 
+gute Abschirmung an. Immer dann, wenn es um die elektrische Anpassung der 
+Leitung an ein Ger&auml;t oder eine andere Leitung geht, kommt es auch auf 
+die Beachtung des Eingangswiderstands oder der Impedanz der Leitung an. 
+Anpassung ist immer dann gegeben, wenn der Ausgangswiderstand der einen 
+Leitung genauso gro&szlig; ist wie der Eingangswiderstand der anderen. Denn 
+nur in diesem Fall kommt es nicht zu Reflexionen an den &Uuml;bergangsstellen. 
+Sonst geht eine ankommende Welle nicht vollst&auml;ndig in das neue Medium 
+&uuml;ber, sondern wird teilweise an der Nahtstelle reflektiert und damit 
+zum St&ouml;rsignal.
+<P>
+
+<H2><A NAME="6.2">Begrenzung der Bandbreite</A></H2>
+Man kann sich ein typisches Digitalsignal auch zusammengesetzt aus einer 
+gr&ouml;&szlig;eren Anzahl von Sinussignalen unterschiedlicher Freqenzen 
+vorstellen. Je h&ouml;her die Frequenz ist, desto geringer ist die Amplitude 
+des jeweiligen Signals. Von diesen Frequenzen gelangen nur die Anteile zum 
+Empf&auml;nger, die innerhalb der Bandbreite der &Uuml;bertragungsstrecke
+liegen. Je geringer die Bandbreite des Mediums ist, desto mehr wird das 
+Rechtecksignal &quot;verschliffen&quot;. Am Empfangsort mu&szlig; dann die 
+Rechteckform wieder regeneriert werden. Nyquist hat eine Formel abgeleitet, 
+mit der sich die maximale Daten&uuml;bertragungsrate bei gegebener Bandbreite 
+ermitteln l&auml;&szlig;t. Bei einem Digitalsignal (also zwei unterschiedliche 
+Signalpegel) k&ouml;nnen bei einer Bandbreite von B (in Hertz) 2*B Bit pro 
+Sekunde &Uuml;bertragen werden. Allgemein lautet die Formel f&uuml;r die 
+&Uuml;bertragungsrate C (in Bit/s) bei einer Bandbreite B und einer Anzahl 
+der Signalpegel M:
+<P><PRE>
+    C = 2*B*ld(M)
+</PRE><P>
+In der Praxis wird dieser Idealwert nat&uuml;rlich nicht erreicht, weil 
+andere St&ouml;rgr&ouml;&szlig;en (z. B. Rauschen) dies verhindern. Eine 
+Begrenzung der Bandbreite kann durch zu hohe D&auml;mpfungswerte 
+oder falsche Kabeltypen hervorgerufen werden. Insbesondere sollte 
+man bei der Twisted-Pair-Verkabelung die geringe Mehrausgabe nicht scheuen 
+und gleich Typ-5-Kabel f&uuml;r 100 MBit/s verwenden, auch wenn man noch 
+mit 10 MBit/s arbeitet. Bei einer sp&auml;teren Aufr&uuml;stung ist das 
+Neuverlegen wesentlich teuerer. Meist tritt jedoch die Bandbreitenbegrenzung 
+bei WAN-Verbindungen &uuml;ber Modem in Erscheinung. Die derzeit erreichbaren 
+Raten von 33600 bps und mehr sind bei normalen Telefonverbindungen
+schon am Rande des technisch m&ouml;glichen.
+<P>
+
+<H2><A NAME="6.3">Verzerrungen durch Laufzeit</A></H2>
+Die Geschwindigkeit, mit der ein sinusf&ouml;rmiges Signal in einem Medium 
+transportiert wird, variiert mit der Freqenz. Wenn also ein Rechtecksignal 
+&uuml;bertragen wird, das wir uns als Gemisch von Sinussignalen unterschiedlicher 
+Frequenz vorstellen, dann kommen die einzelnen Frequenzanteile zu verschiedenen 
+Zeiten beim Empf&auml;nger an (Laufzeitverzerrungen). Die Verzerrungen nehmen 
+mit steigender Datenrate noch zu, weil das Signalgemisch nicht homogen wie 
+bei einem stetigen 0-1-Wechsel ist. Die Signalanteile, die durch die Flanken 
+des Digitalsignals hervorgerufen werden, kommen h&auml;ufiger vor und interferieren 
+zus&auml;tzlich mit anderen Signalanteilen. Man spricht deshalb auch von 
+'Intersymbol-Interferenzen'. Diese k&ouml;nnen dazu f&uuml;hren, da&szlig; 
+bei der Abtastung des Signals beim Empf&auml;nger in der nominellen Bitmitte 
+Fehler auftreten k&ouml;nnen. Bei manchen Empf&auml;ngerschaltungen versucht 
+man diesen Fehler zu umgehen, indem der Abtastzeitpunkt adaptiv ge&auml;ndert 
+wird. Die Laufzeitverzerrungen sind auch der Grund daf&uuml;r, da&szlig; 
+nicht beliebig viele Repeater hintereinandergeschaltet werden k&ouml;nnen. 
+<P>
+
+<H2><A NAME="6.4">Rauschen</A></H2>
+In einem idealen &Uuml;bertragungskanal sind in &Uuml;bertragungspausen 
+au&szlig;er dem Ruhepegel keinerlei elektrische Signale festzustellen. In
+der Praxis stahlen jedoch mannigfache elektromagnetische Wellen auf das 
+Kabel ein. Quellen solcher St&ouml;rsignale sind alle elektrischen Ger&auml;te 
+und Maschinen in der Umgebung der Leitung und nicht zuletzt auch die nat&uuml;rliche 
+Strahlung von Erde und Atmosph&auml;re. Die Freqenzen und Feldst&auml;rken 
+sind von zuf&auml;lligen Faktoren abh&auml;ngig. Alle diese auf das &Uuml;bertragungsmedium 
+einwirkenden zuf&auml;lligen Signale nennt man 'Rauschen'. Dieses Rauschen 
+l&auml;&szlig;t sich durch keinerlei Ma&szlig;nahmen vollst&auml;ndig beseitigen, 
+sondern nur mildern, z. B. durch abgeschirmte Kabel.
+<P>
+Aber auch innerhalb der &Uuml;bertragungsstrecke, etwa durch die Bewegung 
+der Elektronen im Leiter wird ein, wenn auch sehr schwaches, zus&auml;tzliches 
+Signal erzeugt. In den &Uuml;bertragungsweg geschaltete Verst&auml;rker, 
+z. B. Repeater, verst&auml;rken nat&uuml;rlich nicht nur das Nutzsignal, 
+sondern auch den Rauschanteil. Wenn das Rauschen einen gewissen Pegel &uuml;bersteigt, 
+kann dies zu empf&auml;ngerseitigen Fehlern f&uuml;hren.
+<P>
+Von besonderem Interesse ist das Verh&auml;ltnis von Nutzsignal zum St&ouml;rsignal, 
+da dieses 'Signal-Rauschverh&auml;ltnis' wie schon die vorher erw&auml;hnte 
+Bandbreite die maximale &Uuml;bertragungsrate beeinflu&szlig;t. Speziell 
+bei der modulierten &Uuml;bertragung spielt dieser Faktor eine wichtige 
+Rolle. Das Signal-Rauschverh&auml;ltnis wird meist in Dezibel angegeben: 
+<P><PRE>
+      SR = 10 * log(Signalpegel/Rauschpegel) dB
+</PRE><P>
+Ein hoher Wert f&uuml;r SR impliziert einen weiten Abstand zwischen Signalpegel
+und Rauschpegel. Ein niedriger Wert steht f&uuml;r 'schlechte' Leitungen.
+Ein schlechter Wert l&auml;&szlig;t sich immer auf zwei Wegen verbessern;
+entweder durch Anheben des Signalpegels oder durch reduzieren des Rauschpegels.
+Das theoretische Maximum der Daten&uuml;bertragungsrate C abh&auml;ngig
+von SR und der Bandbreite B wird durch das Gesetz von Shannon-Hartley definiert:
+<P><PRE>
+      C = B * ld(1 + SR) bps<P>
+</PRE><P>
+Ma&szlig;nahmen zur Senkung des Rauschpegels sind einerseits Abschirmung
+(beim Koaxkabel), im Einstreuung von St&ouml;rsignalen zu verhindern, und
+andererseits Differenzsignale (bei Twisted Pair), bei denen sich die eingestreuten
+St&ouml;rungen auf den beiden Leitungen kompensieren.
+<P>
+
+<A NAME="6.5"></A>
+<H2>Reflexionen, R&uuml;ckflu&szlig;d&auml;mpfung, Nebensprechen</H2>
+Die meisten Netzverkabelungen setzen mittlerweile auf einer einheitlichen 
+physischen Infrastruktur auf die bestimmten Anforderungen gen&uuml;gen mu&szlig;.
+Die international wichtigsten Normen f&uuml;r Netzwerkverkabelungen sind: 
+TIA 56813, ISO/IEC 11801 und DIN/EN 50173. Die Normen unterscheiden verschiedene 
+Leistungsklassen der Netzwerkverkabelung: die TIA, die bekannten Kategorien Cat 3,
+Cat 5, Cat 5E, Cat 6 und Cat 7, und die ISO/IEC und EN die Klassen C, D, E und F.
+<P>
+<CENTER>
+<TABLE BORDER=1 CELLSPACING=1 CELLPADDING=1>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT><P>Category </TD>
+<TD VALIGN=TOP ALIGN=LEFT><P>Type </TD>
+<TD VALIGN=TOP ALIGN=LEFT><P>Spectral B/W</TD>
+<TD VALIGN=TOP ALIGN=LEFT><P>Length</TD>
+<TD VALIGN=TOP ALIGN=LEFT><P>LAN Applications</TD>
+<TD VALIGN=TOP ALIGN=LEFT><P>Notes</TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT HEIGHT=16>Cat3</TD>
+<TD VALIGN=TOP ALIGN=LEFT>UTP</TD>
+<TD VALIGN=TOP ALIGN=LEFT>16 MHz</TD>
+<TD VALIGN=TOP ALIGN=LEFT>100m</TD>
+<TD VALIGN=TOP ALIGN=LEFT>10Base-T, 4Mbps</TD>
+<TD VALIGN=TOP ALIGN=LEFT>Now mainly for telephone cables</TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT>Cat4</TD>
+<TD VALIGN=TOP ALIGN=LEFT>UTP</TD>
+<TD VALIGN=TOP ALIGN=LEFT>20 MHz</TD>
+<TD VALIGN=TOP ALIGN=LEFT>100m</TD>
+<TD VALIGN=TOP ALIGN=LEFT>16Mbps</TD>
+<TD VALIGN=TOP ALIGN=LEFT>Rarely seen</TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT>Cat5</TD>
+<TD VALIGN=TOP ALIGN=LEFT>UTP</TD>
+<TD VALIGN=TOP ALIGN=LEFT>100MHz</TD>
+<TD VALIGN=TOP ALIGN=LEFT>100m</TD>
+<TD VALIGN=TOP ALIGN=LEFT>100Base-Tx,ATM, CDDI</TD>
+<TD VALIGN=TOP ALIGN=LEFT>Common for current LANs</TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT>Cat5e</TD>
+<TD VALIGN=TOP ALIGN=LEFT>UTP</TD>
+<TD VALIGN=TOP ALIGN=LEFT>100MHz</TD>
+<TD VALIGN=TOP ALIGN=LEFT>100m</TD>
+<TD VALIGN=TOP ALIGN=LEFT>1000Base-T</TD>
+<TD VALIGN=TOP ALIGN=LEFT>Common for current LANs</TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT>Cat6</TD>
+<TD VALIGN=TOP ALIGN=LEFT>UTP</TD>
+<TD VALIGN=TOP ALIGN=LEFT>250MHz</TD>
+<TD VALIGN=TOP ALIGN=LEFT>100m</TD>
+<TD>&nbsp;</TD>
+<TD VALIGN=TOP ALIGN=LEFT>Emerging</TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT>Cat7</TD>
+<TD VALIGN=TOP ALIGN=LEFT>ScTP</TD>
+<TD VALIGN=TOP ALIGN=LEFT>600MHz</TD>
+<TD VALIGN=TOP ALIGN=LEFT>100m</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>
+Die Normen definieren verschiedene Verbindungsarten, englisch "Link".
+Die Basic Link Definition schlie&szlig;t die Messkabel mit ein. 
+<P>
+<CENTER><IMG SRC="strukt1.gif"></CENTER>
+<P>
+Inzwischen wird aber normkonform nur noch nach Permanent Link oder Channel 
+gemessen. Bei der Permanent-Link-Messung (PL) darf der Einfluss der Messkabel 
+nicht in die Messwerte eingehen. Damit belegt der Installateur seinem Auftraggeber 
+die Funktion genau der Strecke, die er installiert hat, &uuml;blicherweise das fest 
+verlegte Kabel inklusive der Dosen an beiden Enden. Die dritte Link-Definition, 
+der Channel, schlie&szlig;t die Patchkabel mit ein, mit der die Endger&auml;te an die fest 
+installierte Strecke angeschlossen werden. Bei dieser Messung wird der gesamte 
+&Uuml;bertragungsweg, &uuml;ber den die Netzkommunikation l&auml;uft, erfasst. Nicht in den 
+Messwerten niederschlagen d&uuml;rfen sich nach der normgem&auml;&szlig;en Channel-Definition die
+Anteile der letzten Steckverbinder, mit denen die Patchkabel an die Messger&auml;te 
+angeschlossen werden. Ein automatischer Test an einer Netzverkabelungs-Strecke 
+schlie&szlig;t nach Norm die folgenden Messungen und Pr&uuml;fungen ein:
+<UL>
+<LI> Verdrahtungsplan (Wiremap): &Uuml;berpr&uuml;ft werden alle vier Aderpaare und
+Schirme auf Durchgang, Schluss und Vertauschung, wobei der Fehler "Split" 
+besonders t&uuml;ckisch ist:
+<P>
+<CENTER><IMG SRC="strukt2.gif"></CENTER>
+<P>
+<LI><B>Laufzeit, Laufzeitunterschied und L&auml;ngen (Delay, Delay Skew und Length):</B> 
+Das Messger&auml;t ermittelt die Signallaufzeiten auf allen Aderpaaren. Aus der 
+Laufzeit errechnet der Kabelscanner unter Verwendung des NVP-Werts
+die Kabell&auml;nge. Auf Grund der unterschiedlichen Verdrillung sind die Laufzeiten 
+auf den vier Aderpaaren leicht unterschiedlich. Damit &Uuml;bertragungen, die Daten
+parallel &uuml;ber mehrere Aderpaare versenden, zuverl&auml;ssig funktionieren, mu&szlig; 
+gew&auml;hrleistet sein, da&szlig; die parallel gesendeten Daten auch gleichzeitig 
+ankommen.
+<P>
+<LI><B>Gleichstrom-Schleifenwiderstand (DC Loop Resistance):</B> Den 
+Gleichstrom-Schleifenwiderstand sollte man nicht mit der Kabelimpedanz 
+(komplexe Kabeleigenschaft) verwechseln, deren Ermittlung im Rahmen einer 
+normalen Abnahmemessung einer installierten LAN-Verkabelung von keiner
+aktuellen Norm verlangt wird.
+<P>
+<LI><B>D&auml;mpfung bzw. Einf&uuml;ged&auml;mpfung (Attenuation/Insertion Loss):</B> Es wird die 
+D&auml;mpfung im Frequenzbereich der zu Grunde gelegten Norm f&uuml;r jedes Aderpaar
+erfasst und bewertet.
+<P>
+<LI><B>Nahnebensprechen (Near End Crosstalk, NEXT):</B> Da dieser Effekt frequenzabh&auml;ngig 
+ist, wobbelt der Tester alle Frequenzen durch (daher der Name Cable-Scanner, 
+Wobbel-Messtechnik), die die Norm f&uuml;r die betreffende Kategorie bzw. Klasse fordert, 
+f&uuml;r Cat 6/Klasse E also von 1,0 bis 250 MHz. Im NEXT-Test sendet das Messger&auml;t jeweils 
+auf einem Paar ein Signal und misst, wie viel davon in die verschiedenen benachbarten
+Paare eingekoppelt wird. Bei einem 4-Paar-Kabel ergeben sich so sechs Aderpaar-Kombinationen, 
+n&auml;mlich 12-36, 12-45, 12-78, 36-45, 36-78 und 45-78, Entsprechend ergeben sich sechs
+Frequenzgangkurven. Da das NEXT von beiden Seiten der Leitung gemessen werden mu&szlig;,
+erh&auml;lt man insgesamt 12 Kurven.
+Starkes &Uuml;bersprechen (niedriger Zahlenwert!) ist eine der h&auml;ufigsten Ausfallursachen 
+bei Abnahmemessungen. Gute Kabelscanner zeigen das NEXT im Abstand vom Messpunkt so, 
+da&szlig; man Aufschlu&szlig; dar&uuml;ber erh&auml;lt, wie viel NEXT an den Steckverbindungen oder auf 
+der eigentlichen Kabelstrecke auftritt.
+<P>
+<LI><B>Attenuation to Crosstalk Ratio, ACR:</B> Dies ist die Differenz von D&auml;mpfung und 
+NEXT und gibt Auskunft &uuml;ber den St&ouml;rabstand zwischen dem (ged&auml;mpften) Nutzsignal und 
+dem St&ouml;rsignal NEXT. Der ACR wird nicht direkt gemessen, sondern auf Grundlage der 
+gemessenen D&auml;mpfungs- und NEXT-Werte vom Tester errechnet.
+<P>
+<LI><B>R&uuml;ckflussd&auml;mpfung (Return Loss, RL):</B> Impedanzvariationen entlang der Verbindung 
+f&uuml;hren zu Signalreflexionen, die einerseits das zum anderen Ende gelangende Signal 
+schw&auml;chen (Anteile die reflektiert werden dringen nicht bis zur anderen Seite durch), 
+andererseits aber auch vom anderen Ende ankommende, entsprechend ged&auml;mpfte Signale st&ouml;ren
+k&ouml;nnten. Speziell die Steckverbindungen sind, &auml;hnlich wie beim NEXT, f&uuml;r RL kritisch. 
+Allerdings k&ouml;nnen auch schlechte oder bei der Installation besch&auml;digte Kabel 
+RL-Probleme verursachen. Ein h&auml;ufig untersch&auml;tztes Problem sind au&szlig;erdem
+Impedanzspr&uuml;nge zwischen Installations- und Patchkabel. Auch RL wird von beiden Seiten 
+gemessen und in dB angegeben. Je gr&ouml;&szlig;er der Zahlenwert, umso besser.
+Ausnahmeregel: Liegt die D&auml;mpfung der gemessenen Strecke unter 3dB, wird das RL nicht 
+bewertet, sondern nur informativ angegeben. Bei kurzen Strecken "sieht" der 
+Kabelscanner n&auml;mlich nicht nur die Reflexion vom Anfang der Strecke, sondern teilweise 
+auch vom anderen Ende (auf l&auml;ngeren Kabeln wird das vom fernen Ende reflektierte Signal 
+auf dem R&uuml;ckweg zum Scanner so stark ged&auml;mpft, da&szlig; es keine nennenswerte Rolle mehr 
+spielt). Diese dann fast doppelt so starken Reflexionen k&ouml;nnen bei Messger&auml;ten, die 
+diese normgem&auml;&szlig;e Ausnahmeregel nicht ber&uuml;cksichtigen, zu Fehlbewertungen f&uuml;hren.
+<P>
+<LI><B>FEXT/ELFEXT (Far End CrossTalk/Equal Level Far End CrossTalk):</B> Hierbei wird, 
+im Gegensatz zu NEXT, das &Uuml;bersprechen von einem Aderpaar auf die anderen
+am fernen Ende gemessen.
+<P>
+<CENTER><IMG SRC="strukt3.gif"></CENTER>
+<P>
+Da f&uuml;r den Signalempfang nat&uuml;rlich der St&ouml;rabstand entscheidend ist und das Signal 
+am anderen Ende ged&auml;mpft ankommt, bezieht man den gemessenen FEXT-Wert nicht auf das 
+Sendesignal in seiner Originalst&auml;rke, sondern auf den Empfangspegel. ELFEXT
+ist also ein errechneter Wert, der aus der Subtraktion der D&auml;mpfung vom gemessenen 
+FEXT entsteht und in dB angegeben wird. Anders als NEXT kann FEXT richtungsabh&auml;ngig 
+sein, darum gibt es f&uuml;r jedes Ende der gemessenen Verbindung 12 Messwerte
+(Paarkombinationen), insgesamt also 24.
+<P>
+<LI><B>Power Sum NEXT, ACR und ELFEXT (PSNEXT, PSACR, PSELFEXT):</B> Bei 
+Gigabit-Ethernet-&Uuml;bertragungen &uuml;ber Klasse D Verkabelungen wird auf allen vier 
+Aderpaaren gleichzeitig in beide Richtungen gesendet und empfangen.
+Das auf jedem einzelnen Paar empfangene Signal kann also von den
+Signalen gest&ouml;rt werden, die gleichzeitig auf drei anderen Paaren &uuml;bertragen werden. 
+Das hei&szlig;t, die St&ouml;rungen, die von den drei anderen Paaren im Kabel verursacht
+werden, addieren sich. Genauso werden auch die Power-Sum-Werte pro Paar durch Addition 
+der auf jedes Paar einwirkenden St&ouml;rgr&ouml;&szlig;en ermittelt. Es handelt sich also
+nicht um Messungen, sondern um eine rechnerische Auswertung der zuvor mit den Messungen 
+von D&auml;mpfung, NEXT und ELFEXT ermittelten Werte.
+</UL>
+<P>
+Ein genereller Problempunkt bei Messungen von Cat 6/Klasse E-Verkabelungen ist die 
+elektrische Kompatibilit&auml;t von Stecker und Buchse. Nat&uuml;rlich pa&szlig;t jeder RJ-45-Stecker 
+mechanisch in jede RJ-45 Dose, aber harmonieren Stecker und Dose auch elektrisch? 
+Die Hersteller m&uuml;ssen spezielle Ma&szlig;nahmen ergreifen, um die f&uuml;r Cat 6/Klasse E
+festgelegten Grenzwerte der Steckverbinder zu garantieren. Meist sind das kleine 
+Leiterplatten mit Kondensatoren, die durch geeignete Verschaltung das in der gesteckten 
+Verbindung (RJ-45 Stecker in Dose eingesteckt) entstandene &Uuml;bersprechen kompensieren. 
+Der Kompensationsschaltkreis kann dabei in Stecker oder Dose eingebaut sein. Wichtig
+f&uuml;r die &Uuml;bertragungseigenschaften ist nur das hochfrequenztechnische Gesamtergebnis 
+von Dose und Stecker.
+<P>
+<CENTER><IMG SRC="strukt4.gif"></CENTER>
+<P>
+Die Erf&uuml;llung der Cat 6/Klasse E-Leistungsdaten von Steckern und Dosen verschiedener 
+Hersteller miteinander ist nicht garantiert. Das betrifft leider auch die Stecker an 
+den Permanent-Link-Adaptern der Kabeltester! 
+<P>
+F&uuml;r den Installateur bringt eine Channel-Messung Vorteile. Bei Messungen nach 
+Permanent Link werden ja die Permanent-Link-Adapter f&uuml;r jede Strecke einmal 
+ein- und ausgesteckt. Die Stecker unterliegen also st&auml;ndigem Verschlei&szlig;.
+Da sie Teil des Messaufbaus sind, kann man die Stecker an den Permanent-Link-Adaptern 
+nicht einfach ersetzen, denn damit ver&auml;ndern sich die elektrischen Eigenschaften des 
+Messaufbaus, was zu Verf&auml;lschungen der Messwerte f&uuml;hrt. Der Permanent-Link-Adapter
+ist also ein Verschlei&szlig;teil, das normalerweise nach einigen tausend Messungen ersetzt 
+werden mu&szlig;.<BR>
+Im Gegensatz dazu werden Messungen mit dem Channel-Adapter und einem Patchkabel
+durchgef&uuml;hrt. Das zum Zertifizieren verwendete Patchkabel kann dabei am Channel-Adapter 
+eingesteckt bleiben, hier gibt es also kaum Verschlei&szlig; am Adapter.
+Nur der Stecker am anderen Ende des Patchkabels verschlei&szlig;t, so da&szlig; nur dieses Kabel 
+ersetzt werden mu&szlig;. 
+<P>
+<CENTER>
+<TABLE BORDER=1 CELLSPACING=1 CELLPADDING=3>
+<TR>
+<TD COLSPAN=4 VALIGN=TOP ALIGN=LEFT>CAT5, CAT5e, and CAT6 UTP Solid Cable Specifications Comparison</TD>
+</TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD VALIGN=TOP ALIGN=LEFT>Category 5</TD>
+<TD VALIGN=TOP ALIGN=LEFT>Category 5e </TD>
+<TD VALIGN=TOP ALIGN=LEFT>Category 6 </TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT BGCOLOR="#FFFFFF">Frequency</TD>
+<TD VALIGN=TOP ALIGN=LEFT BGCOLOR="#FFFFFF">100 MHz</TD>
+<TD VALIGN=TOP ALIGN=LEFT BGCOLOR="#FFFFFF">100 MHz</TD>
+<TD VALIGN=TOP ALIGN=LEFT BGCOLOR="#FFFFFF">250 MHz</TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT>Attenuation (Min. at 100 MHz)</TD>
+<TD VALIGN=TOP ALIGN=LEFT>22 dB</TD>
+<TD VALIGN=TOP ALIGN=LEFT>22 dB</TD>
+<TD VALIGN=TOP ALIGN=LEFT>19.8 dB</TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT BGCOLOR="#FFFFFF">Characteristic Impedance</TD>
+<TD VALIGN=TOP ALIGN=LEFT BGCOLOR="#FFFFFF">100 ohms ± 15%</TD>
+<TD VALIGN=TOP ALIGN=LEFT BGCOLOR="#FFFFFF">100 ohms ± 15%</TD>
+<TD VALIGN=TOP ALIGN=LEFT BGCOLOR="#FFFFFF">100 ohms ± 15%</TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT>NEXT (Min. at 100 MHz)</TD>
+<TD VALIGN=TOP ALIGN=LEFT>32.3 dB</TD>
+<TD VALIGN=TOP ALIGN=LEFT>35.3 dB</TD>
+<TD VALIGN=TOP ALIGN=LEFT>44.3 dB</TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT BGCOLOR="#FFFFFF">PS-NEXT (Min. at 100 MHz)</TD>
+<TD VALIGN=TOP ALIGN=LEFT BGCOLOR="#FFFFFF">no specification</TD>
+<TD VALIGN=TOP ALIGN=LEFT BGCOLOR="#FFFFFF">32.3 dB</TD>
+<TD VALIGN=TOP ALIGN=LEFT BGCOLOR="#FFFFFF">42.3 dB</TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT>ELFEXT (Min. at 100 MHz)</TD>
+<TD VALIGN=TOP ALIGN=LEFT>no specification</TD>
+<TD VALIGN=TOP ALIGN=LEFT>23.8 dB</TD>
+<TD VALIGN=TOP ALIGN=LEFT>27.8 dB</TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT>PS-ELFEXT (Min. at 100 MHz)</TD>
+<TD VALIGN=TOP ALIGN=LEFT>no specification</TD>
+<TD VALIGN=TOP ALIGN=LEFT>20.8 dB</TD>
+<TD VALIGN=TOP ALIGN=LEFT>24.8 dB</TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT>Return Loss (Min. at 100 MHz)</TD>
+<TD VALIGN=TOP ALIGN=LEFT>16.0 dB</TD>
+<TD VALIGN=TOP ALIGN=LEFT>20.1 dB</TD>
+<TD VALIGN=TOP ALIGN=LEFT>20.1 dB</TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ALIGN=LEFT>Delay Skew (Max. per 100 m)</TD>
+<TD VALIGN=TOP ALIGN=LEFT>no specification</TD>
+<TD VALIGN=TOP ALIGN=LEFT>45 ns</TD>
+<TD VALIGN=TOP ALIGN=LEFT>45 ns</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>
+
+
+<H2><A NAME="6.5">Erdschleifen</A></H2>
+(Ground Loops) entstehen durch einen Potentialunterschied zwischen Sender und Empf&auml;nger.
+Durch Erdschleifen werden u. U. sehr gro&szlig;e Str&ouml;me auf der Abschirmung oder
+den Masseleitungen hervorgerufen, wodurch auch St&ouml;rungen auf die Signalleitungen
+gelangen (Induktion). Durch das nur einseitige Erden der Abschirmung (meist im Verteiler
+oder am Patchfeld) lassen sich Erdschleifen vermeiden. Eine aufwendigere Methode
+ist der Einsatz von Optokopplern, die Sender und Empf&auml;nger galvanisch trennen.
+<P>
+Eine Erdung von Datenkabeln erfolgt eigentlich nur im Bereich explosionsgef&auml;hrdeter 
+Industrieanlagen. Bei unsachgem&auml;&szlig;er Verkabelung richtet die Erdung mehr Schaden 
+als Nutzen an.
+<P>
+
+<CENTER><TABLE BORDER=0 WIDTH="100%">
+<TR>
+<TD ALIGN=LEFT VALIGN=BOTTOM><IMG SRC="left.gif" BORDER=0> <A HREF="netz5.html">Zum vorhergehenden Abschnitt</A></TD>
+<TD ALIGN=CENTER VALIGN=BOTTOM><IMG SRC="up.gif" BORDER=0> <A HREF="index.html">Zum Inhaltsverzeichnis</A></TD>
+<TD ALIGN=RIGHT VALIGN=BOTTOM><IMG SRC="right.gif" BORDER=0> <A HREF="netz7.html">Zum n&auml;chsten Abschnitt</A></TD>
+</TR></TABLE></CENTER>
+<P><HR>
+<h6><i>Copyright &copy; Hochschule M&uuml;nchen, FK 04, Prof. J&uuml;rgen Plate</i><br>
+Letzte Aktualisierung: <SCRIPT LANGUAGE="JavaScript">document.write(document.lastModified);</SCRIPT></I></H6>
+</BODY>
+</HTML>

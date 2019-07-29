@@ -1,0 +1,1733 @@
+<!DOCTYPE HTML PUBLIC "-;W3C;DTD HTML 4.01 Transitional;EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta NAME="robots" CONTENT="all">
+<meta NAME="revisit-after" CONTENT="10 days">
+<meta NAME="Reply-To" CONTENT="webmaster@netzmafia.de">
+
+<meta NAME="keywords" CONTENT="LAN WAN TCP/IP Computernetze Ethernet Vernetzung Router Hub Switch Protokolle">
+<meta NAME="description" CONTENT="Praxisorientierte Einf&uuml;hrung in den Aufbau und die Funktionsweise von Computernetzen.">
+<title>Grundlagen Computernetze</title>
+</head>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" ALINK="#FF0000" VLINK="#FF00FF">
+<CENTER><TABLE BORDER=0 WIDTH="90%" >
+<TR><TD ALIGN=LEFT><IMG SRC="eyes.gif"></TD>
+<TD ALIGN=RIGHT><H2>Grundlagen Computernetze</H2> 
+<BR><B><I>Prof. J&uuml;rgen Plate</I></B></TD></TR>
+</TABLE></CENTER>
+<HR>
+
+
+<h1 align=center>&Uuml;bertragungsmedien</h1>
+
+Egal wie das Kabel letztendlich aussieht, gibt es bei allen Kabeln ein paar 
+grundlegende Eigenschaften. Jeder Leiter hat einen gewissen Gleichstromwiderstand, 
+der abh&auml;ngt vom spezifischen Widerstand des Materials (r), vom Querschnitt 
+des Leiters (A) und von seiner L&auml;nge (l):
+<P>
+<CENTER>R = r * l/A</CENTER>
+<P>
+F&uuml;r die Anwendung im Netz wesentlich wichtiger ist der Wechselstromwiderstand 
+des Kabels. Wenn wir ein kurzes Leitungsst&uuml;ck betrachten, bildet die 
+Leitung eine Induktivit&auml;t L, die in Serie zum ohmschen Widerstand liegt. 
+Die nebeneinanderliegenden Leiter und der R&uuml;ckleiter bilden eine Kapazit&auml;t 
+C. Schlie&szlig;lich gibt es zwischen beiden Leitern noch einen sehr hohen 
+Isolationswiderstand G. Man kann das Leiterst&uuml;ck also durch eine Ersatzschaltung 
+wie im Bild ann&auml;hern.<BR>
+<P>
+<center><IMG SRC="b1-14.gif" ALT=""></center>
+<P>
+Das Kabel setzt sich dann aus vielen dieser kleinen Schaltungen zusammen, 
+die hintereinandergeschaltet sind. Betrachtet man das Leitungsst&uuml;ck dx, 
+in dem der Strom I(x,t) fliesst, so ergibt sich ein Spannungsabfall U(x,t) 
+&uuml;ber L und R nach dem ohmschen Gesetz die linke Gleichung. Mit der
+Knotenregel erhalten wir ausserdem die rechte Gleichung:
+<P>
+<center><IMG SRC="kabel1.jpg" ALT=""></center>
+<P>
+Differenziert man die erste Gleichung nach x und eliminiert man den Term
+dI/dx bleibt eine Differentialgleichung f&uuml;r die Spannung U(x) &uuml;brig, 
+die sogenannte Telegraphengleichung (analog l&auml;&szlig;t sich das f&uuml;r 
+den Strom erledigen):
+<P>
+<center><IMG SRC="kabel2.jpg" ALT=""></center>
+<P>
+Als L&ouml;sung erhalten wir ged&auml;mpfte Wellen entlang des Leiters:
+<P>
+<center><IMG SRC="kabel3.jpg" ALT=""></center>
+<P>
+&gamma; nennt man "komplexe D&auml;mfungskonstante". Ihr Realteil &alpha; beschreibt 
+die D&auml;mpfung, der Imagin&auml;rteil &beta; die Wellenzahl. F&uuml;r eine 
+verlustfreie Leitung mit R = 0 und G = 0 gilt &alpha; = 0 sowie:
+<P>
+<center><IMG SRC="kabel4.jpg" ALT=""></center>
+<P>
+Man nennt das Verh&auml;ltnis von Spannung zu Strom in der Leitung analog dem
+ohmschen Gesetz "Wellenwiderstand" oder "Wellenimpedanz" Z. Durch Einsetzen
+der Gleichung erh&auml;lt man:
+<P>
+<center><IMG SRC="kabel5.jpg" ALT=""></center>
+<P>
+F&uuml;r den Fall einer sogenannten Widerstandsd&auml;mpfung (R > 0, aber G = 0) erhalten
+wir:
+<P>
+<center><IMG SRC="kabel6.jpg" ALT=""></center>
+<P>
+Damit ist f&uuml;r &omega; = R/L die Wellenzahl &beta; nicht mehr genau proportional 
+zu &omega;, sondern etwas gr&ouml;&szlig;er. Die Phasengeschwindigkeit &omega;/&beta; 
+wird frequenzabh&auml;ngig kleiner, d.h. wir haben "Dispersion"; Signale werden 
+verzerrt &uuml;bertragen. Auch Z ist dann frequenzabh&auml;ngig und wird f&uuml;r 
+kleine Frequenzen gr&ouml;&szlig;er. F&uuml;r hohe Frequenzen verschwindet die
+Dispersion.
+<P>
+F&uuml;r die oben stehenden Gleichungen gilt, da&szlig; bei
+hohen Frequenzen die induktive Reaktanz viel gr&ouml;&szlig;er ist als der ohmsche
+Widerstand (&omega;L &gt> R). Es wird ferner angenommen, da&szlig; die Ableitung
+verschwindend gering ist (G = 0). Es gilt:
+<P>
+<center><IMG SRC="kabel7.jpg" ALT=""></center>
+<P>
+Nach dieser Gleichung scheint &alpha; frequenzabhängig zu sein.
+<p>
+Hier kommt jedoch ein anderer Effekt zu Tage. Der "Skineffekt" bewirkt, dass die Stromdichte an der Oberfl&auml;che eines metallischen K&ouml;rpers nach innen 
+exponentiell abnimmt. Durch das elektromagnetische Feld des Stromes entstehen 
+Wirbelstr&ouml;me im Leiter, durch welche ein nicht leitender Bereich in der 
+Leitung entsteht. Der Leiterquerschnitt wird effektiv verringert und somit der 
+Widerstand erhöht. Ein Gleichstrom I erzeugt ein konstantes Magnetfeld H. F&uuml;r
+Wechselstrom erzeugt <i>dI/dt</i> entsprechend <i>dH/dt</i>. Ein magnetisches 
+Wechselfeld <i>dH/dt</i> erzeugt seinerseits aber ein elektrisches Feld, was
+wieder den Strom I beeinflu&szlig;t.
+<P>
+<center><IMG SRC="kabel8.jpg" ALT=""></center>
+<P>
+Die mittlere Eindringtiefe des Stromes ist frequenzabh&auml;ngig:
+<P>
+<center><IMG SRC="kabel9.jpg" ALT=""></center>
+<P>
+(&mu; = Permeabilität &rho; = Leitf&auml;higkeit)
+Typische Werte sind f&uuml;r Kupfer bei 1 MHz 70&mu;m, bei 1 GHz 2 &mu;m. Der 
+effektive Kabelwiderstand nimmt also mit der Frequenz zu; demzufolge hat man 
+auch eine Frequenzabh&auml;ngigkeit der D&auml;mpfung. Um die Oberfl&auml;che
+des Leiters zu vergr&ouml;&szlig;ern und so die Leitf&auml;higkeit zu verbessern, 
+nimmt man f&uuml;r Hochfrequenz-Anwendungen oft Kupferfolien, mehrere Litzen
+oder - bei ganz hohen Frequenzen - Hohlleiter. Dazu ein Zahlenbeispiel: Das 
+Koaxkabel RG 178 hat Z = 50&Omega;, R = 0,45 &Omega;/m, L = 240 nH/m und
+C = 95 pF/m. Bei 2 MHz und 100 m L&auml;nge wird das Signal um einen Drittel 
+reduziert, bei 200 MHz sogar um 99%. 
+<P>
+Die Sache ist in der Praxis noch komplizierter, da weitere Effekte hinzukommen.
+<ul>
+<li>Ein in positiver- und ein in negativer Richtung durchflossener Leiter Sto&szlig;en 
+sich voneinander ab (Proximity-Effekt). Die konzentrischen, stromfreien Zonen 
+werden asymetrisch. 
+<li>Die Oberfläche eines Leiters ist nie glat, es gibt mikroskopisch kleine "T&auml;ler"
+und "H&uuml;gel". Sinkt bei hohen Frequenzen die Eindringtiefe unter die Oberfl&auml;chenrauheit, muss der Strom einen weiteren Weg zurücklegen.
+</ul>
+
+Andert sich die Geometrie der Leitung an einer bestimmten Stelle, so &auml;ndern sich
+auch Ausbreitungsgeschwindigkeit und Impedanz. Ein spezieller Fall ist das Ende einer
+Leitung. Es sei mit einem Widerstand R abgeschlossen.
+Ist R = Z, so ist der Widerstand "angepasst", die Energie der ankommenden Welle wird 
+im Widerstand vernichtet, der <b>Reflexionsfaktor</b> r = 0. F&uuml;r alle anderen
+Werte von R ist er definiert als <i>r = (R - Z)/(R + Z)</i>. F&uuml;r ein offenes
+Kabelende (R unendlich) geht r gegen 1. Die reflektierte Spannung ergibt sich aus der Signalspannung multipliziert mit dem Reflexionsfaktor (das gleiche gilt für den
+Strom). Daraus folgt, da&szlig; offene Leitungen (bzw. R gro&szlig;) f&uuml;hren zu 
+Refexionen von Signalen mit gleichem Vorzeichen, kleine Widerstandswerte 
+(Kurzschluss) f&uuml;hren zu Reflexionen mit umgekehrtem Vorzeichen. 
+F&uuml;r die st&ouml;rungsfreie Daten&uuml;bertragung sollte die Leitung also mit
+R = Z abgeschlossen sein. Offene oder kurzgeschlossene Leitungen lassen sich zur
+Messung von Leitungsl&auml;ngen und Lokalisierung von Impedanzinhomogenit&auml;ten 
+nutzen.
+<P>
+Der <b>Wellenwiderstand</b> eines realen Kabels ist seine Kenngr&ouml;&szlig;e, 
+die angibt, mit welchem Ohmschen Widerstand eine Leitung abgeschlossen werden 
+muss, damit Anpassung erfolgt (keine Reflexionen). Zur Berechnung des Wellenwiderstandes 
+werden die physischen Eigenschaften des Kabels ben&ouml;tigt, also konstante 
+Gr&ouml;&szlig;en, die von Leitungsmaterial und der Leitungsgeometrie abh&auml;ngen. 
+In der Informations- und Kommunikationstechnik werden &uuml;blicherweise Kabel und 
+Leitungen mit einem Widerstand abgeschlossen, um Reflexionen der Signale an den Kabelenden 
+zu vermeiden. 
+<P>
+Mi&szlig;t man den Wechselstromwiderstand eines Kabels indem man ein Wechselspannungssignal 
+einspeist, erh&auml;lt man den spezifischen Wellenwiderstand des Kabels. Dazu misst man den 
+Strom bei offenen und kurzgeschlossenen Leitungsenden. Nach den Strommessungen berechnet man 
+aus der Generatorspannung U<sub>G</sub> und gemessenem Strom den Kurzschluss- und 
+Leerlaufwiderstand, R<sub>K</sub> und R<sub>L</sub>:
+<p>
+R<sub>K</sub> = U<sub>G</sub>/I<sub>K</sub> (= Z<sub>K</sub>)
+&nbsp;&nbsp;&nbsp;&nbsp;
+R<sub>L</sub> = U<sub>G</sub>/I<sub>L</sub> (= Z<sub>L</sub>)
+<p>
+Der Wellenwiderstand Z<sub>W</sub> der Leitung, ergibt sich aus Kurzschluss- und 
+Leerlaufwiderstand:
+<P>
+<img src="wellenwid.gif"> 
+<P>
+Beim Ethernet ist der Wellenwiderstand auf 50 Ohm festgelegt. Die Grenzfrequenz 
+ist erreicht, wenn die Ausgangsspannung 70% der Eingangsspannung erreicht hat. Die 
+digitalen Signale, die auf das Netzwerkkabel geleitet werden, bilden auch eine (sehr 
+oberwellenreiche) Wechselspannung.
+<P>
+Zu Beginn hat man sich beim Ethernet f&uuml;r Koaxialkabel entschieden. 
+Sie bestehen aus einem &auml;u&szlig;eren Leiter, der einen innenliegenden 
+Leiter vollst&auml;ndig umschlie&szlig;t und dadurch abschirmt. Die beiden 
+Leiter sind durch einen Isolator elektrisch getrennt. Koaxkabel gibt es 
+in verschiedenen Ausf&uuml;hrungen, f&uuml;r das Ethernet werden Typen mit 
+einem Wellenwiderstand von 50 Ohm verwendet. Die Konstruktion dieses Kabels 
+ist aber nicht nur wegen der Abschirmung des inneren Leiters g&uuml;nstig, 
+da sie noch einen anderes Ph&auml;nomen der Hochfrequenztechnik ausnutzt: 
+den oben beschriebenen Skineffekt. <P>
+Seit einigen Jahren werden fast nur noch <A HREF="5.5">verdrillte 
+Zweidrahtleitungen (10BaseT)</A> oder Glasfaserleitungen verwendet. F&uuml;r
+einige Grundsatzbetrachtungen sind die Koaxialkabel aber immer noch interessant.
+<P>
+
+Die Definition des physikalischen Kanals ist aber nur ein Teil der IEEE 
+802.3-Spezifikation. Der Standard beschreibt physikalische &Uuml;bertragung, 
+die auch unser Thema ist, und Zugriffsverfahren, die sogenannten Protokolle. 
+Auf der physikalischen Ebene sind Bezeichnungen wie 10Base5, 10Base2 und 
+10BaseT von Belang. Entscheidend sind dabei drei Parameter:<BR>
+die &Uuml;bertragungsrate, das &Uuml;bertragungsverfahren (Basis- oder Breitband; 
+'Base' oder 'Broad') sowie Aussagen zur r&auml;umlichen Ausdehnung. Zur 
+Unterscheidung und Charakterisierung der einzelnen &Uuml;bertragungsmedien 
+wurde folgende Systematik f&uuml;r die Kabelbezeichnung entwickelt: 
+<P>
+<TT>    &lt;Datenrate in MBit/s&gt;&lt;&Uuml;bertragungsverfahren&gt;&lt;Max. L&auml;nge/100 m&gt;</TT>
+<P>
+Auch der Kabeltyp kann unterschiedlich sein. Vom Koaxkabel &uuml;ber Glasfasern 
+bis zu verdrillten Zweidrahtleitungen ist alles vertreten.
+<P>
+
+<H2><A NAME="5.2">Standard-Ethernet, 10Base5</A></H2>
+Im weiteren wollen wir aber nur auf die Ethernet-Verkabelung eingehen. Das 
+Standard-Ethernet besteht aus dem, meistens gelb isoliertem, 50-Ohm-Koaxialkabel 
+mit ca. 10 mm Durchmesser (10,3 mm bei PVC-Isolierung, 9,5 mm bei PEP). 
+Ein Kabelsegment darf maximal 500 m lang sein. Im Mindestabstand von 2,50 
+m k&ouml;nnen Media Attachment Units (MAUs) gesetzt werden. Zu diesem Zweck 
+sind auf dem Kabel Markierungen angebracht. Die Ursache f&uuml;r den vorgeschriebenen 
+Mindestabstand liegt darin, da&szlig; man eine Beeinflussung der MAUs untereinander 
+ausschlie&szlig;en wollte. Das Bild zeigt schematisch den Anschlu&szlig; 
+an das Kabel.
+<P>
+<center><IMG SRC="b1-15.gif" ALT=""></center>
+<P>
+An einen MAU kann &uuml;ber ein maximal 50 m langes Transceiverkabel eine 
+Ethernet-Station angeschlossen werden. Maximal 100 Stationen k&ouml;nnen 
+an einem Kabelsegment h&auml;ngen. Der Biegeradius darf 20 cm nicht unterschreiten. 
+Das Kabel mu&szlig; zur Vermeidung von Reflexionen an beiden Enden mit einem 
+50-Ohm-Widerstand (1 Watt) terminiert werden.
+<P>
+Der Transceiver im MAU wird &uuml;ber einen TAP angeschlossen, bei dem Mittelleiter 
+und Schirm kontaktiert werden, ohne das Kabel - und damit den 
+Datenflu&szlig; auf dem Netz - zu unterbrechen.  
+<P>
+<center><IMG SRC="b1-16.gif" ALT=""></center>
+<P>
+Bei einem Defekt im Transceiverkabel wird das Netz nicht beeinflu&szlig;t; 
+lediglich die betroffene Station ist von der Kommunikation getrennt. Die 
+paarweise verdrillten Leitungen im Transceiverkabel werden &uuml;ber Differenztreiber 
+angesteuert, auf Empfangsseite sitzen Differenzverst&auml;rker. St&ouml;rungen 
+k&ouml;nnen sich so nur gering bemerkbar machen. <BR>
+<P>
+<h4>Anbindung der Arbeitspl&auml;tze direkt an das Yellow-Cable</h4>
+Zum Anschlu&szlig; der einzelnen Arbeitspl&auml;tze an das Netzwerk ben&ouml;tigt 
+man pro Arbeitsplatz den oben erw&auml;hnten MAU. Er stellt die Verbindung von 
+Rechner &uuml;ber den AUI-Port mit dem Netzwerk her. Diese Vorgehensweise birgt 
+allerdings einige Probleme (z. B. Netzlast, usw.). 
+Es existieren strenge Verlegevorschriften bez&uuml;glich Biegeradius, 
+Anschlu&szlig;m&ouml;glichkeiten der einzelnen Stationen usw. 
+<p>
+<center><IMG src="netz1.gif"></center>
+<p>
+Das Yellow Cable ist heute veraltet und sollte f&uuml;r Neuinstallationen
+nicht mehr eingesetzt werden. Es ist aber noch relativ h&auml;ufig anzutreffen.
+Bei Anschlu&szlig;fehlern werden die benachbarten Teile des Netzes betroffen. 
+Au&szlig;erdem wird f&uuml;r den Anschlu&szlig; des MAU ein Spezialwerkzeug ben&ouml;tigt.
+<p>
+<center><IMG src="mat1.gif"></center>
+<p>
+
+<H2><A NAME="5.3">AUI-Kabel (Attachment Unit Interface, Transceiver-Kabel)</A></H2>
+An einen MAU kann &uuml;ber ein maximal 50 m langes AUI-Kabel (Impedanz 
+100 Ohm) eine Ethernet-Station angeschlossen werden, z. B. eine Workstation, 
+ein Terminalserver oder ein PC mit Ethernet-Einschubkarte. Das Kabel bietet 
+die n&ouml;tige Bewegungsfreiheit bei dem doch recht sperrigen &quot;yellow 
+cable&quot;. Im Transceiver-Anschlu&szlig;kabel existieren zwei Leitungspaare 
+f&uuml;r die beiden Senderichtungen. Der eigentliche Sender ist im wesentlichen 
+eine Stromschleife, die zirka 65 mA treibt. Der Empf&auml;nger realisiert 
+einen hochohmigen Abgriff des Signals vom Kabel, damit das Signal auf der 
+Leitung nicht zu stark ged&auml;mpft wird. Weitere Leitungen liefern Informationen 
+&uuml;ber Kollisionen. Zus&auml;tzlich erfolgt &uuml;ber das Kabel auch 
+noch die Stromversorgung des Transceivers. Die Verbindung zum Transceiver 
+bzw. zum Ethernet-Contoller erfolgt &uuml;ber 15polige SUB-D-Stecker. Das 
+Kabel tr&auml;gt die Stecker an den Netzkomponenten sind die Buchsen angebracht. 
+Die Belegung der Stecker ist so gehalten, da&szlig; &uuml;bereinanderliegende 
+Pins jeweils die zueinander inversen Signale leiten:
+<P>
+<TABLE BORDER=1 CELLPADDING=5 CELLSPACING=0>
+<TR><TH>Pin</TH><TH>Signal                             </TH><TH>Pin</TH><TH>Signal</TH></TR>
+<TR><TD>1 </TD><TD>Schirm f&uuml;r Kollisionserkennung </TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR><TD>2 </TD><TD>Kollisionserkennung +               </TD><TD> 9 </TD><TD>Kollisionserkennung -</TD></TR>
+<TR><TD>3 </TD><TD>Sendedaten +                        </TD><TD>10 </TD><TD>Sendedaten -</TD></TR>
+<TR><TD>4 </TD><TD>Schirm f&uuml;r Empfangsdaten       </TD><TD>11 </TD><TD>Schirm f&uuml;r Sendedaten </TD></TR>
+<TR><TD>5 </TD><TD>Empfangsdaten +                     </TD><TD>12 </TD><TD>Empfangsdaten -</TD></TR>
+<TR><TD>6 </TD><TD>Masse                               </TD><TD>13 </TD><TD>+ 12 bis 15 V DC</TD></TR>
+<TR><TD>7 </TD><TD>Control Out +                       </TD><TD>14 </TD><TD>Schirm f&uuml;r Stromversorgung</TD></TR>
+<TR><TD>8 </TD><TD>Schirm f&uuml;r Control Out         </TD><TD>15 </TD><TD>Control Out -</TD></TR>
+</TABLE>
+<P> 
+
+
+<H2><A NAME="5.4">Thinwire-Ethernet (Cheapernet), 10Base2</A></H2>
+Eine weitere Abweichung vom urspr&uuml;nglichen Standard besteht im Einsatz 
+d&uuml;nnerer Koaxialkabel. Diese haben zwar eine h&ouml;here D&auml;mpfung 
+und geringere St&ouml;rfestigkeit als das Yellow Cable, sind aber f&uuml;r 
+kleinere Netze vollkommen ausreichend. Sie sind nicht nur billiger (daher 
+auch der Spitzname 'Cheapernet'), sondern auch besser zu verlegen. Bei diesem 
+Netz entfallen auch die externen Transceiver und die Anschlu&szlig;kabel. 
+Das Kabel wird unmittelbar an der Netzwerkkarte des Rechners vorbeigeschleift 
+und mittels eines BNC-T-St&uuml;cks angeschlossen. Dazu mu&szlig; das Koaxkabel 
+durchtrennt und mit zwei BNC-Steckern versehen werden - das Netz wird also 
+kurzzeitig unterbrochen. Der Transceiver ist mit auf dem Netzwerkinterface 
+integriert. Es handelt sich um ein 50-Ohm-Kabel RG58A/U oder RG58C/U mit 
+einem Durchmesser von 4,7 - 4,9 mm Durchmesser. Die maximale L&auml;nge 
+eines Segmentes betr&auml;gt 185 m (nicht etwa 200 m, wie die &quot;2&quot; 
+bei 10Base2 vermuten l&auml;&szlig;t) und es k&ouml;nnen bis zu 30 Stationen 
+angeschlossen werden, deren Minimalabstand 0,5 m betragen mu&szlig;. Beim 
+Verlegen des Kabels darf der Biegeradius 5 cm nicht unterschreiten. Durch 
+geeignete Repeater k&ouml;nnen Standard-Ethernet-Segmente 
+mit dem Cheapernet verbunden werden. 
+<P>
+Die 50-Ohm-Abschlu&szlig;widerst&auml;nde sind in BNC-Stecker integriert 
+und werden bei den beiden &auml;u&szlig;eren Stationen direkt auf das T-St&uuml;ck 
+gesetzt. Ein Defekt im Kabel, das ja an allen Stationen &uuml;ber die T-St&uuml;cke 
+angeschlossen ist, betrifft somit auch alle Stationen.  
+<P>
+<center><IMG SRC="mat3.gif" ALT=""></center>
+<P>
+Das direkte Vorbeischleifen des Kabels am Interface ist f&uuml;r das 10Base2-Interface 
+zwingend notwendig, ein Verl&auml;ngern des T-St&uuml;ckes mit einer 'Stichleitung' 
+ist aufgrund der Funktionsweise des Transceivers nicht m&ouml;glich. Wenn 
+man versuchen w&uuml;rde, einen 10Base2-Anschlu&szlig; durch eine Stichleitung 
+zu verl&auml;ngem, w&auml;re die saubere Ausbreitung der Welle nicht mehr 
+gew&auml;hrleistet und Reflexionen am Anfang und Ende der Stichleitung die 
+Folge.
+<p>
+<center><IMG src="mat2a.gif"></center>
+<P>
+Den Nachteil des Vorbeischleifens macht das 10Base2-Kabel dadurch wett, 
+da&szlig; es bei deutlich geringerem Preis einfacher zu verlegen ist als 
+das herk&ouml;mmliche Ethernet. Moderne Netzwerkkarten bieten &uuml;brigens 
+Anschlu&szlig;m&ouml;glichkeiten f&uuml;r Transceiver-Kabel (also konventionelles 
+Ethernet), f&uuml;r BNC-T-St&uuml;cke (10Base2) und f&uuml;r 10BaseT-Kabel 
+(siehe unten) und sind standardm&auml;&szlig;ig mit einem OnBoard-Transceiver 
+ausgestattet. Damit ist eine gro&szlig;e Flexibilit&auml;t in der Installation 
+gegeben, es mu&szlig; lediglich auf der Netzwerkkarte die gew&uuml;nschte 
+Konfiguration eingestellt werden.
+<P>
+<h4>Anschlu&szlig; der Arbeitspl&auml;tze an einen BNC-Strang</h4>
+Die Ausf&uuml;hrung eines Netzwerksegmentes mit BNC-Kabeln ist wesentlich 
+kosteng&uuml;nstiger als mit Yellow-Cable. Das BNC-Kabel wird an einen 
+BNC-Hub o. &auml;. angeschlossen welcher selbst beispielsweise am Yellow-Cable 
+angeschlossen ist.
+<p>
+<center><IMG src="mat4a.gif"></center>
+<p>
+Das oben erw&auml;hnte T-St&uuml;ck wird direkt an der Netzwerkkarte angeschlossen,
+die im Rechner eingebaut ist. Sollte es sich um den ersten bzw. letzten Rechner im 
+Segment handeln, so wird dieser auch mit einem T-St&uuml;ck angeschlossen. Jedoch
+wird hier der freibleibende Anschlu&szlig; durch einen 50 Ohm-Abschlu&szlig;widerstand 
+best&uuml;ckt.
+<b>Der Kabelanfang und das Kabelende m&uuml;ssen jeweils mit einem 50 Ohm 
+Abschlu&szlig;widerstand abgeschlossen werden.</b>
+<p>
+<center><IMG src="mat3a.gif"></center>
+<P>
+Die Verl&auml;ngerung der einzelnen Segmente erfolgt mit Repeatern. Sie werden als 
+Signalverst&auml;rker zwischen die einzelnen Segmente geschaltet. Mittels 
+Multiportrepeatern kann man das Netzwerk an diesen Stellen auch aufsplitten und 
+in verschiedene Einzelsegmente aufteilen.
+Allerdings sollte immer darauf geachtet werden, da&szlig; bei einer solchen 
+Installation nicht zu viele Arbeitspl&auml;tze angeschlossen werden. Jede 
+Arbeitsstation bedeutet zus&auml;tzliche Netzlast. Je geringer die Netzlast ist, 
+desto h&ouml;her ist die Arbeitsgeschwindigkeit des Netzwerkes.
+<p>
+<center><IMG src="netz2.gif"></center>
+<p>
+<h4>BNC-Netz mit eigenem Server</h4>
+Bei den beiden vorgenannten Versionen sind die Installationen abh&auml;ngig von einem 
+abgesetzten File-Server. Er liefert die notwendige Netzwerksoftware und evtl. die
+ben&ouml;tigten Programme.  
+Soll nun aber ein bestimmter Bereich des Netzes unabh&auml;ngig vom 
+File-Server betrieben werden, so ist es unerl&auml;&szlig;lich, einen Server nur 
+f&uuml;r diesen Bereich zu beschaffen. 
+<p>
+<p>
+<center><IMG src="netz3.gif"></center>
+<p>
+Allerdings ist die BNC-Verkabelung - wie das Yellow Cable - ein aussterbender Standard, 
+da man mit dieser Technik bereits an die Grenzen des technisch M&ouml;glichen angelangt ist. 
+Die &Uuml;bertragungsgeschwindigkeit von 10 Mbit/s kann hier nicht 
+&uuml;berschritten werden kann. F&uuml;r "Wohngemeinschaftsnetze" wird es wegen seiner
+Preisg&uuml;nstigkeit aber immer noch verwendet.
+<p>
+
+<H2><A NAME="5.5">Twisted-Pair, 10BaseT</A></H2>
+Twisted-Pair ist ein vieradriges, paarweise verdrilltes Kupferkabel, bei 
+dem zwischen Sender und Empf&auml;nger f&uuml;r jede &Uuml;bertragungsrichtung 
+zwei Kupferadern genutzt werden. Die typische Dicke der Adern betr&auml;gt 
+0,5 oder 0,6 mm. Die maximale &Uuml;bertragungsl&auml;nge variiert mit der D&auml;mpfung 
+und ist abh&auml;ngig davon, ob die Dr&auml;hte abgeschirmt sind oder nicht. 
+Das Twisted-Pair-Kabel eignet sich f&uuml;r verschiedene Uebertragungsmethoden 
+wie Token Ring und Ethernet. Bei einer Datenrate von 10 - 100 MBit/s kann 
+ein Twisted-Pair-Kabel bis zu 100 m lang sein. Die Mindestl&auml;nge des 
+Kabels betr&auml;gt 0,6 m. Das Kabel verbindet genau zwei Stationen miteinander. 
+<p>
+<center><IMG src="mat6a.gif"></center>
+<p>
+Zum Anschlu&szlig; mehrerer Stationen m&uuml;ssen sogenannte Hubs (engl. "Hub" = Nabe eines 
+Speichenrades) eingesetzt werden, es lassen sich dann bis zu 1024 Stationen 
+miteinander koppeln. Als Verbinder kommen normalerweise RJ-45-Stecker (Western-Stecker) 
+und -Dosen zum Einsatz. Auch hier werden wieder Differenztreiber und -empfangsverst&auml;rker 
+eingesetzt. Der Pegel wechselt zwischen -2,5 V und +2,5 V. <BR>
+Mit der Twisted-Pair-Verkabelung hielt auch eine kaum &uuml;berschaubare Anzahl 
+unterschiedlicher Kabelvarianten Einzug in die Datentechnik. UTP, FTP, S/UTP, S/STP oder 
+ITP beschreiben den Kabelaufbau, CAT 3, 5 oder 7 beschreiben die Kategorie 
+hinsichtlich der Anforderung der Kabel und Steckverbinder. Die Kabelklasse (A - 100 kHz,
+B - 1 MHz, C - 16 MHz, D - 100 MHz, E - 300 MHz,  F - 600 MHz) definiert die Anforderungen 
+hinsichtlich der &Uuml;bertragungsbandbreite. <BR>
+<UL>
+<LI>CAT-1 f&uuml;r Alarmsysteme und analoge Sprach&uuml;bertragung 
+<LI>CAT-2 f&uuml;r Sprache und RS232-Schnittstellen
+<LI>CAT-3 Daten&uuml;bertragung bis 16 MHz
+<LI>CAT-4 Daten&uuml;bertragung bis 20 MHz (IBM Token-Ring 16 MHz) 
+<LI>CAT-5 Daten&uuml;bertragung bis 100 MHz
+</UL>
+<P>
+<TABLE WIDTH=90% BORDER=1 CELLPADDING=4 CELLSPACING=0>
+	<TR>
+		<TH VALIGN=TOP>Kategorie</TH>
+		<TH COLSPAN=2 ALIGN=CENTER VALIGN=BOTTOM>1</TH>
+		<TH COLSPAN=2 ALIGN=CENTER VALIGN=BOTTOM>2</TH>
+		<TH COLSPAN=2 ALIGN=CENTER VALIGN=BOTTOM>3</TH>
+		<TH COLSPAN=2 ALIGN=CENTER VALIGN=BOTTOM>4</TH>
+		<TH COLSPAN=2 ALIGN=CENTER VALIGN=BOTTOM>5</TH>
+	</TR>
+	<TR>
+		<TD VALIGN=TOP>
+			&Uuml;bertragungs-<br>geschwindigkeit<br>(Mbit/s) 
+		</TD>
+		<TD COLSPAN=2 VALIGN=TOP>&nbsp;</TD>
+		<TD COLSPAN=2 ALIGN=CENTER>4</TD>
+		<TD COLSPAN=2 ALIGN=CENTER>10</TD>
+		<TD COLSPAN=2 ALIGN=CENTER>16</TD>
+		<TD COLSPAN=2 ALIGN=CENTER>100</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD><FONT SIZE="-1">Frequenz<br>(MHz) </FONT></TD>
+		<TD><FONT SIZE="-1">D&auml;mpfung<br>(dB/100m)</FONT></TD>
+		<TD><FONT SIZE="-1">NEXT<br>(dB)</FONT></TD>
+		<TD><FONT SIZE="-1">D&auml;mpfung<br>(dB/100m)</FONT></TD>
+		<TD><FONT SIZE="-1">NEXT<br>(dB)</FONT></TD>
+		<TD><FONT SIZE="-1">D&auml;mpfung<br>(dB/100m)</FONT></TD>
+		<TD><FONT SIZE="-1">NEXT<br>(dB)</FONT></TD>
+		<TD><FONT SIZE="-1">D&auml;mpfung<br>(dB/100m)</FONT></TD>
+		<TD><FONT SIZE="-1">NEXT<br>(dB)</FONT></TD>
+		<TD><FONT SIZE="-1">D&auml;mpfung<br>(dB/100m)</FONT></TD>
+		<TD><FONT SIZE="-1">NEXT<br>(dB)</FONT></TD>
+	</TR>
+	<TR>
+		<TD VALIGN=BOTTOM>1</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=BOTTOM>2,6</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=BOTTOM>2,6</TD>
+		<TD VALIGN=BOTTOM>41</TD>
+		<TD VALIGN=BOTTOM>2,1</TD>
+		<TD VALIGN=BOTTOM>56</TD>
+		<TD VALIGN=BOTTOM>2,1</TD>
+		<TD VALIGN=BOTTOM>62</TD>
+	</TR>
+	<TR>
+		<TD VALIGN=BOTTOM>4</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=BOTTOM>5,6</TD>
+		<TD VALIGN=BOTTOM>32</TD>
+		<TD VALIGN=BOTTOM>4,3</TD>
+		<TD VALIGN=BOTTOM >47</TD>
+		<TD VALIGN=BOTTOM>4,3</TD>
+		<TD VALIGN=BOTTOM>53</TD>
+	</TR>
+	<TR>
+		<TD VALIGN=BOTTOM>8</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=BOTTOM>8,5</TD>
+		<TD VALIGN=BOTTOM>28</TD>
+		<TD VALIGN=BOTTOM>6,2</TD>
+		<TD VALIGN=BOTTOM>42</TD>
+		<TD VALIGN=BOTTOM>5,9</TD>
+		<TD VALIGN=BOTTOM>48</TD>
+	</TR>
+	<TR>
+		<TD VALIGN=BOTTOM>10</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=BOTTOM>9,9</TD>
+		<TD VALIGN=BOTTOM>26</TD>
+		<TD VALIGN=BOTTOM>7,2</TD>
+		<TD VALIGN=BOTTOM>41</TD>
+		<TD VALIGN=BOTTOM>6,6</TD>
+		<TD VALIGN=BOTTOM>47</TD>
+	</TR>
+	<TR>
+		<TD VALIGN=BOTTOM>16</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=BOTTOM>13,1</TD>
+		<TD VALIGN=BOTTOM>23</TD>
+		<TD VALIGN=BOTTOM>8,9</TD>
+		<TD VALIGN=BOTTOM>38</TD>
+		<TD VALIGN=BOTTOM>8,2</TD>
+		<TD VALIGN=BOTTOM>44</TD>
+	</TR>
+	<TR>
+		<TD VALIGN=BOTTOM>20</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=BOTTOM>10,2</TD>
+		<TD VALIGN=BOTTOM>36</TD>
+		<TD VALIGN=BOTTOM>9,2</TD>
+		<TD VALIGN=BOTTOM>42</TD>
+	</TR>
+	<TR>
+		<TD VALIGN=BOTTOM>25</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=BOTTOM>10,5</TD>
+		<TD VALIGN=BOTTOM>41</TD>
+	</TR>
+	<TR>
+		<TD VALIGN=BOTTOM>31,25</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=BOTTOM>11,8</TD>
+		<TD VALIGN=BOTTOM>40</TD>
+	</TR>
+	<TR>
+		<TD VALIGN=BOTTOM>62,5</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=BOTTOM>17,1</TD>
+		<TD VALIGN=BOTTOM>35</TD>
+	</TR>
+	<TR>
+		<TD VALIGN=BOTTOM>100</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=TOP>&nbsp;</TD>
+		<TD VALIGN=BOTTOM>22</TD>
+		<TD VALIGN=BOTTOM>32</TD>
+	</TR>
+</TABLE>
+<P>Bemerkung : <BR>Bei Kategorie 1 liegt die Impedanz im Bereich von
+84 bis 113 Ohm<BR>Bei Kategorie 2 - 5 betr&auml;gt die Impedanz 100
+Ohm &plusmn; 15%
+<P>
+
+Die Bauart der Kabel hat einen ganz wesentlichen Einflu&szlig; auf die 
+St&ouml;rleistungsunterdr&uuml;ckung und damit die St&ouml;rsicherheit 
+der Kabel. W&auml;hrend UTP-Kabel eine typische St&ouml;rteistungsunterdr&uuml;ckung 
+von 40 dB haben, erreichen S/STP-Kabel Werte bis zu 90 dB. 
+<P>
+<CENTER><IMG SRC="tpkabel.gif"></CENTER>
+<P>
+<UL>
+<LI>UTP-Kabel (Unshielded Twisted Pair, nicht abgeschirmte verdrillte Leitungen)
+geh&ouml;rten fr&uuml;her typischerweise der Kategorie 3 an. Inzwischen gibt
+es sie auch als CAT-5-Kabel. UTP-Kabel haben im industriellen 
+Bereich oder in der Datentechnik mit hohen Datenraten nichts verloren. 
+
+<LI>S/UTP-Kabel (Screened/Unshielded Twisted Pair) haben einen Gesamtschirm 
+aus einem Kupfergeflecht zur Reduktion der &auml;u&szlig;eren St&ouml;reinfl&uuml;sse.
+
+<LI>FTP-Kabel (Foileshielded Twisted Pair) besitzen zur Abschirmung einen Gesamtschirm, 
+zumeist aus einer alukaschierten Kunststoff-Folie. 
+
+<LI>S/FTP-Kabel (Screened/Foileshielded Twisted Pair) sind heute Stand der Technik
+bei der Verkabelung sogenannter UTP-Dosen. Der Aufbau besteht aus einem 
+Gesamtschirm aus alukaschierter Polyesterfolie und einem dar&uuml;berliegenden 
+Kupfergeflecht. Gute Kabel erreichen eine St&ouml;rleistungsunterdr&uuml;ckung 
+&uuml;ber 70 dB. 
+<P>
+<IMG SRC="tkabel1.jpg">
+<P>
+
+<LI>STP (Shielded Twisted Pair) bezeichnt eine Kabelgattung mit Gesamtschirmung 
+ohne weitere Spezifikation. 
+
+<LI>S/STP-Kabel (Screened/Shielded Twisted Pair) besitzen eine Abschirmung f&uuml;r 
+jedes Kabelpaar sowie eine Gesamtschirmung. Hierdurch kann eine optimale 
+St&ouml;rleistungsunterdr&uuml;ckung erreicht werden. Auch das Übersprechen zwischen 
+den einzelnen Adernpaaren kann so wirksam unterdr&uuml;ckt werden.
+<P>
+<IMG SRC="tkabel2.jpg">
+<P>
+
+<LI>ITP (Industrial Twisted Pair) ist die industrielle Variante von S/STP. W&auml;hrend 
+typische Netzwerkadern jedoch vier Adernpaare besitzen, beschr&auml;nkt sich ITP 
+auf zwei Paare.
+</UL>
+<p>
+<center><IMG src="tpkabel2.gif"></center>
+<p>
+Die Preisunterschiede zwischen Cat-3-Kabeln und Cat-5-Kabeln ist so gering, 
+da&szlig; es sich bei Neuinstallation auf jeden Fall empfiehlt, Cat-5-Kabel 
+einzusetzen - schon, um mit 100 MBit/s arbeiten zu k&ouml;nnen.
+<P>
+<TABLE BORDER=1 CELLPADDING=3 CELLSPACING=0 WIDTH="90%">
+<TR><TH COLSPAN=2>Elektrische Eigenschaften f&uuml;r installierte 100-Ohm-Kabel<BR>
+gem&auml;&szlig; DIN EN 50173 bzw. ISO/IEC 11801, Kategorie 5</TH></TR>
+<TR><TD>Gr&ouml;&szlig;ter Schleifenwiderstand</TD><TD>300 Ohm/km</TD></TR>
+<TR><TD>Gr&ouml;&szlig;ter Widerstandsunterschied</TD><TD>3 %</TD></TR>
+<TR><TD>Isolationswiderstand</TD><TD>150 MOhm x km</TD></TR>
+<TR><TD>Impedanz Zo bei 0,064 MHz</TD><TD>125 Ohm +/- 25%</TD></TR>
+<TR><TD>Impedanz Zo bei 1 - 100 MHz</TD><TD>100 Ohm +/- 15%</TD></TR>
+<TR><TD>Kopplungswiderstand</TD><TD>bei 10 MHz &lt; 100 Ohm/km</TD></TR>
+<TR><TD>R&uuml;ckflu&szlig;d&auml;mpfung an 100 m L&auml;nge: 1..20 MHz</TD><TD>>23 dB</TD></TR>
+<TR><TD>R&uuml;ckflu&szlig;d&auml;mpfung an 100 m L&auml;nge: &gt;20 MHz</TD><TD>23 dB - 10 log (f/20)</TD></TR>
+<TR><TD>Erdunsymmetried&auml;mpfung dB/BZL = 1000 m</TD><TD>bei 64 kHz &gt; 43 dB</TD></TR>
+<TR><TD>Gr&ouml;&szlig;te Erdkopplung bei 0,001 MHz</TD><TD>1600 pF/km</TD></TR>
+<TR><TD>Kleinste Ausbreitungsgeschwindigkeit bei 1 MHz</TD><TD>0,60 c</TD></TR>
+<TR><TD>Kleinste Ausbreitungsgeschwindigkeit bei 10 MHz</TD><TD>0,65 c</TD></TR>
+<TR><TD>Kleinste Ausbreitungsgeschwindigkeit bei 100 MHz</TD><TD>0,65 c</TD></TR>
+</TABLE>
+<p>
+<center><IMG src="b1-18.gif"></center>
+<p>
+Die konventionelle Twisted-Pair-Ethernet-Verkabelung verwendet RJ-45-Steckverbinder. 
+Auch hier gibt es die unterschiedlichsten geschirmten und ungeschirmten Ausf&uuml;hrungen. 
+Sie sind f&uuml;r den industriellen Einsatz nur teilweise geeignet.
+Von den acht Leitungen des RJ45-Steckers werden nur vier verwendet: 
+<P>
+<TABLE BORDER=0 CELLPADDING=20>
+<TR><TD><IMG SRC="netz4a.gif"></TD><TD>
+<TABLE BORDER=0>
+<TR><TH>Pin</TH><TH ALIGN=LEFT>Signal</TH></TR>
+<TR><TD>1</TD><TD>Sendesignal +</TD></TR>
+<TR><TD>2</TD><TD>Sendesignal -</TD></TR>
+<TR><TD>3</TD><TD>Empfangssignal +</TD></TR>
+<TR><TD>6</TD><TD>Empfangssignal -</TD></TR>
+</TABLE>
+</TD></TR></TABLE>
+<P>
+Zwischen Rechner und Hub verbindet das Kabel die beiden Stecker 1:1. Bei 
+speziellen Kabeln f&uuml;r die direkte Verbindung zweier Computer oder f&uuml;r 
+das Kaskadieren von Hubs m&uuml;ssen die Leitungen gekreuzt werden. Die 
+Verbindung ist dann:<BR>
+<P>
+<TABLE BORDER=0 CELLPADDING=20>
+<TR><TD>
+<TABLE BORDER=0 CELLPADDING=5>
+<TR><TH>Pin<BR>(Signal)</TH><TH> &nbsp; </TH><TH>Pin<BR>(Signal)</TH></TR>
+<TR><TD>1 (TX+)</TD><TD> - </TD><TD>3 (RX+)</TD></TR>
+<TR><TD>2 (TX-)</TD><TD> - </TD><TD>6 (RX-)</TD></TR>
+<TR><TD>3 (RX+)</TD><TD> - </TD><TD>1 (TX+)</TD></TR>
+<TR><TD>6 (RX-)</TD><TD> - </TD><TD>2 (TX-)</TD></TR>
+</TABLE>
+</TD><TD><IMG SRC="tpstecker.jpg">
+</TD></TR></TABLE>
+<P>
+Die RJ-45-Buchsen sind inzwischen auch keine profanen Steckkontakte mehr, sondern 
+in ihnen sind auch gleich &Uuml;bertrager, Drosseln und Widerst&auml;nde integriert.
+Damit wird nicht nur Leiterplattenplatz eingespart, sondern auch bessere 
+EMV-Eigenschaften erzielt und Layoutfehler vermieden. Das folgende Bild zeigt
+die elektrische Beschaltung einer solchen Buchse:
+<p>
+<center><IMG src="rj45buchse1.gif"></center>
+<p>
+Die &Uuml;bertrager sorgen gleichzeitig f&uuml;r eine Potentialtrennung zwischen
+der Buchse und der restlichen Schaltung und f&uuml;r die Ausblendung von 
+St&ouml;rungen.
+Im folgenden Bild ist eine typische Buchse f&uuml;r die Platinenmontage
+abgebildet und darunter sind die Abmessungen (Vorder- und Seitenansicht)
+gezeigt. Oft sind in die Buchsen noch ein oder zwei LEDs integriert.
+<p>
+<center><IMG src="rj45buchse2.gif"></center>
+<p>
+
+<h4>Twisted-Pair-Verkabelung</h4>
+<p>
+Wie gesagt, verlegt man pro Rechner ein eigenes Kabel. W&auml;hrend BNC-Netze eine 
+Bus-Struktur haben, zeichnen sich Twisted-Pair-Netze durch eine Baumstruktur aus.
+Die einzelne Kabell&auml;nge zu einem Rechner darf 100 m nicht &uuml;berschreiten. 
+Die Anzahl der im Netz verf&uuml;gbaren Rechner ist abh&auml;ngig von den 
+eingesetzten Repeatern, die hier "Hub" hei&szlig;en (4-Port, 8-Port; usw.).
+<p>
+<center><IMG src="netz4.gif"></center>
+<p>
+Mehr dazu steht im <a href="twisted.html">Kapitel &uuml;ber Twisted-Pair-Verkabelung</A>.
+<P>
+
+<H2><A NAME="5.6">Lichtwellenleiter</A></H2>
+Seit einiger Zeit werden Netzwerkleitungen teilweise als Lichtwellenleiter 
+verlegt. Der zus&auml;tzliche Aufwand zum Konvertieren von Strom in Licht 
+und zur&uuml;ck lohnt sich. Der Hauptvorteil liegt in der sehr hohen &Uuml;bertragungskapazit&auml;t 
+der durchsichtigen Faser, die bis in den Bereich von GBit/s reicht. Die 
+Daten&uuml;bertragung via Lichtsignal l&auml;&szlig;t sich au&szlig;erdem 
+durch elektrische und elektromagnetische St&ouml;rungen kaum beeintr&auml;chtigen. 
+Dadurch ist das Glasfaserkabel besonders f&uuml;r die Daten&uuml;bertragung 
+in elektrisch verseuchten R&auml;umen wie zum Beispiel einer Maschinenhalle 
+geeignet. Auch spielt die schon beschriebene Problematik des sich unweigerlich 
+immer weiter verschlechternden Rauschabstandes keine Rolle mehr. 
+Lichtwellenleiter bieten gegen&uuml;ber dem Kupferkabel entscheidende Vorteile:
+<ul>
+<li>Lichtwellenleiter k&ouml;nnen beliebig mit anderen Versorgungsleitungen parallel 
+verlegt werden. Es gibt keine elektromagnetische St&ouml;reinfl&uuml;sse.
+<li>Wegen der optischen Übertragung gibt es keine St&ouml;rstrahlungen, Kontakt- oder 
+Masseprobleme.
+<li>Entfernungsbedingte Verluste des Signals aufgrund der Leitungs-Induktivit&auml;ten, -Kapazi&auml;ten 
+und -Widerst&auml;nden treten nicht auf.
+<li>Weitgehend frequenzunabh&auml;ngige Leitungsd&auml;mpfung der zu &uuml;bertragenen Signale.
+<li>Übertragungsraten sind durch mehrere Tr&auml;gerwellen mit unterschiedlichen Wellenl&auml;ngen 
+(Farbspektrum) erweiterbar.
+</ul>
+Allerdings sind Lichtwellenleiter teurer als Kupferleitungen. Dies betrifft nicht nur die 
+Materialkosten sondern auch den Aufwand f&uuml;r die Verlegung. Und ganz 
+so einfach ist die Daten&uuml;bertrag via Lichtwellenleiter (LWL) auch nicht. 
+Die Eigenschaften des Leiters h&auml;ngen vom geometrischen Aufbau und den 
+physikalischen Eigenschaften des verwendeten Materials ab. Physikalische 
+Grundlage des LWL ist das Prinzip von Brechung und Reflexion. Allgemein 
+bekannt ist das Brechungsgesetz: Licht wird, wie das Bild zeigt, beim &Uuml;bergang 
+von einem optisch dichteren in ein optisch d&uuml;nneres Medium vom Einfallslot 
+weg gebrochen. <BR>
+<P>
+<center><IMG SRC="b1-19.gif" ALT=""></center>
+<P>
+Die Ursache daf&uuml;r liegt in der sich &auml;ndernden Ausbreitungsgeschwindigkeit. 
+Diese hat in jedem Medium einen anderen Wert. In einem optisch dichteren 
+Medium bewegt sich Licht langsamer fort als in einem optisch d&uuml;nneren. 
+Das Verh&auml;ltnis der Lichtgeschwindigkeit c in Vakuum zur Lichtgeschwindigkeit 
+v in einem anderen Medium ergibt die Brechzahl:
+<P>
+<TT><B>n = c/v</B></TT>
+<P>  
+Typische Werte f&uuml;r die Brechzahl sind:<BR>
+ f&uuml;r Glas etwa 1,5,<BR>
+ f&uuml;r Wasser 1,33 und<BR>
+ f&uuml;r das Vakuum 1.<BR>
+<P>
+Bei jedem Medien&uuml;bergang wird ein Teil des Lichts reflektiert je stumpfer 
+der Einfallswinkel, desto st&auml;rker die Reflexion. Der Reflexionsgrad 
+h&auml;ngt vom Unterschied der beiden optischen Dichten und vom Einfallswinkel 
+ab. Erreicht der Einfallswinkel einen kritischen Wert, gelangt &uuml;berhaupt 
+kein Licht aus dem Medium mit der h&ouml;heren Brechzahl heraus. Auf dieser 
+Totalreflexion beruht das Prinzip des Lichtwellenleiters. Die Aufgabe des 
+Leiters besteht ja darin, das Licht verlustlos und ohne Impulsverformung 
+&uuml;ber lange Strecken zu transportieren. Da sich Licht aber nach allen 
+Seiten ausbreitet, mu&szlig; man einen K&auml;fig bauen, der das Licht im 
+Leiter h&auml;lt. Denn bei jeder Biegung des Kabels w&uuml;rde sonst nur 
+ein Bruchteil des urspr&uuml;nglichen Lichts im Kabel verbleiben und eine 
+l&auml;ngere &Uuml;bertragungsstrecke w&auml;re v&ouml;llig unm&ouml;glich. 
+Deshalb konstruiert man den Lichtwellenleiter als optische R&ouml;hre. Im 
+Innern der R&ouml;hre kann sich das Licht ungehindert fortpflanzen und an 
+den W&auml;nden wird es total reflektiert. So wird der Lichtstrahl gezwungen, 
+sich innerhalb der Faser fortzubewegen.
+<P>
+Der LWL mit dem einfachsten Aufbau besteht aus einem konzentrischen optischen 
+Kern mit einer hohen Brechzahl n1, der mit einem optischen Mantel kleinerer 
+Brechzahl n2 versehen ist. Licht, das in einem gewissen Winkelbereich in 
+den LWL eintritt, wird durch fortlaufende Totalreflexion an der Grenze Kern/Mantel 
+weiterbef&ouml;rdert.
+<P>
+Neben dem reinen Transport ist die Verformung, die die Lichtimpulse w&auml;hrend 
+der Leitung erleiden, von Bedeutung. Sehen Sie sich dazu das Einspeisen 
+des Lichts in den LWL etwas genauer an: Trifft das Licht in einem Winkel 
+nahe dem maximalen Einfallswinkel f&uuml;r den Lichtleiter auf, wird es 
+sehr oft im LWL reflektiert. Es hei&szlig;t dann Licht hohen Modes. Entsprechend 
+hei&szlig;t Licht, welches in relativ guter &Uuml;bereinstimmung mit der 
+optischen Achse des LWL eintrifft, Licht niedrigen Modes. Licht hohen Modes 
+legt insgesamt einen l&auml;ngeren Weg im Kabel zur&uuml;ck und ben&ouml;tigt 
+dadurch mehr Zeit f&uuml;r den Durchlauf. F&auml;llt nun Licht mit nicht 
+genau definiertem Winkel in den LWL ein, kommt es bis zum Ausgang wegen 
+der unterschiedlichen Laufzeiten f&uuml;r jeden Einfallswinkel zu einer 
+Dehnung des Lichtimpulses. Dieser unsch&ouml;ne Effekt, die Dispersion, 
+verbreitert die Signalimpulse und beschr&auml;nkt damit die erreichbare 
+&Uuml;bertragungsrate.
+<P> 
+Unter Dispersion versteht man die Verbreitung eines Lichtimpulses durch 
+Laufzeitunterschiede (Gruppenlaufzeit) der Moden (Eigenwellen), was eine 
+Begrenzung der Übertragungsbandbreite von LWLs zur Folge hat. Man unterscheidet 
+die Modendispersion und die chromatische Dispersion, die sich aus 
+Materialdispersion und Wellenleiterdispersion zusammensetzt.
+Die Modendispersion ist ein Effekt der unterschiedlichen Signallaufzeiten der 
+Moden, was zu einer Signalverzerrung f&uuml;hrt. Die Materialdispersion, auch 
+Manteldispersion bezeichnet, ist die Wellenl&auml;ngenabh&auml;ngigkeit der Brechzahl 
+eines Materials. Die Wellenleiterdispersion (Waveguide Dispersion) ist gerade 
+bei Singlemode-LWL von Bedeutung und bezieht sich auf die Wellenl&auml;ngenabh&auml;ngigkeit 
+der Lichtverteilung zwischen Kern und Mantel.
+Die nutzbare Übertragungsbandbreite ist umgekehrt proportional zur Dispersion. 
+Die Dispersion wird in einer Zeit- zu L&auml;ngeneinheit (ns/km) angegeben und ist der 
+reziproke Wert des Bandbreitenl&auml;ngenproduktes. Beispiel: Dispersion 5ns/km &lt;-&gt; 
+Bandbreite 200 MHz * km.
+<P>
+<center><IMG SRC="glasfaser.gif" ALT=""></center>
+<P>
+Abhilfe schafft ein nach au&szlig;en hin stetig abnehmender Brechungsindex. 
+Dadurch gleichen sich die Geschwindigkeiten und Laufzeiten f&uuml;r die 
+verschiedenen Einfallswinkel bei gen&uuml;gender Kabell&auml;nge wieder 
+aus. Wegen des stetigen &Uuml;bergangs von Kern zu Mantel werden diese Leiter 
+Gradientenprofilfasern genannt. Es ergibt sich beim Einfall der unterschiedlichen 
+Lichtwellen trotz unterschiedlich langer Wege in der Faser eine nahezu gleiche 
+Laufzeit aller Wellen.<br>
+Eine noch geringere Dispersion liefern die 
+Monomode-Fasern. Im Gegensatz zu den Multimode-Fasern leiten sie nur Licht 
+einer bestimmten Wellenl&auml;nge. Ihr Kerndurchmesser ist so klein, da&szlig; 
+sich das Licht fast nur noch entlang der L&auml;ngsachse ausbreiten kann. 
+Mit diesen Monomode-Fasern sind also die steilsten Flanken und damit die 
+gr&ouml;&szlig;ten &Uuml;bertragungsraten zu erzielen.
+<P>
+
+<H4>Wellenl&auml;ngen</H4>
+Mit zunehmender Wellenl&auml;nge nimmt der Streuverlust eines LWL ab. Verunreinigung, 
+z.B. Sauerstoffionen oder OH-Ionen, die bei der Herstellung in die Faser gelangen, 
+absorbieren das Licht bei verschiedenen Wellenl&auml;ngen. Bedingt durch die 
+Absorptionsspitzen gibt es D&auml;mpfungsspitzen bei ca. 950, 1.200 und 1.400 nm und 
+g&uuml;nstige Wellenl&auml;ngenbereiche, die auch "Fenster" oder "Arbeitswellenl&auml;ngenbereiche" 
+genannt werden. Heute werden bei LWL-Systemen drei Fenster bei 850 nm, 1300 nm und 
+1550 nm genutzt.
+<P>
+<center><IMG SRC="wellenlaengen.gif" ALT=""></center>
+<P>
+Typische LWL haben folgende Daten.
+<P>
+<table border=0 cellpadding=5 cellspacing=0>
+<tr><td valign=top>
+<H4>Multimode-Stufenindex-Faser</H4>
+Multimodefasern mit Stufenprofil haben einen Durchmesser von 200 &micro;m.
+Durch sie werden mehrere Lichtwellen gleichzeitig geschickt. An den 
+W&auml;nden der Faser wird das Signal hart reflektiert. Das Ausgangssignal 
+wird dadurch verbreitert (je nach Einfallswinkel dauert das Signal 
+unterschiedlich lang, weil der Weg mal l&auml;nger und mal k&uuml;rzer ist) und
+bed&auml;mpft. Sie werden z.B. als Verbindungskabel beim Patchfeld verwendet.
+</td><td valign=top><IMG src="lwl_1.gif"></td></tr>
+<tr><td valign=top>
+<H4>Multimode-Gradienten-Faser</H4>
+Multimodefasern mit Gradientenprofil haben einen Durchmesser von 50 &micro;m.
+Durch sie werden mehrere Lichtwellen gleichzeitig geschickt. An den 
+W&auml;nden der Faser wird das Signal weich reflektiert. Das Ausgangssignal wird
+zwar auch verbreitert, aber nicht so stark bed&auml;mpft. Sie werden f&uuml;r 
+Verbindungen von Geb&auml;uden oder Etagen eingesetzt. 
+</td><td valign=top><IMG src="lwl_2.gif"></td></tr>
+<tr><td valign=top>
+<H4>Monomode-Stufenindex-Faser</H4> 
+Monomode-Fasern (Singlemode-Fasern) haben einen Durchmesser von 10 &micro;m.
+Durch sie werden die Lichtwellen gerade hindurchgeleitet. Das Signal wird 
+wenig bed&auml;mpft und auch nicht verbreitert. So ist eine hohe Bandbreite m&ouml;glich.
+Sie werden f&uuml;r weite Strecken eingesetzt.
+</td><td valign=top><IMG src="lwl_3.gif"></td></tr>
+</table>
+<P>
+Als Sender f&uuml;r die LWL-&Uuml;bertragung stehen Leuchtdioden (LEDs) und Laserdioden 
+(LD) zur Verf&uuml;gung. dabei werden LEDs am besten im Bereich von 850/860 nm eingesetzt 
+und LDs im Bereich von 1300 nm.
+<p><div align="center">
+<table border=1 cellpadding=3 CELLSPACING=0>
+<tr><th>&nbsp;</th><th>LED</th><th>LD</th></tr>
+<tr><td>Licht-Typ</td><td>inkoh&auml;rent</td><td>koh&auml;rent</td></tr>
+<tr><td>Wellenl&auml;nge</td><td>850/860 nm und 1300 nm</td><td>1300 nm</td></tr>
+<tr><td>Spektralbreite</td><td>30 - 40 nm</td><td>1 - 3 nm</td></tr>
+<tr><td>Abstrahlwinkel</td><td>mittel bis hoch</td><td>gering</td></tr>
+<tr><td>einkoppelbare<br>Leistung</td><td>gering</td><td>hoch</td></tr>
+<tr><td>Lebensdauer</td><td>10<sup>6</sup> Stunden</td><td>10<sup>5</sup> Stunden</td></tr>
+</table></div>
+<p>
+Die unten stehende Abbildung zeigt die Zusammenh&auml;nge von Faserart und Sendertyp
+im Hinblick auf das Einsatzgebiet bez&uuml;glich &Uuml;bertragungsstrecke und 
+&Uuml;bertragungsrate.
+<p>
+<center><IMG src="lwl_4.gif"></center>
+<p>
+Die optischen Sender und Empf&auml;nger (meist Laserdioden) m&uuml;ssen 
+genau auf die Faser abgestimmt sein, um verlustarm und reflexionsfrei &uuml;bertragen 
+zu k&ouml;nnen. Ein gro&szlig;es technisches Problem beim Verlegen von LWL 
+ist immer noch der &Uuml;bergang von einem Leiterst&uuml;ck auf ein anderes, 
+das sogenannte 'Splei&szlig;en'. Im Gegensatz zum elektrischen Leiter, bei 
+dem eine Klemm- oder L&ouml;tverbindung ohne gro&szlig;e Sorgfalt gen&uuml;gt, 
+m&uuml;ssen die Glasfasern genau in der optischen Achse plan miteinander 
+verschwei&szlig;t werden. Unter Laborbedingungen stellt das nat&uuml;rlich 
+l&auml;ngst kein Problem mehr dar, aber im mobilen Einsatz sieht das schon 
+etwas anders aus.<P>
+Beim sogenannten 'Splei&szlig;en' von Glasfaserkabeln gibt es zahlreiche 
+Fehlerm&ouml;glichkeiten. Das beginnt nach dem Entfernen des Sekund&auml;rschutzes 
+mit mangelhaftem Reinigen der Faser. Weitere Fehlerm&ouml;glichkeiten sind 
+zu sparsame Verwendung des Leims zum Verkleben der Faser im Kontaktk&ouml;rper 
+oder zu wenig Sorgfalt beim anschlie&szlig;enden Schleifen der Kontaktfl&auml;che. 
+Das beste 'Me&szlig;instrument' ist hier eine Lupe mit mindestens 10-facher 
+Vergr&ouml;&szlig;erung. Man leitet sichtbares Licht in die Faser und pr&uuml;ft 
+die Fl&auml;che auf Verunreinigungen oder Kratzer. Zum Reinigen der Kontaktfl&auml;che 
+verwendet man nicht-denaturierten reinen Alkohol.
+<P>
+<H4>D&auml;mpfung</H4>
+Bei Lichtwellenleitern ist die D&auml;mpfung der Energieverlust des Lichtstrahls, der beim 
+Durchlaufen der Faser in Form von Streuung und Absorption auftritt. Sie wird in dB 
+angegeben und meistens auf eine L&auml;nge von einem Kilometer (dB/km) bezogen. Die D&auml;mpfung 
+ist abh&auml;ngig von der verwendeten Wellenl&auml;nge. G&uuml;nstige Wellenl&auml;ngen f&uuml;r Quarzglas 
+liegen bei 850 nm, 1.300 nm und 1.550 nm. Die D&auml;mpfung sollte so niedrig wie m&ouml;glich 
+sein, um die Signalverluste bei der Übertragung so gering wie m&ouml;glich zu halten. 
+Typische D&auml;mpfungswerte liegen bei ca. 3 dB/km f&uuml;r 850 nm Wellenl&auml;nge. 
+Zum Vergleich haben Koaxialkabel eine D&auml;mpfung von ca. 17 dB/km.<P>
+<P>
+
+<H4>10Base-F Ethernet</H4>
+Schon fr&uuml;h wurden Glasfasern als Link-Segmente f&uuml;r die Verbindung
+zweier Repeater-Komponenten standardisiert (<I>Fiber Optic Inter Repeater Link 
+- FOIRL</I>). Unter Beachtung der Repeaterregel und des Laufzeitverhaltens 
+lassen sich so entfernte Segmente untereinander verbinden.
+Dieser Standard wurde mittlerweile so erweitert (10Base-F), da&szlig; sich
+auch Stationen &uuml;ber Glasfasern an Glasfaserrepeater anschlie&szlig;en lassen.
+Die Konfiguration entspricht etwa der von 10Base-T. F&uuml;r die
+Verbindung werden sogenannte ST-Stecker vorgeschrieben.
+<P>
+<CENTER><IMG SRC="lwl-stecker.jpg"></CENTER>
+<P>
+Link-Segmente mit FOIRL-Ger&auml;ten k&ouml;nnen bis zu 1000 m lang sein und
+Segmente mit 10Base-F Ger&auml;ten bis zu 2000 m.
+<P>
+<CENTER><IMG SRC="10basef.gif"></CENTER>
+<P>
+Maximale L&auml;nge von Glasfaserkabeln ohne Verst&auml;rkung:
+<p>
+<table border=1 cellpadding=3 CELLSPACING=0>
+<tr><th>Typ</th><th>Stufenindex</th><th>Gradientenindex</th><th>Monomode</th></tr>
+<tr><td>D&auml;mpfung</td><td>20dB/km bei 900nm</td><td>3dB/km bei 850nm</td><td>0,1dB/km bei 1300nm</td></tr>
+<tr><td>Bitratenl&auml;ngen-<br>produkt</td><td>5 MHz * km</td><td>1,5 GHz * km</td><td>250 GHz * km</td></tr>
+<tr><td>max. L&auml;nge<br>(ohne Repeater)</td><td>1 km</td><td>10 km</td><td>60 km/100 km</td></tr>
+</table>
+<P>
+
+<H4>Die häufigsten Fehlerursachen bei Glasfaserleitungen</h4>
+
+Verschmutzte Endflächen der Steckverbinder sind das größte Problem 
+beim Betrieb von Glasfaserverbindungen. Weitere Fehler sind die
+mangelhafte Polierung der Steckerstirnfläche, fehlerhafte Stecker und
+Spleiße sowie zu stark gebogene Kabel.
+
+Verschmutzte Endflächen lassen sich mit einem Mikroskop mit 100- bis 200-facher Vergrößerung erkennnen. 
+Ein äußerst effizientes Verfahren für die Überprüfung von Glasfaserendflächen besteht in der Verwendung 
+eines Videomikroskops. Der Bediener kann problemlos in Patch-Panels und Anschlüsse elektronischer Geräte 
+vordringen, deren Überprüfung unter Verwendung eines herkömmlichen Mikroskops mit einem erheblich größeren 
+Zeitaufwand verbunden wäre. Eine weitere Schwierigkeit besteht darin, dass bei der Installation eines 
+verschmutzten Glasfaseranschlusses auch mit einer Verschmutzung des Gegenstücks zu rechnen ist. 
+Schon die versehentliche Berührung einer Endfläche kann zu deutlichen Verunreinigungen führen.
+Das folgende Bild zeigt einige Formen der Veunreinigung von Glasfasern.
+<P>
+<CENTER><IMG SRC="glasfaser_fehler.jpg"></CENTER>
+<P>
+
+
+<H2><A NAME="5.7">Gigabit-Ethernet</A></H2>
+W&auml;hrend die Normierung der neuen Verkabelungsklassen bzw. Kategorien E/6 (250 MHz) 
+und f&uuml;r die Bewertung von  Verkabelungsanlagen F/7 (600 MHz) im Jahr 2001 zum 
+Endspurt ansetzte, ist mit Gigabit-Ethernet eine Anwendung nachger&uuml;ckt, die deutlich 
+mehr Bandbreite als bisherige &Uuml;bertragungsprotokolle beansprucht. Hierdurch sind 
+Klasse C/Kategorie-3- und -4-Verkabelungen endg&uuml;ltig &uuml;berholt. Aber auch 
+Klasse D/Kategorie-5-Verkabelungen sind "Auslaufmodelle", insbesondere dann, wenn 
+zukunftssichere Konzepte f&uuml;r Neuinstallationen gefragt sind.
+
+<H4>Gigabit Ethernet (IEEE 802.3z, 802.3ab)</H4>
+Gigabit Ethernet kann sowohl &uuml;ber Kupferkabel als auch &uuml;ber Glasfaser laufen:
+1000Base-T &nbsp;&nbsp; Cat 5 UTP<BR>
+1000Base-CX &nbsp; STP/Twinax<BR>
+1000Base-SX &nbsp; Multimode Fiber (850nm)<BR>
+1000Base-LX &nbsp; Monomode Fiber oder Multimode (1300nm)<BR>
+<P>
+STP- und Fiber-Standards sind verabschiedet, zur Festlegung des UTP-Standards wurde 
+ein eigenes IEEE-802.3ab-Subkommitee gebildet. Dieses hat das Ziel, einen Standard 
+f&uuml;r eine Reichweite von 100m auf UTP Cat. 5 Kabeln zu erzielen.
+<P>
+<CENTER><IMG SRC="gigabit.gif"></CENTER>
+<P>
+
+<H4>Gigabit Ethernet: 1000Base-T &uuml;ber Kupfer</H4>
+Auf Grund der schwachen+-+ Auslegung von Klasse D/Kategorie-5-Verkabelungen sind bei 
+2-paariger &Uuml;bertragung und Schwerpunktfrequenzen bis etwa 60 MHz &Uuml;bertragungsraten 
+bis 155 MBit/s (ATM) m&ouml;glich. Der Bandbreitenengpa&szlig; bei Kategorie-5-Verkabelungen 
+(bis 100 MHz) erfordert deshalb die Verwendung von 4 Paaren, um die &Uuml;bertragung 
+von Gigabit Ethernet zu erm&ouml;glichen.  1000Base-T verwendet eine Symbolrate von 
+125 Mbaud und eine 5-Level-Codierung (PAM 5). Da bei 1000Base-T auf allen 4 Paaren 
+gleichzeitig in beiden Richtungen gesendet und empfangen wird, &uuml;bernimmt jedes 
+Paar 250 MBit/s und in Summe (alle Paare) 1 GBit/s. Bei der Voll-Duplex-&Uuml;bertragung 
+&uuml;ber 4 Paare wechseln die Sende- und Empfangszust&auml;nde der GigaBit-Ethernet-Bausteine 
+st&auml;ndig einander ab. Die gleichzeitige &Uuml;bertragung in zwei Richtungen und die 
+wechselnden Sende- und Empfangszust&auml;nde haben neue &Uuml;bertragungsparameter f&uuml;r die
+Bewertung von Verkabelungen generiert:
+<OL>
+<LI>Leistungssumme des Nahnebensprechens(PSNEXT)<BR>
+Power Sum NEXT (PSNEXT) beschreibt die Summe aller St&ouml;rleistungen, die durch 
+Nahnebensprechen in ein Paar eingekoppelt werden. Das kommt dem tats&auml;chlichen 
+Einsatzfall, d.h. wenn alle Paare in Betrieb sind, nahe. Ma&szlig;geblich  ist immer der 
+st&auml;rkste St&ouml;rer. Nur bei hohen Paarzahlen gibt es deutliche Unterschiede 
+zwischen NEXT und Power Sum NEXT.
+<LI>Fernnebensprechen (FEXT)<BR>
+Mit FEXT (Far End Cross Talk) wird das Nebensprechen am fernen (empf&auml;ngerseitigen) 
+Ende bezeichnet, das im Allgemeinen geringere St&ouml;rungen verursacht als das 
+Nahnebensprechen.Man unterscheidet beim FEXT zwischen:
+<UL>
+<LI>Input-Output-FEXT (l/O-FEXT) und
+<LI>Equal-Level-FEXT (EL-FEXT).
+</UL>
+Beide Gr&ouml;&szlig;en sind durch die Gleichung <TT>EL-FEXT = I/O - FEXT - D&auml;mpfung</TT> 
+verbunden, wobei das ELTEXT in etwa dem ACR beim NEXT entspricht.
+<LI>Leistungssumme des Fernnebensprechens (PSFEXT)<BR>
+Power Sum FEXT (PSFEXT) beschreibt die Summe aller St&ouml;rleistungen, die durch 
+Fernnebensprechen in ein Paar eingekoppelt werden. Das kommt dem tats&auml;chlichen 
+Einsatzfall, alle Paare in Betrieb, nahe.
+<LI>Delay und Skew<BR>
+Propagation Delay (Verz&ouml;gerung der Ausbreitung) bezeichnet die Verz&ouml;gerungszeit/Laufzeit
+der Signal&uuml;bertragung &uuml;ber ein Paar. Sind die Signalverz&ouml;gerungen frequenzabh&auml;ngig, 
+f&uuml;hrt das zu Signalverzerrungen, auch "Dispersion" genannt. Der Wert "Delay Skew" gibt 
+die Differenz der Verz&ouml;gerungszeiten/Laufzeiten zwischen zwei Paaren an.
+<LI>R&uuml;ckflu&szlig;d&auml;mpfung (RL)<BR>
+Die R&uuml;ckflu&szlig;d&auml;mpfung, auch "Return Loss" genannt, beschreibt die 
+Inhomogenit&auml;ten/Fehlanpassungen entlang des &Uuml;bertragungskanals anhand des Verh&auml;ltni&szlig;es 
+von r&uuml;cklaufender zu hinlaufender elektromagnetischer  Welle.
+<LI>St&ouml;rleistungsunterdr&uuml;ckung<BR>
+Die St&ouml;rleistungsunterdr&uuml;ckung ist ein Ma&szlig; f&uuml;r die F&auml;higkeit eines Kabels, elektrische 
+externe St&ouml;rungen zu bed&auml;mpfen. Je h&ouml;her die St&ouml;rleistungsunterdr&uuml;ckung ist, umso 
+besser ist die elektromagnetische Vertr&auml;glichkeit.
+</OL>
+
+<H4>Gigabit Ethernet: konkurrierende Eigenschaften</H4>
+Die untereinander konkurrierenden Parameter f&uuml;r die &Uuml;bertragung von Gigabit Ethernet
+haben Einflu&szlig; auf die konstruktive Gestaltung der Kabel. Die Problematik l&auml;&szlig;t sich 
+anhand der unterschiedlichen &Uuml;bertragungsparameter in Abh&auml;ngigkeit der bekannten 
+Kabelbauarten mit verseilten Paaren aufzeigen. Je nach Anforderung werden dem Datenkabel
+m&ouml;glichst kleine und unterschiedliche (f&uuml;r NEXT und FEXT) oder m&ouml;glichst lange und 
+gleiche Paarschlagl&auml;ngen) (f&uuml;r D&auml;mpfung, Return Loss, propagation delay und delay skew) 
+abverlangt. Ein Kompromi&szlig; bei UTP und S/UTP-Kabeln ist &auml;u&szlig;erst diffizil und f&uuml;hrt zu 
+Einbu&szlig;en bei dem einen oder anderen Parameter. Eine Ausnahme stellen die S/STP-Kabel dar. 
+Hier werden die NEXT-, FEXT- und ACR-Anforderungen wesentlich durch Einzelschirmung der 
+Paare (PiMF) sichergestellt. Dies erlaubt erhebliche Freiheitsgrade bei der Gestaltung 
+der Paarschlagl&auml;ngen. S/STP-Kabel stehen deshalb f&uuml;r sicheres Einhalten aller 
+Eigenschaften bis 600 MHz und dar&uuml;ber hinaus (1200 MHz). Zudem verf&uuml;gen sie auf
+Grund der doppelten Abschirmung &uuml;ber hervorragende EMV-Eigenschaften.
+<P>
+Anmerkung: Die "Schlagl&auml;nge" ist die L&auml;nge (z. B. in Millimetern), bei der sich eine 
+Ader vom Anfangspunkt A bis zum Endpunkt B einmal um 360 Grad gedreht hat.
+<P>
+Zusammenfassung: 1000Base-T auf UTP Kabeln
+<UL>
+<LI>Verwendung einer 5 Level Codierung
+<LI>gleichzeitig Verwendung von 4 Adernpaaren
+<LI>Vollduplex Betrieb auf allen 4 Paaren
+<LI>Trellis Codierung (nicht 8B10B)
+</UL>
+<P>
+
+Gegen&uuml;berstellung Ethernet - fast Ethergent - Gigabit-Ethernet
+<P>
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th>&nbsp;</th><th>Ethernet</th><th>Fast Ethernet</th><th>Gigabit Ethernet</th></tr>
+<tr><td>Standard</td><td align="center"> IEEE 802.3</td><td align="center">IEEE 802.3u</td><td align="center">IEEE 802.3z</td></tr>
+<tr><td>Datenrate</td><td align="center"> 10 Mbit/s</td><td align="center"> 100 Mbit/s</td><td align="center"> 1000 Mbit/s</td></tr>
+<tr><td>Zeitdauer eines Bits</td><td align="center"> 100 ns </td><td align="center">10 ns </td><td align="center">1 ns</td></tr>
+<tr><td>Kollisionsfenster</td><td align="center"> 51,2 &micro;s</td><td align="center"> 5,12 &micro;s</td><td align="center"> 0,512 &micro;s</td></tr>
+<tr><td>Gr&ouml;&szlig;tes Datenpaket</td><td colspan="3" align="center"> 1518 Byte</td></tr>
+<tr><td>Kleinstes Datenpaket</td><td colspan="2" align="center"> 64 Byte</td><td align="center"> 512 Byte<br>
+<small>(kleinere Datenpakete<br>mit Carrier Extension)</small></td></tr>
+</table>
+<P>
+
+<H4>Zugriffsverfahren: CSMA/CD</H4>
+Bei Erh&ouml;hung der &Uuml;bertragungsrate auf 1 Gbit/s m&ouml;chte man auf die vorhandenen
+Verkabelungsstrukturen aufsetzen, d. h. die Leitungsl&auml;ngen sollen gleich sein wie bei 
+100Base-T (Da die Dauer des Kollisionsfensters nur noch 0,512 &micro;s betr&auml;gt,
+d&uuml;rften rein rechnerisch die Kabel nur noch maximal 10 m lang sein - nicht 
+praktikapel). Daher mu&szlig; bei gleicher Leitungsl&auml;nge die minimale 
+Paketgr&ouml;&szlig;e vergr&ouml;&szlig;ert werden. Es gilt daher beim Gigabit-Ethernet eine
+minimale Paketl&auml;nge von 512 Byte. Mit Hilfe eines "Kunstgriffs" wird diese
+Festsetzung ohne &Auml;nderung im Datenframe-Format gew&auml;hrleistet: der <b>Carrier
+Extension</b>. Bei Gigabit Ethernet-Frames mit weniger als 493 Datenbytes
+(46 bis 492) werden die fehlenden Datenbytes durch das Aufrechthalten des
+Tr&auml;gers nach dem Ende des eigentlichen Datenpakets &uuml;berbr&uuml;ckt. Der Ethernet-Frame 
+wird dabei nicht ver&auml;ndert, so dass es f&uuml;r die Kommunikationssoftware keinen Unterschied
+gibt.
+<P>
+Muss Carrier Extension eingesetzt werden, steigt auch der Overhead des
+Ethernet-Protokolls. Um dieses Anwachsen m&ouml;glichst zu kompensieren, f&uuml;hrt
+Gigabit Ethernet das Frame Bursting ein, das ebenfalls auf dem Physical Layer
+integriert wird. Dabei wird im Physical Layer versucht, mehrere kurze Datenbl&ouml;cke
+in einen Ethernet-Frame zu packen, um so die erforderliche Mindestl&auml;nge von
+512 Byte ohne den Einsatz von Carrier Extension zu erreichen.
+<P>
+Im Gegensatz zu Ethernet und Fast Ethernet werden bei Gigabit Ethernet alle vier
+Paare eines Twisted Pair-Kabels verwendet. Damit k&ouml;nnen im Vollduplex-Betrieb
+die Daten Ober jeweils zwei Paare gleichzeitig gesendet und empfangen werden.
+
+<P>
+F&uuml;r die Optik-Version bestehen folgende Randbedingungen:
+<P>
+<TABLE BORDER=1 CELLPADDING=3 CELLSPACING=0>
+<TR>
+<TD><B>Bezeichnung</B></TD><TD><B>Medium</B></TD>
+    <TD><B>mm</B></TD><TD><B>Max. L&auml;nge (m)</B></TD>
+</TR>
+<TR>
+<TD>1000Base-SX</TD><TD>Multimode Fiber (850nm)</TD><TD>62,5</TD><TD>260</TD>
+</TR>
+<TR>
+<TD>1000Base-SX</TD><TD>Multimode Fiber (850nm)</TD><TD>50</TD><TD>550</TD>
+</TR>
+<TR>
+<TD>1000Base-LX</TD><TD>Multimode Fiber (850nm)</TD><TD>62,5</TD><TD>440</TD>
+</TR>
+<TR>
+<TD>1000Base-LX</TD><TD>Multimode Fiber (850nm)</TD><TD>50</TD><TD>550</TD>
+</TR>
+<TR>
+<TD>1000Base-LX</TD><TD>Monomode Fiber</TD><TD>8,3</TD><TD>3000</TD>
+</TR></TABLE>
+<P>
+
+<H4>Fibre Channel</H4>
+Urspr&uuml;nglich entwickelt von HP, IBM und Sun als M&ouml;glichkeit einer 
+Hochgeschwindigkeitsanbindung von Rechnern zu Peripherieger&auml;ten. Fibre Channel 
+(ANSI-T11) ist allerdings auch als LAN-Technologie denkbar. Fibre Channel definiert 
+die Schichten 1 und 2 des OSI-Modells. &Uuml;bertragungsraten von 1 Gbit/s sind heute 
+verf&uuml;gbar (2 Gbit/s als Dual Channel), 4 Gbit/s ist in Entwicklung und 8 Gbit/s 
+geplant. Vorteilhaft sind die Ausfallsicherheit bei Verwendung eines Dual Channel,
+der geringe Protokoll-Overhead und gesicherte &Uuml;bertragung (keine Zellverluste 
+wie bei ATM). Es ist eine Kabell&auml;nge bis 10 km m&ouml;glich. Der Adre&szlig;raum 
+umfa&szlig;t 16'000'000 Adressen im lokalen Fibre-Channel-Netz und ist so mit klassischen 
+LAN-Technologien vergleichbar. Fibre Channel bildet die Grundlage f&uuml;r andere 
+Technologien, z. B. ATM over Fibre Channel oder Gigabit Ethernet auf Fibre Channel.
+<P>
+
+Die folgende Tabelle fasst nochmals knapp alle Medien zusammen:
+<P>
+<table border="1" cellpadding="3" cellspacing="0">
+<tr><th>Bezeichnung </th><th> Datenrate [MBit/s] </th><th> Übertragungsmedium </th><th> IEEE-Norm </th></tr>
+<tr><td>10Base5 </td><td> 10 </td><td> RG 8 Koaxialkabel 50 Ohm, 500 m Segmentlänge </td><td> 802.3 </td></tr>
+<tr><td>10Base2 </td><td> 10 </td><td> RG 58 Koaxialkabel 50 Ohm, 200 m Segmentlänge </td><td> 802.3a </td></tr>
+<tr><td>10Broad36 </td><td> 10 </td><td> Koaxialkabel 75 Ohm, max.Ausdehnung 3600 Meter </td><td> 802.3b </td></tr>
+<tr><td>10BaseT </td><td> 10 </td><td> Twisted Pair Kabel, Kat.3, 100 m Segmentlänge </td><td> 802.3i </td></tr>
+<tr><td>10BaseFL </td><td> 10 </td><td> MMF-Lichtwellenleiter, 850 nm, 2000 m Segmentlänge </td><td> &nbsp; </td></tr>
+<tr><td>10BaseFB </td><td> 10 </td><td> MMF-Lichtwellenleiter, 850 nm, 2000 m Segmentlänge </td><td> &nbsp; </td></tr>
+<tr><td>100Base-TX </td><td> 100 </td><td> Twisted Pair Kabel, Kat.5, 100 m Segmentlänge </td><td> &nbsp; </td></tr>
+<tr><td>100Base-T2 </td><td> 100 </td><td> Twisted Pair Kabel, Kat.3, 100 m Segmentlänge, 2x2 Adern </td><td> &nbsp; </td></tr>
+<tr><td>100Base-T4 </td><td> 100 </td><td> Twisted Pair Kabel, Kat.3, 100 m Segmentlänge, 4x2 Adern </td><td> &nbsp; </td></tr>
+<tr><td>100Base-FX </td><td> 100 </td><td> MMF-Lichtwellenleiter, 1300 nm, 2000 m Segmentlänge </td><td> &nbsp; </td></tr>
+<tr><td>1000Base-T </td><td> 1000 </td><td> Twisted Pair Kabel, Kat.5, 100 m Segmentlänge </td><td> 802.3ab </td></tr>
+<tr><td>1000Base-SX </td><td> 1000 </td><td> MMF-Lichtwellenleiter, 830 nm, 550 m Segmentlänge </td><td> 802.3z </td></tr>
+<tr><td>1000Base-LX </td><td> 1000 </td><td> MMF-Lichtwellenleiter, 1270 nm, 5000 m Segmentlänge </td><td> 802.3z </td></tr>
+<tr><td>1000Base-CX </td><td> 1000 </td><td> Twinax-Kupferkabel, 150 Ohm, 25 m Segmentlänge </td><td> 802.3z </td></tr>
+<tr><td>10GBase-SR </td><td> 10 </td><td> seriell, Lichtwellenleiter, 850 nm, 2-300 m, ohne WAN-Anpassung </td><td> &nbsp; </td></tr>
+<tr><td>10GBase-SW </td><td> 10 </td><td> seriell, Lichtwellenleiter, 850 nm, 2-300 m, mit WAN-Anpassung </td><td> &nbsp; </td></tr>
+<tr><td>10GBase-LR </td><td> 10 </td><td> seriell, Lichtwellenleiter, 1310 nm, 2-10.000 m, ohne WAN-Anpassung </td><td> &nbsp; </td></tr>
+<tr><td>10GBase-LW </td><td> 10 </td><td> seriell, Lichtwellenleiter, 1310 nm, 2-10.000 m, mit WAN-Anpassung </td><td> &nbsp; </td></tr>
+<tr><td>10GBase-ER </td><td> 10 </td><td> seriell, Lichtwellenleiter, 1550 nm, 2-40.000 m, ohne WAN-Anpassung </td><td> &nbsp; </td></tr>
+<tr><td>10GBase-EW </td><td> 10 </td><td> seriell, Lichtwellenleiter, 1550 nm, 2-40.000 m, mit WAN-Anpassung </td><td> &nbsp; </td></tr>
+<tr><td>10GBase-LX4 </td><td> 10 </td><td> Lichtwellenleiter, 1310 nm, 2-10.000 m, WWDM-Technik m. 4 Kanälen </td><td> &nbsp; </td></tr>
+</table>
+<P>
+
+<h4>10 Gigabit Ethernet</h4>
+10 Gigabit Ethernet ist die (zur Zeit) schnellste &Uuml;bertragungsvariante f&uuml;r
+Ethernet. In der IEEE 802.3ae werden die Produktspezifikationen f&uuml;r die
+entsprechenden Ger&auml;te standardisiert. 
+<P>
+
+<H2><A NAME="5.8">Anzeige-LEDs</A></H2>
+In den Slotblechen von Netzwerkkarten finden Sie in den meisten F&auml;llen einige 
+Leuchtdioden, welche die gleiche Aufgabe wie bei den Hubs haben. Typische 
+Bezeichnungen und die damit verbundenen Funktionen sind in der Tabelle 
+angegeben, wobei - je nach Typ - auch nur eine Teilmenge davon vorhanden 
+sein kann.
+<P>
+<TABLE BORDER=1 CELLPADDING=3 CELLSPACING=0 WIDTH="90%">
+<TR><TH>Bezeichnung</TH><TH>Bedeutung</TH></TR> 
+<TR><TD>10 LNK </TD>
+    <TD>Diese LED signalisiert, dass die Karte im 10 MBit/s-Mode (Standard-Ethernet) arbeitet.</TD></TR>
+<TR><TD>100 LNK </TD>
+    <TD>Diese LED signalisiert, dass die Karte im 100 MBit/s-Mode (Fast-Ethernet) arbeitet.</TD></TR>
+<TR><TD>ACT Action </TD>
+    <TD>Es werden Daten gesendet oder empfangen, wenn diese LED aktiv ist.</TD></TR>
+<TR><TD>COL Collision </TD>
+    <TD>Die LED blinkt bei auftretenden Datenkollisionen (CSMA/CD).</TD></TR>
+<TR><TD>FDX Full Duplex </TD>
+    <TD>Diese LED signalisiert, dass eine Voll-Duplex-Verbindung besteht, also gleichzeitiges Senden und Empfangen m&ouml;glich ist.</TD></TR>
+<TR><TD>Link (Beat) Link </TD>
+    <TD>Die LED leuchtet, wenn eine Netzwerkverbindung besteht (Kabel angeschlossen, Datenverbindung m&ouml;glich, usw.).</TD></TR>
+<TR><TD>LNK Link </TD>
+    <TD>Die LED leuchtet, wenn eine Netzwerkverbindung besteht (Kabel angeschlossen, Datenverbindung m&ouml;glich, usw.).</TD></TR>
+<TR><TD>NML Normal </TD>
+    <TD>Der Hub arbeitet in der normalen Betriebsart und kann zum Test per Schalter in einen Testmodus geschaltet werden, woraufhin diese Diode dann nicht leuchtet.</TD></TR>
+<TR><TD>POL Polarity </TD>
+    <TD>Diese LED ist eher selten zu finden und ist normalerweise aus. Sie leuchtet nur dann, wenn die Polarit&auml;t der Datenempfangsleitungen vertauscht ist. In der Regel k&ouml;nnen Netzwerkkarten mit einer derartigen Anzeige automatisch die richtige Polarit&auml;t herstellen, und dann leuchtet auch die LED.</TD></TR>
+<TR><TD>PWR Power </TD>
+    <TD>Die Spannungsversorgung des Hubs ist vorhanden, wenn diese LED leuchtet.</TD></TR>
+<TR><TD>REC Receive </TD>
+    <TD>Die LED blinkt, wenn gerade Daten von der Einheit empfangen werden.</TD></TR>
+<TR><TD>RX (DATA) Receive Data </TD>
+    <TD>Die LED blinkt, wenn gerade Daten von der Einheit empfangen werden.</TD></TR>
+<TR><TD>T/R Transceive/Receive </TD>
+    <TD>Die LED blinkt, wenn gerade Daten von der Einheit gesendet oder empfangen werden.</TD></TR>
+<TR><TD>TX (DATA) Transmit Data </TD>
+    <TD>Die LED blinkt, wenn gerade Daten von der Einheit gesendet werden.</TD></TR>
+</TABLE>
+<P>
+Die Receive- und Transmit-Leuchtdioden sind n&uuml;tzlich, um den augenblicklichen 
+Status einer Netzwerkkarte ablesen zu k&ouml;nnen. Falls keine LED leuchten will, 
+ist der Treiber f&uuml;r die Karte wahrscheinlich (noch) nicht korrekt installiert 
+worden oder die Karte wurde nicht korrekt mit dem Netz verbunden.
+Die Anzeige LNK (Link) oder ACT (Activity) sollte auf jeden Fall dann
+leuchten, wenn das Netzwerk aktiv ist. 
+Au&szlig;erdern sollte an einer Netzwerkkarte auch die Receive-Anzeige 
+leuchten oder blinken, wenn Pakete im Netz &uuml;bertragen werden.
+<P>
+
+<H2><A NAME="5.9">Wie funktioniert Wake-on-LAN</A></H2>
+Bei Wake-On-LAN, kurz WOL, handelt es sich um einen 1995 von AMD in Zusammenarbeit 
+mit HP veröffentlichten Standard, der das Einschalten von Rechnern über das Netz
+regelt. Um WOL zu nutzen, müssen das Mainboard und die Netzwerkkarte des jeweiligen
+PCs ACPI unterstützen. Um einen PC aufzuwecken, sendet man ein sogenanntes Magic 
+Packet an diesen. Dieses Paket veranlasst dann den Rechner, zu starten. Natürlich muss
+im BIOS des jeweiligen Rechners WOL aktiviert werden. Unter Umständen muss bei 
+einigen Netzwerkkarten auch erst das passende WOL-Kabel zwischen Netzwerkkarte und 
+Mainboard gesteckt werden (damit die Karte auch bei ausgeschaltetem Rechner mit
+Strom versorgt wird). 
+<P>
+Unter Windows XP wird in der ACPI-Spezifikation festgelegt, dass WOL einen Rechner 
+aus den Zuständen S3 (Suspend-to-RAM), S4 (Suspend-to-Disk) und S5 (Soft-Off) 
+aufwecken kann. Die Optionen werden an unterschiedlichen Stellen in den 
+Eigenschaften der Netzwerkkarte (erreichbar über den Geräte-Manager) konfiguriert. 
+<P>
+Bei Linux deaktivieren viele Netzwerkkarten-Treiber die WOL-Funktion nach dem Starten 
+des Interfaces. Um diese nun wieder zu aktivieren, benutzen wir das Programm <tt>ethtool</tt>, 
+das in vielen Fällen nützlich ist. Durch den Aufruf unter Angabe des Netzwerk-Interfaces
+erhalten Sie alle Informationen über die Netzwerkkarte:
+<P>
+<pre>
+# ethtool eth0
+Settings for eth0:
+        Supported ports: [ TP ]
+        Supported link modes:   10baseT/Half 10baseT/Full
+                                100baseT/Half 100baseT/Full
+                                1000baseT/Full
+        Supports auto-negotiation: Yes
+        Advertised link modes:  10baseT/Half 10baseT/Full
+                                100baseT/Half 100baseT/Full
+                                1000baseT/Full
+        Advertised auto-negotiation: Yes
+        Speed: 1000Mb/s
+        Duplex: Full
+        Port: Twisted Pair
+        PHYAD: 0
+        Transceiver: internal
+        Auto-negotiation: on
+        Supports Wake-on: umbg
+        Wake-on: d
+        Current message level: 0x00000007 (7)
+        Link detected: yes
+</pre>
+
+Wichtig sind die beiden Zeilen
+
+<pre>
+  Supports Wake-on: umbg
+  Wake-on: g
+</pre>
+
+Die erste Zeile listet die Möglichkeiten des Weckrufs auf. Bei meiner Karte werden
+u, m, b und g unterstützt. Die Bedeutung der Buchstaben zeigt folgende Tabelle:
+<p>
+<table border="1" cellpadding="3" cellspacing="0">
+<tr><th>Code </th><th> Bedeutung</th></tr>
+<tr><td>p </td><td> Wake on phy activity</td></tr>
+<tr><td>u </td><td> Wake on unicast messages</td></tr>
+<tr><td>m </td><td> Wake on multicast messages</td></tr>
+<tr><td>b </td><td> Wake on broadcast messages</td></tr>
+<tr><td>a </td><td> Wake on ARP</td></tr>
+<tr><td>g </td><td> Wake on MagicPacket</td></tr>
+<tr><td>s </td><td> Enable SecureOn password for MagicPacket</td></tr>
+<tr><td>d </td><td> Disable (wake on nothing)</td></tr>
+</table>
+<P>
+Wie man an der zweiten Zeile sieht, ist das WOL derzeit deaktiviert.
+Um WOL per Magic Packet zu aktivieren, genügt der Kommandoaufruf  
+<tt>ethtool -s eth0 wol g</tt>. Damit man das nicht nach jedem Reboot
+des Rechners das Kommando von Hand eingeben muss, schreibt man
+es am besten in die Datei <tt>/etc/rc.local</tt>. Debian-User vermerken
+<tt>NETDOWN=no</tt> in der Datei <tt>/etc/default/halt</tt>, damit
+die Netzwerkkarte eingeschaltet bleibt.
+<P>
+Wie nun den Rechner aufwecken? Das Magische am "Magic Packet"
+ist gar nicht so magisch: Es wird ein Datenpaket an den Rechner
+gesendet, das aus sechs Bytes mit dem hexadezimalen Wert 0xFF 
+besteht. Dann folgt 16-mal die Hardwareadresse (MAC-Adresse) der 
+Netzwerkkarte. Die Daten können als nacktes Ethernet-Paket gesendet
+werden, oder per UDP bzw. TCP. Bei den meisten Linux-Distributionen
+ist ein Perl-Programm namens "wakeonlan" von Jose Pedro Oliveira
+enthalten, welches mit allem Komfort arbeitet. Es kann beispielsweise
+die MAC-Adressen der zu weckenden Rechner aus einer Datei lesen, einen
+ARP-Eintrag für die IP-Adresse hinzufügen usw. 
+<P>
+Die einfachste Form des Weckrufs benötigt aber nur wenige Zeilen Perl.
+Die folgende Funktion überprüft zunächst, ob ihr eine gültige
+MAC-Adresse (xx:xx:xx:xx:xx:xx) übergeben wurde, und sendet dann den 
+Weckruf per Broadcast aus. Die MAC-Adresse(n) werden auf der 
+Kommandozeile übergeben:
+
+<pre>
+use strict;
+use warnings;
+use Socket;
+
+while (@ARGV)
+  {  send_wol_broadcast(shift(@ARGV)); }
+
+sub send_wol_broadcast
+  {
+  my $mac = shift;
+
+  die "Fehler in MAC-Addrese $mac\n"
+     if ($mac !~ /([0-9a-f]{2}:){5}[0-9a-f]{2}/i);
+
+  # Doppelpunkte entfernen
+  $mac =~ tr/://d;
+
+  # Magic Packet: 6 x FF, 16 x MAC-Adresse
+  my $magic = ("\xff" x 6) . (pack('H12', $mac) x 16);
+
+  # Create socket
+  socket(S, PF_INET, SOCK_DGRAM, getprotobyname('udp'))
+     or die "Oops - Socket: $!\n";
+
+  # Enable broadcast
+  setsockopt(S, SOL_SOCKET, SO_BROADCAST, 1)
+    or die "Oops - Setsockopt: $!\n";
+
+  # Paket senden
+  die "Oops - Send: $!\n" unless
+     defined(send(S, $magic, 0, sockaddr_in(0x2fff, INADDR_BROADCAST)));
+  close(S);
+  }
+</pre>
+
+Die zweite Version adressiert nur den Zielrechner über seine IP-Adresse. Dazu
+muss aber gegebenenfalls die Zuordnung MAC-Adresse zu IP-Adresse in die
+ARP-Tabelle geschrieben werden. Leider unterscheidet sich das entsprechende
+Kommando bei Linux und Windows bei der Angaben der MAC-Adresse:
+
+<pre>
+Linux:   arp -s 197.54.85.222  00:aa:00:62:c6:09
+Windows: arp -s 197.54.85.222  00-aa-00-62-c6-09
+</pre>
+
+Im folgenden Listing sind beide Varianten berücksichtigt, da das Betriebssystem
+bekanntlich über die Variable <tt>$^O</tt> ermittelt werden kann. Zum Absetzen
+des <tt>arp</tt>-Kommandos sind jedoch auf jeden Fall Root-Rechte erforderlich.
+
+<pre>
+use strict;
+use warnings;
+use Socket;
+
+while (@ARGV)
+  {send_wol_packet(shift(@ARGV),shift(@ARGV)); }
+
+sub send_wol_packet
+  {
+  my $mac = shift;
+  my $ip = shift;
+  my $iaddr;
+  
+  die "Fehler in MAC-Addrese $mac\n"
+    if ($mac !~ /([0-9a-f]{2}:){5}[0-9a-f]{2}/i);
+
+  die "Fehler in IP-Adresse $ip\n"
+    if (! defined($iaddr = inet_aton($ip)));
+
+  # ARP-Eintrag schreiben
+  if ($^O =~ /MSWIn/) 
+    { $mac =~ s/:/-/g; }      # NUR bei Windows
+  system("arp -s $ip $mac") == 0
+  or die "Warning: arp command failed, you need to be root\n";
+
+  # Doppelpunkte entfernen
+  $mac =~ tr/://d;            # fuer Linux
+  $mac =~ tr/-//d;            # fuer Windows
+
+  # Magic packet: 6 x FF, 16 x MAC-Adresse
+  my $magic = ("\xff" x 6) . (pack('H12', $mac) x 16);
+
+  # Create socket
+  socket(S, PF_INET, SOCK_DGRAM, getprotobyname('udp'))
+  or die "Oops - Socket: $!\n";
+
+  # Paket senden
+  die "Oops - Send: $!\n" unless
+    defined(send(S, $magic, 0, sockaddr_in(0x2fff, $iaddr)));
+  close(S);
+  }
+</pre>
+<P>
+
+<H2><A NAME="5.10">Ethernetkarten konfigurieren unter Linux</A></H2>
+Um die Parameter eines Netzwerk-Interfaces anzusehen oder 
+um eine optimale Performance zu erzielen, braucht man ein
+Programm, das die Konfiguration des Interfaces gestattet.
+Unter Linux gibt es daf&uuml;r "<b>ethtool</b>". Leider arbeiten 
+nicht  alle Treiber mit dem Programm zusammen.
+<p>
+In der Regel funktioniert eine Verbindung im Ethernet auch
+ohne weitere Konfiguration. Um die verf&uuml;gbare Bandbreite 
+optimal auszunutzen, gilt es einige Grundregeln: 
+Die Duplexeinstellung mussebei beiden Linkpartnern gleich sein. 
+Also entweder beide Seiten eines Link auf Autonegotiation oder 
+beide Seiten fest auf die selben Parameter einstellen.
+Viele preiswerte Switches bieten keine Einstellm&ouml;glichkeiten 
+und arbeiten immer mit Autonegotiation. Die Netzwerkkarten der 
+angeschlossenen Clients m&uuml;ssen also auch auf "Auto" stehen.
+<p>
+Zur Anzeige der aktuellen Parameter wird "ethtool" mit dem 
+entsprechenden Interface als Parameter aufgerufen. Hier die 
+Ausgabe f&uuml;r das Interface eth0:
+</p>
+<pre>
+netzmafia:~# ethtool eth0
+Settings for eth0:
+
+        Supported ports: [ TP MII ]
+        Supported link modes:   10baseT/Half 10baseT/Full
+                                100baseT/Half 100baseT/Full
+        Supports auto-negotiation: Yes
+        Speed: 10Mb/s
+        Duplex: Half
+        Port: MII
+        PHYAD: 0
+        Transceiver: internal
+        Auto-negotiation: off
+        Supports Wake-on: d
+        Wake-on: d
+</pre>
+<p>
+Mit ethtool ist es auch m&ouml;glich, Einstellungen der Netzwerkkarte zu ver&auml;ndern.
+Das folgende Kommando stellt das Interface eth0 auf 100 MBit/s und Halbduplex ein.
+<pre>
+ethtool -s eth0 speed 100 duplex half
+</pre>
+F&uuml;r "speed" sind die Parameter 10, 100 und 1000 erlaubt. Der Duplexmode kann auf
+"half" oder "full" eingestellt werden. Autonegotiation wird mit dem Paramter "autoneg on"
+eingeschaltet und mit "autoneg off" abgeschaltet.
+<pre>
+ethtool -s eth0 autoneg on
+</pre>
+F&uuml;r Netzwerkinterfaces die WakeOnLAN (WOL) beherrschen (siehe oben), bietet ethtool 
+auch einige Konfigurationsoptionen. Der Benutzer kann festlegen welche Art von Frame
+ein Aufwachen ausl&ouml;sen soll und ein Kennwort f&uuml;r Wake-on-LAN festlegen. Nicht alle
+Interfaces unterst&uuml;tzen diese Option. 
+<pre>
+ethtool -s eth0 wol &lt;argument&gt;
+</pre>
+Das Argument von "wol" ist eine Kombination aus folgenden Buchstaben:
+<pre>
+        p  Wake on phy activity
+        u  Wake on unicast messages
+        m  Wake on multicast messages
+        b  Wake on broadcast messages
+        a  Wake on ARP
+        g  Wake on MagicPacket(tm)
+        s  Enable SecureOn(tm) password for MagicPacket(tm)
+        d  Disable (wake on nothing).  
+</pre>
+Die Option "d" l&ouml;scht auch alle anderen Optionen.
+
+<pre>
+ethtool -s eth0 sopass xx:yy:zz:aa:bb:cc
+</pre>
+Setzt das Wake-on-LAN-Passwort. Das Passwort wird als Folge von 6 Hexzahlen
+angegeben, die durch Doppelpunkte getrennt sind.
+<p>
+Neuere Netzwerkkarten haben mitunter die M&ouml;glichkeit, eine LED manuell
+blinken zu lassen. Das ist zum Identifizieren einer Karte in komplexen 
+Umgebungen sehr hilfreich. Dazu dient der Parameter "-p":
+<pre>
+ethtool -p eth1
+</pre>
+<P>
+
+<H2><A NAME="5.11">Tabellen</A></H2>
+<P>
+<TABLE border=1 cellspacing=0 cellpadding=6 width=90%>
+<TR><TH valign="TOP" colspan=2>Normen</TH></TR>
+<TR><TD valign="TOP" width="22%"><B>Abk&uuml;rzung, Begriff</B></TD>
+<TD valign="TOP"><B>Erl&auml;uterung</TD></TR>
+<TR>
+<TD valign="TOP" width="22%">
+ISO
+</TD>
+<TD valign="TOP">
+International Standard Organization, internationale Normungsorganisation. <A href="http://www.iso.ch" target="_blank">www.iso.ch</A>
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+IEC
+</TD>
+<TD valign="TOP">
+International Electrotechnical Commission , Internationale Elektrotechnische Kommission, erstellt und ver&ouml;ffentlicht internationale Normen f&uuml;r Elektrotechnik, Elektronik und verwandtze Gebiete. <A href="http://www.iec.ch" target="_blank">www.iec.ch</A>
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+IEC 11801
+</TD>
+<TD valign="TOP">
+Die internationale Entsprechung der TIA568B: Norm zur Definition strukturierter Geb&auml;udeverkabelungen. Legt auch die bekannten ISO-Klassen D, E, und F fest.
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+Klasse D
+</TD>
+<TD valign="TOP">
+Leistungsklasse f&uuml;r strukturierte Geb&auml;udeverkabelung nach ISO/IEC 11801 bis 100MHz
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+Klasse E
+</TD>
+<TD valign="TOP">
+Leistungsklasse f&uuml;r strukturierte Geb&auml;udeverkabelung nach ISO/IEC 11801 bis 250MHz (Entwurf)
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+Klasse F
+</TD>
+<TD valign="TOP">
+Leistungsklasse f&uuml;r strukturierte Geb&auml;udeverkabelung nach ISO/IEC 11801 bis 600MHz (Entwurf)
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+OSI
+</TD>
+<TD valign="TOP">
+Open Systems Interconnection, globaler Rahmen f&uuml;r die Standardisierung &quot;Offener Kommunikation&quot; zwischen kooperierenden Systemen. Die 7 Schichten des OSI-Referenzmodells zerlegen, losgel&ouml;st von speziellen Implementierungen, den Funktionskomplex Kommunikation in sieben schichtdiskrete hierarchische Teilprozesse.
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+TIA
+</TD>
+<TD valign="TOP">
+Telecommunications Industry Association, US-amerikanische Normungsorganisation f&uuml;r (u.a.) Netzwerkstandards. http://www.tiaonline.org
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+TIA 568A
+</TD>
+<TD valign="TOP">
+Commercial Building Telecommunications Cabling Standard, US-Norm zur Definition strukturierter Geb&auml;udeverkabelungen. Legt auch die bekannten Cat 5, Cat 5e, Cat 6 etc. fest.
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+TIA 568B
+</TD>
+<TD valign="TOP">
+Heute (seit April 2001) g&uuml;ltige Version der US-Norm
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+Cat 5
+</TD>
+<TD valign="TOP">
+Engl. Abk. f&uuml;r Category 5 (Kategorie 5), Leistungsklasse f&uuml;r strukturierte Geb&auml;udeverkabelung nach TIA568 bis 100MHz, legt (unter anderem) die bei der Endabnahme (Zertifizierung) anzuwendenden Grenzwerte f&uuml;r die zu messenden Parameter fest.
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+Cat 5e
+</TD>
+<TD valign="TOP">
+&quot;verbesserte&quot; (engl. enhanced) Cat 5 mit etwas versch&auml;rften Grenzwerten bis 100MHz, die ausreichende Reserven zur &Uuml;bertragung von Gigabit Ethernet (1000BaseT), f&uuml;r die Cat 5 urspr&uuml;nglich nicht vorgesehen war, sicherstellen soll. Entspricht ISO 11801 Klasse D.
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+Cat 6
+</TD>
+<TD valign="TOP">
+Leistungsklasse f&uuml;r strukturierte Geb&auml;udeverkabelung nach TIA568 bis 250MHz (Entwurf)
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+Cat 7
+</TD>
+<TD valign="TOP">
+Leistungsklasse f&uuml;r strukturierte Geb&auml;udeverkabelung nach TIA568 bis 600MHz (Entwurf)
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+EN
+</TD>
+<TD valign="TOP">
+European Norm, dt. Europ&auml;ische Norm. Oberbegriff f&uuml;r die vom CEN (Comit&eacute; Europ&eacute;enne de Normalisation) und CENELEC (Comit&eacute; Europ&eacute;enne de Normalisation Electrotechnique) erarbeiteten Normen.
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+EN 50173
+</TD>
+<TD valign="TOP">
+&quot;Europ&auml;isierte&quot; Entsprechung der IEC 11801: Norm zur Definition strukturierter Geb&auml;udeverkabelungen.
+</TD>
+</TR>
+</TABLE>
+<P>
+
+<TABLE border=1 cellspacing=0 cellpadding=6 width=90%>
+<TR>
+<TH valign="TOP" colspan=2>Schnittstellendefinitionen/Steckernormen</TH>
+</TR>
+<TR>
+<TD valign="TOP" width="22%"><B>Abk&uuml;rzung, Begriff</B></TD>
+<TD valign="TOP"><B>Erl&auml;uterung</B></TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+RJ-45
+</TD>
+<TD valign="TOP">
+Registered Jack, 8-Poliger Stecker
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+BNC
+</TD>
+<TD valign="TOP">
+Bayonet Neill Concelman, f&uuml;r Koax-Verkabelungen &uuml;blicher Bayonet-Steckverbindertyp
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+RS-232, RS-232C
+</TD>
+<TD valign="TOP">
+Recommended Standard 232, serielle Schnittstelle, an PCs heutzutage meist mit DB-9 Steckergesicht
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+DB-9, DB-9M, DB-9F
+</TD>
+<TD valign="TOP">
+In der Computer- und Telekommunikationstechnik verbreiteter 9-poliger Standard-Steckerverbinder. Einsatzbeispiele: Token-Ring- und FDDI-Netze (STP), serielles Interface DB-9M (IBM AT Standard) eines Personalcomputers.
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+10 Base T
+</TD>
+<TD valign="TOP">
+Standard: IEEE 802.3, steht f&uuml;r Ethernet mit 10 Mbit/s &Uuml;bertragungsgeschwindigkeit, Basisband&uuml;bertragung und TP-Verkabelung (Twisted Pair)
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+100 Base TX
+</TD>
+<TD valign="TOP">
+&quot;Fast Ethernet&quot; mit 100 Mbit/s
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+Twinax
+</TD>
+<TD valign="TOP">
+Twinaxialkabel, elektrisches Nachrichtenkabel, dessen Aufbau dem Koaxialkabel &auml;hnelt, das jedoch zwei Innenleiter aufweist
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+Siemon Tera
+</TD>
+<TD valign="TOP">
+&quot;CAT 7&quot; Steckverbinder, bei dem bis zu 4 Aderpaare einzeln geschirmt durch die Steckverbindung gef&uuml;hrt werden. Weist gegen&uuml;ber RJ-45 Steckverbinder weit bessere Leistungsdaten auf und kann daher bis zu weit h&ouml;heren Frequenzen eingesetzt werden. <A href="http://www.siemon.com" target="_blank">www.siemon.com</A>
+</TD>
+</TR>
+<TR>
+<TD valign="TOP" width="22%">
+Kerpen E-Line 600
+</TD>
+<TD valign="TOP">
+Weiterer &quot;CAT 7&quot; Steckverbinder, bei dem bis zu 4 Aderpaare einzeln geschirmt durch die Steckverbindung gef&uuml;hrt werden. Weist gegen&uuml;ber RJ-45 Steckverbinder weit bessere Leistungsdaten auf und kann daher bis zu weit h&ouml;heren Frequenzen eingesetzt werden. <A href="http://www.kerpen.com" target="_blank">www.kerpen.com</A>
+</TD>
+</TR>
+</TABLE>
+
+<P>
+<B>Weitere Infos zur Verkabelungspraxis finden Sie im Kapitel 
+<A HREF="twisted.html">Twisted-Pair-Verkabelung und Netzplanung</A>.</B>
+<P>
+
+<CENTER><TABLE BORDER=0 WIDTH="100%">
+<TR>
+<TD ALIGN=LEFT VALIGN=BOTTOM><IMG SRC="left.gif" BORDER=0> <A HREF="netz4.html">Zum vorhergehenden Abschnitt</A></TD>
+<TD ALIGN=CENTER VALIGN=BOTTOM><IMG SRC="up.gif" BORDER=0> <A HREF="index.html">Zum Inhaltsverzeichnis</A></TD>
+<TD ALIGN=RIGHT VALIGN=BOTTOM><IMG SRC="right.gif" BORDER=0> <A HREF="netz6.html">Zum n&auml;chsten Abschnitt</A></TD>
+</TR></TABLE></CENTER>
+<P><HR>
+<h6><i>Copyright &copy; Hochschule M&uuml;nchen, FK 04, Prof. J&uuml;rgen Plate</i><br>
+Letzte Aktualisierung: <SCRIPT LANGUAGE="JavaScript">document.write(document.lastModified);</SCRIPT></I></H6>
+</BODY>
+</HTML>

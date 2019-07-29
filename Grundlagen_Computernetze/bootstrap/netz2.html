@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-;W3C;DTD HTML 4.01 Transitional;EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta NAME="robots" CONTENT="all">
+<meta NAME="revisit-after" CONTENT="10 days">
+<meta NAME="Reply-To" CONTENT="webmaster@netzmafia.de">
+
+<meta NAME="keywords" CONTENT="LAN WAN TCP/IP Computernetze Ethernet Vernetzung Router Hub Switch Protokolle">
+<meta NAME="description" CONTENT="Praxisorientierte Einf&uuml;hrung in den Aufbau und die Funktionsweise von Computernetzen.">
+<title>Grundlagen Computernetze</title>
+</head>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" ALINK="#FF0000" VLINK="#FF00FF">
+<CENTER><TABLE BORDER=0 WIDTH="90%" >
+<TR><TD ALIGN=LEFT><IMG SRC="eyes.gif"></TD>
+<TD ALIGN=RIGHT><H2>Grundlagen Computernetze</H2> 
+<BR><B><I>Prof. J&uuml;rgen Plate</I></B></TD></TR>
+</TABLE></CENTER>
+<HR>
+
+
+<h1 align=center>Zugriffsverfahren</h1>
+Bei jedem Netz gibt es die physikalischen Verbindungswege (Kan&auml;le),
+&uuml;ber welche die einzelnen Stationen miteinander kommunizieren. Die
+Art und Weise, wie die einzelnen Stationen diese Kan&auml;le nutzen und
+belegen, h&auml;ngt vom jeweiligen System des Zugriffs, dem Zugriffsverfahren,
+ab. In diesem Abschnitt werden die unterschiedlichen Zugriffsverfahren im
+&Uuml;berblick besprochen, wobei nicht auf die Protokolle eingegangen wird.
+Das Zugriffsverfahren ist nicht von einer bestimmten logischen Netzwerkstruktur
+abh&auml;ngig. Lassen Sie uns zu Beginn ein historisch interessantes Verfahren
+mit ein paar S&auml;tzen w&uuml;rdigen, das Ausgangspunkt f&uuml;r die Entwicklung
+der heute &uuml;blichen Zugriffsverfahren war.<BR>
+<P>
+
+<H2><A NAME="2.1">ALOHA</A></H2>
+Dieses Verfahren ist eines der &auml;ltesten Zugriffsverfahren und wurde
+1970 an der Universit&auml;t von Hawaii entwickelt (&quot;Aloha&quot; =
+&quot;Hallo&quot;). Da man die Inseln nicht &uuml;ber Kabel verbinden konnte,
+hat man ein Funknetz aufgebaut. Die Grundidee ist recht einfach: Jede Station
+darf jederzeit senden. Danach wartet die sendende Station auf eine Best&auml;tigung
+auf einem separaten R&uuml;ckkanal. Senden zwei Stationen zur gleichen Zeit,
+treten Kollisionen auf - die Datenbl&ouml;cke sind defekt und es erfolgt
+keine Best&auml;tigung. Wurde eine Best&auml;tigung empfangen, kann bei
+Bedarf weitergesendet werden. Im anderen Fall wartet jede Sendestation eine
+Zeitspanne, deren L&auml;nge zuf&auml;llig bestimmt wird. Danach wird der
+Datenblock nochmals gesendet. Da die Wartezeit von einem Zufallsgenerator
+bestimmt wird, l&ouml;st sich der Datenstau auf. Solange das Verh&auml;ltnis
+von aktiver Sendezeit zu Leerlaufzeit hoch genug ist, arbeitet das System
+sehr gut. Sobald die &quot;Netzlast&quot; steigt, h&auml;ufen sich Kollisionen,
+bis schlie&szlig;lich kein Datenblock mehr durchkommt. Der h&ouml;chste
+Durchsatz ergibt sich, wenn die Sendebl&ouml;cke 18% der Gesamtzeit belegen.
+Zwei Jahre sp&auml;ter wurde eine Verbesserung eingef&uuml;hrt: Slotted
+ALOHA. Jeder darf nun nur noch zu Beginn eines festgelegten Zeitintervalls
+mit dem Senden beginnen (&quot;time slot&quot;). Um nun alle Stationen zu
+synchronisieren, gibt es eine ausgezeichnete Station, die &quot;Zeitmarken&quot;
+senden darf. Die anderen Stationen synchronisieren sich mit diesem Markengeber.
+Der maximale Durchsatz wird hier bei einem Sendeanteil von knapp 36% erreicht.
+ALOHA wird immer noch bei manchen Formen der Kommunikation &uuml;ber Satelliten
+verwendet.<BR>
+<P>
+
+<H2><A NAME="2.2">CSMA/CD</A></H2>
+Die Abk&uuml;rzung &quot;CSMA/CD&quot; steht f&uuml;r &quot;Carrier Sense
+Multiple Access/Collision Detect&quot;. Dieses Verfahren findet h&auml;ufig
+bei logischen Busnetzen Anwendung (z. B. Ethernet), kann aber prinzipiell
+bei allen Topologien eingesetzt werden. Bevor eine Station sendet, h&ouml;rt
+sie zun&auml;chst die Leitung ab, um festzustellen, ob nicht schon ein Datenverkehr
+zwischen anderen Stationen stattfindet. Erst bei freier Leitung wird gesendet
+und auch w&auml;hrend der Sendung wird mitgeh&ouml;rt, um festzustellen,
+ob eine Kollision mit einer Station auftritt, die zuf&auml;llig zum gleichen
+Zeitpunkt mit dem Senden begonnen hat (Collision Detect). Bei allen Leitungen
+ist eine gewisse Laufzeit (siehe sp&auml;ter) zu ber&uuml;cksichtigen, so
+da&szlig; auch dann eine Kollision auftritt, wenn zwei Stationen um eine
+geringe Zeitspanne versetzt mit dem Senden beginnen. In einem solchen Fall
+produzieren alle sendenden Stationen ein JAM-Singal auf der Leitung, damit
+auf jeden Fall alle beteiligten Sende- und Empfangsknoten die Bearbeitung
+des aktuellen Datenpakets abbrechen. 
+<P>
+<center><IMG SRC="kollision.gif" ALT="Schema der Kollision"></center>
+<P>
+Das JAM-Signal besteht aus einer 32 Bit 
+langen Folge von 1010101010101010... Danach warten alle sendewilligen Stationen
+eine zufallsbestimmte Zeit und versuchen es dann nochmals. Alle Stationen
+im Netz &uuml;berpr&uuml;fen die empfangenen Datenpakete und &uuml;bernehmen
+diejenigen, die an sie selbst adressiert sind. Wichtigster Vertreter
+f&uuml;r CSMA/CD ist das Ethernet, dem deshalb ein eigener Abschnitt gewidmet
+ist. Normalerweise tritt eine Kollision innerhalb der ersten 64 Bytes auf (Weiteres
+in <A HREF="netz4.html">Kapitel 4, "Slot Time"</A>).
+<P>
+<center><IMG SRC="b1-5.gif" ALT="Schema des CSMA/CD-Verfahrens"></center>
+<P>
+
+                                                              
+<H4>Konfliktparameter k:</H4>
+<P>
+<center><IMG SRC="k.gif" ALT="k"></center>
+<P>
+<B>k&gt;1</B>: Sender k&ouml;nnte eine ganze Nachricht an den Kanal &uuml;bergeben,
+bevor ein Konflikt entsteht. Beim CSMA/CD-Verfahren inpraktikabel.<BR> 
+<B>k&lt;1</B>: CSMA/CD-Verfahren praktikabel 
+<P>
+Spezifikation: Bei gr&ouml;&szlig;ter zul&auml;ssiger Netzl&auml;nge und kleinster 
+zul&auml;ssiger Paketl&auml;nge ergibt sich <B>k~0,21</B>. 
+<P>
+<H4>Wartezeit</H4>
+Die Wartezeit, die nach einer Kollision bis zum n&auml;chsten Sendeversuch
+vergeht, wird im Standard durch ein Backoff-Verfahren festgelegt (Truncated
+Binary Expotential Backoff). Es wird wie folgt definiert:<BR>
+<P>
+<BLOCKQUOTE>
+<B>Wartezeit  = ZZ * T</B>
+<P>
+ZZ = Zufallszahl aus [0 &lt; ZZ &lt; 2<SUP>n</SUP>]<BR>
+n = Anzahl Wiederholungen des gleichen Blocks, jedoch maximal 10<BR>
+T = Slot Time<BR>
+</BLOCKQUOTE>
+<P>
+Die Slot Time entspricht der doppelten maximalen Signallaufzeit 
+des &Uuml;bertragungsmediums. Die Wartezeit steigt im statistischen Mittel
+nach 10 Versuchen nicht mehr an. Nach 16 Versuchen wird abgebrochen und
+eine Fehlermeldung erzeugt. 
+<P>
+<center><IMG SRC="backoff.gif" ALT="backoff"></center>
+<P>
+Damit eine sendende Station eine Kollision sicher
+erkennen kann, mu&szlig; die Dauer der Block&uuml;bertragung mindestens
+das Doppelte der Signallaufzeit zwischen den beiden beteiligten Stationen
+betragen. Somit ist die minimale Blockl&auml;nge abh&auml;ngig von Signallaufzeit
+und &Uuml;bertragungsrate. Das Rahmenformat von CSMA/CD ist nach IEEE 802.3
+festgelegt. Neben Verkabelungsproblemen gibt es bei CSMA/CD-Netzen einige
+typische Fehlerquellen. Einige davon sollen hier kurz vorgestellt werden.
+<UL>
+<LI>'Late Collisions' sind Kollisionen, die au&szlig;erhalb des Kollisionsfensters
+von 512 Bit, also sp&auml;ter, auftreten. Daf&uuml;r gibt es generell drei
+Ursachen: Entweder eine Station mit Hardwaredefekt (Netzwerkinterface, Transceiver,
+etc.), ein Fehler in der Software (Treiber), wodurch sich die Station nicht
+an die CSMA/CD-Konventionen h&auml;lt (Senden ohne Abh&ouml;ren), oder die
+Konfigurationsregeln f&uuml;r die Kabell&auml;nge sind nicht eingehalten
+worden (zu lange Signallaufzeit). <BR>
+<LI>Sendet eine Station ohne Unterbrechung l&auml;ngere Zeit, also Frames mit
+mehr als die maximal zugelassenen 1518 Bytes, dann bezeichnet man dies als
+'Jabber' (zu deutsch 'Geplapper'). Hauptursache sind hier defekte Netzwerkkarten
+oder -Treiber. <BR>
+<LI>'Short Frames' sind Frames, die kleiner als die minimal zugelassenen 64
+Bytes sind. Grund hierf&uuml;r sind auch Defekte beim Netzwerkinterface
+oder im Treiber.<BR>
+<LI>'Ghost Frames' sind in Ihrer Erscheinung &auml;hnlich einem Datenframe,
+haben jedoch Fehler schon im Start-Delimiter. Potentialausgleichsstr&ouml;me
+und St&ouml;rungen, die auf das Kabel einwirken, k&ouml;nnen einem Repeater
+ein ankommendes Datenpaket vorspiegeln. Der Repeater sendet das Geisterpaket
+dann weiter ins Netz.<BR>
+</UL>
+<P>
+
+<H2><A NAME="2.3">Token-Ring</A></H2>
+Dieses Netz wurde von IBM entwickelt. Alle Rechner sind hintereinandergeschaltet
+und somit ringf&ouml;rmig verbunden. Im &quot;Ruhezustand&quot; (keine Station
+will senden) zirkuliert eine spezielle Nachricht im Netz, das sogenannte
+&quot;Token&quot; (genauer &quot;Frei-Token&quot;, &quot;free token&quot;).
+Diese Nachricht wird von einem Rechner an den n&auml;chsten weitergegeben.
+Der Rechner, der im Besitz des Frei-Tokens ist, kann senden, indem er an
+dieses die Nachricht anh&auml;ngt (&quot;busy token&quot;). Dieser Datenblock
+wird von Station zu Station weitergereicht, bis sie beim Empf&auml;nger
+angekommen ist. Der Empf&auml;nger best&auml;tigt die Nachricht
+durch eine Acknowledge-Meldung, die mit dem Token weiter auf den Ring geschickt 
+wird und schlie&szlig;lich wieder beim Absender eintrifft. Dieser schickt 
+nun wieder ein Frei-Token auf die Reise.<BR>
+<P>
+<center><IMG SRC="b1-6.gif" ALT="Token-Ring-Struktur"></center>
+<P>
+In der Regel berechtigt der Besitz des Tokens nur zur Sendung eines Blocks 
+(non exhaustive), im anderen Extremfall k&ouml;nnte auch definiert werden, 
+da&szlig; die Station soviele Datenbl&ouml;cke senden kann, wie sie m&ouml;chte 
+(exhaustive). Damit k&ouml;nnte aber eine Station, die den Token besitzt, 
+alle anderen dominieren. Normalerweise wird deshalb nur ein Block gesendet. 
+Au&szlig;erdem wird die Dauer der Sendeberechtigung befristet (Token Holding
+Time, z. B. 10 ms). Solange das Netz fehlerfrei funktioniert, stellt Token-Ring 
+ein sehr einfach handzuhabendes Verfahren dar. Komplexer sind die Aufgaben 
+beim Initieren des Netzes und beim Ein- oder Auskoppeln von Stationen. Token-Ring 
+ist das einzige Netz mit aktiven Stationen, die aus Eingabe- und Ausgabeeinheit 
+bestehen. Grunds&auml;tzlich sind alle Stationen gleichberechtigt, jedoch 
+&uuml;bernimmt eine von ihnen als &quot;aktiver Monitor&quot; besondere
+&Uuml;berwachungsaufgaben im Netz. Eine andere Station &uuml;berwacht als 
+&quot;passiver Monitor&quot; den aktiven Monitor und kann gegebenenfalls 
+dessen Aufgaben &uuml;bernehmen. Die Aufgaben des aktiven Monitors sind: 
+<UL>
+<LI>Erzeugen des Ringtaktes<BR>
+<LI>&Uuml;berwachen des Tokens (Neuen Token erzeugen, falls er verloren geht, 
+Verhindern mehrerer Tokens)<BR>
+<LI>Unterbinden permanent kreisender Bl&ouml;cke oder Tokens erh&ouml;hter 
+Priorit&auml;t. (Generell: Ring s&auml;ubern durch Senden eines &quot;Purge 
+Ring Frame&quot; an alle Stationen und Erzeugen eines neuen Frei-Tokens). 
+<LI>Verhindern, da&szlig; mehrere Monitore aktiv sind.<BR>
+<LI>Verz&ouml;gerung des Token-Rahmens um 24 Bit-Zeiten (die L&auml;nge des 
+Token-Rahmens betr&auml;gt 24 Bit). Auch bei extrem kleinem Ring wird so 
+sichergestellt, da&szlig; eine Station den Token-Rahmen vollst&auml;ndig 
+senden kann, bevor sie ihn wieder empf&auml;ngt.<BR>
+</UL>
+<P>
+In regelm&auml;&szlig;igen Abst&auml;nden sendet der aktive Monitor einen 
+&quot;Active Monitor Present Frame&quot; an alle Stationen im Ring. Gleichzeitig 
+wird dadurch eine Prozedur in Gang gesetzt, die allen Stationen die Adresse 
+des jeweiligen Vorg&auml;ngers im Ring liefert (NAUN = Nearest Active Upstream 
+Neighbour) - eine Information, die nur im Fehlerfall wichtig ist. Ein Fehler 
+auf Empfangsseite bedeutet, da&szlig; der eigene Empf&auml;nger oder der 
+Sender des NAUN defekt ist. Die Auswahl des aktiven Monitors geschieht per 
+&quot;Claim-Token Process&quot; durch:<BR>
+<UL>
+<LI>den derzeit aktiven Monitor, wenn dieser Probleme bei der Durchf&uuml;hrung 
+seiner Aufgaben hat,<BR>
+<LI>einen passiven Monitor, wenn der aktive Monitor nicht korrekt arbeitet 
+(z. B. Timeout auftritt).<BR>
+<LI>eine neu eingegliederte Station, wenn diese das Fehlen des aktiven Monitors 
+feststellt.<BR>
+</UL>
+<P>
+Token-Ring-Netze werden normalerweise als Stern-Ring-Verbindungen mit passiven 
+Ringleitungsverteilern aufgebaut. In den Ringleitungsverteilern
+befinden sich Relais (die von den Stationen gesteuert werden) zur Eingliederung 
+von Stationen und zur Schaltung von Ersatzringen bei Defekten. 
+<P>
+<center><IMG SRC="b1-7.gif" ALT="Ringleitungsverteiler"></center>
+<P>
+Die Eingliederung einer Station erfolgt in f&uuml;nf Schritten: 
+<P>
+<OL>
+<LI>Ist ein Adapter vom Ring getrennt, sind gleichzeitig Eingangs- und Ausgangsleitung 
+kurzgeschlossen. Es erfolgt zun&auml;chst ein Adaptertest. Nach dem Test 
+versorgt der Adapter die Relais mit Strom und wird in den Ring eingegliedert. 
+<P>
+<LI>Die Station h&ouml;rt nun den Ring ab. Wenn sie innerhalb einer festgelegten
+Zeit keine Aktivit&auml;t des aktiven Monitors wahrnimmt, startet sie den 
+Proze&szlig; zur Auswahl des aktiven Monitors.<BR>
+<P>
+<LI>Durch Aussenden eines &quot;Duplicate Address Test Frame&quot; pr&uuml;ft 
+die Station die Eindeutigkeit ihrer Adresse. Ist sie nicht eindeutig, koppelt 
+sich die Station wieder ab.<BR>
+<P>
+<LI>Durch den NAUN-Proze&szlig; erf&auml;hrt die Station die Adresse ihres 
+Vorg&auml;ngers und ist nun ins Netz eingegliedert.<BR>
+<P>
+<LI>Von den Voreinstellungen abweichende Parameter k&ouml;nnen nun bei einer 
+Server-Station abgefragt werden, sofern dies n&ouml;tig ist. 
+</UL>
+<P>
+Die Funktionen von Monitor und der eingegliederten Stationen m&uuml;ssen 
+nicht nur einmalig initiiert, sondern auch st&auml;ndig &uuml;berwacht werden. 
+In vielen F&auml;llen sind dies zahlreiche Aktionen, die auch viele Bl&ouml;cke 
+auf dem Netz zur Folge haben und in deren Verlauf auch Fehler- und Ausnahmebedingungen 
+auftreten k&ouml;nnen. Der Nachteil von Token-Ring liegt darin, da&szlig; 
+beim Ausfall einer Station oder bei Kabeldefekten das Netz unterbrochen 
+wird. Wird die defekte Station hingegen abgeschaltet, schalten die Relais
+im Ringleitungsverteiler die Leitung durch. Token Ring ist genormt nach 
+IEEE 802.5.
+<P>
+
+<H2><A NAME="2.4">Token-Bus</A></H2>
+Auch beim Token-Bus wird der Zugriff &uuml;ber Token-Passing geregelt, nur 
+besitzt das Netz Bus- oder Baumstruktur. Hier haben wir also den Fall, da&szlig; 
+eine logische Ringstruktur auf eine physikalische Busstruktur aufsetzt.
+Das Verfahren wird z. B. beim ARCNET und in der industriellen Automatisierung 
+(MAP = Manufacturing Automation Protocol) verwendet. Anders als beim Token-Ring 
+empfangen alle Stationen auf dem Bus die Daten. Daher wird die Reihenfolge 
+der Stationen nicht durch die hardwarem&auml;&szlig;ige Verbindung, sondern 
+rein logisch durch die Adre&szlig;zuordung erledigt. Die Tokens werden von 
+der Station mit der h&ouml;chsten Adresse an diejenige mit der n&auml;chstniedrigeren 
+weitergereicht. Die Station mit der niedrigsten Adresse schlie&szlig;t den 
+logischen Ring durch Adressierung auf die h&ouml;chste Adresse  Token Bus 
+ist genormt nach IEEE 802.4.
+<P>
+
+<CENTER><TABLE BORDER=0 WIDTH="100%">
+<TR>
+<TD ALIGN=LEFT VALIGN=BOTTOM><IMG SRC="left.gif" BORDER=0> <A HREF="netz1.html">Zum vorhergehenden Abschnitt</A></TD>
+<TD ALIGN=CENTER VALIGN=BOTTOM><IMG SRC="up.gif" BORDER=0> <A HREF="index.html">Zum Inhaltsverzeichnis</A></TD>
+<TD ALIGN=RIGHT VALIGN=BOTTOM><IMG SRC="right.gif" BORDER=0> <A HREF="netz3.html">Zum n&auml;chsten Abschnitt</A></TD>
+</TR></TABLE></CENTER>
+<P><HR>
+<h6><i>Copyright &copy; Hochschule M&uuml;nchen, FK 04, Prof. J&uuml;rgen Plate</i><br>
+Letzte Aktualisierung: <SCRIPT LANGUAGE="JavaScript">document.write(document.lastModified);</SCRIPT></I></H6>
+</BODY>
+</HTML>

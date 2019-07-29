@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-;W3C;DTD HTML 4.01 Transitional;EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta NAME="robots" CONTENT="all">
+<meta NAME="revisit-after" CONTENT="10 days">
+<meta NAME="Reply-To" CONTENT="webmaster@netzmafia.de">
+
+<meta NAME="keywords" CONTENT="LAN WAN TCP/IP Computernetze Ethernet Vernetzung Router Hub Switch Protokolle">
+<meta NAME="description" CONTENT="Praxisorientierte Einf&uuml;hrung in den Aufbau und die Funktionsweise von Computernetzen.">
+
+<title>Grundlagen Computernetze</title>
+</head>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" ALINK="#FF0000" VLINK="#FF00FF">
+<CENTER><TABLE BORDER=0 WIDTH="90%" >
+<TR><TD ALIGN=LEFT><IMG SRC="eyes.gif"></TD>
+<TD ALIGN=RIGHT><H3>Grundlagen Computernetze</H3>
+<BR><B><I>Prof. J&uuml;rgen Plate</I></B></TD></TR>
+</TABLE></CENTER>
+<HR>
+
+<H1 ALIGN=CENTER>Grundlagen Computernetze</H1>
+<H2>Inhalt</H2>
+<H3><a href="netz0.html">1 Einf&uuml;hrung</a></H3>
+   <OL>
+   <LI><A HREF="netz0.html#0.1">Einf&uuml;hrung</A>
+   <LI><A HREF="netz0.html#0.2">ISO-Referenzmodell f&uuml;r die Datenkommunikation</A>
+   <LI><A HREF="netz0.html#0.3">Paketvermittlung vs. Leitungsvermittlung</A>
+   <LI><A HREF="netz0.html#0.4">Leistungsparameter</A>
+   </OL>
+<P>
+<H3><a href="netz1.html">2 Logische Struktur von Netzen</a></H3>
+<P>
+<H3><a href="netz2.html">3 Zugriffsverfahren</a></H3>
+   <OL>
+   <LI><A HREF="netz2.html#2.1">ALOHA</A>
+   <LI><A HREF="netz2.html#2.2">CSMA/CD</A>
+   <LI><A HREF="netz2.html#2.3">Token-Ring</A>
+   <LI><A HREF="netz2.html#2.4">Token-Bus</A>
+   </OL>
+<P>
+<H3><a href="netz3.html">4 &Uuml;bertragungsverfahren</a></H3>
+<P>
+<H3><a href="netz4.html">5 Ethernet</a></H3>
+   <OL>
+   <LI><A HREF="netz4.html#4.1">Ethernet II</A>
+   <LI><A HREF="netz4.html#4.2">Novells 802.3 raw</A>
+   <LI><A HREF="netz4.html#4.3">IEEE 802.2 und SNAP</A>
+   <LI><A HREF="netz4.html#4.4">Identifizierung des Ethernet-Interfaces</A>
+   <LI><A HREF="netz4.html#4.5">Signallaufzeiten, Slot Time</A>
+   <LI><A HREF="netz4.html#4.6">Einordnung Ethernet ins OSI-7-Schichten-Referenzmodell</A>
+   <LI><A HREF="netz4.html#4.7">Historisches</A>
+   <LI><A HREF="netz4.html#4.8">Entwicklung der &Uuml;bertragungsmedien (IEEE 802.3)</A>
+   <LI><A HREF="netz4.html#4.9">Promiscous Mode</A>
+   <LI><A HREF="netz4.html#4.10">Power over Ethernet</A>
+   </OL>
+<P>
+<H3><a href="netz5.html">6 &Uuml;bertragungsmedien</a></H3>
+   <OL>
+   <LI><A HREF="netz5.html#5.2">Standard-Ethernet, 10Base5</A>
+   <LI><A HREF="netz5.html#5.3">AUI-Kabel (Transceiver-Kabel)</A>
+   <LI><A HREF="netz5.html#5.4">Thinwire-Ethernet (Cheapernet), 10Base2</A>
+   <LI><A HREF="netz5.html#5.5">Twisted-Pair, 10BaseT</A>
+   <LI><A HREF="netz5.html#5.6">Lichtwellenleiter</A>
+   <LI><A HREF="netz5.html#5.7">Gigabit-Ethernet</A>
+   <LI><A HREF="netz5.html#5.8">Anzeige-LEDs</A>
+   <LI><A HREF="netz8.html#5.9">Wie funktioniert Wake-on-LAN</A>
+   <LI><A HREF="netz5.html#5.10">Ethernetkarten konfigurieren unter Linux</A>
+   <LI><A HREF="netz5.html#5.11">Tabellen</A>
+   </OL>
+<P>
+<H3><a href="netz6.html">7 St&ouml;rquellen</a></H3>
+   <OL>
+   <LI><A HREF="netz6.html#6.1">D&auml;mpfung</A>
+   <LI><A HREF="netz6.html#6.2">Begrenzung der Bandbreite</A>
+   <LI><A HREF="netz6.html#6.3">Verzerrungen durch Laufzeit</A>
+   <LI><A HREF="netz6.html#6.4">Rauschen</A>
+   <LI><A HREF="netz6.html#6.5">Reflexionen, R&uuml;ckflu&szlig;d&auml;mpfung, Nebensprechen</A>
+   </OL>
+<P>
+<H3><a href="netz7.html">8 Repeater, Bridge, Router</a></H3>
+   <OL>
+   <LI><A HREF="netz7.html#7.1">Multiport-Repeater</A>
+   <LI><A HREF="netz7.html#7.2">Hub</A>
+   <LI><A HREF="netz7.html#7.3">Repeaterregel</A>
+   <LI><A HREF="netz7.html#7.4">Lichtwellenleiter (10BaseF, FOIRL) und Sternkoppler</A>
+   <LI><A HREF="netz7.html#7.5">Bridge</A>
+   <LI><A HREF="netz7.html#7.6">Switch</A>
+   <LI><A HREF="netz7.html#7.7">Router</A>
+   <LI><A HREF="netz7.html#7.8">Layer-3-Switching</A>
+   <LI><A HREF="netz7.html#7.9">Terminalserver</A>
+   <LI><A HREF="netz7.html#7.10">Gateway</A>
+   <LI><A HREF="netz7.html#7.11">Firewall-Rechner</A>
+   <LI><A HREF="netz7.html#7.12">VLAN - virtuelle lokale Netzwerke</A>
+   </OL>
+<P>
+<H3><a href="twisted.html">9 Twisted-Pair-Verkabelung</A></H3>
+   <OL>
+   <LI><A HREF="twisted.html#t.1">Stecker und Buchsen</A>
+   <LI><A HREF="twisted.html#t.2">Steckerbelegung und Adernfarben</A>
+   <LI><A HREF="twisted.html#t.3">Fehlerquellen und Fehlersuche</A>
+   <LI><A HREF="../hardware/Elektro.html">Leitungsf&uuml;hrung im Raum</A>
+   </OL>
+<P>
+<H3><a href="planung.html">10 Netz-Verkabelung und Netzplanung</A></H3>
+   <OL>
+   <LI><A HREF="planung.html#t.3">Netz-Verkabelung</A>
+   <LI><A HREF="planung.html#t.4">Netzplanung</A>
+   <LI><A HREF="planung.html#t.5">Netz-Dokumentation</A>
+   <LI><A HREF="planung.html#t.6">Fehlersuche/Belastungstest</A>
+   </OL>
+<P>
+<H3><a href="netz8.html">11 TCP/IP</a></H3>
+   <OL>
+   <LI><A HREF="netz8.html#8.1">Die TCP/IP-Protokolle</A>
+   <LI><A HREF="netz8.html#8.2">ARP</A>
+   <LI><A HREF="netz8.html#8.3">IP - Internet Protocol</A>
+   <LI><A HREF="netz8.html#8.4">ICMP - Internet Control Message Protocol</A>
+   <LI><A HREF="netz8.html#8.5">UDP - User Datagram Protocol</A>
+   <LI><A HREF="netz8.html#8.6">TCP - Transmission Control Protocol</A>
+   <LI><A HREF="netz8.html#8.7">PPP - Point to Point Protocol</A>
+   <LI><A HREF="netz8.html#8.8">IP Next Generation</A>
+   <LI><A HREF="netz8.html#8.9">Domain Name System (DNS)</A>
+   <LI><A HREF="netz8.html#8.10">Zero Configuration Networking</A>
+   <LI><A HREF="netz8.html#8.11">Netzwerkkonfiguration am Beispiel Linux</A>
+   </OL>
+<P>
+<H3><a href="netz9.html">12 H&ouml;here Protokolle</a></H3>
+   <OL>
+   <LI><A HREF="netz9.html#9.1">DHCP</A>
+   <LI><A HREF="netz9.html#9.2">SMTP</A>
+   <LI><A HREF="netz9.html#9.3">POP</A>
+   <LI><A HREF="netz9.html#9.4">IMAP</A>
+   <LI><A HREF="netz9.html#9.5">FTP</A>
+   <LI><A HREF="netz9.html#9.6">HTTP</A>
+   </OL>
+<P>
+<H3><a href="netz10.html">13 Weitverkehrsnetze, VoIP, Powerline, Funknetze</a></H3>
+   <OL>
+   <LI><A HREF="netz10.html#10.1">&Uuml;bertragungsmedien f&uuml;r Weitverkehrsnetze</A>
+   <LI><A HREF="netz10.html#10.2">Voice over IP</A>
+   <LI><A HREF="netz10.html#10.3">Powerline Communications</A>
+   <LI><A HREF="netz10.html#10.4">Funk-LAN-Technologie</A>
+   <LI><A HREF="netz10.html#10.5">Weitere Drahtlos-Verfahren</A>
+   </OL>
+<P>
+<H3>14 Anhang</H3>
+<OL>
+<LI><a href="netz11.html">Literatur</a>
+<LI><a href="http://www.submarinecablemap.com/">Karte der Untersee-Kabelverbindungen</a>
+<LI><a href="wlan-antennen.pdf">WLAN-Antennen (von M. Reimann)</a>
+<LI><a href="Ethernet_Kabeldiagnose.pdf">Ethernet Kabeldiagnose</a> (National Semiconductor
+Application Note 1508)
+<LI><a href="http://www.wut.de/pdf/e-58www-11-prde-000.pdf">TCP/IP-Ethernet bis Web-IO (Fa. Wiesemann &amp; Theis)</a>
+<LI><a href="http://www.wut.de/pdf/e-58www-12-prde-000.pdf">Fit in einem Tag für TCP/IP-Sockets (Fa. Wiesemann &amp; Theis)</a>
+<LI><a href="http://www.wut.de/pdf/e-58www-20-prde-000.pdf">Poster Internet-Protokolle (Fa. Wiesemann &amp; Theis)</a>
+<LI><a href="wlan_bsi.pdf">WLAN-Sicherheit</a> (Quelle: <a href="http://www.bsi.de/">BSI</a>)
+<LI>Kostenlose  Software von Reichle &amp; De-Massari: <A HREF="http://www.netplex.gr/planing_1.htm">R&amp;M Netplanner</A>
+<LI><a href="http://www-wsp.adckrone.com/eu/de/webcontent/support/PDFs/carrier/103629DE.pdf">Inside LSA plus</A>
+<LI><a href="http://www.psiberdata.de/fileadmin/templates/WhitePaper/2009_04_OptischeMesstechnik.pdf">Optische Messtechnik für LAN Verkabelungen</A>
+<LI><a href="http://www.psiberdata.de/fileadmin/templates/WhitePaper/2008_11_Glasfasernetze_zuverlssig_betreiben.pdf">Glasfasernetze zuverl&auml;ssig betreiben</A>
+<LI><a href="http://www.psiberdata.de/fileadmin/templates/WhitePaper/2008_09_WhitePaper_WLANStandard_n.pdf">Systematische WLAN-Planung</A>
+<LI><a href="rfc1925.html">RFC 1925: The Twelve Networking Truths</a>
+<LI><a href="https://tools.ietf.org/html/rfc3092">RFC3092: Etymology of "Foo"</a>
+<LI><a href="https://tools.ietf.org/html/rfc2324">RFC2324: Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0)</a>
+<LI><a href="https://tools.ietf.org/html/rfc7168">RFC7168: The Hyper Text Coffee Pot Control Protocol for Tea Efflux Appliances (HTCPCP-TEA)</a>
+</OL>
+<P>
+<A HREF="netze.tgz">Download</A> des gesamten Skripts<BR>
+<P>
+<HR>
+<H6><I>Copyright &copy; Hochschule M&uuml;nchen, FB 04, Prof. J&uuml;rgen Plate<BR>
+Letzte Aktualisierung: <SCRIPT LANGUAGE="JavaScript">document.write(document.lastModified);</SCRIPT></I></H6>
+</BODY>
+</HTML>

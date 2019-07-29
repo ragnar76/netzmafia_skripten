@@ -1,0 +1,916 @@
+<!DOCTYPE HTML PUBLIC "-;W3C;DTD HTML 4.01 Transitional;EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta NAME="robots" CONTENT="all">
+<meta NAME="revisit-after" CONTENT="10 days">
+<meta NAME="Reply-To" CONTENT="webmaster@netzmafia.de">
+
+<meta NAME="keywords" CONTENT="LAN WAN TCP/IP Computernetze Ethernet Vernetzung Router Hub Switch Protokolle">
+<meta NAME="description" CONTENT="Praxisorientierte Einf&uuml;hrung in den Aufbau und die Funktionsweise von Computernetzen.">
+<title>Grundlagen Computernetze</title>
+</head>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" ALINK="#FF0000" VLINK="#FF00FF">
+<CENTER><TABLE BORDER=0 WIDTH="90%" >
+<TR><TD ALIGN=LEFT><IMG SRC="eyes.gif"></TD>
+<TD ALIGN=RIGHT><H3>Grundlagen Computernetze</H3>
+<BR><B><I>Prof. J&uuml;rgen Plate</I></B></TD></TR>
+</TABLE></CENTER>
+<HR>
+
+<h1 align=center>Twisted-Pair-Verkabelung</h1>
+<BR>
+<CENTER><IMG SRC="messy-rj45.jpg"></CENTER>
+<BR><BR><BR><BR>
+
+<A NAME="t.1"></A>
+<H2>Stecker und Buchsen</H2>
+<TABLE BORDER="1" CELLPADDING="4" CELLSPACING="0">
+<TR>
+<TD ALIGN=CENTER><IMG SRC="rj45stecker.jpg"></TD>
+<TD ALIGN=CENTER><IMG SRC="tpdose.jpg"></TD>
+<TD ALIGN=CENTER><IMG SRC="tpbuchse.jpg"></TD>
+</TR><TR>
+<TD>RJ45-Stecker zum <BR>
+Aufpressen der Kabeladern<BR>
+(Twisted-Pair-Stecker)</TD>
+<TD>RJ45-Einbaudose (Aufputz)</TD>
+<TD>RJ45-Buchse zum Einl&ouml;ten</TD>
+</TR></TABLE>
+<P>
+
+<A NAME="t.2"></A>
+<H2>Steckerbelegung und Adernfarben</H2>
+
+Der Standard DIN EN 50173 regelt die Kabelbelegung zumindest bei
+Kupferkabeln in Netzen. Es gibt vier Kabelpaare:
+<P>
+<IMG SRC="paare.gif" ALIGN=LEFT HSPACE=20>
+<BR>
+Blick in die Buchse
+<PRE>
+
+   Paar 1 Pins 4, 5
+   Paar 2 Pins 1, 2
+   Paar 3 Pins 3, 6
+   Paar 4 Pins 7, 8
+</PRE>
+<BR CLEAR=ALL>
+<P>
+<UL>
+<LI>Token Ring verwendet die Paare 1 und 3
+<LI>10BaseT verwendet die Paare 2 und 3 (ebenso 100BaseTX)
+<LI>100BaseT4 und VG-Anylan verwenden alle Paare
+<LI>ISDN verwendet die Paare 1 und 3
+<LI>ATM verwendet die Paare 2 und 4
+<LI>TP-PMD verwendet die Paare 2 und 4
+<LI>AS 400 verwendet das Paar 1
+<LI>IBM 3270 verwendet das Paar 2
+</UL>
+Bei der Nummerierung wird immer von einem achtpoligen Stecker ausgegangen. 
+Vier- oder sechspolige Stecker verwenden die Pin-Nummern <i>aus der Mitte</i>. 
+So hat z. B. ein vierpoliger Stecker nicht die Pins1 bis 4, sondern 3 bis 6.
+In der folgenden Tabelle sind einige Belegungen von achtpoligen RJ-45-Steckern 
+angegeben:
+<p>
+<table border=1" cellpadding="3" cellspacing="0">
+<tr>
+<th>Anwendung</th>
+<th width="20">1</th>
+<th width="20">2</th>
+<th width="20">3</th>
+<th width="20">4</th>
+<th width="20">5</th>
+<th width="20">6</th>
+<th width="20">7</th>
+<th width="20">8</th>
+</tr>
+<tr>
+<td>10BaseT, 100BaseTX</td>
+<td>Tx+</td>
+<td>Tx-</td>
+<td>Rx+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Rx-</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Gigabit-Ethernet (1000BaseT), 100BaseT4</td>
+<td>D1+</td>
+<td>D1-</td>
+<td>D2+</td>
+<td>D3+</td>
+<td>D3-</td>
+<td>D2-</td>
+<td>D4+</td>
+<td>D4-</td>
+</tr>
+<tr>
+<td>U<sub>P0</sub>, U<sub>200</sub>, U<sub>2B1Q</sub>, U*</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>2a<sup>1</sup></td>
+<td>1a</td>
+<td>1b</td>
+<td>2b<sup>1</sup></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Analoges Telefon, neuere Belegung (international)</td>
+<td>&nbsp;</td>
+<td>a2</td>
+<td>W</td>
+<td>a</td>
+<td>b</td>
+<td>E</td>
+<td>b2</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Analoges Telefon, ältere Belegung (Deutschland)</td>
+<td>&nbsp;</td>
+<td>a2</td>
+<td>a</td>
+<td>E</td>
+<td>W</td>
+<td>b</td>
+<td>b2</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>ISDN S<sub>0</sub>-Bus</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>2a</td>
+<td>1a</td>
+<td>1b</td>
+<td>2b</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>DSL-Weiche</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1a</td>
+<td>1b</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<p>
+<small><sup>1</sup> Optional für externe Stromversorgung</small>
+<p>
+
+<P>
+<IMG SRC="tpstecker.gif">
+<BR>
+Pin-Numerierung von Stecker und Kabel
+<P>
+F&uuml;r den IP65/67-Bereich in der Industrie kommen keine RJ-45-Stecker zum Einsatz,
+sondern es werden 4-polige M12-Steckverbinder mit D-Codierung verwendet. An diese
+ Stecker kann die Profinet-AWG22-Leitung angeschlossen werden. Der Stecker ist 
+abgeschirmt und f&uuml;r den rauhen Insustrieeinsatz ausgelegt.
+<P>
+<IMG SRC="m12stecker.jpg">
+<BR>
+
+<H3>Adernfarben</H3>
+Hier gibt es zwei Belegungen (die aber bis auf die Farben zum gleichen Ergebnis f&uuml;hren).
+Man mu&szlig; sich nur an einen der beiden Standards halten, damit man nicht durcheinander
+ger&auml;t. Normales 100BaseT- und 10BaseT-Kabel kommt mit den Adern an den Pins 1, 2, 3
+und 6 aus. Die Pins 4, 5, 7 und 8 werden f&uuml;r 100BaseT4+ ben&ouml;tigt.
+<P>
+<center>
+<TABLE BORDER="0" CELLSPACING="20">
+<TR><TD ALIGN="LEFT" VALIGN="TOP">
+Standard EIA/TIA-T568A-Belegung:<BR>
+&nbsp;
+<P>
+<TABLE BORDER="0" BGCOLOR="#DDDDDD">
+<TR><TH>&nbsp;Pin&nbsp;</TH><TH align=left>&nbsp;Farbe</TH></TR>
+<TR><TD>&nbsp;1&nbsp;</TD><TD>&nbsp;Wei&szlig;/Gr&uuml;n &nbsp;</TD></TR>
+<TR><TD>&nbsp;2&nbsp;</TD><TD>&nbsp;Gr&uuml;n &nbsp;</TD></TR>
+<TR><TD>&nbsp;3&nbsp;</TD><TD>&nbsp;Wei&szlig;/Orange &nbsp;</TD></TR>
+<TR><TD>&nbsp;4&nbsp;</TD><TD>&nbsp;Blau &nbsp;</TD></TR>
+<TR><TD>&nbsp;5&nbsp;</TD><TD>&nbsp;Wei&szlig;/Blau &nbsp;</TD></TR>
+<TR><TD>&nbsp;6&nbsp;</TD><TD>&nbsp;Orange &nbsp;</TD></TR>
+<TR><TD>&nbsp;7&nbsp;</TD><TD>&nbsp;Wei&szlig;/Braun &nbsp;</TD></TR>
+<TR><TD>&nbsp;8&nbsp;</TD><TD>&nbsp;Braun &nbsp;</TD></TR>
+</TABLE>
+<P>
+</TD><TD ALIGN="LEFT" VALIGN="TOP">
+Standard EIA/TIA-T568B-Belegung:<BR>
+(Diese scheint die verbreitetste zu sein.)
+<P>
+<TABLE BORDER="0" BGCOLOR="#DDDDDD">
+<TR><TH>&nbsp;Pin&nbsp;</TH><TH align=left>&nbsp;Farbe</TH></TR>
+<TR><TD>&nbsp;1&nbsp;</TD><TD>&nbsp;Wei&szlig;/Orange&nbsp;</TD></TR>
+<TR><TD>&nbsp;2&nbsp;</TD><TD>&nbsp;Orange&nbsp;</TD></TR>
+<TR><TD>&nbsp;3&nbsp;</TD><TD>&nbsp;Wei&szlig;/Gr&uuml;n&nbsp;</TD></TR>
+<TR><TD>&nbsp;4&nbsp;</TD><TD>&nbsp;Blau&nbsp;</TD></TR>
+<TR><TD>&nbsp;5&nbsp;</TD><TD>&nbsp;Wei&szlig;/Blau&nbsp;</TD></TR>
+<TR><TD>&nbsp;6&nbsp;</TD><TD>&nbsp;Gr&uuml;n&nbsp;</TD></TR>
+<TR><TD>&nbsp;7&nbsp;</TD><TD>&nbsp;Wei&szlig;/Braun&nbsp;</TD></TR>
+<TR><TD>&nbsp;8&nbsp;</TD><TD>&nbsp;Braun&nbsp;</TD></TR>
+</TABLE>
+<P>
+</TD><TD ALIGN="LEFT" VALIGN="TOP">
+M12-Belegung:<br>(Profinet-Kabelfarben)
+<P>
+<TABLE BORDER="0" BGCOLOR="#DDDDDD">
+<TR><TH>&nbsp;Pin&nbsp;</TH><TH align=left>&nbsp;Farbe</TH></TR>
+<TR><TD>&nbsp;1 (TD+)&nbsp;</TD><TD>&nbsp;Gelb&nbsp;</TD></TR>
+<TR><TD>&nbsp;2 (RD+)&nbsp;</TD><TD>&nbsp;Wei&szlig;&nbsp;</TD></TR>
+<TR><TD>&nbsp;3 (TD-)&nbsp;</TD><TD>&nbsp;Orange&nbsp;</TD></TR>
+<TR><TD>&nbsp;</TD><TD>&nbsp</TD></TR>
+<TR><TD>&nbsp;</TD><TD>&nbsp</TD></TR>
+<TR><TD>&nbsp;4 (RD-)&nbsp;</TD><TD>&nbsp;Blau&nbsp;</TD></TR>
+<TR><TD>&nbsp;</TD><TD>&nbsp</TD></TR>
+<TR><TD>&nbsp;</TD><TD>&nbsp</TD></TR>
+</TABLE>
+<P>
+</TD></TR></TABLE>
+<P>
+<IMG SRC="kabelfarben.gif">
+</center>
+<P>
+Die Belegung ist grunds&auml;tzlich eins zu eins an beiden Steckern.
+Auf Dosen ist die Belegung aufgedruckt (bzw. die LSA-Klemmen sind einfach in
+der entsprechenden Farbe markiert). Die Kabelfarben kennzeichnen die verdrillten
+Adernpaare, die Paare m&uuml;ssen eingehalten werden.
+<P>
+
+<h3>Crossoverkabel</h3>
+Crossoverkabel dienen zur Verbindung zweier Hubs. Auf diese Weise kann man die
+Zahl der verf&uuml;gbaren Rechneranschl&uuml;sse erh&ouml;hen. Beachten Sie aber,
+da&szlig; sich nur eine begrenzte Zahl von Hubs kaskadieren lassen.
+<p>
+<center><img src="cross.gif"></center>
+<p>
+
+<h3>Anschlu&szlig;belegung der Twisted-Pair-Unterputz-Kanaleinbaudose</h3>
+In der Regel wird das Fabrikat Teleg&auml;rtner MJ45 LFS 8/8 verwendet.
+Die Darstellung zeigt die Draufsicht (anschlusseitig) der Dose. Die obere
+Klemmenreihe ist f&uuml;r die linke Dose, die untere Klemmenreihe f&uuml;r
+die rechte Dose. Beim Standardnetz sind nur vier Kabeladern pro Dose
+anzuschliessen (Pins 1,2, 3 und 6, siehe oben).
+<P>
+<center><img src="twisted.gif"></center>
+<p>
+
+<h3>Anschlu&szlig;belegung der Twisted-Pair-Stecker f&uuml;r Hub und Computer</h3>
+<p>
+<center><img src="stecker.gif"></center>
+<p>
+
+<h3>Cable-Sharing, Y-Kabel</h3>
+Y-Kabel sind spezielle Kabel, mit denen man ein voll ausgebautes RJ-45-Kabel, bei
+dem alle 4 Paare des Kabels angeschlossen sind, als Verbindungsleitung
+f&uuml;r zwei Endger&auml;te benutzen kann. Sinn des Ganzen ist, da&szlig; man nur
+ein Twisted-Pair-Kabel mit 8 Adern verlegen mu&szlig;, um zwei Computer (oder andere
+Ger&auml;te) anschlie&szlig;en zu k&ouml;nnen (jedenfalls bei niedrigeren
+&Uuml;bertagungsraten).<br>
+An Ihrem Hub belegen Sie zwei Ports, die dann per Y-Kabel auf ein Kabel geleitet
+werden, das zu einem Verteilungspunkt (Dose im B&uuml;ro) verlegt ist. Von dort
+wird mit einem weiteren Y-Kabel zu Ihren Endger&auml;ten verteilen.
+<p>
+<center><img src="ykabel1.gif"></center>
+<p>
+<H3 align=center>Schema der Verbindung:</H3>
+<p>
+<center><img src="ykabel3.gif"></center>
+<P>
+Für die verschiedenen Sprach- und Datendienste sind in den internationalen
+Richtlinien unterschiedliche Buchsenkontaktbelegungen festgelegt worden. Damit die
+Signalleitungen an den richtigen Kontakten der Endger&auml;te angelegt sind, wurden
+f&uuml;r Y-Kabel (Cable Sharing Adapter) verschiedene Ausf&uuml;hrungen entwickelt:
+<UL>
+<li>mit Kontaktbelegung 1, 2, 3, 6 (Ethernet usw.)
+<li>mit Kontaktbelegung 3, 6, 4, 5 (Token Ring, Telefonanschluss, ISDN)
+</UL>
+Es gibt auch fertige Adapter im Handel zu kaufen:
+<p>
+<center><img src="y-adapter.jpg"> &nbsp;&nbsp;&nbsp; <img src="y-adapter2.jpg"></center>
+<p>
+Der Cable-Sharing-Adapter wird immer paarweise eingesetzt. Auf der einen Seite
+am Verteiler, um die beiden Dienste auf die Installationsleitung aufzuschalten und auf
+der anderen Seite (z. B. an der Dose), um die Dienste vom 8-adrigen Anschluss wieder
+abzugreifen. Durch die flexible Anschlu&szlig;schnur wird eine gute Verteilung der
+Zugkr&auml;fte erreicht, die von der Anschlu&szlig;schnur der Endger&auml;te bzw. von
+den Patchkabeln auf den Adapter einwirken.
+<P>
+<H3 align=center>Verdrahtung des Kabels:</H3>
+<center><img src="y-eth-eth.gif"><br>Verteiler f&uuml;r 2 Ethernet-Anschl&uuml;sse</center>
+<P>
+<center><img src="y-tel-eth.gif"><br>Verteiler f&uuml;r Ethernet- und Telefon-Anschlu&szlig;</center>
+<P>
+<center><img src="y-tel-tel.gif"><br>Verteiler f&uuml;r 2 Telefon-Anschl&uuml;sse</center>
+<P>
+
+<H3>100Base-T4 und 1000BaseT</H3>
+100Base-T4 und 1000BaseT nutzen im Gegensatz zu 10BaseT alle 4 Adernpaare. Die
+Steckerbelegung ist dann:
+<p>
+<center><img src="tp1000.gif"></center>
+<p>
+Das Crossover-Kabel wird folgenderma&szlig;en verdrahtet:
+<p>
+<center><img src="cross8.gif"></center>
+<P>
+Mir wurde zugetragen, dass zumindest manche Kabeltester die Polarit&auml;t der 
+gekreuzten D3- und D4-Leitungen (4,5 mit 7,8) bem&auml;ngeln. Nach allen meinen
+Quellen sollte Pin 4 mit Pin 7 und Pin 5 mit Pin 8 verbunden sein, der
+Tester meint aber, man solle Pin 4 mit Pin 8 und Pin 5 mit Pin 7 verbinden.
+Leider ist es mir bisher nicht gelungen, das Mysterium zu klären. 
+<p>
+
+<H3>RJ-45-Stecker crimpen</H3>
+<TABLE Border=1 Cellpadding=3 Cellspacing=0>
+<TR><TD VALIGN=MIDDLE ALIGN=CENTER BGCOLOR="#CCCCCC"><IMG border=0 src="crimpzange.jpg"></TD>
+<TD VALIGN=TOP ALIGN=LEFT>Zuerst sollten Sie alles Ben&ouml;tigte bereitlegen. F&uuml;r eine TP-Verbindung
+braucht man das Kabel, zwei Knickschutzh&uuml;llen, zwei Crimpstecker, eine Crimpzange,
+ein scharfes Messer, einen Schraubenzieher und eine Kabelschere oder einen
+Seitenschneider.</TD></TR>
+<TR><TD VALIGN=TOP ALIGN=LEFT>Schieben Sie die Knickschutzh&uuml;lle auf das Kabel. Dann entfernen
+Sie ca. 2 cm der Isolierung. Oft ist an der Crimpzange ein entsprechendes Werkzeug vorhanden.
+Achten Sie darauf, die Abschirmung und die Adern nicht zu verletzen.
+<P>
+Dazu noch ein Tipp von Thomas Schmieder:<br>
+<I>Die Knickschutzh&uuml;lle wird ja gerne vergessen. Aber manchmal (oder eigentlich meistens)
+klappt das Aufschieben nicht, da das Material des Kabels und das der H&uuml;lle so aneinander
+kleben, dass man eher einen Kopfstand auf der Wasseroberfl&auml;che hinbekommt, als die T&uuml;lle
+aufzuschieben. Ein winziges Tr&ouml;pfchen Speise&ouml;l hat mir schon oft die Show gerettet.</I>
+<P>
+Nat&uuml;rlich tut's auch etwas Vaseline oder ein anderes Gleitmittel...
+</TD><TD VALIGN=MIDDLE ALIGN=CENTER BGCOLOR="#CCCCCC"><IMG border=0 src="crimp1.jpg"></TD>
+</TR>
+<TR><TD VALIGN=MIDDLE ALIGN=CENTER BGCOLOR="#CCCCCC"><IMG border=0 src="crimp2.jpg"></TD>
+<TD VALIGN=TOP ALIGN=LEFT>Nun &ouml;ffnen Sie vorsichtig die Abschirmfolie und klappen Sie diese
+nach hinten. Danach ordnet man die Kabelpaare parallel entsprechend der Adernbelegung
+nebeneinander an.<BR>
+Halten Sie die Kabel etwa 10 mm von der Isolierung entfernt parallel
+fest und schneiden Sie alle Adern ca. 4 mm vor den Fingern ab. Ab da sollten Sie
+die Adern weiter festhalten. Die L&auml;nge der freiliegenden isolierten Adern mu&szlig;
+zwischen 10 mm und 14 mm liegen. Manche Steckertypen haben einen kleinen,
+rechteckigen Plastikschlitten als Montagehilfe beiliegen. In diesem Fall werden
+die Kabel zuerst in den Schlitten eingeschoben und danach abgeschnitten.
+Der Schlitten hat einen Nachteil: Manchmal kann man nicht erkennen, ob
+er tief genug im Stecker sitzt (dann gibt es keinen Kontakt beim abschlie&szlig;enden
+Crimpen). Wenn man den Plastikschlitten mit schwarzem Filzer am Rand einf&auml;rbt,
+kann man seine Lage leichter erkennen und sie gegebenenfalls korrigieren, indem
+man ihn mit Pinzette oder Schraubendreher tiefer in den Stecker schiebt.
+</TD></TR>
+<TR><TD VALIGN=TOP ALIGN=LEFT>Schieben Sie die Kabel in den RJ45-Stecker (das Steckersichtfenster zeigt nach
+oben), und zwar solange, bis die Kabel b&uuml;ndig am Steckerabschlu&szlig; sitzen.
+Sollte sich beim hineinschieben eine Ader verkanten, alles nochmal herausziehen
+und neu versuchen. Bei der Schlittenvariante f&uuml;hren Sie den Schlitten mit den
+Adern in den Stecker ein und stellen Sie sicher,  da&szlig; alle Adern bis nach ganz
+vorne durchgeschoben werden. <BR>
+Beim nicht abgeschirmten Stecker: W&auml;hrend Sie Kabel und Stecker mit der einen
+Hand festhalten, schieben Sie mit dem Schraubenzieher die Abschirmung vorsichtig
+rechts und links neben die Adern in den Stecker (nicht zu tief).
+Damit wird ein stabilerer Sitz des Steckers und eine optimale Verbindung zwischen
+der Stecker- und Kabelmasse erreicht. Die einzelnen Adern m&uuml;ssen erkennbar sein,
+wenn man von vorne auf den Stecker schaut. </TD>
+<TD VALIGN=MIDDLE ALIGN=CENTER BGCOLOR="#CCCCCC"><IMG border=0 src="crimp3.jpg"></TD></TR>
+<TR><TD VALIGN=MIDDLE ALIGN=CENTER BGCOLOR="#CCCCCC"><IMG border=0 src="crimp4.jpg"></TD>
+<TD VALIGN=TOP ALIGN=LEFT>Der Stecker wird vorsichtig in die Crimpzange eingef&uuml;hrt (er pa&szlig;t nur in einer
+Richtung) und bis zum Anschlag hineingeschoben. Jetzt pressen Sie die Crimpzange
+einmal kr&auml;ftig zusammen (soweit es geht), l&ouml;sen sie wieder und ziehen den Stecker
+heraus. Beim nicht-abgeschirmten Stecker schieben Sie noch die Knickschutzh&uuml;lle
+auf den Stecker. <BR>
+Nun sind die Litzen des Kabels fest mit dem Stecker verpre&szlig;t und gleichzeitig
+die Isolierung aufgetrennt worden - wie die folgende Schemazeichnung zeigt.
+<BR><IMG border=0 src="cbside.gif">
+</TD></TR>
+<TR><TD VALIGN=TOP ALIGN=LEFT>Beim abgeschirmten Stecker werden die beiden Metallzungen der Abschirmung
+mit einer Flachzange vorsichtig um das Kabel herumgebogen und festgedr&uuml;ckt. Achten
+Sie auf guten Kontakt mit der Abschirmung des Kabels. Dann kann auch hier die
+Knickschutzh&uuml;lle aufgeschoben werden.
+</TD>
+<TD VALIGN=MIDDLE ALIGN=CENTER BGCOLOR="#CCCCCC"><IMG border=0 src="crimp5.jpg"></TD></TR>
+<TR><TD VALIGN=MIDDLE ALIGN=CENTER BGCOLOR="#CCCCCC"><IMG border=0 src="crimp6.jpg"></TD>
+<TD VALIGN=TOP ALIGN=LEFT>Das Kabel sollte jetzt fertig sein und man kann es testen. Das fertige Kabel
+wird mit einem Kabeltester &uuml;berpr&uuml;ft, indem auf die eine Seite der entsprechende
+Adapter aufgesteckt und das andere Kabelende in den Tester gesteckt wird. Zur
+Not reicht auch ein Durchgangspr&uuml;fer.
+</TD></TR>
+</TABLE>
+<P>
+
+<H3>Auflegen der Kabel am Patchfeld/an der Dose</H3>
+In der Regel werden bei den Dosen zwei Varianten verwendet, entweder mit herk&ouml;mmlichen
+Schraubklemmen oder mit LSA-Klemmen. Zur Schraubklemmen-Variante ist nicht viel zu sagen.
+Die Kabel werden abisoliert und die Abschirmung zur&uuml;ckgeschlagen. Anschlie&szlig;end wird
+auch die Isolierung der einzelnen Adern auf ca. 5 mm L&auml;nge entfernt und jede Ader einzeln
+in die Klemme eingef&uuml;hrt und verschraubt.<BR>
+"LSA" steht f&uuml;r "l&ouml;t-, schraub- und abisolierfrei". Bei diesem Verbindungsverfahren
+wird zum Auflegen ein spezielles Werkzeug verwendet.
+<BR>
+<IMG border=0 src="auflegewerkzeug1.jpg">
+<IMG border=0 src="auflegewerkzeug2.jpg"><BR>
+Mit dem LSA-Auflegewerkzeug werden die einzelnen Adern an der Dose oder am
+Patchpanel aufgelegt. Damit wird jede Ader in einen Schlitz gequetscht
+und das &uuml;berstehende Ende abgeschnitten. So kann eine Dose zuverl&auml;ssig
+in wenigen Minuten angeschlossen werden.
+<P>
+<TABLE Border=1 Cellpadding=3 Cellspacing=0>
+<TR><TD VALIGN=MIDDLE ALIGN=CENTER BGCOLOR="#CCCCCC"><IMG border=0 src="patch1.jpg"></TD>
+<TD VALIGN=TOP ALIGN=LEFT>Zur Demonstation wird hier ein Stecker-Patchfeld verwendet,
+bei einer Dose ist die Vorgehensweise aber dieselbe. Meist sind die entsprechenden
+Leisten auch farbig markiert oder zumindest beschriftet, so da&szlig; man beim
+Auflegen der Kabel eigentlich nichts falsch machen kann.
+</TD></TR>
+<TR><TD VALIGN=TOP ALIGN=LEFT>Das Kabel wird zuerst abisoliert. Hier sehen Sie eine
+Kabelvariante, bei der die Adernpaare nochmals einzeln abgeschirmt sind. Die Abschirmung
+des Kabels und die der Adern wird nur soweit wie n&ouml;tig zur&uuml;ckgeschlagen. Dann werden
+die Adern entsprechend der Farbmarkierung in die Schlitze der Leiste eingelegt. Man
+kann entweder erst alle Kabel auflegen und dann die Verbindung herstellen oder man
+bearbeitet Paar f&uuml;r Paar.
+</TD>
+<TD VALIGN=MIDDLE ALIGN=CENTER BGCOLOR="#CCCCCC"><IMG border=0 src="patch2.jpg"></TD></TR>
+<TR><TD VALIGN=MIDDLE ALIGN=CENTER BGCOLOR="#CCCCCC"><IMG align=Left border=0 src="patch3.jpg">
+<IMG align=right border=0 src="patch6.jpg"></TD>
+<TD VALIGN=TOP ALIGN=LEFT>Liegt die Kabelader im Schlitz der Leiste wird das
+Auflegewerkzeug aufgesetzt und nach unten gedr&uuml;ckt. Mit diesem Vorgang wird die
+Kabelader abisoliert und die Kuferlitze in einen V-f&ouml;rmigen Schlitz aus Metall
+gepre&szlig;t, wo eine innige Verbindung zwischen Litzte und Metallkontakt hergestellt wird.
+Gleichzeitig schneidet das Werkzeug das &uuml;berstehende Ende der Litze ab.
+<P>
+Die rechte Abbildung zeigt die Situation bei einer Einzel-Steckdose.
+</TD></TR>
+<TR><TD VALIGN=TOP ALIGN=LEFT>Sind alle Adern korrekt aufgelegt, wird das Abschirmnetz
+zur&uuml;ckgezogen, zusammen mit dem Kabel unter die Zugentlastungs-Schelle gelegt und
+festgeklemmt. Die Schellen sind jeweils f&uuml;r ein Kabelpaar, so da&szlig; man normalerweise
+erst noch das zweite Kabel auflegt, bevor die Schraube der Schelle festgezogen wird.
+</TD>
+<TD VALIGN=MIDDLE ALIGN=CENTER BGCOLOR="#CCCCCC"><IMG border=0 src="patch4.jpg"></TD></TR>
+<TR><TD VALIGN=MIDDLE ALIGN=CENTER BGCOLOR="#CCCCCC"><IMG border=0 src="patch5.jpg"></TD>
+<TD VALIGN=TOP ALIGN=LEFT>Zum Schlu&szlig; wird als zweite Zug- und Biegeentlastung das
+Kabel noch mit einem Kabelbinder etwas weiter hinten am Patchfeld befestigt. Bei
+einer Doseninstallation entf&auml;llt dieser Schritt. Daf&uuml;r wird bei einer Dose noch
+der Abschirmdeckel zugeschraubt. Abschlie&szlig;end erfolgt auch hier der Test der
+Verbindung mit einem Kabeltester.
+</TD></TR>
+</TABLE>
+<P>
+
+<h3><A NAME="t.3">Fehlerquellen und Fehlersuche</A></h3>
+
+<h4>Kabel besch&auml;digt</h4>
+Besch&auml;digungen an Netzwerkkabeln k&ouml;nnen viele Ursachen haben: Anwender
+rollen achtlos mit B&uuml;rost&uuml;hlen &uuml;ber Leitungen, treten auf Kabel oder
+stellen Schr&auml;nke darauf ab.
+Welche Folgen sich daraus ergeben h&auml;ngt neben dem Grad der Besch&auml;digung
+(Quetschung, Kurzschlu&szlig;, Unterbrechung) von der verwendeten Netzwerkstruktur
+ab. Die schlimmsten Folgen ergaben sich bei den alten Bus-Netzen. Hier waren
+immer alle Rechner im Segment von der St&ouml;rung betroffen. Bei den heutigen
+Sternstrukturen sieht die Situation g&uuml;nstiger aus. Nur die angeschlossene
+Station wird durch das besch&auml;digte Kabel beeinflu&szlig;t. Aber auch hier
+gibt es Ausnahmen: Handelt es sich bei der defekten Leitung um ein Link-Kabel
+zwischen zwei Hubs/Switches, k&ouml;nnen die Auswirkungen auch ganze
+Rechnerverb&uuml;nde treffen. <br>
+
+"Mechanische" Besch&auml;digung einer Leitung f&uuml;hrt immer zu einer &Auml;nderung
+der elektrischen Parameter. Der f&uuml;r Netzwerke wichtigste ist die Impedanz.
+Mit der Impedanz in direktem Zusammenhang steht der im Kabel auftretende
+Reflexionsfaktor (siehe <A HREF="netz6.html#6.5">Kapitel 7</A>). An der St&ouml;rstelle
+wird ein Teil (Quetschung) oder das komplette Signal reflektiert (Leerlauf
+und Kurzschlu&szlig;). Die typischen Symptome von besch&auml;digten Leitungen sind Verlangsamung
+oder Teilausfall des Datenverkehrs bei Quetschung des Kabels und Totalausfall
+des betroffenen Segmentes bei Leerlauf oder Kurzschlu&szlig;.
+Schwieriger wird es mit Quetschungen. Weder ein einfaches Multimeter
+noch der L&auml;ngenmesser helfen hier weiter. Bei sehr kleinen Netzen
+und ohne spezielle Me&szlig;ger&auml;te hilft hier wieder nur die Sichtkontrolle.
+Wer &uuml;ber einen Kabel-Scanner verf&uuml;gt, kann die Impedanz oder
+den Reflexionsfaktor der Leitung nachmessen. <br>
+Wichtig ist im Zusammenhang mit Quetschungen folgende Tatsache:
+Die Auswirkungen m&uuml;ssen sich nicht "sofort" zeigen. H&auml;ngen
+nur wenige Stationen im Netz oder herrscht nur geringer Datenverkehr,
+dann treten zwar mehr Kollisionen auf als in einem unbesch&auml;digten Segment,
+sie sind aber nicht als Verlangsamung des Netzes sp&uuml;rbar.
+Erst wenn sich der Datenverkehr
+erh&ouml;ht oder die Anzahl der Stationen vergr&ouml;&szlig;ert wird, macht sich die St&ouml;rung
+bemerkbar. Solche "schleichenden" Fehler lassen sich mit k&uuml;nstlicher Erh&ouml;hung
+der Netzwerkauslastung durch Dumb-Loads finden.
+<P>
+
+<h4>Fehlerhafte Stecker</h4>
+Egal ob selbst "gekrimpte" oder fertig konfektionierte Kabel
+verwendet werden: Fehler an den Steckern geh&ouml;ren in der "Netzwerkwelt"
+h&auml;ufig zu den St&ouml;rungsursachen. Im Gegensatz zur Besch&auml;digung der Leitung
+sind sie allerdings meist nicht durch eine kurze Sichtkontrolle zu finden.<br>
+Bei der Beschreibung der Fehlerquellen mu&szlig; man zwischen der Herstellung
+und der Verwendung der Verbindungskabel unterscheiden. Zun&auml;chst zur Herstellung:
+Stecker/Leitungsverbindungen werden meist mit Hilfe vom Krimp-Werkzeugen
+hergestellt.
+Bei Twisted-Pair-Leitungen ist besonders auf den guten Sitz der einzelnen
+Kabel in den Kontaktklemmen zu achten. Immerhin gilt es, bis zu acht Leitungen
+im Stecker unterzubringen. H&auml;ufig werden beim Zusammenquetschen der Stecker
+falsch verlegte Adern gegeneinander kurzgeschlossen. Ein neu gekrimptes
+Kabel sollte auf jeden Fall einem Verdrahtungstest unterzogen werden.
+Die Verdrillung der einzelnen Adrenpaare sollte erst m&ouml;glichst kurz vor
+dem Stecker aufgehoben werden, um die Auswirkung von Nahnebensprechen
+(NEXT) klein zu halten.<br>
+Generell gilt f&uuml;r das Anfertigen von Steckverbindungen: Vorher &uuml;ben!
+Um die Bedienung der Krimpzange zu erlernen, sollte man auf jeden
+Fall einige "Probeverbindungen" anfertigen. Die so gewonnene Routine
+zahlt sich in der Praxis aus.
+<P>
+Bei Twisted-Pair-Leitungen f&auml;llt die Sichtpr&uuml;fung leicht aus, da
+die meisten Stecker ein Klarsichgeh&auml;use haben. In der Praxis werden
+oft einzelne Adern durch Zugbelastung abgetrennt. Auch die d&uuml;nnen Rastnasen
+der Stecker werden h&auml;ufig auf diese Weise abgebrochen. Ohne sie sitzen
+Steckverbindungen unter Umst&auml;nden nur locker in der zugeh&ouml;rigen Buchse
+(Wanddose, Netzwerkadapter oder &auml;hnliches). Wackelkontakte sind die Folge.
+Abgetrennte Adern findet man am leichtesten mit einem Verdrahtungspr&uuml;fer.
+Kabel mit abgebrochenen Rastnasen sollten grunds&auml;tzlich ausgetauscht werden.
+<P>
+
+<h4>Maximall&auml;nge des Segmentes &uuml;berschritten</h4>
+Zu den h&auml;ufigsten Fehlern bei der Installation und Erweiterung
+von Netzen geh&ouml;rt die unzul&auml;ssige &Uuml;berschreitung der Segment-Maximall&auml;nge.
+Netze entstehen in aller Regel schrittweise.
+Gerade in kleineren Unternehmen werden zu Anfang oft nur einige
+wenige Rechner vernetzt. Hat sich die Netzwerktechnik mit ihren vielen
+Vorteilen erst einmal etabliert, beginnt der Ausbau der Verkabelungsstruktur.
+Nach und nach werden immer mehr Rechner an den Strang angeschlossen.
+Die wenigsten Administratoren machen sich in einem solchen Stadium
+des Netzausbaus Gedanken &uuml;ber die Kabell&auml;nge. Erst wenn das Netz
+beginnt, langsamer als gew&ouml;hlich zu werden, wird mit der Fehlersuche
+begonnen. Oftmals wird dann ein leistungsf&auml;higerer Server gekauft,
+der aber keinerlei Verbesserung bringt. In anderen F&auml;llen &uuml;berschreiten
+Netzwerkverantwortliche wissentlich die zugelassene L&auml;nge, mit
+dem Argument: "Das Netz geht doch noch!" Tats&auml;chlich mag das Netz
+noch ohne erkennbare Probleme funktionieren, allerdings nur bei der
+aktuelle Auslastung. Wird die Netzlast gr&ouml;&szlig;er, bricht pl&ouml;tzlich
+die Kommunikation zusammen. <br>
+Die Funktion von CSMA/CD-Netzen beruht auf der Einhaltung von Maximallaufzeiten.
+Wird ein Segment &uuml;ber seine zugelassene L&auml;nge hinaus erweitert,
+dann k&ouml;nnen Kollisionen nicht mehr zuverl&auml;ssig erkannt werden.
+Das Auftreten einer Kollision ist abh&auml;ngig von der aktuellen
+Netzlast. Will nur eine Station im ganzen Segment senden, kann
+kein Zusammensto&szlig; von Paketen entstehen. Wollen aber viele
+Stationen im gleichen Zeitraum Daten verschicken, dann ist eine
+Kollision sehr wahrscheinlich. Die Aussage: "Das Netz geht zum
+Zeitpunkt X." sagt also nichts &uuml;ber den Zustand zur Zeit Y.
+<P>
+F&uuml;r die Bestimmung der L&auml;nge des Segmentes ist ein spezialisiertes
+L&auml;ngenme&szlig;ger&auml;t notwendig.
+Es ist ratsam, jedes verlegte Kabel-Segment zu vermessen und
+an wenigstens einer Seite mit einer Beschriftungsfahne zu versehen.
+Das Etikett sollte neben der Bestimmung des Stranges (zum Beispiel:
+"1. OG/West") auch die gemessene Kabell&auml;nge ausweisen. So kann
+bei einer anstehenden Erweiterung sofort entschieden werden, ob
+das Segment noch verl&auml;ngert werden darf. Reicht die zur Verf&uuml;gung
+stehende L&auml;nge nicht mehr aus, dann mu&szlig; das Segment zum Bespiel
+&uuml;ber einen Switch in zwei Teilst&uuml;cke getrennt werden.
+In der Praxis sollte man die geforderte Maximall&auml;nge um einen gewissen
+Prozentsatz unterschreiten. Dies gilt insbesondere, wenn
+Netzwerkkarten verschiedener Hersteller eingesetzt werden.
+<P>
+
+
+<h4>Verschiedene Kabelkategorien gemischt</h4>
+Bei Twisted-Pair-Verkabelungen ist die Gefahr recht gro&szlig;, verschiedene
+Kabelkategorien (zum Beispiel 3 und 5) versehentlich zu mischen.
+Solange das Netz nur mit 10 MBit/s lief, bereitete diese Situation
+keine Probleme. Erst wenn auf schnellere Technologien umgestiegen
+wurde, treten Fehler auf. Eines oder mehrere der verwendeten Kabel
+sind f&uuml;r die gew&auml;hlte Geschwindigkeit nicht geeignet,
+obwohl die restlichen die Spezifikation einhalten. Liegen die Leitungen
+teilweise in Kabelkan&auml;len, f&auml;llt die Ortung des falschen Kabels
+schwer. Mit einem "Cable-Scanner", der die TSB67 erf&uuml;llt, kann der
+komplette Link vor dem Umstieg auf eine schnellere Technologie gepr&uuml;ft
+werden.
+<P>
+
+<h4>Routereintr&auml;ge</h4>
+Ist ein IP-Netz in Subnetze unterteilt (zum Beispiel Class-C-Netze)
+dann kommmunizieren sie &uuml;ber Router miteinander. Jeder Rechner im Netz
+mu&szlig; dazu einen Eintrag in einer Konfigurationsdatei besitzen, der
+ihm mitteilt, welche Adresse der Router-Rechner hat. Insbesondere bei
+PC-Software herrscht allerdings eine gewisse "Namensverwirrung".
+Hier werden Routereintr&auml;ge oft als "Gateway" oder "Default-Gateway"
+angegeben. <br>
+Fehlende oder falsche Routereintr&auml;ge findet man relativ leicht mit folgender
+Methode: Zuerst wird ein einfacher Verbindungstest zu einem Rechner
+im eigenen Subnetz durchgef&uuml;hrt. Wenn dies erfolgreich war, wird der
+Test mit einem Rechner au&szlig;erhalb des eigenen Netzes wiederholt.
+Funktioniert das nicht sollte man einen Blick auf die
+Router-Konfigurations-Eintr&auml;ge des aktuellen Rechners werfen.
+<P>
+
+<h4>Falsche IP-Nummer</h4>
+Oft tritt nach der Verlegung von Rechnern in andere Geb&auml;ude folgender
+Fehler auf: Obwohl an der Konfigurations des Rechners nichts ver&auml;ndert
+wurde, kann &uuml;ber IP keine andere Maschine mehr angesprochen werden.
+Ähnlich verh&auml;lt es sich mit Notebooks oder Laptops, die an verschiedenen
+Orten mit dem Netz verbunden werden. Die L&ouml;sung ist meist recht einfach:
+Beide Geb&auml;ude liegen innerhalb verschiedener IP-Subnetze. Dazu ein Beispiel:
+<P>
+Das Notebook <i>wichtel</i> mit der IP-Nummer <i>129.177.206.99</i>
+ist f&uuml;r das Class-C-Netz <i>129.177.206.0</i> konfiguriert. Sein
+"Default-Router-Eintrag" lautet <i>129.177.206.254</i>. Dieser
+Computer wird nun im Subnetz <i>129.177.106.0</i> (ebenfalls Class-C)
+an eine Netzwerkdose angeschlossen und nichts an der Konfiguration ge&auml;ndert.
+Sendet <i>wichtel</i> nun Pakete an Rechner mit der IP-Nummer <i>129.177.206.x</i>
+dann werden sie von der Netzwerksoftware mit der Netzmaske (<i>129.177.206.0</i>)
+oder der Broadcastmaske (<i>129.177.206.255</i>) verglichen.
+Ergebnis des Vergleichs: es mu&szlig; sich um einen lokalen Rechner handeln
+(gleiches Subnetz). Folglich schickt <i>wichtel</i> das Paket direkt,
+ohne den Standard-Router anzusprechen. Da sich der Rechner aber nicht
+mehr im Netz <i>129.177.206.0</i>) befindet, kann der Empf&auml;nger nicht erreicht
+werden. Ähnlich verh&auml;lt es sich, wenn <i>wichtel</i> versuchen w&uuml;rde
+mit einem Computer au&szlig;erhalb von <i>129.177.206.0</i> zu kommunizieren.
+Dieses Paket w&uuml;rde zur Weiterleitung an den Standard-Router geschickt
+werden, den <i>wichtel</i> unter der Adresse <i>129.177.206.254</i>
+anspricht. Auch dieses Paket wird als "lokal" verschickt
+und kann damit den Empf&auml;nger nicht erreichen.
+<P>
+
+Gegen das Problem "falsche IP-Nummer durch Standortwechsel" l&auml;&szlig;t
+sich bereits im Vorfeld einiges unternehmen:
+<UL>
+<LI> Sind alle Rechner mit einem Aufkleber ausgestattet, der den Namen,
+die IP-Nummer und eventuell auch die Ethernet-Adresse ausweist, dann
+l&auml;&szlig;t sich mit einem Blick kl&auml;ren, ob der Rechner nach einem
+Umzug neu konfiguriert werden mu&szlig;.
+<LI> Anwender sollten auf alle F&auml;lle dar&uuml;ber aufgekl&auml;rt werden, da&szlig; man
+nicht einen Rechner, der f&uuml;r Geb&auml;ude <i>A</i> konfiguriert ist, mit
+in Geb&auml;ude <i>B</i> nehmen kann, ohne etwas an der Konfiguration zu &auml;ndern.
+<LI> Insbesondere bei Laptops und Notebooks, deren Hauptzweck der Einsatz
+an verschiedenen Orten ist, ist die Einrichtung einer dynamischen
+IP-Konfiguration in jedem Subnetz sinnvoll (DHCP).Die Rechner erhalten
+dann keine feste IP-Nummer mehr, sondern holen sich die Nummer und die
+Konfiguration (Netzmaske, Broadcast und Router-Adresse) erst beim Start
+der Netzwerksoftware von einem DHCP-Server.
+</UL>
+<P>
+
+
+<h4>Fehlersuchstrategien</h4>
+Neben den o. g. Fehlern k&ouml;nnen nat&uuml;rlich noch diverse andere Probleme
+auftreten - angefangen beim Putzdienst, der den Netzstecker vom Server
+abzieht bis hin zum Telekom-Mitarbeiter, der bein Einziehen einer
+neuen Glasfaser die vorhandenen anderen Verbindungen schrottet. Es k&ouml;nnen
+eben auch in einem korrekt geplanten und installierten Netzwerk Fehler
+auftreten. Viele Administratoren neigen dazu, bei einer St&ouml;rung
+relativ unkoordiniert einzelne Konfigurationen zu &uuml;berpr&uuml;fen. Oft
+werden dabei v&ouml;llig ungeeignete Suchstrategien angewendet, wodurch die
+Zeit bis zur L&ouml;sung des Problems unn&ouml;tig verl&auml;ngert wird. Eine effiziente
+und schnelle Fehlersuche ist nur m&ouml;glich, wenn geeignete Testverfahren
+verwendet werden.
+Nachdem die Anzahl der Fehler, die in Netzwerken auftreten k&ouml;nnen, un&uuml;berschaubar
+hoch ist, kann hier nicht auf Details bestimmter Konfigurationen
+eingegangen werden. Der nachfolgende Abschnitt beschreibt daher allgemein
+ein sinnvolles Vorgehen bei Netzwerkproblemen. Den Ausgangspunkt bilden
+Fehler, die sich direkt an den Stationen
+auswirken (Fehlermeldungen der Treiber, usw.). Im Netzwerkalltag
+ist das die sicherlich h&auml;ufigste Ausgangs-Situation: Ein Anwender stellt
+fest, da&szlig; eine bestimmte Netzwerkfunktion nicht zur Verf&uuml;gung
+steht und benachrichtigt den Netzwerkverwalter. Fehler an Koppelelementen
+wie Bridges und Routern werden ausgehend von den Fehlermeldungen der Stationen
+im Lauf der beschriebenen Tests ermittelt. <br>
+Die wohl wichtigste Regel bei der Fehlersuche ist: "Ruhig bleiben!".
+Auch wenn der betroffene Rechner noch so wichtig ist, eine hektische
+Suchaktion f&uuml;hrt nur selten zum Erfolg.
+Wird man als Netzverwalter von einem Anwender angerufen und mu&szlig;
+am Telefon Hilfestellung leisten, dann sollte man sich
+die entsprechenden Fehler-Meldungen "Wort f&uuml;r Wort" vorlesen lassen.
+Durch die teilweise recht ungenauen Beschreibungen der Benutzer
+("Das Internet geht nicht!", "Es druckt nicht!" oder "Ich komme nicht ans Netz!")
+ger&auml;t man sonst oft auf eine v&ouml;llig falsche "F&auml;hrte". Der Administrator mu&szlig;
+zun&auml;chst mit der Abgrenzung des Fehlerumfanges beginnen. Dazu geh&ouml;rt die
+Feststellung, ob nur eine Station oder mehrere Stationen betroffen sind.
+
+<h4>Client-Fehler</h4>
+Die Suche nach Client-Fehlern beginnt sinnvollerweise zun&auml;chst mit einer
+Befragung des Anwenders der Station. Oft ver&auml;ndern Benutzer unabsichtlich
+Konfigurationsdateien oder l&ouml;schen f&uuml;r die Netzwerkfunktionen wichtige Dateien.
+Ein der Standardfragen sollte also lauten: "Ist an diesem Rechner irgend etwas
+ge&auml;ndert worden?". Auch wenn die Antwort ein "nein"
+ist, lohnt sich meist ein genaueres "Nachhaken" mit Fragen wie
+"Haben Sie ein neues Programm installiert?". Oft gelangt man mit
+dieser Methode schneller zum Ziel, als mit diversen Testprogrammen.
+Bei allen Antworten sollte allerdings ein wichtiger psychologischer
+Faktor nicht au&szlig;er Acht gelassen werden: Viele Anwender verschweigen
+ihre Änderungen an der Rechnerkonfiguration aus Angst, f&uuml;r den Fehler
+verantwortlich gemacht zu werden. Die meisten erfahrenen Netzwerkverwalter
+haben schon einmal Situationen erlebt, in denen Benutzer beteuerten
+nichts am Rechner ver&auml;ndert zu haben, obwohl auf der Station zum Beispiel
+ein neues, v&ouml;llig anderes Betriebssystem installiert wurde.
+Diesem Ph&auml;nomen kann man nur begegnen,
+indem man alle "Netz-Nutzer" dar&uuml;ber aufkl&auml;rt, da&szlig; das Interesse
+eines Administrators ausschlie&szlig;lich in der Funktionsf&auml;higkeit
+des Netzwerkes und nicht in der Bestrafung von "Schuldigen" besteht.
+<P>
+Vor dem Einsatz von Software f&uuml;r den Stationstest sollte man einen
+Blick auf das Netzwerkkabel des Rechners werfen. Werden bei
+Twisted-Pair-Verkabelungen Hubs mit je einer "Online-LED" pro Port verwendet,
+gen&uuml;gt f&uuml;r eine grobe Überpr&uuml;fung zun&auml;chst das Betrachten dieser Anzeige.
+Leuchtet die Diode, dann ist das Kabel
+zumindest nicht kurzgeschlossen oder aufgetrennt.
+Leuchtet die LED nicht, dann kommt als Ursache das Kabel oder das
+Netzwerkinterface
+der Station in Frage. Ersteres l&auml;&szlig;t sich durch den Austausch der Leitung gegen
+eine andere ausschlie&szlig;en.
+Ist trotz aktiver LED kein Netzwerkzugriff m&ouml;glich, dann mu&szlig; die Überpr&uuml;fung
+der Station mit dem Einsatz von Software fortgesetzt werden. Die einfachste
+Testm&ouml;glichkeit ergibt sich auf PCs.
+Man bootet den Rechner  mit einer vorbereiteten Boot-CD/DVD (z. B. mit "Knoppix",
+einem Linux-Derivat).Hier kann das Netz schnell passend von Hand konfiguriert
+werden. Ist auch unter diesen "Minimal-Bedingungen" kein
+Netzwerkbetrieb m&ouml;glich, ist ein Hardwarefehler zu vermuten.
+<P>
+
+<h4>Server-Fehler</h4>
+F&uuml;r die Suche nach einem Serverfehler ist zun&auml;chst einmal interessant, ob
+der entsprechende Rechner in einem lokalen, nahen (gleiches Geb&auml;ude wie die
+zugreifenden Stationen) oder
+in einem unzug&auml;nglichen, weit entfernten Segment steht (zum Beispiel
+in einem anderen Geb&auml;ude oder einer anderen Stadt). Lokale Server
+sollten vom Administrator direkt inspiziert werden. Meist erweist
+sich ein "ausgeschalteter" oder vom Netzkabel getrennter Server
+als Ursache. Kann bei dieser Überpr&uuml;fung kein Fehler gefunden werden,
+dann sollte die einwandfreie Funktion des Netzwerkinterfaces im Server
+getestet werden. Dies ist bei fast allen Betriebssystemen durch
+die Ausgaben diverser Hilfs-Programme m&ouml;glich. Um die zwischen der zugreifenden Station
+und dem Server-Rechner liegende Verkabelungsstruktur als Fehlerquelle
+auszuschlie&szlig;en, f&uuml;hrt man sinnvollerweise
+einen erweiterten Verbindungstest zwischen beiden durch.
+Auf diese Weise erh&auml;lt man detailierte Informationen &uuml;ber den
+Weg jedes Datenpaketes. Im Falle eines weit entfernten Rechners
+ist das oft die einzige Testm&ouml;glichkeit. <P>
+
+<h4>Konfigurations-Fehler</h4>
+Konfigurations-Fehler treten in Netzen haupts&auml;chlich nach
+der Neuinstallation an Stationen oder Servern auf. Hierbei
+handelt es sich um grunds&auml;tzliche Fehler in den Soft- oder
+Hardware-Einstellungen der Rechner. In einigen F&auml;llen bleiben
+die Netzwerkprobleme vorerst unentdeckt, weil die betroffenen
+Netzwerkdienste zun&auml;chst nicht genutzt werden. Da die Bandbreite
+der m&ouml;glichen Fehler sehr gro&szlig; ist und nat&uuml;rlich vom jeweiligen
+Betriebs- und Netzwerksystem abh&auml;ngt, kann hier keine allgemeing&uuml;ltige
+Fehler-Strategie angegeben werden. In der Praxis kommt der Administrator
+dabei nicht um eine genaue Überpr&uuml;fung der einzelnen Konfigurations-Dateien
+der Rechner herum.
+<P>
+
+<h4>Netzwerk-Fehler</h4>
+Wie bereits oben beschrieben, k&ouml;nnen in Netzwerken
+eine ganze Reihe von "Hardware-Fehlern" auftreten. Eine schnelle Bestimmung
+der Ursache ist nur mit dem Einsatz von Me&szlig;ger&auml;ten m&ouml;glich.
+Vor dem Einsatz von Cable-Scannern oder &auml;hnlichem sollte zun&auml;chst
+die Anzahl der betroffenen Segmente bestimmt werden. Über den Vergleich
+mit dem Netzwerkplan, den jeder Verwalter angelegt haben sollte,
+k&ouml;nnen sinnvolle Me&szlig;punkte ausgew&auml;hlt werden.
+In kleinen Netzen, bei denen der Administrator
+oft ohne entsprechende Me&szlig;ger&auml;te auskommen mu&szlig;, kann folgende Strategie angewendet
+werden, um den Fehler zumindest grob einzukreisen:<P>
+
+Die Fehlersuche beginnt mit dem Betrachten der Status-, Activity und
+Collision-Anzeigen der eingesetzten Koppelelemente (Hubs, Repeater, Switches,
+usw.). In den meisten F&auml;llen l&auml;&szlig;t sich damit das betroffene Netz-Teilst&uuml;ck
+ermitteln. Bei Bus-Netzen kann der Fehler &uuml;ber ein
+"Trial-and-Error-"Verfahren bestimmt werden. Dazu wird der Bus
+aufgetrennt und damit in Teilnetze zerlegt. Jeder Teil wird mit Hilfe
+eines zus&auml;tzlichen Widerstandes elektrisch abgeschlossen. In den beiden
+so entstandenen Einzel-Segmenten k&ouml;nnen Verbindungstests
+ausgef&uuml;hrt werden. Zum dem fehlerfreien
+Teilst&uuml;ck wird nun schrittweise ein Abschnitt des anderen Segmentes hinzugef&uuml;gt
+und der Verbindungstest erneut ausgef&uuml;hrt, bis der Fehler auftritt.
+Auch wenn dieses Verfahren nicht bei allen m&ouml;glichen Hardwarefehlern
+zum Erfolg f&uuml;hrt, k&ouml;nnen damit zumindest die h&auml;ufigsten Probleme ermittelt
+werden.<P>
+
+<h4>Aktives Netzwerkmanagement</h4>
+Der hohe Hardware-Anteil an der Gesamtfehler-H&auml;ufigkeit von Netzwerken
+entsteht nicht etwa, weil die eingesetzten Komponenten unzuverl&auml;ssig sind,
+sondern vielmehr durch prinzipielle Fehler bei Planung und Erweiterung der
+Kommunikationsstrukturen. Auch heute noch bestehen viele Netze
+bei der Erstinstallation aus nur wenigen Stationen.
+In dem Glauben, ein Netzwerk sei wirtschaftlich, wenn die Erstinvestition
+m&ouml;glichst gering ausf&auml;llt, werden Komponenten nach dem Motto
+"Je billiger desto besser" eingekauft. Die Verdrahtung
+der Rechner untereinander wird "frei", das hei&szlig;t ohne Kabelsch&auml;chte
+und Verteilerelemente, vorgenommen.
+In aller Regel gibt es keinen Netzwerkadministrator, sondern die
+Verwaltungsarbeit wird von einem oder mehreren Mitarbeitern
+"nebenher" erledigt. Typischerweise werden allen Benutzern
+Rechte auf allen Dateisystemen vergeben. Fehler in der Verkabelung
+fallen zun&auml;chst nicht auf, da das Datenaufkommen und die verlegte
+Kabell&auml;nge gering sind.
+Mit zunehmendem Kommunikationsbedarf wachsen die Netze jedoch
+stetig. Aus relativ kleinen Strukturen entstehen damit schnell
+gr&ouml;&szlig;ere Installationen. Erst in diesem Stadium des Ausbaues
+werden die ersten Fehler sichtbar und die Teil- oder Totalausf&auml;lle
+h&auml;ufen sich. Die Suche nach der St&ouml;rung nimmt meist relativ viel
+Zeit in Anspruch, weil weder Pl&auml;ne der Verkabelung noch Testger&auml;te
+zur Verf&uuml;gung stehen. Neben den Kosten f&uuml;r die Unterbrechnung
+des Datenaustausches w&auml;chst auch der Unmut der Anwender.
+<P>
+Mit den oben dargestellten Zusammenh&auml;ngen d&uuml;rfte klar werden, worauf
+die hohe Prozentzahl der Hardwarefehler zur&uuml;ckzuf&uuml;hren ist. Sie
+l&auml;&szlig;t sich auf einen sehr geringen Prozentsatz senken, wenn man
+bei Planung, Erweiterung und Betrieb von Netzen nach gewissen Regeln vorgeht.
+Die in diesem Abschnitt beschriebenen Ma&szlig;nahmen werden als "<i>aktives
+Netzwerkmanagement</i>" bezeichnet.
+Um zu verstehen, was dazu n&ouml;tig ist, mu&szlig; man sich zun&auml;chst Gedanken
+&uuml;ber die heutigen Anforderungen an Netzstrukturen machen:
+
+<UL>
+<LI> Wirtschaftlichkeit: Die laufenden Betriebskosten sollten zum einen
+m&ouml;glichst gering ausfallen, zum anderen kalkulierbar sein.
+<LI> Flexibilit&auml;t: Die Kommunikationsstruktur soll leicht umkonfigurierbar
+sein.
+<LI> Zukunftssicherheit und Investitionsschutz: Die installierte
+Netzwerktechnik mu&szlig; auch zuk&uuml;nftigen Anforderungen gen&uuml;gen. Vorhandene
+Komponenten sollten sich problemlos erweitern lassen.
+</UL>
+
+Auch mit der Auswahl der Komponenten (Interfaces, Hubs, Switches,
+etc.) k&ouml;nnen die laufenden Kosten f&uuml;r das Netzwerk erheblich beeinflu&szlig;t
+werden. Werden im Netz PCs eingesetzt, dann beginnt ein Administrator
+normalerweise den Netzwerkaufbau mit dem Kauf der Steckkarten. Vielen ist
+allerdings unklar, da&szlig; damit &uuml;ber den sp&auml;ter entstehenden Verwaltungs-Aufwand
+entschieden wird. Genauso wie bei der Anschaffung von Computern ist hier
+nicht der g&uuml;nstigste Kauf auch gleichzeitig der beste. Vielmehr sollte
+man bei der Anschaffung der Netzwerkkarten auf folgende Punkte achten:
+<UL>
+<LI> Kaufen Sie konservativ! Bei neu auf dem Markt erschienenen Karten sind
+die Treiberprogramme oft eher "Beta-Versionen". Die instabile Software
+kann eine ganze Reihe von Fehlern wie "Abst&uuml;rze" der Stationen oder
+Übertragungsfehler ausl&ouml;sen. Oft findet der Administrator
+erst nach stundenlanger Suche heraus, da&szlig; der Treiber die Ursache ist.
+
+<LI> Support ist wichtig! Markenhersteller bieten in aller Regel
+einen Treibersupport per Mailbox oder FTP-Server an. Ist die Software
+f&uuml;r ein neues Betriebssystem nicht auf der zum Interface mitgelieferten
+Diskette enthalten oder ist das Programm fehlerhaft, dann kann
+der Kunde sich dort kostenlos ein Update besorgen. Die Hersteller
+von "No-Name-Hardware" bieten diesen Service nicht.
+
+<LI> Markentreue zahlt sich aus! Mit der Anzahl der verschiedenen
+Karten-Typen wachsen auch die Betriebskosten des Netzes. Der Administrator
+mu&szlig; f&uuml;r alle vorhandenen Adapter Treiber f&uuml;r die unterschiedlichen eingesetzten
+Betriebssysteme auf Vorrat halten und aktualisieren. Besitzt man nur einige
+wenige oder nur einen Kartentyp, dann kennt der Systemverwalter
+dessen besondere Einrichtungsoptionen und findet einen Fehler in den
+Einstellungen schneller.
+</UL>
+
+Bei anderen Komponenten (Hubs, Switches, usw.) sollte nach folgenden
+Kriterien vorgegangen werden:
+<P>
+<UL>
+<LI>Selbst bei kleinen Netzwerkstrukturen sind Anzeige-Elemente (LEDs, etc.)
+f&uuml;r Zust&auml;nde wie zum Beispiel Aktivit&auml;t (<i>activity</i>) und
+Kollision (<i>collision</i>) wichtig. Mit ihrer Hilfe l&auml;&szlig;t
+sich ein eventueller Fehler meist schon grob einkreisen.
+Diese M&ouml;glichkeit ist insbesondere dann wichtig, wenn keine
+oder nur wenige Me&szlig;ger&auml;te zur Verf&uuml;gung stehen. Ist etwa ein
+Stations-Kabel vom Hub getrennt, dann l&auml;&szlig;t sich das mit einem
+kurzen Blick auf die entsprechende "<i>Online</i>-Anzeige" feststellen.
+
+<LI>Je gr&ouml;&szlig;er das Netz ist, desto wichtiger wird der Punkt "Remote-Monitoring".
+Mit dem Einsatz von Komponenten, die &uuml;ber SNMP-Funktionen verf&uuml;gen,
+ist der Administrator in der Lage, von seinem Arbeitsplatz aus
+einzelne Ger&auml;te zu &uuml;berpr&uuml;fen. An der "Management-Konsole" kann
+ein Fehler oder eine drohende Überlastung einzelner Elemente
+meist fr&uuml;hzeitig erkannt werden. Mit Hilfe von Steuerfunktionen
+kann das unter Umst&auml;nden sehr weit entfernte Ger&auml;t konfiguriert
+werden, ohne da&szlig; der Weg dorthin zur&uuml;ckgelegt werden mu&szlig;.
+Vern&uuml;nftiges und optimiertes Management kann daher die Betriebskosten
+des Netzwerkes erheblich senken.
+
+<LI>Wie bei den Netzwerkkarten ist der Support des Herstellers ein wichtiger
+Faktor beim Kauf anderer Komponenten. Die Router von Markenherstellern
+lassen zum Beispiel meist das Einspielen neuer Betriebssystem-Versionen
+zu. Die dazu ben&ouml;tigte Software und oft auch eine ganze Reihe n&uuml;tzlicher
+Tools k&ouml;nnen von den einzelnen Firmen &uuml;ber deren FTP-Server oder
+eine "Support-Mailbox" bezogen werden. Wie wichtig ein solcher
+Support ist, merken viele Systemverwalter erst, wenn sie den ersten
+Fehler in der Software ihres Routers finden der eine
+dringend ben&ouml;tigte Betriebsart nicht erlaubt.
+</UL>
+<P>
+
+
+<CENTER><TABLE BORDER=0 WIDTH="100%">
+<TR>
+<TD ALIGN=LEFT VALIGN=BOTTOM><IMG SRC="left.gif" BORDER=0> <A HREF="netz7.html">Zum vorhergehenden Abschnitt</A></TD>
+<TD ALIGN=CENTER VALIGN=BOTTOM><IMG SRC="up.gif" BORDER=0> <A HREF="index.html">Zum Inhaltsverzeichnis</A></TD>
+<TD ALIGN=RIGHT VALIGN=BOTTOM><IMG SRC="right.gif" BORDER=0> <A HREF="planung.html">Zum n&auml;chsten Abschnitt</A></TD>
+</TR></TABLE></CENTER>
+<P><HR>
+<H6><I>Copyright &copy; FH M&uuml;nchen, FB 04, Prof. J&uuml;rgen Plate</I></H6>
+<H6><I>Letzte Aktualisierung: 07. Mär 2012</I></H6>
+</BODY>
+</HTML>
