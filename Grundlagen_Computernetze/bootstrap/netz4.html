@@ -1,20 +1,21 @@
-<!DOCTYPE HTML PUBLIC "-;W3C;DTD HTML 4.01 Transitional;EN">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta NAME="robots" CONTENT="all">
 <meta NAME="revisit-after" CONTENT="10 days">
 <meta NAME="Reply-To" CONTENT="webmaster@netzmafia.de">
 
 <meta NAME="keywords" CONTENT="LAN WAN TCP/IP Computernetze Ethernet Vernetzung Router Hub Switch Protokolle">
-<meta NAME="description" CONTENT="Praxisorientierte Einf&uuml;hrung in den Aufbau und die Funktionsweise von Computernetzen.">
+<meta NAME="description" CONTENT="Praxisorientierte Einführung in den Aufbau und die Funktionsweise von Computernetzen.">
 <title>Grundlagen Computernetze</title>
 </head>
 <BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" ALINK="#FF0000" VLINK="#FF00FF">
 <CENTER><TABLE BORDER=0 WIDTH="90%" >
 <TR><TD ALIGN=LEFT><img src="images/eyes.png"></TD>
 <TD ALIGN=RIGHT><H2>Grundlagen Computernetze</H2>
-<BR><B><I>Prof. J&uuml;rgen Plate</I></B></TD></TR>
+<BR><B><I>Prof. Jürgen Plate</I></B></TD></TR>
 </TABLE></CENTER>
 <HR>
 
@@ -22,99 +23,99 @@
 <h1 align=center>Ethernet</h1>
 
 <UL>
-<I>"Ja, aber ich w&uuml;rde lieber den Bus nehmen. Es gibt nichts sch&ouml;neres
+<I>"Ja, aber ich würde lieber den Bus nehmen. Es gibt nichts schöneres
 auf der Welt als einen Bus."<BR>
 <FONT SIZE="-2">Charles, Prince of Wales, als er gefragt wurde, ob er die Reise
-mit der k&ouml;niglichen Segelyacht nach Tobruk genossen habe.</FONT></I>
+mit der königlichen Segelyacht nach Tobruk genossen habe.</FONT></I>
 </UL>
 
-Der zur Zeit am weitesten verbreitete Standard f&uuml;r lokale Netze ist
+Der zur Zeit am weitesten verbreitete Standard für lokale Netze ist
 Ethernet. Er geht auf gemeinsame Spezifikationen von Intel, DEC und Xerox
-zur&uuml;ck. Der Name (Ether = &Auml;ther) weist noch auf die ersten Funknetze
-(ALOHA) hin. Die Daten&uuml;bertragung erfolgt mit dem CSMA/CD-Verfahren.
-Auf dem Ethernet k&ouml;nnen verschiedene Protokolle laufen, z. B. TCP/IP,
+zurück. Der Name (Ether = Äther) weist noch auf die ersten Funknetze
+(ALOHA) hin. Die Datenübertragung erfolgt mit dem CSMA/CD-Verfahren.
+Auf dem Ethernet können verschiedene Protokolle laufen, z. B. TCP/IP,
 DECnet, IPX/SPX (Novell), etc. <BR>
 Das Ethernet besteht physikalisch aus verschiedenen Typen von 50-Ohm-Koaxkabeln
 oder paarweise verdrillten Leitungen (Twisted-Pair), Glasfasern, oder anderen
-Medien (siehe n&auml;chsten Abschnitt). Die Datenrate betr&auml;gt typisch
-100 MBit/s (fr&uuml;her 10 MBit/s, 1000 MBit/s l&auml;uft an). Die wichtigsten
-Eigenschaften nach der urspr&uuml;nglichen Spezifikation sind:
+Medien (siehe nächsten Abschnitt). Die Datenrate beträgt typisch
+100 MBit/s (früher 10 MBit/s, 1000 MBit/s läuft an). Die wichtigsten
+Eigenschaften nach der ursprünglichen Spezifikation sind:
 <P>
 <center> <table border=1 cellpadding=5 cellspacing=0>
 <tr><td>Datenrate:</td><td>10 MBit/s</TD></TR>
-<tr><td>Maximale L&auml;nge des gesamten Netzes:</td><td>2500 m</TD></TR>
+<tr><td>Maximale Länge des gesamten Netzes:</td><td>2500 m</TD></TR>
 <tr><td>Maximale Zahl der Knoten:</td><td>1024</TD></TR>
-<tr><td>Medium:</td><td>Koaxkabel, Basisband&uuml;bertragung</TD></TR>
+<tr><td>Medium:</td><td>Koaxkabel, Basisbandübertragung</TD></TR>
 <tr><td>Zugriffsverfahren:</td><td>CSMA/CD</TD></TR>
-<tr><td>Datenprotokoll:</td><td>Frames variabler Gr&ouml;&szlig;e</TD></TR>
+<tr><td>Datenprotokoll:</td><td>Frames variabler Größe</TD></TR>
 </table></center>
 <P>
 Die Daten werden in Paketen gesendet und mit Verwaltungsinfo zu Beginn und
-CRC-Pr&uuml;finfo am Ende versehen (Ethernet-Frame). Ethernet basiert, wie
+CRC-Prüfinfo am Ende versehen (Ethernet-Frame). Ethernet basiert, wie
 andere Netze auch, auf einer Sammlung von Medium- und Protokollspezifikationen.
-Zuunterst liegt die physische Ebene; sie umfa&szlig;t neben der Verkabelung
+Zuunterst liegt die physische Ebene; sie umfaßt neben der Verkabelung
 auch die Signalerzeugung und -kodierung. Als Ethernet von DEC, Intel und
 Xerox aus der Taufe gehoben wurde, gab es nur eine Verkabelungsart, der
 heutige Ethernet-Standard kennt eine Vielfalt von Topologien.
-Ethernet-Anwender m&uuml;ssen bei der Vernetzung nicht nur zwischen den
-Protokollen auf den h&ouml;heren Schichten wie TCP/lP und IPX/SPX unterscheiden,
-sondern auch noch den richtigen Ethernet-Frame w&auml;hlen. 'Server not
-found' oder &auml;hnliche Fehlermeldungen stellen sich manchmal selbst dann
+Ethernet-Anwender müssen bei der Vernetzung nicht nur zwischen den
+Protokollen auf den höheren Schichten wie TCP/lP und IPX/SPX unterscheiden,
+sondern auch noch den richtigen Ethernet-Frame wählen. 'Server not
+found' oder ähnliche Fehlermeldungen stellen sich manchmal selbst dann
 ein, wenn alle Ethernet-Treiber auf Workstation und Server korrekt geladen
 sind und keine Kabelprobleme bestehen. Der Grund liegt nicht selten darin,
-da&szlig; Ethernet nicht gleich Ethernet ist. Gleich vier verschiedene Dialekte
+daß Ethernet nicht gleich Ethernet ist. Gleich vier verschiedene Dialekte
 sind heute in Gebrauch, die erschwerenderweise ziemlich inkonsistent benannt
-sind. Kein anderes lokales Netz weist diese Eigent&uuml;mlichkeit auf. Gro&szlig;
-sind die Unterschiede nicht; sie beschr&auml;nken sich auf ein paar Bytes
-in den &uuml;bertragenen Datenpaketen (Frames) und lassen sich in der Regel
-durch einfache Konfigurations&auml;nderungen der Netztreiber regulieren.
-Die elektrischen Anschlu&szlig;bedingungen im weitesten Sinne sind f&uuml;r
+sind. Kein anderes lokales Netz weist diese Eigentümlichkeit auf. Groß
+sind die Unterschiede nicht; sie beschränken sich auf ein paar Bytes
+in den übertragenen Datenpaketen (Frames) und lassen sich in der Regel
+durch einfache Konfigurationsänderungen der Netztreiber regulieren.
+Die elektrischen Anschlußbedingungen im weitesten Sinne sind für
 die verschiedenen LAN-Typen standardisiert. Es handelt sich dabei um die
 Standards des IEEE (Institute of Electrical and Electronic Engineers, USA).
 Das IEEE ist eine internationale Vereinigung, die sich mit allen wesentlichen
-Aspekten der Elektrotechnik besch&auml;ftigt. Verbindlich f&uuml;r
+Aspekten der Elektrotechnik beschäftigt. Verbindlich für
 lokale Netze sind die Empfehlungen des Subkomitees mit der Kurzbezeichnung
-802. Eine relativ neu gegr&uuml;ndete Runde besch&auml;ftigt sich mit drahtlosen
+802. Eine relativ neu gegründete Runde beschäftigt sich mit drahtlosen
 LANS (802.11). Physikalisch handelt es sich bei Ethernet immer um einen
 Bus, an den die Stationen elektrisch parallel angeschlossen sind.
 Das klassische Ethernet benutzt als Medium das yellow cable, ein dickes,
 vierfach abgeschirmtes Koaxkabel. Die beiden Enden des Kabels
-sind mit an den Wellenwiderstand des Kabels (50 Ohm) angepa&szlig;ten
-Widerst&auml;nden abgeschlossen, um Reflexionen zu vermeiden. Wenn
+sind mit an den Wellenwiderstand des Kabels (50 Ohm) angepaßten
+Widerständen abgeschlossen, um Reflexionen zu vermeiden. Wenn
 eine Station nun Daten an eine andere senden will, schickt sie digitale
-Signale auf Reisen. Diese Signale breiten sich vom Anschlu&szlig;punkt der
-Station nach beiden Seiten hin gleichm&auml;&szlig;ig aus. Irgendwo auf
-dem Weg liegt dann der Empf&auml;nger, der die Signale am Kabel abgreifen
-kann und f&uuml;r die weitere Nutzung aufbereitet. Unabh&auml;ngig davon
+Signale auf Reisen. Diese Signale breiten sich vom Anschlußpunkt der
+Station nach beiden Seiten hin gleichmäßig aus. Irgendwo auf
+dem Weg liegt dann der Empfänger, der die Signale am Kabel abgreifen
+kann und für die weitere Nutzung aufbereitet. Unabhängig davon
 wandern die Signale jedoch weiter, bis sie die Leitungsenden des Ethernet-Kabels
-erreicht hat. Dort wird ihre Energie vollst&auml;ndig von den Abschlu&szlig;widerst&auml;nden
-aufgenommen, so da&szlig; es nicht zu Reflexionen kommt.<BR>
+erreicht hat. Dort wird ihre Energie vollständig von den Abschlußwiderständen
+aufgenommen, so daß es nicht zu Reflexionen kommt.<BR>
 Nach einer gewissen Zeit, die aus der Ausbreitungsgeschwindigkeit der Signale
 und der Entfernung der sendenden Station zu den beiden Kabelenden resultiert,
 sind die Signale 'verschwunden' und das Kabel wieder frei. Dieses Prinzip
 liegt allen Ethernet-Varianten zugrunde. Es gibt jedoch Unterschiede in
 der Topologie des Netzes und beim verwendeten Kabel. <BR>
-Die Daten werden in Paketen, sogenannten 'Frames' zusammengefa&szlig;t.
-Jedes Paket tr&auml;gt zu Beginn Verwaltungsinformationen (z. B. Absender-
-und Empf&auml;ngerstation, L&auml;nge, etc.) und nach den Nutzdaten schlie&szlig;t
-sich eine Pr&uuml;finformation an. Leider gibt es keinen einheitlichen Frame,
+Die Daten werden in Paketen, sogenannten 'Frames' zusammengefaßt.
+Jedes Paket trägt zu Beginn Verwaltungsinformationen (z. B. Absender-
+und Empfängerstation, Länge, etc.) und nach den Nutzdaten schließt
+sich eine Prüfinformation an. Leider gibt es keinen einheitlichen Frame,
 sondern entwicklungsgeschichtlich bedingt Frames mit unterschiedlichem Aufbau.
 Es gab bereits Ethernet-Installationen, lange bevor dieses Netz unter der
 Nummer 802.3 vom IEEE (Institute of Electrical and Electronics Engineers)
-standardisiert wurde. Was Novell eigenm&auml;chtig als 'Ethernet 802.3'
+standardisiert wurde. Was Novell eigenmächtig als 'Ethernet 802.3'
 bezeichnet, ist jedoch etwas anderes.<BR>
 
 <P>
 <H2><A NAME="4.1">Ethernet II</A></H2>
-Eine der &auml;ltesten Framestrukturen ist Ethernet II. Charakteristisches Merkmal
-von Ethernet II ist das Typfeld, das aus zwei Bytes im Anschlu&szlig; an
+Eine der ältesten Framestrukturen ist Ethernet II. Charakteristisches Merkmal
+von Ethernet II ist das Typfeld, das aus zwei Bytes im Anschluß an
 die Start- und Zieladressen besteht und der Unterscheidung verschiedener
-h&ouml;herer Protokolle dient. Alle anderen Formate enthalten hier eine
-L&auml;ngeninformation. Die Unterscheidung der anderen Frames von einem
+höherer Protokolle dient. Alle anderen Formate enthalten hier eine
+Längeninformation. Die Unterscheidung der anderen Frames von einem
 Ethernet-II-Frame kommt dadurch
-zustande, da&szlig; dessen Typ-Nummer immer gr&ouml;&szlig;er ist als die
-maximale Paketgr&ouml;&szlig;e von 1518 Bytes (Z.B. 0800h f&uuml;r IP,
-8137h f&uuml;r IPX, 0600h f&uuml;r XNS oder 809Bh f&uuml;r AppleTalk).
+zustande, daß dessen Typ-Nummer immer größer ist als die
+maximale Paketgröße von 1518 Bytes (Z.B. 0800h für IP,
+8137h für IPX, 0600h für XNS oder 809Bh für AppleTalk).
 Ein Datenpaket besteht aus 576 bis 12208 Bits und hat folgenden Aufbau:
 <P>
 <h4>Frame Ethernet Version 2.0</h4>
@@ -136,37 +137,37 @@ Ein Datenpaket besteht aus 576 bis 12208 Bits und hat folgenden Aufbau:
 </tr>
 </table>
 <P>
-Die Pr&auml;ambel dient zur Synchronisation, sie besteht aus einer Folge
+Die Präambel dient zur Synchronisation, sie besteht aus einer Folge
 von '10101010'-Bytes. Der SFD hat an der letzten Stelle eine '1' (10101011).
-Die L&auml;ngen der einzelnen Teile (in Byte) sind in der Grafik eingetragen.
-Sind weniger als 46 Datenbytes zu &uuml;bertragen, mu&szlig; mit F&uuml;llbits
-erg&auml;nzt werden, um die minimale Slot-Time zu erreichen.
+Die Längen der einzelnen Teile (in Byte) sind in der Grafik eingetragen.
+Sind weniger als 46 Datenbytes zu übertragen, muß mit Füllbits
+ergänzt werden, um die minimale Slot-Time zu erreichen.
 
 <P>
 <H2><A NAME="4.2">802.3 raw (Novell)</A></H2>
 Als Novell Netware und das IPX/SPX-Protokoll auf den Markt brachte, war
-Ethernet noch nicht endg&uuml;ltig standardisiert. Die Netware-Entwickler
-warteten aber weder die Standardisierung ab, noch benutzten sie das g&auml;ngige
-Ethernet-II-Format. Nein, Novell dachte sich f&uuml;r IPX einen eigenen
-Rahmentyp aus. Dieser Pakettyp enth&auml;lt keine Protokollkennung wie Ethernet
-II, kann also allein IPX transportieren. Zu allem &Uuml;berflu&szlig; benannte
-Novell diese propriet&auml;re L&ouml;sung auch noch nach einer IEEE-Arbeitsgruppe
+Ethernet noch nicht endgültig standardisiert. Die Netware-Entwickler
+warteten aber weder die Standardisierung ab, noch benutzten sie das gängige
+Ethernet-II-Format. Nein, Novell dachte sich für IPX einen eigenen
+Rahmentyp aus. Dieser Pakettyp enthält keine Protokollkennung wie Ethernet
+II, kann also allein IPX transportieren. Zu allem Überfluß benannte
+Novell diese proprietäre Lösung auch noch nach einer IEEE-Arbeitsgruppe
 '802.3'.<BR>
 Wie kann ein Rechner oder Router ein solches Novell-Paket aus anderen herausfiltern,
-die ebenfalls nach Start- und Zieladresse eine L&auml;ngeninformation tragen?
-Gegen&uuml;ber 'Ethernet II' werden die beiden Bytes der Protokoll-ID f&uuml;r
-die Rahmenl&auml;nge genutzt. Der einzige weitere Unterschied besteht darin,
-da&szlig; allein im 'Novell-802.3'-Paket zwei Bytes folgen, die nur aus
+die ebenfalls nach Start- und Zieladresse eine Längeninformation tragen?
+Gegenüber 'Ethernet II' werden die beiden Bytes der Protokoll-ID für
+die Rahmenlänge genutzt. Der einzige weitere Unterschied besteht darin,
+daß allein im 'Novell-802.3'-Paket zwei Bytes folgen, die nur aus
 Einsen bestehen (FF, FF). Prinzipiell ist das Gespann IPX-'802.3' also auch
 in heterogenen Umgebungen mit vielen Routern einsetzbar, erfordert aber immer
 einen gewissen Extra-Aufwand. Novell geht die Sache inzwischen etwas vorsichtiger
 an und nennt sein IPX-Spezial-Ethernet offiziell '802.3 raw'. Wir empfehlen,
-dem Rat von Novell neueren Netware-Installationsprogrammen und -Handb&uuml;chern
+dem Rat von Novell neueren Netware-Installationsprogrammen und -Handbüchern
 zu folgen und das standardisierte 'Ethernet 802.2'-Format zu verwenden.
 Hinter Novells Bezeichnung 'Ethernet 802.2' verbirgt sich das eigentlich
 waschechte 802.3-Format. Aber '802.3' hatte Novell bereits vergeben, und
-die Verwechslungsgefahr mit dem 'raw'-Format w&auml;re zu gro&szlig; geworden.
-Man &uuml;bernahm daher einfach die Bezeichnung des IEEE-802.2-Protokollheaders,
+die Verwechslungsgefahr mit dem 'raw'-Format wäre zu groß geworden.
+Man übernahm daher einfach die Bezeichnung des IEEE-802.2-Protokollheaders,
 den die IEEE-802.3-Spezifikation vorschreibt und der den Unterschied zu
 Novells Alleingang ausmacht.
 <P>
@@ -214,18 +215,18 @@ Novells Alleingang ausmacht.
 <P>
 
 <H2><A NAME="4.3">IEEE 802.2 und SNAP</A></H2>
-Bis zu Novells Entscheidung f&uuml;r die Verwendung von '802.2' als Default-Typ
+Bis zu Novells Entscheidung für die Verwendung von '802.2' als Default-Typ
 gab es kaum Anwendungen dieser Ethernet-Variante - abgesehen von der weiter
 unten beschriebenen SNAP-Erweiterung.
-Das IEEE-Gremium ersetzte das Typ-Feld von Ethernet II durch eine L&auml;ngenangabe
-und erg&auml;nzte das Paket durch einen 802.2-Header von drei weiteren Bytes.
-Als Ersatz f&uuml;r das alte Typfeld mit der Protokoll-ID fungieren der
+Das IEEE-Gremium ersetzte das Typ-Feld von Ethernet II durch eine Längenangabe
+und ergänzte das Paket durch einen 802.2-Header von drei weiteren Bytes.
+Als Ersatz für das alte Typfeld mit der Protokoll-ID fungieren der
 'Destination-' und der 'Source Service Access Point' (DSAP und SSAP); hinzu
-kommt ein 'Control Field', das manche Protokolle f&uuml;r Verwaltungszwecke
-ben&ouml;tigen. Ein offensichtlicher Nachteil der 802.2-Definition gegen&uuml;ber
-Ethernet II war die Limitierung der Typ-Codes auf ein Byte, zumal die H&auml;lfte
-der m&ouml;glichen 256 Werte von Anfang an reserviert war(z. B. 04  f&uuml;r IBM
-SNA oder 06  f&uuml;r IP).
+kommt ein 'Control Field', das manche Protokolle für Verwaltungszwecke
+benötigen. Ein offensichtlicher Nachteil der 802.2-Definition gegenüber
+Ethernet II war die Limitierung der Typ-Codes auf ein Byte, zumal die Hälfte
+der möglichen 256 Werte von Anfang an reserviert war(z. B. 04  für IBM
+SNA oder 06  für IP).
 <P>
 <h4>Frame IEEE 802.3 SNAP</h4>
 <table WIDTH="100%" ALIGN=CENTER BORDER=1 CELLSPACING=0 CELLPADDING=1>
@@ -251,29 +252,29 @@ SNA oder 06  f&uuml;r IP).
 </table>
 <P>
 Daher folgte beinahe unweigerlich eine baldige Erweiterung: Das 'Sub Network Access
-Protocol' (SNAP) sorgte f&uuml;r Abhilfe.
+Protocol' (SNAP) sorgte für Abhilfe.
 Diese 802.2-Erweiterung mit der eigenen Protokoll-ID <b>AAh</b> stellt weitere
-f&uuml;nf Bytes f&uuml;r die Protokoll-Identifikation des dar&uuml;berliegenden
-Protokolls bereit, davon drei f&uuml;r eine Herstellerkennung. Der bekannteste
-Nutznie&szlig;er hiervon ist AppleTalk. Auch die Millionenschar der TCP/IP-Anwender
-k&ouml;nnte ihre Ethernet-II-Pakete mit der zwei Byte langen Protokoll-ID
+fünf Bytes für die Protokoll-Identifikation des darüberliegenden
+Protokolls bereit, davon drei für eine Herstellerkennung. Der bekannteste
+Nutznießer hiervon ist AppleTalk. Auch die Millionenschar der TCP/IP-Anwender
+könnte ihre Ethernet-II-Pakete mit der zwei Byte langen Protokoll-ID
 dank SNAP in ein IEEE-konformes Format bringen - doch TCP/lP funktioniert
-auch ohne Standard und den zus&auml;tzlichen Protokoll-Overhead.
+auch ohne Standard und den zusätzlichen Protokoll-Overhead.
 Da TCP/lP eine von anderen Transportprotokollen unerreichte Bedeutung gewonnen
-hat (man denke allein an das Internet), empfiehlt es sich, wenn irgend m&ouml;glich,
-durchgehend den Frame-Typ Ethernet II einzurichten. H&auml;ufig erzwingen
-die Gegebenheiten auch die weitere Ber&uuml;cksichtigung von Ethernet 802.3:
-Einige &auml;ltere, auf NetWare spezialisierte IPX-Printserver zum Beispiel
-m&ouml;gen keinen anderen Rahmentyp. Der von Novell zur Zeit als Default-Typ
+hat (man denke allein an das Internet), empfiehlt es sich, wenn irgend möglich,
+durchgehend den Frame-Typ Ethernet II einzurichten. Häufig erzwingen
+die Gegebenheiten auch die weitere Berücksichtigung von Ethernet 802.3:
+Einige ältere, auf NetWare spezialisierte IPX-Printserver zum Beispiel
+mögen keinen anderen Rahmentyp. Der von Novell zur Zeit als Default-Typ
 verwendete 802.2 hat nur dann Berechtigung, wenn statt TCP/lP und IPX andere
 OSI-Protokolle zum Einsatz kommen sollen.
 <P>
 
-<H3>Erweiterungen f&uuml;r VLANS</H3>
-<A HREF="netz7.html#7.12">Im Abschnitt &uuml;ber virtuelle LANS</A> wird noch eine
+<H3>Erweiterungen für VLANS</H3>
+<A HREF="netz7.html#7.12">Im Abschnitt über virtuelle LANS</A> wird noch eine
 weitere Expansion des Datenrahmens zur Anwendung kommen, das sogenannte "tagged"
-Format. Der Vollst&auml;ndigkeit halber sollen auch dieser Frames hier aufgef&uuml;hrt
-werden, n&auml;heres dann im <A HREF="netz7.html#7.12">VLAN-Abschnitt</A>.
+Format. Der Vollständigkeit halber sollen auch dieser Frames hier aufgeführt
+werden, näheres dann im <A HREF="netz7.html#7.12">VLAN-Abschnitt</A>.
 <P>
 <h4>Frame Ethernet Version 2.0 tagged (VLAN)</h4>
 <table WIDTH="100%" ALIGN=CENTER BORDER=1 CELLSPACING=0 CELLPADDING=1>
@@ -321,16 +322,16 @@ werden, n&auml;heres dann im <A HREF="netz7.html#7.12">VLAN-Abschnitt</A>.
 <P>
 
 <H4>MTU</H4>
-Die Abk&uuml;rzung MTU steht f&uuml;r "Maximum Transmission Unit" und beschreibt die
-maximale Gr&ouml;&szlig;e der Nutzdaten die in einem Datenpaket &uuml;bertragen
-werden k&ouml;nnen. Ein Standard-Ethernetframe hat eine Maximalgr&ouml;&szlig;e
-von 1518 Bytes. Davon beanspruchen Header und Pr&uuml;fsumme 18 Bytes. Somit
-verbleiben genau 1500 Byte f&uuml;r Nutzdaten (s. oben). Die MTU betr&auml;gt
+Die Abkürzung MTU steht für "Maximum Transmission Unit" und beschreibt die
+maximale Größe der Nutzdaten die in einem Datenpaket übertragen
+werden können. Ein Standard-Ethernetframe hat eine Maximalgröße
+von 1518 Bytes. Davon beanspruchen Header und Prüfsumme 18 Bytes. Somit
+verbleiben genau 1500 Byte für Nutzdaten (s. oben). Die MTU beträgt
 also 1500 Byte.
 <P>
-Beim Internetzugang via DSL kommt auf der Verbindung zum DSL-Modem h&auml;ufig
+Beim Internetzugang via DSL kommt auf der Verbindung zum DSL-Modem häufig
 das Protokoll PPPoE (Point-to-Point-Protocol over Ethernet) zum Einsatz.
-PPPoE beansprucht in jedem Frame zus&auml;tzlich 8 Bytes zur &Uuml;bertragung
+PPPoE beansprucht in jedem Frame zusätzlich 8 Bytes zur Übertragung
 von Verbindungsinformationen. Die MTU reduziert sich daher bei der Verwendung
 von PPPoE von 1500 auf 1492 Bytes.
 <p>
@@ -340,18 +341,18 @@ Durch den Einsatz weiterer Protokolle bei einigen Providern, kann sich die
 MTU noch weiter verringern. Je nach Provider schwankt die MTU zwischen
 1400 und 1492. Normalerweise wird die richtige MTU bei der Verbindung zum
 Provider automatisch eingestellt. Eine manuelle Einstellung einer zu
-gr&ouml;&szlig;en MTU f&uuml;hrt zu Verbindungsproblemen.
-Unter Linux kann die MTU f&uuml;r ein Interface mit dem Kommando
+größen MTU führt zu Verbindungsproblemen.
+Unter Linux kann die MTU für ein Interface mit dem Kommando
 <TT>ifconfig eth0 mtu &lt;wert&gt;</TT> eingestellt werden.
 <P>
 
 <H2><A NAME="4.4">Identifizierung des Ethernet-Interfaces</A></H2>
-Jeder Ethernet-Adapter kann &uuml;ber seine in der Hardware verankerte Adresse
+Jeder Ethernet-Adapter kann über seine in der Hardware verankerte Adresse
 eindeutig identifiziert werden. Diese Adresse besteht aus einem 3-Byte-Herstellercode
 und einer ebenfalls 3 Byte (24 Bit) langen laufenden Seriennummer. Auf diese
-Weise ist eine eindeutige Adressierung m&ouml;glich - was aber auch bedeutet,
-da&szlig; die logische Adresse durch die Netzwerksoftware in eine Hardwareadresse
-umgesetzt werden mu&szlig;. Die Angabe der Adresse erfolgt normalerweise
+Weise ist eine eindeutige Adressierung möglich - was aber auch bedeutet,
+daß die logische Adresse durch die Netzwerksoftware in eine Hardwareadresse
+umgesetzt werden muß. Die Angabe der Adresse erfolgt normalerweise
 sedezimal (hexadezimal), wobei zur besseren Lesbarkeit die einzelnen Bytes
 durch '.' oder ':' getrennt werden, z. B. <TT>20:08:AA:10:00:CF</TT>.
 Diese Adresse wird auch gerne <b>MAC-Adresse</b> genannt.
@@ -363,7 +364,7 @@ auch per Software konfiguriert werden (Speicherung im EEPROM).
 Bei jedem Kabel gibt es eine Konstante, welche die Ausbreitungsgeschwindigkeit
 der elektrischen Signale in dem Kabel angibt. Die Maximalgeschwindigkeit,
 die Lichtgeschwindigkeit c, wird jedoch nie erreicht. Die Ausbreitungszeit
-f&uuml;r elektromagnetische Wellen ist abh&auml;ngig vom Medium:
+für elektromagnetische Wellen ist abhängig vom Medium:
 <P>
 <table>
 <tr><th>Ausbreitungs-<br>faktor</th><th>Medium</th>
@@ -373,9 +374,9 @@ f&uuml;r elektromagnetische Wellen ist abh&auml;ngig vom Medium:
 </table>
 <P>
 Aber wozu ist dieser Wert bei Netzen interessant? Nehmen wir als Beispiel
-f&uuml;r die folgenden Berechnungen das 10Base2-Ethernet-Kabel.
+für die folgenden Berechnungen das 10Base2-Ethernet-Kabel.
 <P>
-Nehmen wir nun an, da&szlig; zwei Stationen A und B, die sich an gegen&uuml;berliegenden
+Nehmen wir nun an, daß zwei Stationen A und B, die sich an gegenüberliegenden
 Enden des Kabelsegments befinden. Die Station A sendet zum Zeitpunkt t ein
 Datenpaket ab. Die Station B sendet ihrerseits zum Zeitpunkt t + (T - dt),
 also kurz bevor das Signal von A bei B ankommt. Damit A die Kollision erkennen
@@ -383,82 +384,82 @@ kann, vergeht nochmals die Zeit (T - dt), also insgesamt t + 2*(T - dt).
 <P>
 <center><img src="images/b1-13a.png" ALT=""></center>
 <P>
-F&uuml;r den Grenzfall k&ouml;nnen wir dt gegen 0 gehen lassen, woraus folgt,
-da&szlig; die Dauer der &Uuml;bertragung eines Datenblocks mindestens 2*T betragen
-mu&szlig;, damit eine Kollision bei CSMA/CD sicher erkannt wird. Ein Datenblock
-mu&szlig; also mindestens diese Zeit 2*T zur &Uuml;bertragung ben&ouml;tigen.
+Für den Grenzfall können wir dt gegen 0 gehen lassen, woraus folgt,
+daß die Dauer der Übertragung eines Datenblocks mindestens 2*T betragen
+muß, damit eine Kollision bei CSMA/CD sicher erkannt wird. Ein Datenblock
+muß also mindestens diese Zeit 2*T zur Übertragung benötigen.
 <P>
-Die kleinste erlaubte Packetgr&ouml;sse von 64 Byte ben&ouml;tigt bei 10Base2
+Die kleinste erlaubte Packetgrösse von 64 Byte benötigt bei 10Base2
 51.2 &micro;s, um komplett gesendet zu werden.
 <br>
 Ein Signal, das 51.2 &micro;s dauert, legt im Coax-Medium folgende
-Strecke zur&uuml;ck:
+Strecke zurück:
 <PRE>
       0.77 * 3 * 10<sup>8</sup> = 231 * 10<sup>6</sup> m/s
       231*10<sup>6</sup> * 51.2*10<sup>-6</sup> = 11827.20 m = 11.82 km
 </PRE>
-Das 64-Byte-Ethernetpacket ben&ouml;tigt also f&uuml;r die Strecke  von 2 * 2,5
-= 5 km im idealen Fall nur etwa die H&auml;lfte der minimalen
-&Uuml;bertragungsdauer von 51.2 &micro;s. - die LAN-Sepzifikation beinhaltet
+Das 64-Byte-Ethernetpacket benötigt also für die Strecke  von 2 * 2,5
+= 5 km im idealen Fall nur etwa die Hälfte der minimalen
+Übertragungsdauer von 51.2 &micro;s. - die LAN-Sepzifikation beinhaltet
 somit eine Sicherheitsreserve um dem CSMA/CD-Protokoll des Ethernet auch im
-realen Fall zu gen&uuml;gen.
+realen Fall zu genügen.
 <p>
-Das ideale Beispiel ist sehr weit von der Realit&auml;t entfernt.
-Es liefert jedoch ein Gef&uuml;hl f&uuml;r die
-Zeitr&auml;ume, mit denen beim Ethernetverkehr gerechnet wird.
-F&uuml;r jeden Planer eines Netzes ist es wichtig, m&ouml;glichst
+Das ideale Beispiel ist sehr weit von der Realität entfernt.
+Es liefert jedoch ein Gefühl für die
+Zeiträume, mit denen beim Ethernetverkehr gerechnet wird.
+Für jeden Planer eines Netzes ist es wichtig, möglichst
 genau den "worst case" seines Netzes zu kennen, damit sicher gestellt
-ist, da&szlig; die Kollisionsbehandlung korrekt arbeitet. Dazu werden
+ist, daß die Kollisionsbehandlung korrekt arbeitet. Dazu werden
 die jeweils am weitesten entfernten Netzwerkdevices einer
-Kollisionsdom&auml;ne betrachtet. Hierbei ist sowohl die Entfernung,
+Kollisionsdomäne betrachtet. Hierbei ist sowohl die Entfernung,
 als auch die zwischen Ihnen liegende Netzhardware zu beachten.
 <p>
 Entsprechend <i>jedem physikalischen Element</i> auf der Strecke zwischen
-den Netzwerk-Devices (Hin- und R&uuml;ckweg) werden bestimmte Werte
-addiert. Dies sind die sogenannten "Bitzeiten", die spezifisch f&uuml;r
+den Netzwerk-Devices (Hin- und Rückweg) werden bestimmte Werte
+addiert. Dies sind die sogenannten "Bitzeiten", die spezifisch für
 jede Hardware sind. Diese Bitzeiten sind entweder aus der Literatur oder
 der jeweiligen Herstellerbeschreibung zu entnehmen. Aber nicht immer
-findet man alle Werte; dann mu&szlig; man allgemeing&uuml;ltige Werte
-benutzen, z. B. 8 Bitzeiten f&uuml;r einen Repeater. Diese Zahl soll das
-Zeitintervall repr&auml;sentieren, die ein Repeater ben&ouml;tigt um
+findet man alle Werte; dann muß man allgemeingültige Werte
+benutzen, z. B. 8 Bitzeiten für einen Repeater. Diese Zahl soll das
+Zeitintervall repräsentieren, die ein Repeater benötigt um
 das Ethernetpaket weiterzuleiten.
 <p>
 Ist jede auf der Strecke befindliche Hardware in die Rechnung
-eingeflossen, so erh&auml;lt man den <i>Round Trip Delay</i> (RTD).
-Der RTD mu&szlig; unter einem definierten Schwellwert liegen.
+eingeflossen, so erhält man den <i>Round Trip Delay</i> (RTD).
+Der RTD muß unter einem definierten Schwellwert liegen.
 Dieser Schwellwert von 51,2 &micro;s entspricht 512 Bitzeiten.
-Zur Erinnerung: das kleineste Paket hat 64 Byte = 512 Bit  L&auml;nge.
+Zur Erinnerung: das kleineste Paket hat 64 Byte = 512 Bit  Länge.
 Dieser Wert wird auch als "Slot-Time" bezeichnet.
 <P>
 Das Kabel zwischen AUI (Attachment Unit Interface) und MAU (Media Attachment Unit)
 hat abweichende Spezifikationen (Twisted-Pair,
-jeweils f&uuml;r Senden und Empfangen getrennt, abgeschirmt), seine Maximall&auml;nge
-betr&auml;gt 50 m, die Mindest-Signalausbreitungsgeschwindigkeit betr&auml;gt
+jeweils für Senden und Empfangen getrennt, abgeschirmt), seine Maximallänge
+beträgt 50 m, die Mindest-Signalausbreitungsgeschwindigkeit beträgt
 0,65*c = 195000 km/s. Daraus folgt eine maximale Laufzeit von 0,05/195000
 s = 0,256 Mikrosekunden.
 <P>
-Da sich maximal drei 10Base2-Netzsegmente &uuml;ber Verst&auml;rker (Repeater)
-verbinden lassen, ergibt sich eine Maximall&auml;nge von 1500 m, und so
-eine Laufzeit von 13 Mikrosekunden. Dabei ist noch zu ber&uuml;cksichtigen, da&szlig;
-bis zu sechs Transceiverkabel beteiligt sein k&ouml;nnen (je eines an den
-Stationen und je zwei an den beiden Repeatern). Die maximale Verz&ouml;gerung
-ist hier also 3,08 Mikrosekunden. Wenn man noch die Zeiten f&uuml;r die Kollisionserkennung
-im Ethernet-Interface und weitere Hardwareparameter ber&uuml;cksichtigt,
+Da sich maximal drei 10Base2-Netzsegmente über Verstärker (Repeater)
+verbinden lassen, ergibt sich eine Maximallänge von 1500 m, und so
+eine Laufzeit von 13 Mikrosekunden. Dabei ist noch zu berücksichtigen, daß
+bis zu sechs Transceiverkabel beteiligt sein können (je eines an den
+Stationen und je zwei an den beiden Repeatern). Die maximale Verzögerung
+ist hier also 3,08 Mikrosekunden. Wenn man noch die Zeiten für die Kollisionserkennung
+im Ethernet-Interface und weitere Hardwareparameter berücksichtigt,
 kommt man auf die im Ursprungsdokument von 1980 angegebene maximale Laufzeit
 von 45 Mikrosekunden.
 <P>
 Zu lange Kabel, zuviele hintereinandergeschaltete Repeater, aber auch das
 Ausreizen der im Standard angegebenen Parameter kann durchaus im Zusammenspiel
 mit Komponenten, die am Rande der Toleranzgrenze liegen, zu Fehlfunktionen
-f&uuml;hren. Daher sollte man die angegebenen L&auml;ngen immer unterschreiten.
-Auch bei der Planung von Netzen ist zu ber&uuml;cksichtigen, da&szlig; Kabel
+führen. Daher sollte man die angegebenen Längen immer unterschreiten.
+Auch bei der Planung von Netzen ist zu berücksichtigen, daß Kabel
 niemals in &quot;Luftlinie&quot; verlegt werden und die Kurven und Schleifen
-in den Kabelkan&auml;len sich schnell addieren.
+in den Kabelkanälen sich schnell addieren.
 <P>
-Nicht verkleinern l&auml;&szlig;t sich jedoch der Overhead, der durch die
+Nicht verkleinern läßt sich jedoch der Overhead, der durch die
 Verwaltungsinformation im Ethernet-Frame (Adressen, Control-Info) entsteht.
-Der Overhead wird umso kleiner, je gr&ouml;&szlig;er der Nutzdatenanteil
-ist. Die folgende Tabelle zeigt die Abh&auml;ngigkeit von Overhead und
+Der Overhead wird umso kleiner, je größer der Nutzdatenanteil
+ist. Die folgende Tabelle zeigt die Abhängigkeit von Overhead und
 Nutzdaten (berechnet):
 <P>
 <center><img src="images/ether_overhead_tab.png" ALT=""></center>
@@ -481,7 +482,7 @@ aufgetragen.
 <TR>
 <TD VALIGN=TOP>7 bis 4</TD>
 <TD VALIGN=TOP>Application<BR>Presentation<BR>Session<BR>Transport</TD>
-<TD VALIGN=TOP>Sp&auml;ter weitere Erl&auml;uterungen</TD>
+<TD VALIGN=TOP>Später weitere Erläuterungen</TD>
 </TR>
 
 <TR>
@@ -493,8 +494,8 @@ aufgetragen.
 <TR>
 <TD VALIGN=TOP>2</TD>
 <TD VALIGN=TOP>Data Link</TD>
-<TD VALIGN=TOP>Zusammenfassung der Bits in Bl&ouml;cke (Bytes, Frames),
-Flu&szlig;steuerung, Reihenfolgesicherung Fehlererkennung in Bl&ouml;cken
+<TD VALIGN=TOP>Zusammenfassung der Bits in Blöcke (Bytes, Frames),
+Flußsteuerung, Reihenfolgesicherung Fehlererkennung in Blöcken
 und Korrektur</TD>
 </TR>
 
@@ -503,29 +504,29 @@ und Korrektur</TD>
 <TD VALIGN=TOP>Physical</TD>
 <TD VALIGN=TOP>mechanische Charakteristika (z.B. Pin-Belegung, etc.),
 elektrische, elektromagnetische, akustische, optische Charakteristika,
-&Uuml;bertragungsart (z.B. analog/digital, synchron/asynchron, Modulation etc.)</TD>
+Übertragungsart (z.B. analog/digital, synchron/asynchron, Modulation etc.)</TD>
 </TR>
 </TABLE>
 
 <P>
 Ethernet und IEEE 802.3 sind im OSI-7-Schichten-Modell in der zweiten Schicht
-angesiedelt, wobei man diese Schicht beim IEEE802.3 zus&auml;tzlich einmal
+angesiedelt, wobei man diese Schicht beim IEEE802.3 zusätzlich einmal
 unterteilt in die Schichten 2a: Media Access Control (MAC) und
 2b: Logical Link Control (LLC).
 <P>
 <center><img src="images/b1-13b.png" ALT="Graphische Darstellung der Schichten 1 bis 3"></center>
 <P>
-Der Ethernet-Standard umfa&szlig;t Schicht 1 des OSI-Modells (Physikalische
+Der Ethernet-Standard umfaßt Schicht 1 des OSI-Modells (Physikalische
 Schicht) und den unteren Teil von Schicht 2, der Verbindungsschicht.
 Dieser Teil wird MAC (Media Access Control) genannt. MAC und
-LLC (Logical Link Control) f&uuml;llen zusammen Schicht 2 aus.
+LLC (Logical Link Control) füllen zusammen Schicht 2 aus.
 Der Standard ist in drei Unterebenen eingeteilt. Von oben sind dies
 die eben genannte MAC und in Schicht 1 "PLS" (Physical Signaling)
 sowie "PMA" (Physical Medium Attachment). Die Schnittstelle zwischen
 ihnen ist auch im Standard definiert. Die Verbindung zwischen
 Medium und PMA wird "MDI" (Medium Dependent Interface)
 genannt. Die Einheit zwischen PMA und PLS wird mit "AUI"
-(Attachment Unit Interface) bezeichnet. "MDI" ist der Anschlu&szlig; zum
+(Attachment Unit Interface) bezeichnet. "MDI" ist der Anschluß zum
 Netzkabel.
 <p>
 <center><img src="images/mac.png"></center>
@@ -533,56 +534,56 @@ Netzkabel.
 
 <H4>MAC (Media Access Control)</H4>
 Die MAC-Ebene hat zwei Funktionen. Die eine ist die Datenhandhabung und
-umfa&szlig;t die Paketverwaltung (Datenaufbereitung, Adressierung und
-Fehlerkontrolle). Die andere ist die Zugangskontrolle, die daf&uuml;r sorgt,
-da&szlig; die Pakete ohne Kollisionen ins Netz gelangen. Zudem handhabt die
+umfaßt die Paketverwaltung (Datenaufbereitung, Adressierung und
+Fehlerkontrolle). Die andere ist die Zugangskontrolle, die dafür sorgt,
+daß die Pakete ohne Kollisionen ins Netz gelangen. Zudem handhabt die
 Zugangskontrolle die Kollisionen, die trotzdem entstehen.
 Die Datenhandhabung auf der MAC-Ebene arbeitet mit zwei
 Dienstprimitiven zur LLC: "Request" und "Indication".
 <B>Request</B> wird von der LLC generiert und ist die Anforderung nach
-&Uuml;bertragung von Daten der eigenen LLC zur LLC in einer anderen
+Übertragung von Daten der eigenen LLC zur LLC in einer anderen
 Station. Parameter sind Zieladresse, Dateneinheit und Dienstklasse.
-<B>Indication</B> ist ein Hinweis an die LLC, da&szlig; MAC ein ankommendes
+<B>Indication</B> ist ein Hinweis an die LLC, daß MAC ein ankommendes
 Paket entgegengenommen hat. Hier sind die Parameter Zieladresse,
 Quelladresse, Dateneinheit und Empfangsstatus.
 Die Kollisionshandhabung benutzt mehrere Mechanismen. Beim
-Senden arbeitet ein Proze&szlig;, der "Deference" (defer: nachgeben)
-genannt wird. Dieser kontrolliert, ob eine Aktivit&auml;t im Kabel stattfindet
+Senden arbeitet ein Prozeß, der "Deference" (defer: nachgeben)
+genannt wird. Dieser kontrolliert, ob eine Aktivität im Kabel stattfindet
 (Carrier Sense). In diesem Fall beginnt ein Deferring-Zustand.
-Wenn das Kabel frei ist, wird eine Verz&ouml;gerung von einem "inter frame
+Wenn das Kabel frei ist, wird eine Verzögerung von einem "inter frame
 spacing" initiiert und ein eventuell wartendes Paket losgeschickt.
-Wenn eine Kollision eintritt, wird ein St&ouml;rungssignal gesandt, wonach
-die Sendung abgebrochen wird und der Backoff-Proze&szlig; startet (siehe
-vorhergehendes Kapitel). Die Aufgaben der MAC-Ebene k&ouml;nnen wie folgt
-zusammengefa&szlig;t werden:
+Wenn eine Kollision eintritt, wird ein Störungssignal gesandt, wonach
+die Sendung abgebrochen wird und der Backoff-Prozeß startet (siehe
+vorhergehendes Kapitel). Die Aufgaben der MAC-Ebene können wie folgt
+zusammengefaßt werden:
 <OL>
 <LI>Sendet Frames, indem sie:
   <OL TYPE="a">
   <LI>Daten von der LLC entgegennimmt,
   <LI>kontrolliert, ob ein PAD-Feld notwendig ist, und wenn ja, dieses erzeugt
-      und es am Ende anf&uuml;gt,
-  <LI>kontrolliert, da&szlig; das Frame ganze Bytes enth&auml;lt (da&szlig; die
+      und es am Ende anfügt,
+  <LI>kontrolliert, daß das Frame ganze Bytes enthält (daß die
       Anzahl der Bits ein ganzzahliges Vielfaches von 8 ist), die CRC berechnet
-       (CRC = Cyclic Redundancy Check = Polynompr&uuml;fsumme) und am Ende als FCS
+       (CRC = Cyclic Redundancy Check = Polynomprüfsumme) und am Ende als FCS
        (Frame Check Sum) ablegt,
-  <LI>Preamble, Start Frame Delimiter und Adre&szlig;feld am Anfang hinzuf&uuml;gt,
+  <LI>Preamble, Start Frame Delimiter und Adreßfeld am Anfang hinzufügt,
   <LI>das ganze Frame in serieller Bitform an die PLS schickt.
   </OL>
 <P>
-<LI>Empf&auml;ngt Frames, indem sie:
+<LI>Empfängt Frames, indem sie:
   <OL TYPE="a">
   <LI>ein Frame nach dem anderen in serieller Bitform von der PLS akzeptiert,
-  <LI>untersucht, ob die Zieladresse mit der lokalen Station &uuml;bereinstimmt
+  <LI>untersucht, ob die Zieladresse mit der lokalen Station übereinstimmt
       (individuelle Adresse, Gruppenadresse oder Broadcast),
-  <LI>kontrolliert, da&szlig; das Frame ausreichend lang ist, da&szlig; er ganze
-      Bytes enth&auml;lt und da&szlig; die CRC stimmt,
-  <LI>Preamble, SFD (Starting Frame Delimiter) und Adre&szlig;feld abschneidet,
-      das L&auml;ngenfeld liest
+  <LI>kontrolliert, daß das Frame ausreichend lang ist, daß er ganze
+      Bytes enthält und daß die CRC stimmt,
+  <LI>Preamble, SFD (Starting Frame Delimiter) und Adreßfeld abschneidet,
+      das Längenfeld liest
       und eventuelle PAD-Bytes abschneidet,
   <LI>Daten an die LLC schickt.
   </OL>
 <P>
-<LI>Vermeidet Kollisionen und h&auml;lt einen ausreichenden
+<LI>Vermeidet Kollisionen und hält einen ausreichenden
     Abstand zwischen Frames im Medium aufrecht indem sie:
   <OL TYPE="a">
   <LI>vom Senden absieht, wenn das Medium belegt ist,
@@ -590,17 +591,17 @@ zusammengefa&szlig;t werden:
       abwartet, ehe mit der Sendung begonnen wird.
   </OL>
 <P>
-<LI>Handhabt Kollisionen, indem sie, wenn die Station w&auml;hrend des
+<LI>Handhabt Kollisionen, indem sie, wenn die Station während des
     Sendens eine solche feststellt:
   <OL TYPE="a">
-  <LI>ein St&ouml;rsignal in Form eines zuf&auml;lligen Bitmusters von einer
-      bestimmten L&auml;nge (Jam Size) sendet, damit die Betroffenen
-      Stationen die Kollision entdecken k&ouml;nnen,
+  <LI>ein Störsignal in Form eines zufälligen Bitmusters von einer
+      bestimmten Länge (Jam Size) sendet, damit die Betroffenen
+      Stationen die Kollision entdecken können,
   <LI>eine Zufallzahl generiert und in dem Zeitraum nicht sendet
       (Backoff), der von der Zufallszahl vorgegeben wird,
   <LI>wenn das Medium frei ist, nach dieser Zeit sendet,
   <LI>wenn eine neue Kollision stattfindet den Versuch mehrmals bis
-      zu einer vorgegebenen H&ouml;chstgrenze wiederholt (Attempt Limit)
+      zu einer vorgegebenen Höchstgrenze wiederholt (Attempt Limit)
       und dann gegebenenfalls eine Fehlernachricht generiert.
   </OL>
 </OL>
@@ -609,15 +610,15 @@ zusammengefa&szlig;t werden:
 <h4>MAC-Adressen als physikalische Adressen</h4>
 
 Die Aufgabe der MAC-Adresse liegt darin, die miteinander kommunizierenden
-Stationen eindeutig zu identifizieren. MAC-Adressen haben eine feste L&auml;nge von 48
-bit. Mit einer MAC-Adresse wird der physikalische Netzanschlu&szlig;
-oder <B>Netz-Zugriffspunkt</B> einer Station adressiert. Sie hei&szlig;t daher
+Stationen eindeutig zu identifizieren. MAC-Adressen haben eine feste Länge von 48
+bit. Mit einer MAC-Adresse wird der physikalische Netzanschluß
+oder <B>Netz-Zugriffspunkt</B> einer Station adressiert. Sie heißt daher
 auch <B>physikalische Adresse</B>.
-Eine Station kann durchaus mehrere MAC-Adressen haben, wenn es &uuml;ber mehrere
-Netzanschl&uuml;sse verf&uuml;gt.
+Eine Station kann durchaus mehrere MAC-Adressen haben, wenn es über mehrere
+Netzanschlüsse verfügt.
 <p>
-In manchen Dokumentationen ist zu lesen, dass es f&uuml;r Ethernet
-ganz spezielle, sogenannte Ethernet-Adressen g&auml;be. Dies ist absolut falsch.
+In manchen Dokumentationen ist zu lesen, dass es für Ethernet
+ganz spezielle, sogenannte Ethernet-Adressen gäbe. Dies ist absolut falsch.
 Alle bekannten Zugriffsverfahren der MAC-Schicht (wie z.B. CSMA/CD bzw. Ethernet,
 Token Bus, Token Ring, FDDI) verwenden einheitlich das im folgenden
 beschriebene MAC-Adressformat mit 48 bit langen MAC-Adressen.
@@ -647,44 +648,44 @@ beschriebene MAC-Adressformat mit 48 bit langen MAC-Adressen.
     <dd>Gruppen-Adresse (Multicast Address), die eine Gruppe von Interfaces
       identifiziert.</dd>
   <dt><TT>U/L = 0</TT>:</dt>
-    <dd>universelle Adresse (weltweit eindeutig und unver&auml;nderbar).</dd>
+    <dd>universelle Adresse (weltweit eindeutig und unveränderbar).</dd>
   <dt><TT>U/L = 1</TT>:</dt>
-    <dd>lokale Adresse (lokal ver&auml;nderbar).</dd>
+    <dd>lokale Adresse (lokal veränderbar).</dd>
 </dl>
 Das erste Bit des ersten Bytes einer MAC-Adresse gibt also an, ob es sich um eine Einzel-
-oder Gruppenadresse (I/G f&uuml;r Individual/Group) handelt. Bei einem Broadcast oder 
+oder Gruppenadresse (I/G für Individual/Group) handelt. Bei einem Broadcast oder 
 Multicast wird I/G = 1 gesetzt, sonst und bei der Absenderadresse ist I/G = 0.
-(Nur als Ziel-Adresse, nicht als Quell-Adresse m&ouml;glich.)
+(Nur als Ziel-Adresse, nicht als Quell-Adresse möglich.)
 <p>
-Das folgende Bit (U/L f&uuml;r Universal/Local) zeigt an, ob die MAC-Adresse global 
-eindeutig (Universally Administered Address (UAA); U/L = 0) oder lokal ver&auml;nderbar
+Das folgende Bit (U/L für Universal/Local) zeigt an, ob die MAC-Adresse global 
+eindeutig (Universally Administered Address (UAA); U/L = 0) oder lokal veränderbar
 und nur dort eindeutig ist (Locally Administered Address (LAA); U/L = 1).
 <P>
 
 <H4>Herstellerkennungen</H4>
-F&uuml;r die Festlegung von universellen Individual-Adressen werden von IEEE f&uuml;r
+Für die Festlegung von universellen Individual-Adressen werden von IEEE für
 die Bits 3 bis 24 weltweit eindeutige Werte vergeben und den Herstellern zugewiesen.
 Man bezeichnet eine solche Bitfolge daher als <B>Organizationally Unique
 Identifier (OUI)</B>. Da bei universellen Individual-Adressen stets
 <TT>I/G = 0</TT> und <TT>U/L = 0</TT> gilt, werden diese beiden Bits
-h&auml;ufig in den OUI mit einbezogen, so dass der OUI die ersten beiden Oktette
+häufig in den OUI mit einbezogen, so dass der OUI die ersten beiden Oktette
 der MAC-Adresse darstellt.
-Die Werte f&uuml;r die restlichen Bits 25 bis 48 werden von den
-Herstellern vergeben. Eine solche Bitfolge hei&szlig;t daher
+Die Werte für die restlichen Bits 25 bis 48 werden von den
+Herstellern vergeben. Eine solche Bitfolge heißt daher
 <B>Organizationally Unique Address (OUA)</B>.
-Die MAC-Schicht einer Station, das einen MAC-Rahmen empf&auml;ngt,
+Die MAC-Schicht einer Station, das einen MAC-Rahmen empfängt,
 vergleicht die MAC-Zieladresse des Rahmens mit seiner eigenen
 MAC-Adresse und gibt den Inhalt des Rahmens
-nur dann an die h&ouml;herliegenden Schichten weiter
-(LLC oder Schicht 3), wenn beide Adressen &uuml;bereinstimmen.
+nur dann an die höherliegenden Schichten weiter
+(LLC oder Schicht 3), wenn beide Adressen übereinstimmen.
 Ansonsten wird der Rahmen verworfen.
-Die MAC-Schicht beinhaltet also eine Filterfunktion f&uuml;r MAC-Adressen.
+Die MAC-Schicht beinhaltet also eine Filterfunktion für MAC-Adressen.
 <p>
-F&uuml;r die Darstellung von MAC-Adressen verwendet man am besten die
+Für die Darstellung von MAC-Adressen verwendet man am besten die
 <B>kanonische Form</B>: Die 48 Bits werden zu Bytes bzw. Oktetten
-derart zusammengefa&szlig;t, da&szlig; 6 Oktette entstehen, wobei die Bitreihenfolge nicht
-ver&auml;ndert wird und das <TT>I/G</TT>-Bit im 1. Oktett links steht und als
-Least-Significant-Bit (LSB) interpretiert wird. Unter der Festlegung, da&szlig; in
+derart zusammengefaßt, daß 6 Oktette entstehen, wobei die Bitreihenfolge nicht
+verändert wird und das <TT>I/G</TT>-Bit im 1. Oktett links steht und als
+Least-Significant-Bit (LSB) interpretiert wird. Unter der Festlegung, daß in
 jedem der 6 Oktette das LSB links steht, wird dann jedes Oktett durch zwei
 hexadezimale Ziffern dargestellt und die Ziffernpaare werden durch
 Bindestriche getrennt. Ein Beispiel mag dies veranschaulichen.
@@ -699,25 +700,25 @@ Bindestriche getrennt. Ein Beispiel mag dies veranschaulichen.
 <p>
 Wenn ein MAC-Rahmen an mehrere bzw. an alle Stationen eines Netzes verschickt werden soll,
 spricht man von einem <B>Multicast</B> bzw. einem <B>Broadcast</B>.
-Entsprechende Multicast- bzw. Broadcast-Adressen gibt es verst&auml;ndlicherweise nur
+Entsprechende Multicast- bzw. Broadcast-Adressen gibt es verständlicherweise nur
 als Ziel-Adressen. Bei einem Broadcast lautet die MAC-(Ziel-)Adresse <tt>FF-FF-FF-FF-FF-FF</tt>.
 Einige standardisierte Multicast-Adressen sind:
 <p>
 <TT>01-80-C2-00-00-00</TT>: Spanning Tree Protocol<br>
-<TT>01-80-C2-00-00-10</TT>: Br&uuml;cken-Management<br>
+<TT>01-80-C2-00-00-10</TT>: Brücken-Management<br>
 <TT>01-00-5E-00-00-00</TT>: Internet Protocol (IP) Multicast<br>
 <TT>CF-00-00-00-00-00</TT>: Ethernet Configuration Test Protocol (Loopback)<br>
 <P>
 
 Neben der OUI existiert auch ein kleiner Adressbereich (IAB – Individual 
-Address Block), der sich insbesondere f&uuml;r Privatpersonen und kleine Firmen 
+Address Block), der sich insbesondere für Privatpersonen und kleine Firmen 
 lohnt. Interessierte erhalten einen kleinen eigenen Adressbereich innerhalb 
-der Bits 11 bis 0. Damit sind 212 = 4096 individuelle Adressen m&ouml;glich.
+der Bits 11 bis 0. Damit sind 212 = 4096 individuelle Adressen möglich.
 <P>
 In der OUI-Datenbank als "privat" gekennzeichnete Herstellerkennungen
-sind f&uuml;r Firmen registriert, die ihre Identit&auml;t nicht &ouml;ffentlich preisgeben 
-wollen. Adressen aus diesen Bereichen k&ouml;nnen daher nicht, wie man vermuten 
-w&uuml;rde, f&uuml;r lokale Zwecke eingesetzt werden.
+sind für Firmen registriert, die ihre Identität nicht öffentlich preisgeben 
+wollen. Adressen aus diesen Bereichen können daher nicht, wie man vermuten 
+würde, für lokale Zwecke eingesetzt werden.
 <P>
 Die Herstellerkennung ist weitgehend in einer Datenbank einsehbar: 
 (<A HREF="http://standards.ieee.org/regauth/oui/index.shtml">
@@ -729,18 +730,18 @@ Hersteller einer MAC-Adresse suchen.
 
 <H4>PLS (Physical Level Signaling)</H4>
 PLS kommuniziert teils mit der eigenen MAC, teils mit MACs in anderen Stationen.
-Die Service Primitive, die f&uuml;r die Daten&uuml;bertragung
-benutzt wird, ist "DATA.request" von der MAC, die &uuml;ber "DATA.indication" auf
-Bitebene Daten an alle MACs im Netz sendet. Damit erh&auml;lt
+Die Service Primitive, die für die Datenübertragung
+benutzt wird, ist "DATA.request" von der MAC, die über "DATA.indication" auf
+Bitebene Daten an alle MACs im Netz sendet. Damit erhält
 auch die eigene MAC ihre ausgehenden Bits als Echo von PLS.
 Zur MAC gibt es auch die zwei Primitive, "CARRIER.indication" und
 "SIGNAL.indication". Diese werden benutzt, um der MAC die Zugangskontrolle zu
-erm&ouml;glichen. <BR>
+ermöglichen. <BR>
 CARRIER hat zwei Stellungen ("on" und "off") und wird durch die
-PMA generiert, wenn diese feststellt, da&szlig; ein Bitstrom im Netzkabel
+PMA generiert, wenn diese feststellt, daß ein Bitstrom im Netzkabel
 eingeleitet oder beendet wird. Es wird benutzt, um anzuzeigen, ob das
 Medium frei ist oder nicht.<BR>
-SIGNAL zeigt die Qualit&auml;t des Signals an und wird unter anderem
+SIGNAL zeigt die Qualität des Signals an und wird unter anderem
 dazu benutzt, Kollisionen anzuzeigen.
 <P>
 
@@ -750,8 +751,8 @@ Interface oder AUI) zum Physical Medium Attachment (PMA) und
 von diesem eine weitere Schnittstelle (Medium Dependent Interface
 oder MDI) zum Medium. Zusammen bilden diese die MAU (Medium
 Attachment Unit), die auch als "Transceiver" bezeichnet wird.
-Bei 10Base5 h&auml;ngt der MAU fest angekoppelt am Kabelstrang und
-versorgt den Rechner &uuml;ber Twisted-Pair-Stichleitungen (AUI-Kabel).
+Bei 10Base5 hängt der MAU fest angekoppelt am Kabelstrang und
+versorgt den Rechner über Twisted-Pair-Stichleitungen (AUI-Kabel).
 Der Hauptstrang ist damit von den Benutzern entkoppelt. Bei
 10Base2 verzichtet man darauf.
 <p>
@@ -762,7 +763,7 @@ Der Hauptstrang ist damit von den Benutzern entkoppelt. Bei
 
 <H2><A NAME="4.7">Historisches</A></H2>
 Einige historische Daten aus dem Mund von Bob Metcalfe, dem Erfinder 
-des Ethernet und heute Professor f&uuml;r Innovation an der University of 
+des Ethernet und heute Professor für Innovation an der University of 
 Texas in Austin in seiner Ansprache im Juni 2013:
 <p>
 <img src="images/Metcalfe.jpg" ALT="" align="left" hspace="10" vspace="10">
@@ -770,16 +771,16 @@ Texas in Austin in seiner Ansprache im Juni 2013:
 im Xerox PARC gefeiert. Jetzt, am 23. Juni, feiern wir den 30. 
 Geburtstag der Ethernet-Standardisierung durch IEEE 802." 
 <p>
-Nat&uuml;rlich wurde das Ethernet seit 1983 des &ouml;fteren (neu) standardisiert.
+Natürlich wurde das Ethernet seit 1983 des öfteren (neu) standardisiert.
 Im IEEE 802.3 wurden immer wieder die Innovationen aufgenommen - von 
-2,94 Mb/s bis zu 100 Gb/s, von dicken zu d&uuml;nnen Koaxialkabeln bis hin 
+2,94 Mb/s bis zu 100 Gb/s, von dicken zu dünnen Koaxialkabeln bis hin 
 zu verdrillten Zweidrahtleitungen und Glasfaserkabeln, von CSMA/CD zu 
-Switch und schlie&szlig;lich Zugangspunkten. Gleichzeitig wurde dabei ein 
-hoher Grad an R&uuml;ckw&auml;rtskompatibilit&auml;t sichergestellt.
+Switch und schließlich Zugangspunkten. Gleichzeitig wurde dabei ein 
+hoher Grad an Rückwärtskompatibilität sichergestellt.
 <p>
-"1983 gab es Menschen, die Ethernet kauften und die ich nicht pers&ouml;nlich 
+"1983 gab es Menschen, die Ethernet kauften und die ich nicht persönlich 
 kannte. 1985 gab es sogar Menschen, die ich nicht kannte, die das Ethernet 
-erfanden. Und sie tun es auch heute noch mit gro&szlig;em Erfolg, indem sie den 
+erfanden. Und sie tun es auch heute noch mit großem Erfolg, indem sie den 
 offenen Standardisierungsprozess des IEEE nutzen. Gratulation und 
 vielen Dank", so Metcalfe weiter (Quelle: IEEE SA).
 <br clear="all">
@@ -797,7 +798,7 @@ vielen Dank", so Metcalfe weiter (Quelle: IEEE SA).
 <BR>2002&nbsp;&nbsp;&nbsp;&nbsp; Standard 802.3ae 10-Gigabit-Ethernet
 <P>
 Robert Metcalfe bei Xerox suchte Anfang der 70er Jahre eigentlich nur eine 
-Netzanbindung f&uuml;r Drucker mittels eines Koaxkabels.
+Netzanbindung für Drucker mittels eines Koaxkabels.
 <P>
 Zitat aus The Ethernet Sourcebook, ed. Robyn E. Shotwell (New
 York: North-Holland, 1985): <BR>
@@ -806,11 +807,11 @@ present Ethernet ... to the National Computer Conference in June of
 that year.  On the drawing are the original terms for describing
 Ethernet.  Since then other terms have come into usage among Ethernet
 enthusiasts.''</i><BR>
-Die erste Skizze ist auch noch &uuml;berliefert (Quelle: Palo Alto Research Center):
+Die erste Skizze ist auch noch überliefert (Quelle: Palo Alto Research Center):
 <P>
 <center><img src="images/metcalfe-enet.png" ALT=""></center>
 <p>
-Ein Bericht der Erfinder &uuml;ber das Experimental-Ethernet findet man
+Ein Bericht der Erfinder über das Experimental-Ethernet findet man
 in dem Zeitschriftenartikel:<br>
 Robert M. Metcalfe and David R.  Boggs.<b>``Ethernet: Distributed Packet
 Switching for Local Computer Networks,''</b> <i>Association for Computing
@@ -820,11 +821,11 @@ Eine Zusammenfassung des Patents ist im WWW unter
 <A HREF="http://patent.womplex.ibm.com/details?patent_number=4063220">http://patent.womplex.ibm.com/details?patent_number=4063220</A>
 zu finden.
 <P>
-Sehr umfassende Informationen &uuml;ber das Ethernet sind auch unter
+Sehr umfassende Informationen über das Ethernet sind auch unter
 <A HREF="http://wwwhost.ots.utexas.edu/ethernet/">http://wwwhost.ots.utexas.edu/ethernet/</A>
 gespeichert.
 <P>
-Das folgende Bild zeigt eine fr&uuml;he Skizze der Struktur des Ethernet von Bob Metcalfe, als er 
+Das folgende Bild zeigt eine frühe Skizze der Struktur des Ethernet von Bob Metcalfe, als er 
 am Xerox PARC geforscht hat (Quelle: Palo Alto Research Center). Das Memo mit der Skizze
 war betitelt:
 <pre>
@@ -841,17 +842,17 @@ war betitelt:
 <P>
 
 Als Netzprotokoll wird das ALOHA-Protokoll verwendet, einem
-Funkprotokoll der Universit&auml;t von Hawaii zum Datenaustausch
-zwischen den Inseln. Das Protokoll nimmt eine feste Rahmengr&ouml;&szlig;e
+Funkprotokoll der Universität von Hawaii zum Datenaustausch
+zwischen den Inseln. Das Protokoll nimmt eine feste Rahmengröße
 an und sendet, wann immer was ansteht. Eine kollisionsfreie Übertragung
-ist nur bis zu einer Netz-Auslastung von 18% m&ouml;glich.
+ist nur bis zu einer Netz-Auslastung von 18% möglich.
 Beim slotted ALOHA, es wird zu bestimmten Zeiten gesendet,
 erfolgt die theoretische kollisionsfreie Übertragung bis zu einer
 Auslastung des Netzes von 37%.
 <P>
-Robert Metcalfe erweitert das Verfahren durch einen Abh&ouml;r-
-Mechanismus, der zuvor pr&uuml;ft, ob der Kanal frei ist (carrier sense)
-und entwickelt ein ausgekl&uuml;geltes Kollisionserkennungsverfahren,
+Robert Metcalfe erweitert das Verfahren durch einen Abhör-
+Mechanismus, der zuvor prüft, ob der Kanal frei ist (carrier sense)
+und entwickelt ein ausgeklügeltes Kollisionserkennungsverfahren,
 wenn zwei Stationen gleichzeitig senden sollten (multiple access).
 <p>
 Auch die Geschwindigkeiten stiegen bis heute noch weiter an. 
@@ -862,16 +863,16 @@ errichtet und betrieben, so stieg die Geschwindigkeit seither um
 den Faktor 100. Seit dem Jahr 2000 wurden kupferbasierende 
 Netze mit Übertragungsraten von 1 Gbit/s errichtet und betrieben. 
 10 Jahre danach wurden Netze mit Übertragungsraten von 10 Gbit/s 
-(Cat 6A) m&ouml;glich. Zun&auml;chst findet man diese haupts&auml;chlich in 
+(Cat 6A) möglich. Zunächst findet man diese hauptsächlich in 
 Rechenzentren zur Anbindung von Servern an Speichersysteme. Aber 
-genauso wie man schon fr&uuml;her gesehen hat, sind immer noch die 
+genauso wie man schon früher gesehen hat, sind immer noch die 
 Server von heute unsere Desktops von morgen – bei Leistung und
 Netzanbindung.
 <P>
 Am 17. Juni 2010 wurde ein weiterer Meilenstein erreicht. Von 
 der "IEEE 802.3ba – 40 Gbit/s and 100 Gbit/s Ethernet Task Force" 
 wurde der Standard zur Übertragung von 40 Gbit/s und 100 Gbit/s 
-&uuml;ber Glasfaserkabel verabschiedet.
+über Glasfaserkabel verabschiedet.
 <p>
 Weitere Quellen:
 <ul>
@@ -886,31 +887,31 @@ Weitere Quellen:
 <li><a href="http://www.ethermanage.com/ethernet/standard.html">Ethernet Standard Documents</a>
 <li><a href="http://www.ethermanage.com/ethernet/faq.html">Frequently Asked Questions (FAQ) lists</a>
 <li><a href="http://www.ethermanage.com/ethernet/papers.html">Papers and Reports</a>
-<li><a href="http://www.echtzeit-ethernet.de/">Echtzeit-Ethernetseiten von Prof. Dr.-Ing. J&uuml;rgen Schwager</a>
+<li><a href="http://www.echtzeit-ethernet.de/">Echtzeit-Ethernetseiten von Prof. Dr.-Ing. Jürgen Schwager</a>
 </ul>
 <P>
 
 
-<H3><A NAME="4.8">Entwicklung der &Uuml;bertragungsmedien (IEEE 802.3)</A></H3>
+<H3><A NAME="4.8">Entwicklung der Übertragungsmedien (IEEE 802.3)</A></H3>
 <table width="100%" border="1" cellspacing="1" cellpadding="3">
 <tr>
 <td valign=top width="50%">10Base5 (Thick-Ethernet, Yellow-Cable)
 <ul>
-<li>Ethernet mit einer Bandbreite von 10 Mbit/s &Uuml;ber Yellow-Cable.
-<li>Die maximale Kabell&auml;nge eines Segments betr&auml;gt 500 Meter.
-<li>Die beiden Kabelenden m&uuml;ssen mit Abschlu&szlig;widerst&auml;nden abgeschlossen werden.
-<li>Pro Segment d&uuml;rfen 100 Endger&auml;te angeschlossen werden.
-<li>Der Abstand zwischen zwei Stichleitungen mu&szlig; ein Vielfaches von 2,5m betragen.
-<li>Die Stichleitungen d&uuml;rfen nicht l&auml;nger als 50 Meter sein.
+<li>Ethernet mit einer Bandbreite von 10 Mbit/s Über Yellow-Cable.
+<li>Die maximale Kabellänge eines Segments beträgt 500 Meter.
+<li>Die beiden Kabelenden müssen mit Abschlußwiderständen abgeschlossen werden.
+<li>Pro Segment dürfen 100 Endgeräte angeschlossen werden.
+<li>Der Abstand zwischen zwei Stichleitungen muß ein Vielfaches von 2,5m betragen.
+<li>Die Stichleitungen dürfen nicht länger als 50 Meter sein.
 </ul>
 </td><td valign=top width="50%">
 10Base2 (Thin-Ethernet, Cheapernet)
 <ul>
-<li>Ethernet &uuml;ber RG58 50-Ohm-Koax-Kabel
-<li>Nur f&uuml;r 10Mbit/s
-<li>BNC-Stecker und T-St&uuml;cke zur Verbindung
-<li>An beiden Enden ein 50-Ohm-Abschlu&szlig;widerstand
-<li>Maximale Segmentl&auml;nge: 185m
+<li>Ethernet über RG58 50-Ohm-Koax-Kabel
+<li>Nur für 10Mbit/s
+<li>BNC-Stecker und T-Stücke zur Verbindung
+<li>An beiden Enden ein 50-Ohm-Abschlußwiderstand
+<li>Maximale Segmentlänge: 185m
 <li>Mindest Stationsabstand: 0,5m
 <li>Maximale Anzahl Stationen: 30
 <li>Keine Stichleitungen erlaubt
@@ -918,61 +919,61 @@ Weitere Quellen:
 </td></tr>
 <tr><td valign=top>10Base-T
 <ul>
-<li>&Uuml;bertragung von 10 Mbit/s &uuml;ber Twisted-Pair-Kabel
+<li>Übertragung von 10 Mbit/s über Twisted-Pair-Kabel
 <li>Hub notwendig
 <li>Maximale Entfernung 100m
-<li>Es werden zwei Adernpaare ben&ouml;tigt
+<li>Es werden zwei Adernpaare benötigt
 <li>Kabel ab Kategorie drei
-<li>Mit Switch Full-Duplex-Betrieb m&ouml;glich
-<li>Verbindung von 2 Stationen ohne Hub mit Cross-Over-Kabel m&ouml;glich
+<li>Mit Switch Full-Duplex-Betrieb möglich
+<li>Verbindung von 2 Stationen ohne Hub mit Cross-Over-Kabel möglich
 </ul>
 </td><td valign=top>100Base-T
 <ul>
-<li>&Uuml;bertragung von 100 Mbit/s &uuml;ber Twisted Pair Kabel
+<li>Übertragung von 100 Mbit/s über Twisted Pair Kabel
 <li>Hub notwendig
 <li>Maximale Entfernung 100m
-<li>Es werden zwei Adernpaare ben&ouml;tigt
-<li>Kabel ab Kategorie f&uuml;nf
-<li>Mit Switch Full-Duplex-Betrieb m&ouml;glich
-<li>Verbindung von 2 Stationen ohne Hub mit Cross-Over-Kabel m&ouml;glich
+<li>Es werden zwei Adernpaare benötigt
+<li>Kabel ab Kategorie fünf
+<li>Mit Switch Full-Duplex-Betrieb möglich
+<li>Verbindung von 2 Stationen ohne Hub mit Cross-Over-Kabel möglich
 </ul>
 </td></tr>
 <tr><td valign=top>
 10BaseFB
 <ul>
-<li>"B" f&uuml;r Backbone
-<li>&Uuml;bertragung von 10 Mbit/s &Uuml;ber LWL
+<li>"B" für Backbone
+<li>Übertragung von 10 Mbit/s Über LWL
 <li>Maximal 15 Repeater
-<li>Maximale Segmentl&auml;nge 2000m
+<li>Maximale Segmentlänge 2000m
 <li>Signalisierung ist synchron mit Fehlererkennung
 </ul>
 </td>
 <td valign=top>10BaseFL</a>
 <ul>
-<li>&Uuml;bertragung von 10 Mbit/s &uuml;ber LWL
+<li>Übertragung von 10 Mbit/s über LWL
 <li>Maximal 5 Repeater
-<li>Maximale Segmentl&auml;nge 2000m.
+<li>Maximale Segmentlänge 2000m.
 </ul>
 </td></tr>
 <tr> <td valign=top>
 100BaseFX
 <ul>
-<li>&Uuml;bertragung von 100 Mbit/s &uuml;ber LWL
-<li>Maximale Segmentl&auml;nge von 400m
+<li>Übertragung von 100 Mbit/s über LWL
+<li>Maximale Segmentlänge von 400m
 <li>Max. Distanz zwischen zwei 100BaseFX Switches 2000m
 </ul>
 </td>
 <td valign=top>100BaseT4
 <ul>
-<li>&Uuml;bertragung von 100 Mbit/s &uuml;ber Cat-5-Kabel
+<li>Übertragung von 100 Mbit/s über Cat-5-Kabel
 <li>Es werden alle 4 Adernpaare benutzt
 </ul>
 </td></tr>
 <tr><td valign=top>
 1000BaseLX
 <ul>
-<li>&Uuml;bertragung von 1000 Mbit/s &uuml;ber LWL
-<li>"L" f&uuml;r Long Wavelength von 1300nm
+<li>Übertragung von 1000 Mbit/s über LWL
+<li>"L" für Long Wavelength von 1300nm
 <li>Max. Distanz mit Multimodefasern 550m
 <li>Max. Distanz mit Monomodefaser 3000m
 <li>Full-Duplex
@@ -980,8 +981,8 @@ Weitere Quellen:
 </td><td valign=top>
 1000BaseSX
 <ul>
-<li>&Uuml;bertragung von 1000 Mbit/s &uuml;ber LWL
-<li>"S" f&uuml;r Short Wavelength 850nm
+<li>Übertragung von 1000 Mbit/s über LWL
+<li>"S" für Short Wavelength 850nm
 <li>Max. Distanz mit 62,5&#956;m Multimodefasern 270m
 <li>Max. Distanz mit 50&#956;m Multimodefasern 550m
 <li>Full-Duplex
@@ -990,16 +991,16 @@ Weitere Quellen:
 <tr><td valign=top>
 1000BaseCX
 <ul>
-<li>"C" f&uuml;r Copper.
-<li>&Uuml;bertragung von 1000 Mbit/s &uuml;ber STP-Kabel 150 Ohm Wellenwiderstand
+<li>"C" für Copper.
+<li>Übertragung von 1000 Mbit/s über STP-Kabel 150 Ohm Wellenwiderstand
 <li>Max. Distanz 25m
 <li>Full-Duplex
 </ul>
 </td><td valign=top>
 1000BaseT
 <ul>
-<li>&Uuml;bertragung von 1000 Mbit/s &uuml;ber CAT-5-Kabel
-<li>"T" f&uuml;r Twisted Pair
+<li>Übertragung von 1000 Mbit/s über CAT-5-Kabel
+<li>"T" für Twisted Pair
 <li>Max. Distanz 100m.
 <li>Alle vier Paare sind notwendig
 <li>Full-Duplex
@@ -1008,10 +1009,10 @@ Weitere Quellen:
 <tr><td valign=top>
 10GBaseLX4
 <ul>
-<li>&Uuml;bertragung von 10000 Mbit/s &Uuml;ber LWL
-<li>"L" f&uuml;r Long Wavelength
-<li>"X" f&uuml;r WWDW (Wide Wave Division Multiplexing) 8B/10B-Encoding
-<li>"4" f&uuml;r die vier Bereiche:
+<li>Übertragung von 10000 Mbit/s Über LWL
+<li>"L" für Long Wavelength
+<li>"X" für WWDW (Wide Wave Division Multiplexing) 8B/10B-Encoding
+<li>"4" für die vier Bereiche:
     <ul><li>1269,0nm - 1282,4nm
     <li>1293,5nm - 1306,9nm
     <li>1318,0nm - 1331,4nm
@@ -1025,10 +1026,10 @@ Weitere Quellen:
 
 10GBaseSX4
 <ul>
-<li>&Uuml;bertragung von 10000 Mbit/s &uuml;ber LWL
-<li>"S" f&uuml;r Short Wavelength
-<li>"X" f&uuml;r CWDW (Coarse Wave Division Multiplexing)
-<li>"4" f&uuml;r die vier Bereiche:
+<li>Übertragung von 10000 Mbit/s über LWL
+<li>"S" für Short Wavelength
+<li>"X" für CWDW (Coarse Wave Division Multiplexing)
+<li>"4" für die vier Bereiche:
     <ul><li>773,5nm - 786,5nm
     <li>789,5nm - 811,5nm
     <li>823,5nm - 836,5nm
@@ -1042,18 +1043,18 @@ Weitere Quellen:
 <tr><td valign=top>
 10GBaseSR
 <ul>
-<li>&Uuml;bertragung von 10000 Mbit/s &uuml;ber LWL
-<li>"S" f&uuml;r Short Wavelength von 850nm
-<li>"R" f&uuml;r Serial 64B/66B Encoding
+<li>Übertragung von 10000 Mbit/s über LWL
+<li>"S" für Short Wavelength von 850nm
+<li>"R" für Serial 64B/66B Encoding
 <li>Max. Distanz mit 50&#956;m-Multimodefasern 65m
 <li>nur Full-Duplex, nur Fiber
 </ul>
 </td><td valign=top>
 10GBaseSW
 <ul>
-<li>&Uuml;bertragung von 10000 Mbit/s &uuml;ber LWL
-<li>"S" f&uuml;r Short Wavelength von 850nm
-<li>"W" f&uuml;r Serial WIS (WAN Interface Sublayer) Encoding Ethernet in SONET STS192c
+<li>Übertragung von 10000 Mbit/s über LWL
+<li>"S" für Short Wavelength von 850nm
+<li>"W" für Serial WIS (WAN Interface Sublayer) Encoding Ethernet in SONET STS192c
 <li>Max. Distanz mit 50&#956;m-Multimodefasern 65m
 <li>nur Full-Duplex, nur Fiber
 </ul>
@@ -1061,18 +1062,18 @@ Weitere Quellen:
 <tr><td valign=top>
 10GBaseLW
 <ul>
-<li>&Uuml;bertragung von 10000 Mbit/s &uuml;ber LWL
-<li>"L" f&uuml;r Long Wavelength von 1310nm
-<li>"W" f&uuml;r Serial WIS (WAN Interface Sublayer) Encoding Ethernet in SONET STS192c
+<li>Übertragung von 10000 Mbit/s über LWL
+<li>"L" für Long Wavelength von 1310nm
+<li>"W" für Serial WIS (WAN Interface Sublayer) Encoding Ethernet in SONET STS192c
 <li>Max. Distanz mit 10&#956;m-Monomodefasern 10km
 <li>nur Full-Duplex, nur Fiber
 </ul>
 </td><td valign=top>
 10GBaseLR
 <ul>
-<li>&Uuml;bertragung von 10000 Mbit/s &uuml;ber LWL
-<li>"L" f&uuml;r Long Wavelength von 1310nm
-<li>"R" f&uuml;r Serial 64B/66B Encoding
+<li>Übertragung von 10000 Mbit/s über LWL
+<li>"L" für Long Wavelength von 1310nm
+<li>"R" für Serial 64B/66B Encoding
 <li>Max. Distanz mit 10&#956;m-Monomodefasern 10km
 <li>nur Full-Duplex, nur Fiber
 </ul>
@@ -1080,9 +1081,9 @@ Weitere Quellen:
 <tr><td valign=top>
 10GBaseER
 <ul>
-<li>&Uuml;bertragung von 10000 Mbit/s &uuml;ber LWL
-<li>"E" f&uuml;r Long Wavelength von 1550nm
-<li>"R" f&uuml;r Serial 64B/66B Encoding
+<li>Übertragung von 10000 Mbit/s über LWL
+<li>"E" für Long Wavelength von 1550nm
+<li>"R" für Serial 64B/66B Encoding
 <li>Max. Distanz mit 10&#956;m-Monomodefasern 40km
 <li>nur Full-Duplex, nur Fiber
 </ul>
@@ -1090,9 +1091,9 @@ Weitere Quellen:
 10GBaseEW
 <p>
 </p><ul>
-<li>&Uuml;bertragung von 10000 Mbit/s &uuml;ber LWL
-<li>"E" f&uuml;r Long Wavelength von 1550nm
-<li>"W" f&uuml;r Serial WIS (WAN Interface Sublayer) Encoding Ethernet in SONET STS192c
+<li>Übertragung von 10000 Mbit/s über LWL
+<li>"E" für Long Wavelength von 1550nm
+<li>"W" für Serial WIS (WAN Interface Sublayer) Encoding Ethernet in SONET STS192c
 <li>Max. Distanz mit 10&#956;m-Monomodefasern 40km
 <li>nur Full-Duplex, nur Fiber
 </ul>
@@ -1104,82 +1105,82 @@ Weitere Quellen:
 
 <H2><A NAME="4.9">Promiscous Mode</A></H2>
 Normalerweise nimmt ein Netzwerkinterface nur Datenpakete an, die an seine
-Hardwareadresse gerichtet sind und leitet diese an die h&ouml;heren Schichten
+Hardwareadresse gerichtet sind und leitet diese an die höheren Schichten
 weiter. Manche Interfaces lassen sich aber in den sogenannten "promiscous
-mode" schalten. In diesem Modus werden </I>alle</I> Frames an die h&ouml;heren
+mode" schalten. In diesem Modus werden </I>alle</I> Frames an die höheren
 Schichten weitergeleitet. Dieser Modus wird beispielsweise von
-Netzwerk-&Uuml;berwachungstools oder transparenten Bridges verwendet.
+Netzwerk-Überwachungstools oder transparenten Bridges verwendet.
 <P>
 
 <H2><A NAME="4.10">Power over Ethernet</A></H2>
-Die Stromversorung von Endger&auml;ten in der Netzwerktechnik wurde bisher den
-Herstellern der Endger&auml;te selber &uuml;berlassen. Die l&ouml;sten die
-Stromversorgung mit geringen Leistungen meist &uuml;ber Steckernetzteile. Dazu
+Die Stromversorung von Endgeräten in der Netzwerktechnik wurde bisher den
+Herstellern der Endgeräte selber überlassen. Die lösten die
+Stromversorgung mit geringen Leistungen meist über Steckernetzteile. Dazu
 ist neben jeder Netzwerkdose auch eine Steckdose des 230V-Netzes erforderlich.
 Mit dem IEEE-Standard Power-over-Ethernet (PoE) bzw. IEEE 802.3af wurde dieses
-Problem gel&ouml;st.
-Laut Spezifikation wird eine Leistung von 12,95 Watt zu Verf&uuml;gung gestellt.
+Problem gelöst.
+Laut Spezifikation wird eine Leistung von 12,95 Watt zu Verfügung gestellt.
 Damit eignet sich diese Technik hervorragend um Webcams, Print-Server, IP-Telefone
 (Voice-over-IP), Wireless LAN Access Points, Handheld-Computer und sparsame
 Notebooks mit Strom zu versorgen.<br>
-Die Stromversorgung &uuml;ber die Signalleitungen wirkt sich bei 10BaseT (10 Mbit/s)
-und 100BaseTX (100 Mbit/s) nicht allzu st&ouml;rend auf das Ethernet-Signal aus. Auf
-1000BaseT Gigabit-Ethernet ist PoE zwar m&ouml;glich, wird aber nicht empfohlen,
+Die Stromversorgung über die Signalleitungen wirkt sich bei 10BaseT (10 Mbit/s)
+und 100BaseTX (100 Mbit/s) nicht allzu störend auf das Ethernet-Signal aus. Auf
+1000BaseT Gigabit-Ethernet ist PoE zwar möglich, wird aber nicht empfohlen,
 da 1000BaseT alle 8 Adern im Kabel belegt und man deshalb in jedem Fall auf das
-ohnehin empfindliche Gigabit-Ethernet-Signal einwirken w&uuml;rde.
+ohnehin empfindliche Gigabit-Ethernet-Signal einwirken würde.
 <P>
-Bis alle eingesetzten Switches und Hubs &uuml;ber PoE verf&uuml;gen muss man
-noch auf eine Bastell&ouml;sung zur&uuml;ckgreifen. Bei einzelnen Komponenten,
-die &uuml;ber Power-over-Ethernet mit Strom versorgt werden k&ouml;nnen, tut
+Bis alle eingesetzten Switches und Hubs über PoE verfügen muss man
+noch auf eine Bastellösung zurückgreifen. Bei einzelnen Komponenten,
+die über Power-over-Ethernet mit Strom versorgt werden können, tut
 es ein einfacher Power Injektor, der im Leitungsnetz zwischen Hub/Switch und
-Endger&auml;t geschaltet wird. Gibt es in einem Netzwerk mehrere
-Power-over-Ethernet-Endger&auml;te, dann ist ein Power Hub n&ouml;tig,
+Endgerät geschaltet wird. Gibt es in einem Netzwerk mehrere
+Power-over-Ethernet-Endgeräte, dann ist ein Power Hub nötig,
 der dann beim Hub/Switch installiert sein sollte.
 <p>
-Die Technologie von Power over Ethernet erlaubt es kleinere Netzwerkger&auml;te,
+Die Technologie von Power over Ethernet erlaubt es kleinere Netzwerkgeräte,
 wie z.B. IP-Telefone, Accesspoints, Netzwerkameras etc., ohne eine externe Stromquelle
-zu betreiben. Die Idee der Stromversorgung &uuml;ber die Netzwerkleitung ist jedoch
-schon &auml;lter, nur gab es bislang keinen g&uuml;ltigen Standard, so da&szlig;
-verschiedene Hersteller eigene L&ouml;sungen entwickelten. Dadurch war die Gefahr
-gro&szlig;, da&szlig; man aus Versehen inkompatible Komponenten durch das Anschlie&szlig;en
-besch&auml;digt. Im IEEE 802.3af wird zwischen 2 Kernkomponenten unterschieden.
+zu betreiben. Die Idee der Stromversorgung über die Netzwerkleitung ist jedoch
+schon älter, nur gab es bislang keinen gültigen Standard, so daß
+verschiedene Hersteller eigene Lösungen entwickelten. Dadurch war die Gefahr
+groß, daß man aus Versehen inkompatible Komponenten durch das Anschließen
+beschädigt. Im IEEE 802.3af wird zwischen 2 Kernkomponenten unterschieden.
 <ul>
 <li>Power Sourcing Equipment (PSE). Diese Komponenten speisen das Netz mit Strom.
 Es sind meistens aktive Netzkomponenten oder Patchfelder mit PoE-Support.</li>
-<li>Powered Devices (PD). Dies sind die Energieverbraucher. Sie m&uuml;ssen PoE unterst&uuml;tzen.</li>
+<li>Powered Devices (PD). Dies sind die Energieverbraucher. Sie müssen PoE unterstützen.</li>
 </ul>
 
 Bei den Stromeinspeisungen unterscheidet man zwischen Endspan und Midspan Insertion.
-Die Endspan-Systeme sind aktive Komponenten (haupts&auml;chlich Switches), die die
-angeschlossenen Ger&auml;te direkt &uuml;ber die Ethernetports mit Strom versorgen.
-Der Nachteil dieser Ger&auml;te ist die hohe Leistungsaufnahme und eine hohe
-Abw&auml;rme.
+Die Endspan-Systeme sind aktive Komponenten (hauptsächlich Switches), die die
+angeschlossenen Geräte direkt über die Ethernetports mit Strom versorgen.
+Der Nachteil dieser Geräte ist die hohe Leistungsaufnahme und eine hohe
+Abwärme.
 Die Midspan-Systeme nehmen die Daten der aktiven Komponente entgegen und leiten sie
-gemeinsam mit der Versorgungsspannung an die Endger&auml;te weiter.
+gemeinsam mit der Versorgungsspannung an die Endgeräte weiter.
 <p>
-Die &Uuml;bertragung der 48-V-Gleichspannung ist f&uuml;r maximal 100 Meter ausgelegt,
-was auf das Ethernet abgestimmt wurde. Die angeschlossenen Ger&auml;te d&uuml;rfen
-350 mA Strom abnehmen und die maximale Speiseleistung betr&auml;gt 15,4 W.
-Die Versorgung der Endger&auml;te erfolgt &uuml;ber Cat.5 Kabel mit RJ-45 Steckern.
+Die Übertragung der 48-V-Gleichspannung ist für maximal 100 Meter ausgelegt,
+was auf das Ethernet abgestimmt wurde. Die angeschlossenen Geräte dürfen
+350 mA Strom abnehmen und die maximale Speiseleistung beträgt 15,4 W.
+Die Versorgung der Endgeräte erfolgt über Cat.5 Kabel mit RJ-45 Steckern.
 Das PoE-Verfahren macht sich die Tatsache zu nutze, dass von den 4 vorhandenen
-Adernpaaren lediglich 2 zur Daten&uuml;bertragung benutzt werden.
+Adernpaaren lediglich 2 zur Datenübertragung benutzt werden.
 <p>
 <img src="images/poe.jpg">
 
 <h4>Schutzmechanismen</h4>
-Da man in einem LAN nat&uuml;rlich nicht nur PoE-Ger&auml;te betreiben will, hat das
-IEEE ein Verfahren erarbeitet, das Endger&auml;te vor m&ouml;glichen Sch&auml;den
-sch&uuml;tzt. Dieses Verfahren wird Resistive Power Discovery genannt. Hierbei
-pr&uuml;ft der PSE das PD auf Kompatibilit&auml;t, indem es in zyklischen Abst&auml;nden
+Da man in einem LAN natürlich nicht nur PoE-Geräte betreiben will, hat das
+IEEE ein Verfahren erarbeitet, das Endgeräte vor möglichen Schäden
+schützt. Dieses Verfahren wird Resistive Power Discovery genannt. Hierbei
+prüft der PSE das PD auf Kompatibilität, indem es in zyklischen Abständen
 einen minimalen Strom einspeist und daran erkennt, ob das PD einen
-25-Kiloohm-Abschlusswiderstand besitzt. Wenn nicht ist das Endger&auml;t nicht
-PoE-f&auml;hig. Wenn ja kann der PSE das PD mit Energie versorgen.
+25-Kiloohm-Abschlusswiderstand besitzt. Wenn nicht ist das Endgerät nicht
+PoE-fähig. Wenn ja kann der PSE das PD mit Energie versorgen.
 <p>
 Jetzt wird das PD mit einer geringen Leistung versorgt. Das PD signalisiert nun dem PSE
-welcher der 5 Leistungsklassen es angeh&ouml;rt. Die Erkennung erfolgt innerhalb einer
+welcher der 5 Leistungsklassen es angehört. Die Erkennung erfolgt innerhalb einer
 Sekunde. Einen weiteren Schutz bietet der Disconnect-Schutzmechanismus. Wenn ein PD
 entfernt wird, deaktiviert der PSE automatisch die Stromversorgung des entsprechenden
-Ports. Dieser Mechanismus soll das Vertauschen von PoE-f&auml;higen mit Standardger&auml;ten
+Ports. Dieser Mechanismus soll das Vertauschen von PoE-fähigen mit Standardgeräten
 verhindern. Es werden folgende Leistungsklassen unterschieden:
 <p>
 <table border=1 cellpadding=3 cellspacing=0>
@@ -1221,36 +1222,36 @@ verhindern. Es werden folgende Leistungsklassen unterschieden:
 </tr>
 </table>
 <p>
-Heute definiert der Standard eine maximale Leistung von 12,95 W am Endger&auml;t. 
-Seit der Einf&uuml;hrung von Power over Ethernet ist die Nachfrage nach h&ouml;herer Leistung
-gestiegen, um auch Ger&auml;te zu versorgen, die mehr Leistung ben&ouml;tigen, darunter:
+Heute definiert der Standard eine maximale Leistung von 12,95 W am Endgerät. 
+Seit der Einführung von Power over Ethernet ist die Nachfrage nach höherer Leistung
+gestiegen, um auch Geräte zu versorgen, die mehr Leistung benötigen, darunter:
 <ul>
-<li> IP-Kameras mit zus&auml;tzlichen Funktionen (z. B. PAN/Tilt oder Motorzoom)
+<li> IP-Kameras mit zusätzlichen Funktionen (z. B. PAN/Tilt oder Motorzoom)
 <li> VOIP-Videotelefone mit Display
 <li> POS-Terminals
 <li> Multiband Wireless Access Points
 <li> RFID-Leser
 <li> usw.
 </ul>
-Daher ist ein neuer Standard in Arbeit, der Unterst&uuml;tzung f&uuml;r eine minimale
-Leistung von 24 W am Endger&auml;t definiert: IEEE 802.3at: Power over Ethernet (POEplus).
+Daher ist ein neuer Standard in Arbeit, der Unterstützung für eine minimale
+Leistung von 24 W am Endgerät definiert: IEEE 802.3at: Power over Ethernet (POEplus).
 <p>
-Die Übertragung von Energie &uuml;ber eine universelle Kommunikationsverkabelung f&uuml;hrt 
-dazu, dass die Temperatur in der Verkabelung abh&auml;ngig von der &uuml;bertragenen 
-Energiemenge und dem Leiterquerschnitt steigt. Mit zunehmender W&auml;rme im 
-Kabelb&uuml;ndel nimmt auch die Einf&uuml;gungsd&auml;mpfung zu, was die maximal zul&auml;ssige 
-Kabell&auml;nge verringert. Daraus ergibt sich die Verringerung der maximal zul&auml;ssigen 
-Kabell&auml;nge durch h&ouml;here Kabeld&auml;mpfung aufgrund h&ouml;herer Temperaturen. Im Standard 
-ist die maximale Temperatur von 60°C festgelegt. Die Reduzierung der Leitungsl&auml;nge
-l&auml;sst sich jedoch durch ein Kabel mit einer h&ouml;heren Kategorie mit einem gr&ouml;&szlig;eren 
-Aderquerschnitt kompensieren. Bei der Planung einer Installation f&uuml;r PoEplus 
-sind die Folgen der W&auml;rmeableitung sowohl im Kabel als auch in der Umgebung in
-besonderem Ma&szlig;e zu ber&uuml;cksichtigen.
+Die Übertragung von Energie über eine universelle Kommunikationsverkabelung führt 
+dazu, dass die Temperatur in der Verkabelung abhängig von der übertragenen 
+Energiemenge und dem Leiterquerschnitt steigt. Mit zunehmender Wärme im 
+Kabelbündel nimmt auch die Einfügungsdämpfung zu, was die maximal zulässige 
+Kabellänge verringert. Daraus ergibt sich die Verringerung der maximal zulässigen 
+Kabellänge durch höhere Kabeldämpfung aufgrund höherer Temperaturen. Im Standard 
+ist die maximale Temperatur von 60°C festgelegt. Die Reduzierung der Leitungslänge
+lässt sich jedoch durch ein Kabel mit einer höheren Kategorie mit einem größeren 
+Aderquerschnitt kompensieren. Bei der Planung einer Installation für PoEplus 
+sind die Folgen der Wärmeableitung sowohl im Kabel als auch in der Umgebung in
+besonderem Maße zu berücksichtigen.
 <P>
-Ein weiteres Problem stellt der RJ45-Stecker dar, der ja urspr&uuml;nglich nicht f&uuml;r
-h&ouml;here Str&ouml;me gedacht war. Beim An- und Abstecken unter Last werden die Kontaktfl&auml;chen
-stark belastet. W&auml;hrend des Steckvorgangs verschiebt sich der Kontaktpunkt zwischen Stecker
-Buchse entlang der Oberfl&auml;che der Kontakte vom ersten Kontaktpunkt (Verbindungs- bzw.
+Ein weiteres Problem stellt der RJ45-Stecker dar, der ja ursprünglich nicht für
+höhere Ströme gedacht war. Beim An- und Abstecken unter Last werden die Kontaktflächen
+stark belastet. Während des Steckvorgangs verschiebt sich der Kontaktpunkt zwischen Stecker
+Buchse entlang der Oberfläche der Kontakte vom ersten Kontaktpunkt (Verbindungs- bzw.
 Trennungsbereich) zum Endkontaktpunkt.
 <p>
 <img src="images/poe-stecker.png">
@@ -1260,14 +1261,14 @@ dass das Design von modularen Steckverbindern, beschrieben im Standard IEC 60603
 normalerweise sicherstellt, dass die Schleifzone von der Kontaktzone getrennt ist, in 
 welcher der Kontakt zwischen Stecker und Buchse bei normalem Betrieb hergestellt wird
 (nominaler Kontaktbereich). Bei schlechtem Kontaktdesign, bei dem sich die beiden Bereiche
-&uuml;berlappen und so die Kontakte im Kontaktbereich durch Funkenbildung beim Ein- bzw.
-Ausstecken besch&auml;digt werden k&ouml;nnen. Die erh&ouml;hte Leistung von PoEplus kann einen 
-st&auml;rkeren Funken bei der Trennung verursachen, wodurch dieses Problem noch vergr&ouml;&szlig;ert wird.
+überlappen und so die Kontakte im Kontaktbereich durch Funkenbildung beim Ein- bzw.
+Ausstecken beschädigt werden können. Die erhöhte Leistung von PoEplus kann einen 
+stärkeren Funken bei der Trennung verursachen, wodurch dieses Problem noch vergrößert wird.
 <P>
 
 <h4>Belegung des RJ45-Steckers bei Power-over-Ethernet</h4>
-F&uuml;r die &Uuml;bertragung der Stromversorgung wird das Adernpaar 4/5 f&uuml;r
-den Pluspol und das Adernpaar 7/8 f&uuml;r den Minuspol verwendet.
+Für die Übertragung der Stromversorgung wird das Adernpaar 4/5 für
+den Pluspol und das Adernpaar 7/8 für den Minuspol verwendet.
 <p>
 <table cellspacing=0 cellpadding=3 border=1>
 <tr>
@@ -1284,17 +1285,17 @@ den Pluspol und das Adernpaar 7/8 f&uuml;r den Minuspol verwendet.
 <td BGCOLOR="#CCCCCC">8</td><td BGCOLOR="#6699FF"><b>PoE/-48V</b></td></tr>
 </table>
 <p>
-Wird die Netzwerkverkabelung auch f&uuml;r andere Anwendungen, z. B. f&uuml;r
+Wird die Netzwerkverkabelung auch für andere Anwendungen, z. B. für
 Telefonie, genutzt, dann ist Vorsicht beim Einsatz von
 Power-over-Ethernet-Netzwerk-Komponenten geboten. Mit einem Mechanismus sollten die
 Power-over-Ethernet-Netzwerkkomponenten vor dem Einschalten der PoE-Stromversorgung
-alle angeschlossenen Endger&auml;te auf PoE-Unterst&uuml;tzung &uuml;berpr&uuml;fen.
+alle angeschlossenen Endgeräte auf PoE-Unterstützung überprüfen.
 Auf einen Anschluss sollte nur dann Spannung geschaltet werden, wenn dort auch ein
-Endger&auml;t mit PoE-Unterst&uuml;tzung angeschlossen ist.
+Endgerät mit PoE-Unterstützung angeschlossen ist.
 <p>
-Das folgende Bild zeigt, wie man die 48-V-Versorgung f&uuml;r Power-over-Ethernet mittels 
+Das folgende Bild zeigt, wie man die 48-V-Versorgung für Power-over-Ethernet mittels 
 einer Standardschaltung aus einer niedrigeren Eingangsspannung erzeugen kann.
-Der integrierte Step-Up-Wandler erzeugt die ben&ouml;tigten 48 Volt aus eine Eingangsspannung
+Der integrierte Step-Up-Wandler erzeugt die benötigten 48 Volt aus eine Eingangsspannung
 von 9 bis 24 Volt.
 <p>
 <img src="images/poe-versorgung.png">
@@ -1305,10 +1306,10 @@ von 9 bis 24 Volt.
 <TR>
 <TD ALIGN=LEFT VALIGN=BOTTOM><img src="images/left.png" BORDER=0> <A HREF="netz3.html">Zum vorhergehenden Abschnitt</A></TD>
 <TD ALIGN=CENTER VALIGN=BOTTOM><img src="images/up.png" BORDER=0> <A HREF="index.html">Zum Inhaltsverzeichnis</A></TD>
-<TD ALIGN=RIGHT VALIGN=BOTTOM><img src="images/right.png" BORDER=0> <A HREF="netz5.html">Zum n&auml;chsten Abschnitt</A></TD>
+<TD ALIGN=RIGHT VALIGN=BOTTOM><img src="images/right.png" BORDER=0> <A HREF="netz5.html">Zum nächsten Abschnitt</A></TD>
 </TR></TABLE></CENTER>
 <P><HR>
-<h6><i>Copyright &copy; Hochschule M&uuml;nchen, FK 04, Prof. J&uuml;rgen Plate</i><br>
+<h6><i>Copyright &copy; Hochschule München, FK 04, Prof. Jürgen Plate</i><br>
 Letzte Aktualisierung: <SCRIPT LANGUAGE="JavaScript">document.write(document.lastModified);</SCRIPT></I></H6>
 </BODY>
 </HTML>

@@ -6,7 +6,7 @@
 <CENTER><TABLE BORDER=0 WIDTH="90%" >
 <TR><TD ALIGN=LEFT><img src="images/eyes.png"></TD>
 <TD ALIGN=RIGHT><H3>Grundlagen Computernetze</H3> 
-<BR><B><I>Prof. J&uuml;rgen Plate</I></B></TD></TR>
+<BR><B><I>Prof. Jürgen Plate</I></B></TD></TR>
 </TABLE></CENTER>
 <HR>
 
@@ -14,61 +14,61 @@
 
 In diesem Abschnitt wird ganz knapp die logische Struktur von Netzen behandelt,
 also die Art und Weise, wie die einzelnen Stationen miteinander verbunden
-werden. Bei der Verkabelung von LANs mu&szlig; man aber zwischen logischer
+werden. Bei der Verkabelung von LANs muß man aber zwischen logischer
 Stuktur und Verkabelungsstruktur unterscheiden, z. B. kann ein Netz mit
 logischer Busstruktur bei der Verkabelung mit 'Twisted Pair'-Kabeln wie
 ein Sternnetz aussehen.<BR>
 
 <H3>Sternstruktur</H3>
-Alle Teilnehmer werden an einen zentralen Knoten angeschlossen (fr&uuml;her
-z. B. h&auml;ufig Anschlu&szlig; von Sichtger&auml;ten an einen Zentralrechner).
-Eine direkte Kommunikation der Teilnehmer untereinander ist nicht m&ouml;glich,
-jegliche Kommunikation l&auml;uft &uuml;ber den zentralen Knoten (Punkt-zu-Punkt-Verbindung,
+Alle Teilnehmer werden an einen zentralen Knoten angeschlossen (früher
+z. B. häufig Anschluß von Sichtgeräten an einen Zentralrechner).
+Eine direkte Kommunikation der Teilnehmer untereinander ist nicht möglich,
+jegliche Kommunikation läuft über den zentralen Knoten (Punkt-zu-Punkt-Verbindung,
 Leitungsvermittlung). Die Steuerung der Kommunikation vom Knoten aus ist
-sehr einfach: Polling (regelm&auml;&szlig;ige Abfrage aller Stationen) oder
-Steuerung &uuml;ber Interrupt. Bei Ausfall der Zentrale sind s&auml;mtliche
+sehr einfach: Polling (regelmäßige Abfrage aller Stationen) oder
+Steuerung über Interrupt. Bei Ausfall der Zentrale sind sämtliche
 Kommunikationswege unterbrochen.<BR>
 <P>
 <center><img src="images/b1-1.png" ALT="Schema der Sternstruktur"></center>
 <P>
 <H3>Ringstruktur</H3>
 Es gibt keine Zentrale, alle Stationen sind gleichberechtigt. Jeder Teilnehmer
-verf&uuml;gt &uuml;ber einen  eigenen Netzanschlu&szlig; (Knoten) und ist
-&uuml;ber diesen mit seinem linken und rechten Partner verbunden. Die &Uuml;bertragung
+verfügt über einen  eigenen Netzanschluß (Knoten) und ist
+über diesen mit seinem linken und rechten Partner verbunden. Die Übertragung
 der Info erfolgt in einer Richtung von Knoten zu Knoten. Bei Ausfall eines
-Knotens sind s&auml;mtliche Kommunikationswege unterbrochen.
+Knotens sind sämtliche Kommunikationswege unterbrochen.
 <P>
 <center><img src="images/b1-2.png" ALT="Schema des Ringes"></center>
 <P>
 
 <H3>Busstruktur</H3>
 Es gibt keine Zentrale und keine Knoten. Die Verbindung aller Teilnehmer
-erfolgt &uuml;ber einen gemeinsamen &Uuml;bertragungsweg. Zu einem Zeitpunkt
-kann immer nur eine Nachricht &uuml;ber den Bus transportiert werden. Bei
+erfolgt über einen gemeinsamen Übertragungsweg. Zu einem Zeitpunkt
+kann immer nur eine Nachricht über den Bus transportiert werden. Bei
 Ausfall einer Station bleibt die Kommunikation der anderen Stationen erhalten.
 Bei den Bussystemen kann man noch unterscheiden in Basisband-Bussysteme
 und Breitband-Bussysteme. Bei Basisband-Bussystemen werden die elektrischen
-Pegel direkt &uuml;bertragen; bei den f&uuml;r uns interessanten digitalen
-Informationen also 0- und 1-Pegel. Bei Breitband-Bussystemen werden &uuml;ber
-das Kabel mehrere unabh&auml;ngige Kan&auml;le geleitet (modulierte &Uuml;bertragung).
-Busnetze m&uuml;ssen auf beiden Seiten mit der Leitungsimpedanz abgeschlossen
-werden, damit keine Echos auftreten, die zu Empfangsfehlern f&uuml;hren.
+Pegel direkt übertragen; bei den für uns interessanten digitalen
+Informationen also 0- und 1-Pegel. Bei Breitband-Bussystemen werden über
+das Kabel mehrere unabhängige Kanäle geleitet (modulierte Übertragung).
+Busnetze müssen auf beiden Seiten mit der Leitungsimpedanz abgeschlossen
+werden, damit keine Echos auftreten, die zu Empfangsfehlern führen.
 <P>
 <center><img src="images/b1-3.png" ALT="Schema einer Busstruktur"></center>
 <P>
 
 <H3>vermaschte Struktur</H3>
 Jeder Teilnehmer ist mit mehreren anderen verbunden. Es gibt keine Zentrale
-und es existieren mehrere, unabh&auml;ngige &Uuml;bertragungswege zwischen
+und es existieren mehrere, unabhängige Übertragungswege zwischen
 zwei Stationen. Manchmal gibt es keine direkte Verbindung zwischen
-zwei Stationen. Dann f&uuml;hrt der Weg &uuml;ber eine oder mehrere andere
+zwei Stationen. Dann führt der Weg über eine oder mehrere andere
 Stationen.<BR>
 <P>
 <center><img src="images/b1-4.png" ALT="Vermaschte Struktur eines Netzes"></center>
 <P>
-Je nach Bedarf k&ouml;nnen die o. g. Topologien auch miteinander kombiniert
+Je nach Bedarf können die o. g. Topologien auch miteinander kombiniert
 werden, z. B. Bus mit angeschlossenen Sternen oder Bus mit angeschlossenen
-Bussen, was zu einer Baumstruktur f&uuml;hrt. Insbesondere bei Weitverkehrsnetzen
+Bussen, was zu einer Baumstruktur führt. Insbesondere bei Weitverkehrsnetzen
 (WAN) treten vermaschte Strukturen auf. Teilweise ergeben sich dabei redundante
 Leitungswege, die auch bei Unterbrechung eines Wegs den Datentransport sicherstellen.
 <P>
@@ -77,10 +77,10 @@ Leitungswege, die auch bei Unterbrechung eines Wegs den Datentransport sicherste
 <TR>
 <TD ALIGN=LEFT VALIGN=BOTTOM><img src="images/left.png" BORDER=0> <A HREF="netz0.html">Zum vorhergehenden Abschnitt</A></TD>
 <TD ALIGN=CENTER VALIGN=BOTTOM><img src="images/up.png" BORDER=0> <A HREF="index.html">Zum Inhaltsverzeichnis</A></TD>
-<TD ALIGN=RIGHT VALIGN=BOTTOM><img src="images/right.png" BORDER=0> <A HREF="netz2.html">Zum n&auml;chsten Abschnitt</A></TD>
+<TD ALIGN=RIGHT VALIGN=BOTTOM><img src="images/right.png" BORDER=0> <A HREF="netz2.html">Zum nächsten Abschnitt</A></TD>
 </TR></TABLE></CENTER>
 <P><HR>
-<h6><i>Copyright &copy; Hochschule M&uuml;nchen, FK 04, Prof. J&uuml;rgen Plate</i><br>
+<h6><i>Copyright &copy; Hochschule München, FK 04, Prof. Jürgen Plate</i><br>
 Letzte Aktualisierung: <SCRIPT LANGUAGE="JavaScript">document.write(document.lastModified);</SCRIPT></I></H6>
 </BODY>
 </HTML>

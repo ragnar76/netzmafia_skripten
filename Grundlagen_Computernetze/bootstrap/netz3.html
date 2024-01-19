@@ -1,64 +1,65 @@
-<!DOCTYPE HTML PUBLIC "-;W3C;DTD HTML 4.01 Transitional;EN">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta NAME="robots" CONTENT="all">
 <meta NAME="revisit-after" CONTENT="10 days">
 <meta NAME="Reply-To" CONTENT="webmaster@netzmafia.de">
 
 <meta NAME="keywords" CONTENT="LAN WAN TCP/IP Computernetze Ethernet Vernetzung Router Hub Switch Protokolle">
-<meta NAME="description" CONTENT="Praxisorientierte Einf&uuml;hrung in den Aufbau und die Funktionsweise von Computernetzen.">
+<meta NAME="description" CONTENT="Praxisorientierte Einführung in den Aufbau und die Funktionsweise von Computernetzen.">
 <title>Grundlagen Computernetze</title>
 </head>
 <BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" ALINK="#FF0000" VLINK="#FF00FF">
 <CENTER><TABLE BORDER=0 WIDTH="90%" >
 <TR><TD ALIGN=LEFT><img src="images/eyes.png"></TD>
 <TD ALIGN=RIGHT><H3>Grundlagen Computernetze</H3>
-<BR><B><I>Prof. J&uuml;rgen Plate</I></B></TD></TR>
+<BR><B><I>Prof. Jürgen Plate</I></B></TD></TR>
 </TABLE></CENTER>
 <HR>
 
 
-<h1 align=center>&Uuml;bertragungsverfahren</h1>
+<h1 align=center>Übertragungsverfahren</h1>
 
-Bei der &Uuml;bertragung von Daten in lokalen Netzen verwendet man generell
-Basisband&uuml;bertragung. Die &Uuml;bertragungsleitung nimmt zwei (manchmal
-auch drei) Zust&auml;nde (Pegel) abh&auml;ngig von den zu &uuml;bertragenden
-Bin&auml;rwerten an.<BR>
-Bei Weitverkehrsnetzen wird teilweise auch modulierte &Uuml;bertragung verwendet,
-wobei die Bin&auml;rwerte einem h&ouml;herfrequenten Signal (Sinustr&auml;ger)
-aufmoduliert werden. Modulierte &Uuml;bertragung findet man beispielsweise
-beim Datentransfer &uuml;ber die Telefonleitung, bei Satellitenverbindungen
+Bei der Übertragung von Daten in lokalen Netzen verwendet man generell
+Basisbandübertragung. Die Übertragungsleitung nimmt zwei (manchmal
+auch drei) Zustände (Pegel) abhängig von den zu übertragenden
+Binärwerten an.<BR>
+Bei Weitverkehrsnetzen wird teilweise auch modulierte Übertragung verwendet,
+wobei die Binärwerte einem höherfrequenten Signal (Sinusträger)
+aufmoduliert werden. Modulierte Übertragung findet man beispielsweise
+beim Datentransfer über die Telefonleitung, bei Satellitenverbindungen
 oder bei Breitband-Kabelnetzen.<BR>
-In diesem Text betrachten wir nur Netze mit Basisband-&Uuml;bertragung.
-Die Leitungscodierung erfolgt grunds&auml;zlich auch zwei Arten: Entweder
-werden die einzelnen Bits codiert (z. B. 0 V f&uuml;r "0" und 5 V f&uuml;r "1")
-oder es erfolgt die Codierung der Bit-&Uuml;berg&auml;nge (z. B. bei
-NRZI, wo das Signal f&uuml;r eine "0" konstant bleibt und sich bei
-einer "1" &auml;ndert).
+In diesem Text betrachten wir nur Netze mit Basisband-Übertragung.
+Die Leitungscodierung erfolgt grundsäzlich auch zwei Arten: Entweder
+werden die einzelnen Bits codiert (z. B. 0 V für "0" und 5 V für "1")
+oder es erfolgt die Codierung der Bit-Übergänge (z. B. bei
+NRZI, wo das Signal für eine "0" konstant bleibt und sich bei
+einer "1" ändert).
 
-Im Netzwerkbereich wird eine Codierung verwendet, die eine R&uuml;ckgewinnung des Taktes
-aus dem Signal erlaubt. Bei lokalen Netzen kommen haupts&auml;chlich drei
-Codes zur Abbildung der Bin&auml;rwerte auf die Leitungszust&auml;nde zum
+Im Netzwerkbereich wird eine Codierung verwendet, die eine Rückgewinnung des Taktes
+aus dem Signal erlaubt. Bei lokalen Netzen kommen hauptsächlich drei
+Codes zur Abbildung der Binärwerte auf die Leitungszustände zum
 Einsatz:<BR>
 <P>
 <B>Ethernet: Manchester-Code</B><BR>
-"1": 0-&gt;1-&Uuml;bergang in Bitmitte<BR>
-"0": 1-&gt;0-&Uuml;bergang in Bitmitte<BR>
-Abh&auml;ngig vom Wechsel der Zust&auml;nde ist noch ein zus&auml;tzlicher
-&Uuml;bergang am Anfang jedes Bits n&ouml;tig. &Uuml;ber die Zeit gemittelt
-hat das Signal keinen Gleichstromanteil. Eine R&uuml;ckgewinnung des Taktes
-aus dem Signal ist m&ouml;glich.
+"1": 0-&gt;1-Übergang in Bitmitte<BR>
+"0": 1-&gt;0-Übergang in Bitmitte<BR>
+Abhängig vom Wechsel der Zustände ist noch ein zusätzlicher
+Übergang am Anfang jedes Bits nötig. Über die Zeit gemittelt
+hat das Signal keinen Gleichstromanteil. Eine Rückgewinnung des Taktes
+aus dem Signal ist möglich.
 <P>
 <B>FDDI (Glasfaser, Fiber Distributed Data Interface): NRZI (non return to zero inverted)-Code</B><BR>
 "0": Zu Beginn der Bitperiode Zustandswechsel (0-&gt;1 oder 1-&gt;0)<br>
-"1": keine &Auml;nderung des Pegels.<br>
-Der NRZI-Code erlaubt keine Taktr&uuml;ckgewinnung, da bei 
-ung&uuml;nstigen Bit-Folgen unter Umst&auml;nden lange Zeit kein Zustandswechsel 
+"1": keine Änderung des Pegels.<br>
+Der NRZI-Code erlaubt keine Taktrückgewinnung, da bei 
+ungünstigen Bit-Folgen unter Umständen lange Zeit kein Zustandswechsel 
 eintritt. <br>
 Um trotzdem auch hier den Takt zu halten, erfolgt eine Codewandlung.
 Dies leistet zum Beispiel bei FDDI die <B>4B/5B-Umwandlung (4 binary 5 binary)</B>, bei der jeweils
-ein 4-Bit-Block (Nibble) in einen 5-Bit-Block derart umgewandelt wird, da&szlig; in
+ein 4-Bit-Block (Nibble) in einen 5-Bit-Block derart umgewandelt wird, daß in
 jedem 5-Bit-Block maximal zwei aufeinanderfolgende Nullen vorkommen.
 <P>
 <center><img src="images/b1-8.png" ALT=""></center>
@@ -66,12 +67,12 @@ jedem 5-Bit-Block maximal zwei aufeinanderfolgende Nullen vorkommen.
 Das Bild zeigt Kodierung eines Signals mit verschiedenen Ethernet-Normen: 
 Bei 10 Base T: Manchester-Code, bei Fast Ethernet: zuerst 4B5B-Code (siehe unten), 
 dann Umwandlung auf dreiwertigen Code (–/0/+) mit fünf Schritten, was zur Reduzierung 
-der oberen Grenzfrequenz f&uuml;hrt.
+der oberen Grenzfrequenz führt.
 <P>
 <center>
 <table border=1 cellspacing=0 cellpadding=2 bgcolor="#DDDDDD">
 <tr>
-<th>Urspr&uuml;ngliche<br>Bitfolge<br>(4-Bit-Block)</th>
+<th>Ursprüngliche<br>Bitfolge<br>(4-Bit-Block)</th>
 <th>Umgewandelte<br>Bitfolge<br>(5-Bit-Block)</th>
 </tr>
 <tr><td align=center><TT>0000</TT></td><td align=center><TT>11110</TT></td></tr>
@@ -93,22 +94,22 @@ der oberen Grenzfrequenz f&uuml;hrt.
 </table>
 </center>
 <P>
-Die <B>8B/10B-Umwandlung (8 binary 10 binary)</B> sieht &auml;hnlich
-aus wie die 4B/5B-Umwandlung. Hier werden jedoch 8-Bit-Bl&ouml;cke
-in 10-Bit-Bl&ouml;cke umgewandelt. Die 8B/10B-Umwandlung wird bei
+Die <B>8B/10B-Umwandlung (8 binary 10 binary)</B> sieht ähnlich
+aus wie die 4B/5B-Umwandlung. Hier werden jedoch 8-Bit-Blöcke
+in 10-Bit-Blöcke umgewandelt. Die 8B/10B-Umwandlung wird bei
 Gigabit-Ethernet 1000Base-CX, -SX, -LX und beim Fibre-Channel eingesetzt.
-Alle f&uuml;r die &Uuml;bertragung g&uuml;ltigen Kombinationen sind derart aufgebaut,
+Alle für die Übertragung gültigen Kombinationen sind derart aufgebaut,
 dass 5 mal die "<TT>0</TT>" und 5 mal die "<TT>1</TT>" vorkommt, um Gleichstromfreiheit
-zu garantieren. Au&szlig;erdem weisen diese Kombinationen mindestens 3 Zustandswechsel auf
+zu garantieren. Außerdem weisen diese Kombinationen mindestens 3 Zustandswechsel auf
 (von "<TT>0</TT>" nach "<TT>1</TT>" oder
-umgekehrt), um auf Empf&auml;ngerseite die Taktr&uuml;ckgewinnung zu gew&auml;hrleisten.
+umgekehrt), um auf Empfängerseite die Taktrückgewinnung zu gewährleisten.
 <P>
 Bei der <B>8B/6T-Kodierung (8 binary 6 ternary)</B> wird ein 8-Bit-Block in einen 6T-Code umgewandelt.
 Jeder 6T-Code besteht aus 6 sogenannten"Tri-State-Symbolen", die als "-", "0" und "+" notiert
-werden. &Uuml;bertragungstechnisch verbirgt sich hinter jedem der drei
+werden. Übertragungstechnisch verbirgt sich hinter jedem der drei
 Symbole ein entsprechender elektrischer Pegel. Die Kodierung wird anhand einer Tabelle
-durchgef&uuml;hrt, die s&auml;mtliche 256 m&ouml;glichen 8-Bit-Kombinationen enth&auml;lt.
-W&auml;hrend 4B/5B nur eine Bit-Umwandlung darstellt, die noch eine anschlie&szlig;ende
+durchgeführt, die sämtliche 256 möglichen 8-Bit-Kombinationen enthält.
+Während 4B/5B nur eine Bit-Umwandlung darstellt, die noch eine anschließende
 Kodierung (NRZI oder MLT-3) erforderlich macht, beinhaltet 8B/6T
 bereits die komplette Kodierungsvorschrift.
 Die folgende Tabelle zeigt einen kleinen Ausschnitt der 8B/6T-Codes.
@@ -131,11 +132,11 @@ eingesetzt wird.
 </p>
 
 Beim Kodierungsverfahren <B>5-Level Pulse Amplitude Modulation (PAM5)</B>
-wird pro Takt ein Symbol &uuml;bermittelt, das einen von f&uuml;nf
-verschiedenen Zust&auml;nden (-2, -1, 0, +1, +2) darstellt.
-Mit jedem Symbol werden zwei Bits &uuml;bertragen. Da es vier verschiedene
+wird pro Takt ein Symbol übermittelt, das einen von fünf
+verschiedenen Zuständen (-2, -1, 0, +1, +2) darstellt.
+Mit jedem Symbol werden zwei Bits übertragen. Da es vier verschiedene
 2-Bit-Grupen ("<TT>00</TT>", "<TT>01</TT>", "<TT>10</TT>" und "<TT>11</TT>") gibt,
-bleibt noch ein Symbol &uuml;brig, das f&uuml;r Fehlerbehandlung eingesetzt werden kann.
+bleibt noch ein Symbol übrig, das für Fehlerbehandlung eingesetzt werden kann.
 Die PAM5-Kodierung wird bei Fast-Ethernet 100Base-T2 und bei
 Gigabit-Ethernet 1000Base-T verwendet.
 <p>
@@ -144,10 +145,10 @@ Gigabit-Ethernet 1000Base-T verwendet.
 <TR>
 <TD ALIGN=LEFT VALIGN=BOTTOM><img src="images/left.png" BORDER=0> <A HREF="netz2.html">Zum vorhergehenden Abschnitt</A></TD>
 <TD ALIGN=CENTER VALIGN=BOTTOM><img src="images/up.png" BORDER=0> <A HREF="index.html">Zum Inhaltsverzeichnis</A></TD>
-<TD ALIGN=RIGHT VALIGN=BOTTOM><img src="images/right.png" BORDER=0> <A HREF="netz4.html">Zum n&auml;chsten Abschnitt</A></TD>
+<TD ALIGN=RIGHT VALIGN=BOTTOM><img src="images/right.png" BORDER=0> <A HREF="netz4.html">Zum nächsten Abschnitt</A></TD>
 </TR></TABLE></CENTER>
 <P><HR>
-<h6><i>Copyright &copy; Hochschule M&uuml;nchen, FK 04, Prof. J&uuml;rgen Plate</i><br>
+<h6><i>Copyright &copy; Hochschule München, FK 04, Prof. Jürgen Plate</i><br>
 Letzte Aktualisierung: <SCRIPT LANGUAGE="JavaScript">document.write(document.lastModified);</SCRIPT></I></H6>
 </BODY>
 </HTML>
