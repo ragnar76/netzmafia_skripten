@@ -8,49 +8,49 @@
 <meta NAME="Reply-To" CONTENT="webmaster@netzmafia.de">
 
 <meta NAME="keywords" CONTENT="LAN WAN TCP/IP Computernetze Ethernet Vernetzung Router Hub Switch Protokolle">
-<meta NAME="description" CONTENT="Praxisorientierte Einführung in den Aufbau und die Funktionsweise von Computernetzen.">
+<meta NAME="description" CONTENT="Praxisorientierte EinfÃ¼hrung in den Aufbau und die Funktionsweise von Computernetzen.">
 <title>Grundlagen Computernetze</title>
 </head>
 <BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" ALINK="#FF0000" VLINK="#FF00FF">
 <CENTER><TABLE BORDER=0 WIDTH="90%" >
 <TR><TD ALIGN=LEFT><img src="images/eyes.png"></TD>
 <TD ALIGN=RIGHT><H2>Grundlagen Computernetze</H2>
-<BR><B><I>Prof. Jürgen Plate</I></B></TD></TR>
+<BR><B><I>Prof. JÃ¼rgen Plate</I></B></TD></TR>
 </TABLE></CENTER>
 <HR>
 
 
 <h1 align=center>Repeater, Bridge, Router</h1>
-<img src="images/repeater.jpg" align=left hspace=20 vspace=10>
-Um die Längenbeschränkung eines Ethernet-Segmentes aufzuheben,
+<img src="images/repeater.png" align=left hspace=20 vspace=10>
+Um die LÃ¤ngenbeschrÃ¤nkung eines Ethernet-Segmentes aufzuheben,
 verwendet man Repeater. Ein klassischer Repeater verbindet zwei Ethernet-Segmente
 (10Base5 oder 10Base2), er ist mit je einem Transceiver
 an jedes Segment angeschlossen. Ein Remote-Repeater ist ein Repeater-Paar,
 das durch einen max. 1000 m langen Lichtwellenleiter verbunden ist. In jedem
-Netz dürfen höchstens vier Repeater vorhanden sein, man erreicht
-so eine Gesamtlänge von 2500 m. Ein Remote Repeater-Paar zählt
-dabei wie ein lokaler Repeater. An den Lichtwellenleiter können keine
+Netz dÃ¼rfen hÃ¶chstens vier Repeater vorhanden sein, man erreicht
+so eine GesamtlÃ¤nge von 2500 m. Ein Remote Repeater-Paar zÃ¤hlt
+dabei wie ein lokaler Repeater. An den Lichtwellenleiter kÃ¶nnen keine
 Ethernet-Stationen angeschlossen werden. Der Repeater ist als reines
-Verstärkerelement in der untersten Schicht des OSI-Modells angesiedelt.
+VerstÃ¤rkerelement in der untersten Schicht des OSI-Modells angesiedelt.
 <P>
 
 <H2><A NAME="7.1">Multiport-Repeater</A></H2>
-Der Multiport-Repeater bietet die Möglichkeit, mehrere (typischerweise
-bis zu acht) Cheapernet-Segmente zusammenzuführen und über einen
-Transceiveranschluß mit dem Standard-Ethernet zu verbinden. Bei zwei
-oder mehr anzuschließenden Cheapernet-Segmenten ist die Lösung
-kostengünstiger als der Einsatz von Standard-Repeatern.
+Der Multiport-Repeater bietet die MÃ¶glichkeit, mehrere (typischerweise
+bis zu acht) Cheapernet-Segmente zusammenzufÃ¼hren und Ã¼ber einen
+TransceiveranschluÃŸ mit dem Standard-Ethernet zu verbinden. Bei zwei
+oder mehr anzuschlieÃŸenden Cheapernet-Segmenten ist die LÃ¶sung
+kostengÃ¼nstiger als der Einsatz von Standard-Repeatern.
 <BR CLEAR=ALL>
 <P>
 
 <H2><A NAME="7.2">Hub</A></H2>
 Analog dem Multiport-Repeater besteht die Funktion eines Hub darin, mehrere
-Twisted-Pair-Kabelsegmente über einen Transceiveranschluß mit
+Twisted-Pair-Kabelsegmente Ã¼ber einen TransceiveranschluÃŸ mit
 dem Ethernet zu verbinden. Das englische Wort "Hub" bezeichnet die Nabe
 eines Speichenrades - wie die Speichen des Rades verteilen sich die
-Leitungen sternförmig vom Hub aus. Der Begriff "Hub" steht also für
-fast alle Verstärkerkomponenten, die eine sternförmige Vernetzung
-ermöglichen. Hubs haben immer mehrere Ports zum Anschluß von
+Leitungen sternfÃ¶rmig vom Hub aus. Der Begriff "Hub" steht also fÃ¼r
+fast alle VerstÃ¤rkerkomponenten, die eine sternfÃ¶rmige Vernetzung
+ermÃ¶glichen. Hubs haben immer mehrere Ports zum AnschluÃŸ von
 mehreren Rechnern. Bei Twisted-Pair-Verkabelung ist meist einer der
 Ports als "Uplink" schaltbar, d. h. es werden wie im 4. Kapitel beschrieben
 die Leitungen gekreuzt. Auf diese Weise lassen sich die Hubs kaskadieren.
@@ -58,10 +58,10 @@ Typisch sind Hubs mit 4, 8, 12, 16, 24 und 32 Ports.<BR>
 <P>
 <center><img src="images/hub.png"></center>
 <P>
-Manche Repeater/Hubs lassen sich über spezielle Busports
+Manche Repeater/Hubs lassen sich Ã¼ber spezielle Busports
 und in der Regel sehr kurze Buskabel verbinden. Vorteil dieser
-herstellerspezifischen Kaskadierung ist, daß alle so verbundenen
-Repeater/Hubs als ein Repeater bezüglich der Repeaterregel zählen.
+herstellerspezifischen Kaskadierung ist, daÃŸ alle so verbundenen
+Repeater/Hubs als ein Repeater bezÃ¼glich der Repeaterregel zÃ¤hlen.
 <P>
 <center><img src="images/hub1.png"></center>
 <P>
@@ -71,127 +71,127 @@ Repeater/Hubs als ein Repeater bezüglich der Repeaterregel zählen.
 Die Anzahl der hintereinanderschaltbaren Repeater bei 10Base5 und 10Base2
 ist jedoch limitiert (Addition von Laufzeiten, Phasenverschiebungen, usw.).
 Ein Remote-Repeater-Paar (10Base5, 10Base2) mit einer Punkt-zu-Punkt-Verbindung
-zwischen beiden Hälften wird als ein Repeater betrachtet. Weiterhin gilt:
-Es dürfen nicht mehr als fünf (5) Kabelsegmente verbunden werden. Zur
-Verbindung werden vier (4) Repeater benötigt und nur drei (3) der Segmente
-dürfen Rechner angeschlossen haben. Bei Ethernet (10Base5) können so
+zwischen beiden HÃ¤lften wird als ein Repeater betrachtet. Weiterhin gilt:
+Es dÃ¼rfen nicht mehr als fÃ¼nf (5) Kabelsegmente verbunden werden. Zur
+Verbindung werden vier (4) Repeater benÃ¶tigt und nur drei (3) der Segmente
+dÃ¼rfen Rechner angeschlossen haben. Bei Ethernet (10Base5) kÃ¶nnen so
 5 Segmente zu je 500 m verbunden werden, das gesamte Netz darf damit
 eine Ausdehnung von 2,5 km haben.<BR>
 Man kann diese Regel auch auf Twisted-Pair-Hubs anwenden - auch hier kann man nicht
-beliebig viele Hubs kaskadieren. Hier ist die Leitungslänge sogar auf ca.
-100 m je Segment begrenzt. Eine Erweiterung ist durch aktive Elemente möglich
+beliebig viele Hubs kaskadieren. Hier ist die LeitungslÃ¤nge sogar auf ca.
+100 m je Segment begrenzt. Eine Erweiterung ist durch aktive Elemente mÃ¶glich
 (Switch, Router).
 <P>
 <center><img src="images/repeaterregel.png"></center>
 <P>
 
 <H2><A NAME="7.4">Lichtwellenleiter (10BaseF, FOIRL) und Sternkoppler</A></H2>
-Zur Verbindung von Gebäuden werden oft Lichtwellenleiter (LWL) verwendet.
-Außerdem können mit ihnen in Gebäuden längere Entfernungen
-als mit Koaxkabeln überbrückt werden.
-Lichtleiter können wie TwistedPair auch im Ethernet-Verkehr nur für
+Zur Verbindung von GebÃ¤uden werden oft Lichtwellenleiter (LWL) verwendet.
+AuÃŸerdem kÃ¶nnen mit ihnen in GebÃ¤uden lÃ¤ngere Entfernungen
+als mit Koaxkabeln Ã¼berbrÃ¼ckt werden.
+Lichtleiter kÃ¶nnen wie TwistedPair auch im Ethernet-Verkehr nur fÃ¼r
 Punkt-zu-Punkt-Verbindungen eingesetzt werden. Lichtleiter werden
 zwischen Bridges, Switches und/oder Repeatern, einem Repeater und
 einer einzelnen Station mit Transceiver oder zwischen zwei Stationen
 mit Transceivern verwendet.<BR>
-Als Industriestandard für Lichtleiterprodukte hatte sich ursprünglich
+Als Industriestandard fÃ¼r Lichtleiterprodukte hatte sich ursprÃ¼nglich
 <b>FOIRL</b> (<b>F</b>iber <b>O</b>ptic <b>I</b>nter<b>r</b>epeater<b>L</b>ink)
 durchgesetzt. Inzwischen wurde FOIRL vom offiziellen IEEE 802.3 10BASE-FL-Standard
-abgelöst, daher sollte man heute nur noch
-10BASE-FL konforme Geräte einsetzen. An einem FOIRL-Segment kann ein
-FOIRL-kompatibles Gerät mit einem 10BASE-FL-Transceiver gemischt
+abgelÃ¶st, daher sollte man heute nur noch
+10BASE-FL konforme GerÃ¤te einsetzen. An einem FOIRL-Segment kann ein
+FOIRL-kompatibles GerÃ¤t mit einem 10BASE-FL-Transceiver gemischt
 werden. In diesem Fall gelten jedoch die strengeren
 FOIRL-Regeln. Normalerweise ist das eingesetzte LWL-Kabel ein
-Multimode- (MMF-) Kabel mit ST- oder SC-Steckern. Die maximale Länge des
+Multimode- (MMF-) Kabel mit ST- oder SC-Steckern. Die maximale LÃ¤nge des
 Kabels ist 2000 m beim Einsatz von 10BASE-FL-Komponenten, 1000 m bei
 FOIRL.<BR>
-Sternkoppler können als Verstärker betrachtet werden, jedes Datenpaket,
+Sternkoppler kÃ¶nnen als VerstÃ¤rker betrachtet werden, jedes Datenpaket,
 das von einem angeschlossenen Segment stammt, wird in alle anderen Segmente
-verbreitet, einschließlich Kollisionen und fehlerhafter Pakete.<BR>
-An einen Sternkoppler können Koax- oder Cheapernet-Segmente angeschlossen
-werden. Zudem gibt es direkte Transceiver-Anschlüsse und mittlerweile
-auch Anschlüsse für Twisted-Pair-Kabelsegmente. <BR>
+verbreitet, einschlieÃŸlich Kollisionen und fehlerhafter Pakete.<BR>
+An einen Sternkoppler kÃ¶nnen Koax- oder Cheapernet-Segmente angeschlossen
+werden. Zudem gibt es direkte Transceiver-AnschlÃ¼sse und mittlerweile
+auch AnschlÃ¼sse fÃ¼r Twisted-Pair-Kabelsegmente. <BR>
 <P>
 
 <H2><A NAME="7.5">Bridge</A></H2>
-Eine Bridge trennt zwei Ethernet-LANs physikalisch, Störungen wie z.
-B. Kollisionen und fehlerhafte Pakete gelangen nicht über die Bridge
-hinaus. Die Bridge ist protokolltransparent,  d. h. sie überträgt
+Eine Bridge trennt zwei Ethernet-LANs physikalisch, StÃ¶rungen wie z.
+B. Kollisionen und fehlerhafte Pakete gelangen nicht Ã¼ber die Bridge
+hinaus. Die Bridge ist protokolltransparent,  d. h. sie Ã¼bertrÃ¤gt
 alle auf dem Ethernet laufenden Protokolle. Die beiden beteiligten Netze
-erscheinen also für eine Station wie ein einziges Netz. Durch den Einsatz
-einer Bridge können die Längenbeschränkungen des Ethernets
-überwunden werden, den sie verstärkt die Signale nicht nur, sondern
+erscheinen also fÃ¼r eine Station wie ein einziges Netz. Durch den Einsatz
+einer Bridge kÃ¶nnen die LÃ¤ngenbeschrÃ¤nkungen des Ethernets
+Ã¼berwunden werden, den sie verstÃ¤rkt die Signale nicht nur, sondern
 generiert senderseitig einen neuen Bitstrom. Die Bridge arbeitet mit derselben
-Übertragungsrate, wie die beteiligten Netze. Die Anzahl der
+Ãœbertragungsrate, wie die beteiligten Netze. Die Anzahl der
 hintereinandergeschalteten Bridges ist auf sieben begrenzt (IEEE 802.1).
 Normalerweise wird man aber nicht mehr
 als vier Bridges hintereinanderschalten.
 <P>
 <center><img src="images/bridge.png" ALT=""></center>
 <P>
-Jede lokale Bridge ist über Transceiver an zwei Ethernet-LANs angeschlossen.
-Die Bridge empfängt von beiden Netzsegmenten, mit denen sie wie jede normale
-Station verbunden ist, alle Blöcke und analysiert die Absender- und
-Empfängeradressen. Steht die Absenderadresse nicht in der
-brückeninternen Adreßtabelle, so wird sie vermerkt. Die
+Jede lokale Bridge ist Ã¼ber Transceiver an zwei Ethernet-LANs angeschlossen.
+Die Bridge empfÃ¤ngt von beiden Netzsegmenten, mit denen sie wie jede normale
+Station verbunden ist, alle BlÃ¶cke und analysiert die Absender- und
+EmpfÃ¤ngeradressen. Steht die Absenderadresse nicht in der
+brÃ¼ckeninternen AdreÃŸtabelle, so wird sie vermerkt. Die
 Bridge lernt und speichert so die Information, auf welcher Seite der Bridge
-der Rechner mit dieser Adresse angeschlossen ist. Ist die Empfängeradresse
-bekannt und der Empfänger auf derselben Seite wie der
+der Rechner mit dieser Adresse angeschlossen ist. Ist die EmpfÃ¤ngeradresse
+bekannt und der EmpfÃ¤nger auf derselben Seite wie der
 Absender, so vewirft die Bridge das Paket (filtert es). Ist
-der Empfänger auf der anderen Seite oder nicht in der
+der EmpfÃ¤nger auf der anderen Seite oder nicht in der
 Tabelle, wird das Paket weitergeschickt.
-Die intelligente Bridge lernt so selbständig, welche Pakete
-weitergeschickt werden müssen und welche nicht. Bei managebaren
-Bridges können zusätzliche Adreß-Filter gesetzt werden, die regeln an
-welche Adressen die Bridge Informationen immer weiterschicken muß
+Die intelligente Bridge lernt so selbstÃ¤ndig, welche Pakete
+weitergeschickt werden mÃ¼ssen und welche nicht. Bei managebaren
+Bridges kÃ¶nnen zusÃ¤tzliche AdreÃŸ-Filter gesetzt werden, die regeln an
+welche Adressen die Bridge Informationen immer weiterschicken muÃŸ
 oder nie weiterschicken darf. Eine Bridge arbeitet auf der Ebene 2
 des OSI-Schichtenmodells.<BR>
-Bridges können Ethernet-Segmente auch über
-synchrone Standleitungen, Satellitenverbindungen, Funkverbindungen, öffentliche
+Bridges kÃ¶nnen Ethernet-Segmente auch Ã¼ber
+synchrone Standleitungen, Satellitenverbindungen, Funkverbindungen, Ã¶ffentliche
 Paketvermittlungsnetze und schnelle Lichtleiternetze (z.B. FDDI) verbinden. In der
-Regel müssen solche Bridges immer paarweise eingesetzt werden.
+Regel mÃ¼ssen solche Bridges immer paarweise eingesetzt werden.
 <P>
 <center><img src="images/remotebridge.png" border=0></center>
 <p>
-Bridges sind komplette, relativ leistungsfähige Rechner mit Speicher und
-mindestens zwei Netzwerkanschlüssen. Sie sind unabhängig von
-höheren Protokollen (funktionieren also z.B. mit TCP/IP, DECnet,
+Bridges sind komplette, relativ leistungsfÃ¤hige Rechner mit Speicher und
+mindestens zwei NetzwerkanschlÃ¼ssen. Sie sind unabhÃ¤ngig von
+hÃ¶heren Protokollen (funktionieren also z.B. mit TCP/IP, DECnet,
 IPX, LAT, MOP etc. gleichzeitig) und erfordern bei
-normalem Einsatz keine zusätzliche Software oder Programmierung.
-Nach Außen bildet ein mittels Bridge erweitertes LAN weiterhin eine Einheit,
+normalem Einsatz keine zusÃ¤tzliche Software oder Programmierung.
+Nach AuÃŸen bildet ein mittels Bridge erweitertes LAN weiterhin eine Einheit,
 welches eine eindeutige Adressierung bedingt. Eine Bridge interpretiert die MAC-Adressen
 der Datenpakete. Weitere Features einer Bridge sind:
 <ul>
 <li>Ausfallsicherheit<br>
-Störungen gelangen von der einen Seite einer Bridge nicht auf die andere
-Seite. Sie werden auch in diesem Sinne zum Trennen von sog. Kollisions-Domänen
+StÃ¶rungen gelangen von der einen Seite einer Bridge nicht auf die andere
+Seite. Sie werden auch in diesem Sinne zum Trennen von sog. Kollisions-DomÃ¤nen
 (collision domain) eingesetzt.
 <li>Datensicherheit<br>
 Informationen, die zwischen Knoten auf einer Seite der Bridge ausgetauscht werden,
-können nicht auf der anderen Seite der Bridge abgehört werden.
+kÃ¶nnen nicht auf der anderen Seite der Bridge abgehÃ¶rt werden.
 <li>Durchsatzsteigerung<br>
-In den durch Bridges getrennten Netzsegmenten können jeweils unterschiedliche
-Daten-Blöcke gleichzeitig transferiert werden.  Hierdurch wird die
-Netzperformance erhöht. Allerdings erzeugen Brücken dadurch, daß sie die Blöcke
-zwischenspeichern eine zusätzliche Verzögerung und können deswegen
+In den durch Bridges getrennten Netzsegmenten kÃ¶nnen jeweils unterschiedliche
+Daten-BlÃ¶cke gleichzeitig transferiert werden.  Hierdurch wird die
+Netzperformance erhÃ¶ht. Allerdings erzeugen BrÃ¼cken dadurch, daÃŸ sie die BlÃ¶cke
+zwischenspeichern eine zusÃ¤tzliche VerzÃ¶gerung und kÃ¶nnen deswegen
 bei kaum ausgelasteten Netzen die Performance sogar verschlechtern.
 <li>Vermeidung von Netzwerkschleifen<br>
-Eine Bridge unterstützt den sog. "Spanning-Tree-Algorithmus", wodurch es
-möglich ist, auch Schleifen- oder Ring-Konfigurationen (= redundante Verbindungen)
+Eine Bridge unterstÃ¼tzt den sog. "Spanning-Tree-Algorithmus", wodurch es
+mÃ¶glich ist, auch Schleifen- oder Ring-Konfigurationen (= redundante Verbindungen)
 im Netz zu erlauben. Die Bridges im Netz kommunizieren miteinander, im
-Gegensatz zu "dummen" Repeatern oder Hubs, und stellen über den
-Algorithmus sicher, daß bei mehreren redundanten Verbindungen immer
+Gegensatz zu "dummen" Repeatern oder Hubs, und stellen Ã¼ber den
+Algorithmus sicher, daÃŸ bei mehreren redundanten Verbindungen immer
 nur eine gerade aktiv ist.
 </ul>
-Weitere Kenndaten einer Bridge sind die Größe der Adreßtabelle, die Filterrate,
-und die Transferrate. Die Größe der Adreßtabelle gibt an, wieviele Adressen
-(Knoten) insgesamt in der Bridge gespeichert werden können.
+Weitere Kenndaten einer Bridge sind die GrÃ¶ÃŸe der AdreÃŸtabelle, die Filterrate,
+und die Transferrate. Die GrÃ¶ÃŸe der AdreÃŸtabelle gibt an, wieviele Adressen
+(Knoten) insgesamt in der Bridge gespeichert werden kÃ¶nnen.
 Die Filterrate gibt an, wieviele Pakete pro Sekunde (packets
 per second, pps) eine Bridge maximal empfangen kann. Bei voller Last
-und minimaler Paketlänge können in einem Ethernet-Segment theoretisch
+und minimaler PaketlÃ¤nge kÃ¶nnen in einem Ethernet-Segment theoretisch
 bis zu 14.880 Pakete pro Sekunde auftreten. Auf beiden Ports hat eine
 2-Port-Bridge also insgesamt maximal 29.760 Pakete pro Sekunde zu
-filtern. Alle modernen Bridges erreichen diese theoretisch möglichen
+filtern. Alle modernen Bridges erreichen diese theoretisch mÃ¶glichen
 Maximalwerte. Die Transferrate gibt an, wieviel Pakete pro Sekunde die Bridge
 auf die andere Seite weiterleiten kann. Der Maximalwert ist hier
 14.880 pps, da bei dieser Transferrate beide Segmente voll ausgelastet
@@ -199,70 +199,70 @@ sind.
 <P>
 
 <H2><A NAME="7.6">Switch</A></H2>
-Der Switch ist wie die Bridge ein Gerät des OSI-Layers 2,
+Der Switch ist wie die Bridge ein GerÃ¤t des OSI-Layers 2,
 d. h. er kann LANs mit verschiedenen physikalischen Eigenschaften verbinden, z. B.
-Koax- und Twisted-Pair-Netzwerke. Allerdings müssen, ebenso wie bei der Bridge,
-alle Protokolle höherer Ebenen 3 bis 7 identisch sein! Ein Switch ist
+Koax- und Twisted-Pair-Netzwerke. Allerdings mÃ¼ssen, ebenso wie bei der Bridge,
+alle Protokolle hÃ¶herer Ebenen 3 bis 7 identisch sein! Ein Switch ist
 somit protokolltransparent. Er wird oft auch als Multi-Port-Bridge bezeichnet, da
-dieser ähnliche Eigenschaften wie eine Bridge aufweist.
+dieser Ã¤hnliche Eigenschaften wie eine Bridge aufweist.
 Jeder Port eines Switch bildet ein eigenes Netzsegment. Jedem dieser Segmente
-steht die gesamte Netzwerk-Bandbreite zu Verfügung. Dadurch
-erhöht ein Switch nicht nur - wie die Bridge - die Netzwerk-Performance im Gesamtnetz,
+steht die gesamte Netzwerk-Bandbreite zu VerfÃ¼gung. Dadurch
+erhÃ¶ht ein Switch nicht nur - wie die Bridge - die Netzwerk-Performance im Gesamtnetz,
 sondern auch in jedem einzelnen Segment. Der Switch untersucht jedes durchlaufende Paket auf
 die MAC-Adresse des Zielsegmentes und kann es direkt dorthin weiterleiten.
-Der große Vorteil eines Switches liegt nun  in der Fähigkeit seine
-Ports direkt miteinander verschalten zu können, d. h. dedizierte Verbindungen
+Der groÃŸe Vorteil eines Switches liegt nun  in der FÃ¤higkeit seine
+Ports direkt miteinander verschalten zu kÃ¶nnen, d. h. dedizierte Verbindungen
 aufzubauen.
 <P>
-<center><img src="images/switch.jpg" border=0></center>
+<center><img src="images/switch.png" border=0></center>
 <p>
 Was ist nun der Unterschied zwischen einem Switch und einer
 Multiport-Bridge? Bei den Produkten der meisten Hersteller gibt es
 keinen. "Switch" klingt nach Tempo und Leistung, deswegen haben viele
 Hersteller ihre Multiport-Bridges Switches genannt. Der Begriff
-Switch für Multiport-Bridges wurde von der Firma Kalpana (inzwischen
+Switch fÃ¼r Multiport-Bridges wurde von der Firma Kalpana (inzwischen
 von Cisco aufgekauft) kreiert, da deren Produkte nicht der
 IEEE-Spezifikation einer Bridge entsprachen, konnte Kalpana die
-Produkte nicht Bridges nennen und hat den Namen Switch gewählt.
+Produkte nicht Bridges nennen und hat den Namen Switch gewÃ¤hlt.
 Kalpana war nun sehr erfolgreich mit dem Marketing ihrer Switches.
 Deswegen haben andere Hersteller ihre Bridges auch Switch,
 Switch mit Bridge-Eigenschaften oder "Bridging Switch" genannt.
 Switches brechen die Ethernet-Busstruktur in eine Bus-/Sternstruktur
-auf. Teilsegmente mit Busstruktur werden sternförmig über je einen
-Port des Switch gekoppelt. Zwischen den einzelnen Ports können Pakete
-mit maximaler Ethernet-Geschwindigkeit übertragen werden. Wesentlich
-ist die Fähigkeit von Switches, mehrere Übertragungen zwischen
-unterschiedlichen Segmenten gleichzeitig durchzuführen. Dadurch erhöht
+auf. Teilsegmente mit Busstruktur werden sternfÃ¶rmig Ã¼ber je einen
+Port des Switch gekoppelt. Zwischen den einzelnen Ports kÃ¶nnen Pakete
+mit maximaler Ethernet-Geschwindigkeit Ã¼bertragen werden. Wesentlich
+ist die FÃ¤higkeit von Switches, mehrere Ãœbertragungen zwischen
+unterschiedlichen Segmenten gleichzeitig durchzufÃ¼hren. Dadurch erhÃ¶ht
 sich die Bandbreite des gesamten Netzes entsprechend.
-Die volle Leistungsfähigkeit von Switches kann nur dann genutzt
+Die volle LeistungsfÃ¤higkeit von Switches kann nur dann genutzt
 werden, wenn eine geeignete Netzwerktopologie vorhanden ist
-bzw. geschaffen werden kann. Die Datenlast sollte nach Möglichkeit
-gleichmäßig über die Ports verteilt werden. Systeme, die viele Daten
-übertragen, müssen unter Umständen an einen eigenen Switch-Port
+bzw. geschaffen werden kann. Die Datenlast sollte nach MÃ¶glichkeit
+gleichmÃ¤ÃŸig Ã¼ber die Ports verteilt werden. Systeme, die viele Daten
+Ã¼bertragen, mÃ¼ssen unter UmstÃ¤nden an einen eigenen Switch-Port
 angeschlossen werden. Dies bezeichnet man dann als
-<i>Private Ethernet</i>. Außerdem sollte man versuchen, Systeme die viel
+<i>Private Ethernet</i>. AuÃŸerdem sollte man versuchen, Systeme die viel
 miteinander kommunizieren, an einen gemeinsamen Port des Switches
-anzuschließen, um so die Datenmengen, die mehr als ein Segment
-durchlaufen müssen, zu reduzieren.
+anzuschlieÃŸen, um so die Datenmengen, die mehr als ein Segment
+durchlaufen mÃ¼ssen, zu reduzieren.
 <P>
 <center><img src="images/switch.png"></center>
 <P>
-Es haben sich drei grundlegende Realisierungsformen für Switches etabliert:
+Es haben sich drei grundlegende Realisierungsformen fÃ¼r Switches etabliert:
 <UL>
-<LI><I>Shared Memory:</I> Alle Schnittstellen kommunizieren über einen zentralen
-Speicher. Bei dieser meist recht preisgünstigen Realisierung steht oft nur ein
-einfacher interner Rechnerbus zur Verfügung.
-<LI><I>Common Bus:</I> Die Schnittstellen verfügen über einen lokalen Speicher
-und werden über einen gemeinsamen Bus mit den anderen Schnittstellen verbunden. Der
+<LI><I>Shared Memory:</I> Alle Schnittstellen kommunizieren Ã¼ber einen zentralen
+Speicher. Bei dieser meist recht preisgÃ¼nstigen Realisierung steht oft nur ein
+einfacher interner Rechnerbus zur VerfÃ¼gung.
+<LI><I>Common Bus:</I> Die Schnittstellen verfÃ¼gen Ã¼ber einen lokalen Speicher
+und werden Ã¼ber einen gemeinsamen Bus mit den anderen Schnittstellen verbunden. Der
 interne Bus ist in der Regel schneller getaktet als die externen Schnittstellen (Zeitmultiplex)
 oder erlaubt als so genannte <I>Backplane</I> mehrere parallele Verbindungen (Raummultiplex).
 <P>
 <center><img src="images/switch2.png"></center>
 <P>
-<LI><I>Crosspoint Matrix:</I> Die Schnittstellen verfügen über einen lokalen
-Speicher und werden über eine flexible und leistungsfähige Schaltmatrix mit den
+<LI><I>Crosspoint Matrix:</I> Die Schnittstellen verfÃ¼gen Ã¼ber einen lokalen
+Speicher und werden Ã¼ber eine flexible und leistungsfÃ¤hige Schaltmatrix mit den
 anderen Schnittstellen verbunden. Diese Realisierungsform erlaubt in der Regel die
-höchste Leistungsfähigkeit, bedingt aber den größten
+hÃ¶chste LeistungsfÃ¤higkeit, bedingt aber den grÃ¶ÃŸten
 Hardwareaufwand.
 <P>
 <center><img src="images/switch3.png"></center>
@@ -273,66 +273,66 @@ herauskristallisiert:
 <ul>
 <li><b>Cut-Through</b> bzw. <b>On The Fly</b><br>
 Der Ethernet Switch wartet im
-Gegensatz zu normalen Bridges nicht, bis er das vollständige Paket
-gelesen hat, sondern er überträgt das ankommende Paket nach Empfang
+Gegensatz zu normalen Bridges nicht, bis er das vollstÃ¤ndige Paket
+gelesen hat, sondern er Ã¼bertrÃ¤gt das ankommende Paket nach Empfang
 der 6-Byte-Destination-Adresse. Da nicht das gesamte Paket bearbeitet
-werden muß, tritt eine Zeitverzögerung von nur etwa 40 Mikrosekunden
-ein. Sollte das Zielsegment bei der Übertragung gerade belegt sein,
+werden muÃŸ, tritt eine ZeitverzÃ¶gerung von nur etwa 40 Mikrosekunden
+ein. Sollte das Zielsegment bei der Ãœbertragung gerade belegt sein,
 speichert der Ethernet Switch das Paket entsprechend zwischen.
 Bei den Switches werden, im Gegensatz zu Bridges, mit Ausnahme von
-short frames (Pakete, die kleiner als die minimal zulässigen 64 Bytes
+short frames (Pakete, die kleiner als die minimal zulÃ¤ssigen 64 Bytes
 sind), fehlerhafte Pakete auch auf das andere Segment
-übertragen. Grund hierfür ist, daß die CRC-Prüfung (Cyclic Redundancy
-Check) erst bei einem vollständig gelesenen Paket durchgeführt werden kann.
+Ã¼bertragen. Grund hierfÃ¼r ist, daÃŸ die CRC-PrÃ¼fung (Cyclic Redundancy
+Check) erst bei einem vollstÃ¤ndig gelesenen Paket durchgefÃ¼hrt werden kann.
 Solange der Prozentsatz von fehlerhaften Paketen im Netz gering ist,
 entstehen keine Probleme. Sobald aber (z.B. aufgrund eines
 Konfigurationsfehlers, fehlerhafter Hardware oder extrem hoher
 Netzlast bei gleichzeitig langen Segmenten mit mehreren Repeatern) der
-Prozentsatz der Kollisionen steigt, können Switches auch dazu führen,
-daß die Leistung des Gesamtnetzes deutlich sinkt.
-Cut-Through-Switching bietet dann einen Vorteil, wenn man sehr geringe Verzögerungen
-bei der Übertragung zwischen einzelnen Knoten benötigt. Diese Technologie sollte
+Prozentsatz der Kollisionen steigt, kÃ¶nnen Switches auch dazu fÃ¼hren,
+daÃŸ die Leistung des Gesamtnetzes deutlich sinkt.
+Cut-Through-Switching bietet dann einen Vorteil, wenn man sehr geringe VerzÃ¶gerungen
+bei der Ãœbertragung zwischen einzelnen Knoten benÃ¶tigt. Diese Technologie sollte
 also eingesetzt werden, wenn es darum geht, in relativ kleinen Netzen eine
-große Anzahl Daten zwischen wenigen Knoten zu übertragen.
+groÃŸe Anzahl Daten zwischen wenigen Knoten zu Ã¼bertragen.
 <li><b>Store-and-Forward</b><br>
-Die Switches dieser Kategorie untersuchen im Gegensatz zu den vorher erwähnten
+Die Switches dieser Kategorie untersuchen im Gegensatz zu den vorher erwÃ¤hnten
 das gesamte Datenpaket. Dazu werden die Pakete kurz zwischengespeichert,
-auf ihre Korrektheit und Gültigkeit überprüft und anschließend
+auf ihre Korrektheit und GÃ¼ltigkeit Ã¼berprÃ¼ft und anschlieÃŸend
 verworfen oder weitergeleitet. Einerseits hat dies den Nachteil der
-größeren Verzögerung beim Weiterschicken des Paketes, andererseits
-werden keinerlei fehlerhafte Pakete auf das andere Segment übertragen.
-Diese Lösung ist bei größeren Netzen mit vielen Knoten
+grÃ¶ÃŸeren VerzÃ¶gerung beim Weiterschicken des Paketes, andererseits
+werden keinerlei fehlerhafte Pakete auf das andere Segment Ã¼bertragen.
+Diese LÃ¶sung ist bei grÃ¶ÃŸeren Netzen mit vielen Knoten
 und Kommunikationsbeziehungen besser, weil nicht einzelne fehlerhafte
-Segmente durch Kollisionen das ganze Netz belasten können. Bei diesen
-Anwendungen ist die Gesamttransferrate entscheidend, die Verzögerung wirkt
+Segmente durch Kollisionen das ganze Netz belasten kÃ¶nnen. Bei diesen
+Anwendungen ist die Gesamttransferrate entscheidend, die VerzÃ¶gerung wirkt
 sich hier kaum aus.
 </ul>
 <P>
 <center><img src="images/switches.png" border=0></center>
 <p>
 Inzwischen sind Switching-Produkte (z.B. von 3Com, Cisco oder Allied
-Telesyn) am Markt, die beide Technologien unterstützen. Dies geschieht
+Telesyn) am Markt, die beide Technologien unterstÃ¼tzen. Dies geschieht
 entweder per Konfiguration (Software) oder automatisch anhand der
-CRC-Fehler-Häufigkeit. Wird eine vorgegebene Anzahl von fehlerhaften Paketen
-überschritten, schaltet der Switch automatisch von "Cut Through" auf
+CRC-Fehler-HÃ¤ufigkeit. Wird eine vorgegebene Anzahl von fehlerhaften Paketen
+Ã¼berschritten, schaltet der Switch automatisch von "Cut Through" auf
 "Store and Forward" um.
 <P>
 Die Performance eines Netzes kann man auf Basis vorhandener
-Standalone-Switches erhöhen, indem zusätzliche
-Switches über die Ethernetports kaskadiert werden.
-Alle Switches erlauben die Kaskadierung über einen einzelnen
+Standalone-Switches erhÃ¶hen, indem zusÃ¤tzliche
+Switches Ã¼ber die Ethernetports kaskadiert werden.
+Alle Switches erlauben die Kaskadierung Ã¼ber einen einzelnen
 Ethernet-Port mit einer maximalen Transferrate von 10 Mbit/s (bzw. 100 Mbit/s
 bei Fast Ethernet Switches). Kann man das Netz in Teilnetze unterteilen, zwischen
-denen diese Transferrate ausreicht, ist dies eine sinnvolle Lösung.
+denen diese Transferrate ausreicht, ist dies eine sinnvolle LÃ¶sung.
 Doch meistens ist das nicht der Fall.
-Die nächste und wohl beste Möglichkeit der Kopplung von Switches ist der
-Einsatz von Produkten, die den Anschluß an einen High Speed Backbone
-erlauben. Im Gegensatz zu kaskadierten Standalone-Switches können weitere
-Geräte an den Backbone gehängt werden, ohne daß Ports
-für die Switch-zu-Switch-Verbindung verlorengehen. Eine Backbone-Lösung
-ist nicht nur schneller und flexibler sondern für große Netze auch
-kostengünstiger. Man muß unterscheiden zwischen Lösungen, die eine
-herstellereigene Verbindung benutzen (proprietär) und solchen, die auf
+Die nÃ¤chste und wohl beste MÃ¶glichkeit der Kopplung von Switches ist der
+Einsatz von Produkten, die den AnschluÃŸ an einen High Speed Backbone
+erlauben. Im Gegensatz zu kaskadierten Standalone-Switches kÃ¶nnen weitere
+GerÃ¤te an den Backbone gehÃ¤ngt werden, ohne daÃŸ Ports
+fÃ¼r die Switch-zu-Switch-Verbindung verlorengehen. Eine Backbone-LÃ¶sung
+ist nicht nur schneller und flexibler sondern fÃ¼r groÃŸe Netze auch
+kostengÃ¼nstiger. Man muÃŸ unterscheiden zwischen LÃ¶sungen, die eine
+herstellereigene Verbindung benutzen (proprietÃ¤r) und solchen, die auf
 einen Standard wie Fast Ethernet, Gigabit Ethernet, FDDI oder ATM setzen.
 <P>
 <I>Unterschiede Hub - Switch:</I>
@@ -342,39 +342,39 @@ einen Standard wie Fast Ethernet, Gigabit Ethernet, FDDI oder ATM setzen.
 <li>Es kann immer nur ein Datenpaket nach dem anderen den Hub passieren
  <li>Geschwindigkeit 10 oder 10/100 Mbps bei Dual Speed Hubs
  <li>Hubs wissen nicht, an welchem Port welche Station angeschlossen ist,
-   sie können es auch nicht lernen. Hubs müssen nicht konfiguriert werden.
+   sie kÃ¶nnen es auch nicht lernen. Hubs mÃ¼ssen nicht konfiguriert werden.
 </UL>
 <P>
 <b>Switch</b>
 <UL>
-<li>Mehrere Datenpakete können den Switch gleichzeitig passieren
- <li>Die Gesamtbandbreite (der Datendurchsatz) ist  wesentlich höher als bei einem Hub
+<li>Mehrere Datenpakete kÃ¶nnen den Switch gleichzeitig passieren
+ <li>Die Gesamtbandbreite (der Datendurchsatz) ist  wesentlich hÃ¶her als bei einem Hub
  <li>Switches lernen nach und nach, welche Stationen mit welchen Ports verbunden
-   sind, somit werden bei weiteren Datenübertragungen keine anderen Ports
-   unnötig belastet, sondern nur der Port, an dem die Zielstation angeschlossen ist
+   sind, somit werden bei weiteren DatenÃ¼bertragungen keine anderen Ports
+   unnÃ¶tig belastet, sondern nur der Port, an dem die Zielstation angeschlossen ist
  <li>Geschwindigkeiten sind heute 10, 10/100 oder 1000 MBit/s (Gigabit Ethernet)
- <li>Switches müssen nicht konfiguriert werden
- <li>inzwischen preisgünstiger als Hubs
+ <li>Switches mÃ¼ssen nicht konfiguriert werden
+ <li>inzwischen preisgÃ¼nstiger als Hubs
 </UL>
 <P>
 <I>Eine oft gestellte Glaubensfrage:</I>
 "In der Literatur und im Web finde ich immer wieder die Bemerkung, dass ein Hub 
-nur Half-Duplex-Übertragung ermögliche, ein Switch dagegen aber Full-Duplex.
-Das kann ich nicht glauben. Vorausgesetzt, der Hub ist ein Signalverstärker, an 
-den die Geräte mit zwei Aderpaaren (RX und TX) angeschlossen sind."
+nur Half-Duplex-Ãœbertragung ermÃ¶gliche, ein Switch dagegen aber Full-Duplex.
+Das kann ich nicht glauben. Vorausgesetzt, der Hub ist ein SignalverstÃ¤rker, an 
+den die GerÃ¤te mit zwei Aderpaaren (RX und TX) angeschlossen sind."
 <P>
-Für die Antwort betrachten wir das Ganze aus angemessener Distanz:
-Ein Hub ist nach wie vor ein Verstärker, der alles, was an einem Port reinkommt 
+FÃ¼r die Antwort betrachten wir das Ganze aus angemessener Distanz:
+Ein Hub ist nach wie vor ein VerstÃ¤rker, der alles, was an einem Port reinkommt 
 auf allen(!) Ports wieder ausgibt - egal wie's kommt. Dann gibt der Hub die empfangenen 
 Impulse aber auch an dem Port aus, an dem sie gerade reinkommen. Wenn jetzt 
 eine Kommunikation zwischen zwei Knoten an beispielsweise den 
 Ports 1 und 2 stattfindet und Knoten 1 sendet, dann bekommt er sein 
-logischerweise auch eigenes Geschwätz zu hören. Wenn dann noch der 
+logischerweise auch eigenes GeschwÃ¤tz zu hÃ¶ren. Wenn dann noch der 
 Knoten 2 sendet, gibt's eine Kollision. Also muss Knoten 2 still sein, wenn Knoten 1
 sendet und umgekeht - das ist aber dann doch nur halbduplex.
 <p>
 Der Switch schaltet einen "Kanal" zwischen zwei Ports, die anderen
-bleiben aussen vor und daher kann er tatsächlich vollduplex fahren
+bleiben aussen vor und daher kann er tatsÃ¤chlich vollduplex fahren
 (bis die Last soweit steigt, das er in den Hub-Modus schaltet und 
 alles wieder egal ist).
 <p>
@@ -389,11 +389,11 @@ um einen Zielport aus einer Adresstabelle zu erhalten. Nach der Bestimmung
 des Zielports wird eine Querverbindung durch den Switch geschaltet, und
 der Frame wird zum Zielport geleitet
 Da diese Switching-Methode nur die Speicherung eines kleinen Teils des Frames
-erfordert, bis der Switch fähig ist, die Zieladresse zu erkennen und den
+erfordert, bis der Switch fÃ¤hig ist, die Zieladresse zu erkennen und den
 Switching-Vorgang einzuleiten, ist die Latenzzeit in diesem Fall nur minimal.
-Die Latenzzeit für einen 10-Mbps-Ethernet-Frame berechnet sich wie folgt:
-Der Switch muss zunächst 14 Bytes einlesen (8 Bytes für die Präambel und
-6 Bytes für die Zieladresse). Für die Latenzzeit T<sub>L</sub> eines Cut-Through
+Die Latenzzeit fÃ¼r einen 10-Mbps-Ethernet-Frame berechnet sich wie folgt:
+Der Switch muss zunÃ¤chst 14 Bytes einlesen (8 Bytes fÃ¼r die PrÃ¤ambel und
+6 Bytes fÃ¼r die Zieladresse). FÃ¼r die Latenzzeit T<sub>L</sub> eines Cut-Through
 Ethernet-Switches ergibt sich
 <P><UL><B>
 T<sub>L</sub> = T<sub>IG</sub> + 14*8*T<sub>BK</sub> [&micro;s]
@@ -405,14 +405,14 @@ T<sub>L</sub> =  9,6 + 14*8*0,1 = 9,6 + 11,2 = 20,8 &micro;s
 </B></UL><P>
 Ein Store-and-Forward-Switch speichert erst den gesamten Frame, bevor die
 Verarbeitung der Datenfelder des Frames beginnt. Wenn der gesamte  Frame im
-Zwischenspeicher angekommen ist, wird ein CRC-Check durchgeführt, optional auch
+Zwischenspeicher angekommen ist, wird ein CRC-Check durchgefÃ¼hrt, optional auch
 weitere Filteraktionen. Ist der Frame fehlerfrei, wird er von Zwischenspeicher
-zum Zielport geleitet, anderenfalls verworfen. Für die Latenzzeit T<sub>L</sub> eines
-Ethernet Store-and-Foreward Switches gilt also theoretisch mit der Framegröße FG:
+zum Zielport geleitet, anderenfalls verworfen. FÃ¼r die Latenzzeit T<sub>L</sub> eines
+Ethernet Store-and-Foreward Switches gilt also theoretisch mit der FramegrÃ¶ÃŸe FG:
 <P><UL><B>
 T<sub>L</sub> = T<sub>IG</sub> + FG*8*T<sub>BK</sub> [&micro;s]
 </B></UL><P>
-Da die minimale Größe eines 10-Mbps-Ethernet-Frames 72 Bytes beträgt, gilt für
+Da die minimale GrÃ¶ÃŸe eines 10-Mbps-Ethernet-Frames 72 Bytes betrÃ¤gt, gilt fÃ¼r
 die minimale Latenzzeit TL<sub>min</sub> eines Store-and-Foreward
 Ethernet-Switches:
 <P><UL><B>
@@ -424,8 +424,8 @@ Bitdauer von T<sub>BK</sub> = 0,1 &micro;s ergibt sich:
 T<sub>L</sub> =  9,6 + 72*8*0,1 = 67,2 &micro;s
 </B></UL><P>
 Aufgrund der Speicherung des gesamten Frames ist die Latenzzeit beim
-Store-and-Foreward Switching abhängig von der Framegröße, so daß
-für Frames maximaler Größe (1526 Bytes) gilt:
+Store-and-Foreward Switching abhÃ¤ngig von der FramegrÃ¶ÃŸe, so daÃŸ
+fÃ¼r Frames maximaler GrÃ¶ÃŸe (1526 Bytes) gilt:
 <P><UL><B>
 T<sub>L</sub> =  9,6 + 1526*8*0,1 = 1,23 ms
 </B></UL>
@@ -433,43 +433,43 @@ T<sub>L</sub> =  9,6 + 1526*8*0,1 = 1,23 ms
 
 <h4>Mehrere Verbindungen zwischen zwei Switches</h4>
 Normalerweise werden zwei Switches mit einem Patchkabel verbunden. Manchmal haben Switches 
-hierfür einen eigenen Hochgeschwindigkeits-Port oder einen Glasfaseranschluß, damit die
-Backbone-Verbindung keinen Flaschenhals bildet. Eine andere Möglichkeit stellt das
-Opfern einiger Anschlüsse dar, um die Switches durch mehrere Kabel miteinander
-zu koppeln. Damit das klappt müssen die beiden Geräte eine "Link Aggregation" nach IEEE 802.3ad 
+hierfÃ¼r einen eigenen Hochgeschwindigkeits-Port oder einen GlasfaseranschluÃŸ, damit die
+Backbone-Verbindung keinen Flaschenhals bildet. Eine andere MÃ¶glichkeit stellt das
+Opfern einiger AnschlÃ¼sse dar, um die Switches durch mehrere Kabel miteinander
+zu koppeln. Damit das klappt mÃ¼ssen die beiden GerÃ¤te eine "Link Aggregation" nach IEEE 802.3ad 
 beherrschen (auch "Port Trunking" oder "Channel Bundling" genannt). Damit aus zwei oder mehr
 Verbindungsleitungen eine einzige logische Verbindung wird, gibt es auf Layer 2 als
 Erweiterung den "Link Aggregation Control Layer" (LACL). Die Switches transportieren
 die Daten mittels des "Link Aggregation Control Protocols" (LACP). Die Kabel-Redundanz 
-bietet sogar noch einen weiteren Vorteil: fällt ein Kabel aus, reduziert sich zwar
+bietet sogar noch einen weiteren Vorteil: fÃ¤llt ein Kabel aus, reduziert sich zwar
 die Geschwindigkeit, die Strecke selbst bleibt aber erhalten. Die Gesamtgeschwindigkeit 
 ergibt sich als Summe der Geschwindigkeiten der einzelnen Ports, die alle gleich schnell
-sein und sich im Vollduplexmodus befinden müssen. "Link Aggregation" kann man auch
-einsetzen, wenn aus einem besonderen Anlaß temporär eine höhere Übertragungsbandbreite 
-benötigt wird. 
+sein und sich im Vollduplexmodus befinden mÃ¼ssen. "Link Aggregation" kann man auch
+einsetzen, wenn aus einem besonderen AnlaÃŸ temporÃ¤r eine hÃ¶here Ãœbertragungsbandbreite 
+benÃ¶tigt wird. 
 <P>
 
 <H2><A NAME="7.7">Router</A></H2>
-Große Netzwerke wie das Internet bestehen aus vielen kleineren
+GroÃŸe Netzwerke wie das Internet bestehen aus vielen kleineren
 Teilnetzwerken. Die Verbindung der verschiedenen Netze
 wird durch spezielle Rechner hergestellt. Das sind, neben Bridges, Switches
 und Gateways, im Internet vor allem Router. Diese haben die Aufgabe, Daten
-zwischen Rechnern in verschiedenen Netzen auf möglichst günstigen
+zwischen Rechnern in verschiedenen Netzen auf mÃ¶glichst gÃ¼nstigen
 Wegen weiterzuleiten. Zum Beispiel wenn Rechner 1 im Netz B Daten an Rechner
-2 im Netz C schicken möchte.
+2 im Netz C schicken mÃ¶chte.
 <P>
 <CENTER><img src="images/router0.png"></CENTER>
 <P>
 Router verbinden, im Gegensatz zu Bridges, in OSI-Schicht 3 auch
 Netze unterschiedlicher Topologien. Sie sind Dreh- und Angelpunkt in
-strukturiert aufgebauten LAN- und WAN-Netzen. Mit der Fähigkeit,
+strukturiert aufgebauten LAN- und WAN-Netzen. Mit der FÃ¤higkeit,
 unterschiedliche Netztypen sowie unterschiedliche Protokolle zu
 routen, ist eine optimale Verkehrslenkung und Netzauslastung
-möglich. Routing wird erst dann erforderlich, wenn Kommunikation
+mÃ¶glich. Routing wird erst dann erforderlich, wenn Kommunikation
 zwischen Stationen in unterschiedlichen Subnetzen erfolgen soll.
-Sie sind nicht protokolltransparent, sondern müssen in der Lage
+Sie sind nicht protokolltransparent, sondern mÃ¼ssen in der Lage
 sein, alle verwendeten Protokolle zu erkennen, da sie
-Informationsblöcke protokollspezifisch umsetzen.
+InformationsblÃ¶cke protokollspezifisch umsetzen.
 Klassische Beispiele in Heim- und KMU-Netzen sind die ISDN- oder DSL-Router,
 welche die Verbindung zum Provider herstellen.
 <P>
@@ -477,66 +477,66 @@ welche die Verbindung zum Provider herstellen.
 <P>
 
 Router operieren in der Ebene 3 des OSI-Referenzmodells. Sie verbinden
-Netzwerke über die entsprechenden Netzwerkprotokolle. Sie ermöglichen
-die Zerlegung großer Netzwerke in kleinere Verwaltungseinheiten.
+Netzwerke Ã¼ber die entsprechenden Netzwerkprotokolle. Sie ermÃ¶glichen
+die Zerlegung groÃŸer Netzwerke in kleinere Verwaltungseinheiten.
 Sie leiten Datenpakete der Netzwerkschicht weiter (forwarding) und treffen
-Entscheidungen über Wegewahl und Erreichbarkeit zu anderen Netzwerken
-(routing). Der Router muß dafür die Adressierungsstruktur
+Entscheidungen Ã¼ber Wegewahl und Erreichbarkeit zu anderen Netzwerken
+(routing). Der Router muÃŸ dafÃ¼r die Adressierungsstruktur
 in der Netzwerkschicht kennen.
 
 
 Bevor ein Router ein Paket mit einer bestimmten IP-Adresse weiterleiten
-kann, muß er für diese Adresse zunächst den Weg durch das
+kann, muÃŸ er fÃ¼r diese Adresse zunÃ¤chst den Weg durch das
 Netz zum Zielrechner bestimmen. Das geschieht mit Hilfe spezieller Protokolle
-wie ARP, RIP, OSPF, EGP/BGP. Er ist jedoch von der Schicht 2 unabhängig
+wie ARP, RIP, OSPF, EGP/BGP. Er ist jedoch von der Schicht 2 unabhÃ¤ngig
 und kann deswegen verschiedene Schicht-2-Welten (zum Beispiel Ethernet und
 Token Ring) miteinander verbinden. Ein Router unterscheidet sich u.a. von
-einer Bridge darin, dass die Bridge für die Netzwerkteilnehmer
-völlig transparent ist, während die Adresse eines Routers jedem Host im
-Netzwerk explizit bekannt sein muß, wenn er dessen Dienste nutzen will.
+einer Bridge darin, dass die Bridge fÃ¼r die Netzwerkteilnehmer
+vÃ¶llig transparent ist, wÃ¤hrend die Adresse eines Routers jedem Host im
+Netzwerk explizit bekannt sein muÃŸ, wenn er dessen Dienste nutzen will.
 Ein Router kann einen von mehreren potentiellen Wegen zur Weiterleitung
 der Daten aussuchen, wobei er seine Entscheidung mit Hilfe von Parametern,
-wie zum Beispiel Übertragungszeiten, Knotenlast oder auch nur einfach
-Knotenanzahl, trifft. Wie Router die Wegeentscheidung treffen, hängt
+wie zum Beispiel Ãœbertragungszeiten, Knotenlast oder auch nur einfach
+Knotenanzahl, trifft. Wie Router die Wegeentscheidung treffen, hÃ¤ngt
 wesentlich vom konkreten Protokoll der Schicht 3 ab.<BR>
 In der Routingtabelle ist aber nicht der gesamte Weg zu einem Rechner
 mit einer bestimmten IP-Adresse gespeichert. Vielmehr kennt der einzelne
-Router nur die nächste Zwischenstation (engl. next hop) auf dem Weg
+Router nur die nÃ¤chste Zwischenstation (engl. next hop) auf dem Weg
 zum Ziel. Das kann ein weiterer Router oder der Zielrechner sein.
 <P>
 <H4>Grundlegende Komponenten von Routern</H4>
 Der Router besteht, wie ein Computer auch, aus CPU und Speicher. Dazu kommen
 mehrere Netzwerkadapter, die eine Verbindung zu jenen Netzen herstellen, die
-mit dem Router verbunden sind. Die Adapter sind meist über einen Systembus mit
-der CPU des Routers verbunden. Die CPU wiederum hält im Hauptspeicher
+mit dem Router verbunden sind. Die Adapter sind meist Ã¼ber einen Systembus mit
+der CPU des Routers verbunden. Die CPU wiederum hÃ¤lt im Hauptspeicher
 des Rechners die Routingtabelle vor.
 <P>
 <CENTER><img src="images/router2.png"></CENTER>
 <P>
 <I>LAN Interfaces</I>:<BR>
 Die meisten Router haben ein oder mehrere LAN-Interfaces, je nach
-Topologie für Token-Ring, Ethernet, 100BASE-T Fast Ethernet, FDDI oder
-auch ATM. Für den Anschluß entsprechender Medien sind entweder
+Topologie fÃ¼r Token-Ring, Ethernet, 100BASE-T Fast Ethernet, FDDI oder
+auch ATM. FÃ¼r den AnschluÃŸ entsprechender Medien sind entweder
 alternativ nutzbare Ports (z.B. Ethernet AUI, BNC, RJ45) vorhanden
-oder der Anschluß ist als Einschub realisiert und kann daher den
-Erfordernissen angepaßt werden.
+oder der AnschluÃŸ ist als Einschub realisiert und kann daher den
+Erfordernissen angepaÃŸt werden.
 <P>
 <I>WAN Interfaces</I>:<BR>
 WAN-Leitungen werden von unterschiedlichen Anbietern mit
 unterschiedlichen Geschwindigkeiten angeboten. Entsprechend variieren
 die Kosten und die Schnittstellen.
-Für kleinere Anbindungen (z.B. Workgroups) werden Verbindungen mit
-einer Übertragungsgeschwindigkeit von 64 Kbit/s empfohlen. Es gibt
-natürlich Applikationen, wo eine geringere Übertragungsrate
-ausreicht. Werden höhere Übertragungsraten benötigt, so bietet sich
-die in Europa übliche E1-Verbindung (im Prinzip ein ISDN
-Primärmultiplexanschluß) mit einer Übertragungsrate von 2048 kbit/s an.
+FÃ¼r kleinere Anbindungen (z.B. Workgroups) werden Verbindungen mit
+einer Ãœbertragungsgeschwindigkeit von 64 Kbit/s empfohlen. Es gibt
+natÃ¼rlich Applikationen, wo eine geringere Ãœbertragungsrate
+ausreicht. Werden hÃ¶here Ãœbertragungsraten benÃ¶tigt, so bietet sich
+die in Europa Ã¼bliche E1-Verbindung (im Prinzip ein ISDN
+PrimÃ¤rmultiplexanschluÃŸ) mit einer Ãœbertragungsrate von 2048 kbit/s an.
 Router haben einen oder mehrere WAN-Ports, die entweder fest eingebaut
 sind oder bei modularen Modellen mit entsprechenden Schnittstellenmodulen
-aufgerüstet werden können.
-Übliche physikalische Schnittstellen für Synchronbetrieb sind RS449,
-V.35 und X.21, für asynchronen Betrieb das RS232-Interface.
-Für den Anschluß an ISDN wird die S0-Schnittstelle verwendet.
+aufgerÃ¼stet werden kÃ¶nnen.
+Ãœbliche physikalische Schnittstellen fÃ¼r Synchronbetrieb sind RS449,
+V.35 und X.21, fÃ¼r asynchronen Betrieb das RS232-Interface.
+FÃ¼r den AnschluÃŸ an ISDN wird die S0-Schnittstelle verwendet.
 <P>
 <center><img src="images/routerb.png" border=0></center>
 <p>
@@ -545,35 +545,35 @@ Für den Anschluß an ISDN wird die S0-Schnittstelle verwendet.
 Da, wie gesagt, Routing auf Schicht 3 stattfindet, wird in diesem Abschnitt
 auf das Internet-Protocol vorgegriffen (siehe Kapitel 10:
 <a href="netz8.html">10 TCP/IP</a>).<BR>
-Wenn einer der Netzwerkadapter ein Datenpaket erhält, so verarbeitet
-er zunächst die Schicht-2-Protokolldaten, extrahiert dann das IP-Paket
+Wenn einer der Netzwerkadapter ein Datenpaket erhÃ¤lt, so verarbeitet
+er zunÃ¤chst die Schicht-2-Protokolldaten, extrahiert dann das IP-Paket
 und reicht es zur weiteren Verarbeitung an die CPU weiter. Diese entnimmt
 dem Paketkopf die IP-Adresse des Zielrechners. Wenn nicht der Router selber
-adressiert ist, muß das Paket weitergeleitet werden. Dazu sucht die
+adressiert ist, muÃŸ das Paket weitergeleitet werden. Dazu sucht die
 CPU in der Routingtabelle nach der passenden Next-Hop-Information. Die
 Next-Hop-Information beinhaltet zum einen die Nummer des Netzwerkadapters
-über den das Paket ausgegeben werden soll und zweitens die IP-Adresse
-des Next-Hop. Diese Adresse übergibt die CPU des Routers nun zusammen
+Ã¼ber den das Paket ausgegeben werden soll und zweitens die IP-Adresse
+des Next-Hop. Diese Adresse Ã¼bergibt die CPU des Routers nun zusammen
 mit dem IP-Paket an den entsprechenden Netzwerkadapter. Dieser generiert daraus
 ein Schicht-2-Paket und sendet es ab.
 <P>
-Werden auch Informationen im Kopf des Datagramms vor dem Weiterleiten geändert?
-Zunächst einmal wird bei Eintreffen eines IP-Datagrammes überprüft,
-ob die Prüfsumme mit den Daten des Paketes zusammenpasst. Wenn dies nicht
-der Fall ist, muß der Router eine Fehlermeldung an den Absender schicken.
-Anschließend wird der Zähler "time-to-live" im Kopf des Paketes
+Werden auch Informationen im Kopf des Datagramms vor dem Weiterleiten geÃ¤ndert?
+ZunÃ¤chst einmal wird bei Eintreffen eines IP-Datagrammes Ã¼berprÃ¼ft,
+ob die PrÃ¼fsumme mit den Daten des Paketes zusammenpasst. Wenn dies nicht
+der Fall ist, muÃŸ der Router eine Fehlermeldung an den Absender schicken.
+AnschlieÃŸend wird der ZÃ¤hler "time-to-live" im Kopf des Paketes
 dekrementiert. Erreicht er den Wert 0, wird das Paket verworfen. Auf diese
-Weise können Endlosschleifen vermieden werden. Da sich der Inhalt des
-Paketes deswegen verändert hat, muß eine neue Prüfsumme
+Weise kÃ¶nnen Endlosschleifen vermieden werden. Da sich der Inhalt des
+Paketes deswegen verÃ¤ndert hat, muÃŸ eine neue PrÃ¼fsumme
 berechnet werden. Das neue Datagramm wird nun weitergeleitet. Ist eine lokale
-Auslieferung möglich, ist die physikalische Zieladresse die MAC-Adresse
+Auslieferung mÃ¶glich, ist die physikalische Zieladresse die MAC-Adresse
 des IP-Zieles. Im Falle einer indirekten Auslieferung ist die physikalische
 Zieladresse die MAC-Adresse des Routers.
-Also ist die Information über den Router nicht im Kopf eines IP-Paketes
+Also ist die Information Ã¼ber den Router nicht im Kopf eines IP-Paketes
 vermerkt. Der Weg eines Datagrammes kann also nicht verfolgt werden.
 <P>
 Bevor ein Router ein Paket mit einer bestimmten IP-Adresse weiterleiten
-kann, muß er ggf. für diese Adresse zunächst den Weg durch das
+kann, muÃŸ er ggf. fÃ¼r diese Adresse zunÃ¤chst den Weg durch das
 Netz zum Zielrechner bestimmen. Das geschieht mit Hilfe spezieller Protokolle
 wie ARP, RIP, OSPF, EGP/BGP.
 <P>
@@ -582,11 +582,11 @@ wie ARP, RIP, OSPF, EGP/BGP.
 <TD VALIGN=TOP><img src="images/netbsp-1.png"></TD>
 <TD VALIGN=TOP>Betrachten wir dazu ein stark vereinfachendes Beispiel. Dabei werden lokale
 Netze im folgenden nur noch als gelbe Ovale dargestellt. Innerhalb eines lokalen Netzes
-hat jeder Rechner eine eigene IP-Adresse. Zwei Netze werden miteinander über
+hat jeder Rechner eine eigene IP-Adresse. Zwei Netze werden miteinander Ã¼ber
 Router (rotes Rechteck) gekoppelt.</TD>
 </TR><TR>
 <TD VALIGN=TOP>Bei der Verbindung von mehr als zwei Netzen existieren Knotenpunkte, an
-denen eine Richtungsentscheidung getroffen werden muß. Router mit mehreren
+denen eine Richtungsentscheidung getroffen werden muÃŸ. Router mit mehreren
 Interfaces legen den Weg eines Paketes durch das Netz fest. Es ginge im
 Prinzip auch nur mit einem Interface - aber auf Kosten der Performance.</TD>
 <TD VALIGN=TOP><img src="images/netbsp-2.png"></TD>
@@ -602,88 +602,88 @@ Netzen liegen.</TD>
 </TR><TR>
 <TD VALIGN=TOP><img src="images/netbsp-5.png"></TD>
 <TD VALIGN=TOP>Durch Querverbindungen entsteht ein vermaschtes System. Auch wenn eine der
-Verbindungen ausfällt, kann die Kommunikation weiterlaufen. </TD>
+Verbindungen ausfÃ¤llt, kann die Kommunikation weiterlaufen. </TD>
 </TR>
 </TABLE>
 <P>
-Durch die für das Routen notwendige Untersuchung des Datenpakets,
-erhöht sich die Verweilzeit der Daten im Router selbst (Latenzzeit).
-Die eigentliche Stärke von Routern liegt in ihrer Fähigkeit
-mittels bestimmter Algorithmen den bestmöglichen Weg für ein
-Datenpaket zum Empfänger aus seiner Routing-Tabelle zu wählen.<BR>
-Um die Daten "routen" zu können, ist es notwendig, daß der Router alle
-angeschlossenen Netzwerkprotokolle versteht und diese auch die Fähigkeit des
-Routens unterstützen. Der Vorteil des Routers gegenüber der Bridge ist
+Durch die fÃ¼r das Routen notwendige Untersuchung des Datenpakets,
+erhÃ¶ht sich die Verweilzeit der Daten im Router selbst (Latenzzeit).
+Die eigentliche StÃ¤rke von Routern liegt in ihrer FÃ¤higkeit
+mittels bestimmter Algorithmen den bestmÃ¶glichen Weg fÃ¼r ein
+Datenpaket zum EmpfÃ¤nger aus seiner Routing-Tabelle zu wÃ¤hlen.<BR>
+Um die Daten "routen" zu kÃ¶nnen, ist es notwendig, daÃŸ der Router alle
+angeschlossenen Netzwerkprotokolle versteht und diese auch die FÃ¤higkeit des
+Routens unterstÃ¼tzen. Der Vorteil des Routers gegenÃ¼ber der Bridge ist
 die logische Trennung und die Bildung von (Sub-)Netzen bei TCP/IP bzw. von Areas
 bei DECNET. <br>
 Weitere Features von Routern sind ihre Netzwerk-Management- und die Filter-Funktionen.
-Durch geeignet gewählte Routing-Einstellungen ist es möglich, die
+Durch geeignet gewÃ¤hlte Routing-Einstellungen ist es mÃ¶glich, die
 Netwerk-Performance je nach Anforderungen ans Netz zu verbessern. Die Filterfunktionen
-auf Netzwerk-Protokollebene sind ähnlich wie bei der Bridge. Router bieten aber
-eine generell höhere Isolation da sie z. B. Broadcasts in der Regel nicht weiterleiten.
-Außerdem können sie zusätzlich als "screening Router"  verwendet werden,
+auf Netzwerk-Protokollebene sind Ã¤hnlich wie bei der Bridge. Router bieten aber
+eine generell hÃ¶here Isolation da sie z. B. Broadcasts in der Regel nicht weiterleiten.
+AuÃŸerdem kÃ¶nnen sie zusÃ¤tzlich als "screening Router"  verwendet werden,
 indem z. B. bestimmten IP-Adressen der Zugriff auf bestimmte Netzteile verwehrt wird.
-Aus den erwähnten Gründen sind Router in der Regel per Software konfigurierbar.
+Aus den erwÃ¤hnten GrÃ¼nden sind Router in der Regel per Software konfigurierbar.
 <P>
 Bei Hochgeschwindigkeitsnetzen im Gigabitbereich ist die oben beschriebene
 Struktur eines Routers nicht mehr ausreichend. Die CPU und der Systembus
-müßten dabei die Summe der Übertragungsraten aller angeschlossenen
-Netzwerke verarbeiten können. Bei 2 GBit/s Datenübertragungsgeschwindigkeit
-entspricht das bei einer angenommenen Paketgröße von 1000 Bits bis
-zu zwei Millionen IP-Paketen pro Sekunde und Netzwerkanschluß. Bei solchen
-Hochleistungsroutern geht man dazu über, die Aufgabe des Weiterleitens von
-IP-Paketen den einzelnen Netzwerkadaptern zu übertragen. Die Netzwerkadapter
+mÃ¼ÃŸten dabei die Summe der Ãœbertragungsraten aller angeschlossenen
+Netzwerke verarbeiten kÃ¶nnen. Bei 2 GBit/s DatenÃ¼bertragungsgeschwindigkeit
+entspricht das bei einer angenommenen PaketgrÃ¶ÃŸe von 1000 Bits bis
+zu zwei Millionen IP-Paketen pro Sekunde und NetzwerkanschluÃŸ. Bei solchen
+Hochleistungsroutern geht man dazu Ã¼ber, die Aufgabe des Weiterleitens von
+IP-Paketen den einzelnen Netzwerkadaptern zu Ã¼bertragen. Die Netzwerkadapter
 erhalten zu diesem Zweck eine eigene CPU und Speicher, in dem sich eine Kopie der
 zentralen Routingtabelle des Routers befindet. Trifft bei diesem Routermodell
 ein IP-Paket bei einem der Adapter ein, bestimmt dieser den Next-Hop und
 gibt das Paket direkt an den entsprechenden Ausgangsadapter weiter. Die
-CPU des Routers ist nur noch für die Ausführung der Routingprotokolle
+CPU des Routers ist nur noch fÃ¼r die AusfÃ¼hrung der Routingprotokolle
 und die Verwaltung der zentralen Routingtabelle sowie anderer administrativer
-Aufgaben zuständig. Die zentrale Routingtabelle wird im Fall einer
-Änderung anschließend in die Speicher der einzelnen Netzwerkadapter
+Aufgaben zustÃ¤ndig. Die zentrale Routingtabelle wird im Fall einer
+Ã„nderung anschlieÃŸend in die Speicher der einzelnen Netzwerkadapter
 kopiert.
 <P>
 
 <H3>Die Routingtabelle</H3>
-Eine einfache Tabelle über alle 2<SUP>32</SUP> (bei IPv4) bzw.
-2<SUP>128</SUP> (bei IPv6) möglichen IP-Adressen wäre
-kaum machbar. Schließlich kann ein Router über die
+Eine einfache Tabelle Ã¼ber alle 2<SUP>32</SUP> (bei IPv4) bzw.
+2<SUP>128</SUP> (bei IPv6) mÃ¶glichen IP-Adressen wÃ¤re
+kaum machbar. SchlieÃŸlich kann ein Router Ã¼ber die
 direkt mit ihm verbundenen Netze nur maximal einige tausend Rechner erreichen.
 In der Regel sind es sogar weniger als hundert.
 In der Routingtabelle ist auch nicht der gesamte Weg zu einem
 Rechner mit einer bestimmten IP-Adresse gespeichert. Vielmehr kennt der einzelne
-Router nur die nächste Zwischenstation (engl. next hop) auf dem Weg
+Router nur die nÃ¤chste Zwischenstation (engl. next hop) auf dem Weg
 zum Ziel. Das kann ein weiterer Router oder der Zielrechner sein.
 <P>
 Die IP-Adressen sind nicht einzeln wahllos auf Rechner in der ganzen
-Welt verstreut worden. Bei IPv4 ist der Adreßraum in fünf verschiedene
+Welt verstreut worden. Bei IPv4 ist der AdreÃŸraum in fÃ¼nf verschiedene
 Klassen A-E unterteilt worden, wobei hier nur die Klassen A - C interessieren.
 Jede IPv4-Adresse besteht aus einer Klassenkennung,
-einer Netzadresse, einer möglichen Subnetzadresse und einer Rechneradresse.
+einer Netzadresse, einer mÃ¶glichen Subnetzadresse und einer Rechneradresse.
 Jede Organisation im Internet bekommt eine Netzadresse
 aus einer bestimmten Klasse zugewiesen. Mit den Netzadressen der verschiedenen
 Klassen sind unterschiedliche Kontingente von Rechneradressen verbunden,
-je nachdem wie viele Adressen von einer Organisation benötigt werden.
-So sind die Netzadressen der Klasse B 16 Bit lang, und für die Adreßverteilung
-innerhalb einer Organisation stehen 16 Bit zur Verfügung. Für
-die mögliche Aufteilung in Subnetze und die Verteilung der Adressen
-an einzelne Rechner innerhalb der Organisationen sind diese selber zuständig.
+je nachdem wie viele Adressen von einer Organisation benÃ¶tigt werden.
+So sind die Netzadressen der Klasse B 16 Bit lang, und fÃ¼r die AdreÃŸverteilung
+innerhalb einer Organisation stehen 16 Bit zur VerfÃ¼gung. FÃ¼r
+die mÃ¶gliche Aufteilung in Subnetze und die Verteilung der Adressen
+an einzelne Rechner innerhalb der Organisationen sind diese selber zustÃ¤ndig.
 <ul>
 <li>Class A-Netz: 1 Byte Netzadresse, 3 Byte Rechneradresse.
 <li>Class B-Netz: 2 Byte Netzadresse, 2 Byte Rechneradresse,
 <li>Class C-Netz: 3 Byte Netzadresse, 1 Byte Rechneradresse,
-<li>Class D-Netz: für Multicast-Anwendungen
-<li>Class E-Netz: für Experimente
+<li>Class D-Netz: fÃ¼r Multicast-Anwendungen
+<li>Class E-Netz: fÃ¼r Experimente
 </ul>
 <P>
 <CENTER><img src="images/router3.png"></CENTER>
 <P>
 
-<H3>Beispiel für drei IP-Netze mit Routern</H3>
-Das folgende Netz besteht aus drei IP-Netzen, die über Router verbunden
+<H3>Beispiel fÃ¼r drei IP-Netze mit Routern</H3>
+Das folgende Netz besteht aus drei IP-Netzen, die Ã¼ber Router verbunden
 sind. Jeder Router hat zwei Netzwerk-Interfaces, die jeweils in zwei der
-Netze hängen. Es ist nicht unbedingt erforderlich, für jedes Netz
-ein eigenes Interface zu verwenden; über sogenannte 'virtuelle Interfaces'
+Netze hÃ¤ngen. Es ist nicht unbedingt erforderlich, fÃ¼r jedes Netz
+ein eigenes Interface zu verwenden; Ã¼ber sogenannte 'virtuelle Interfaces'
 kann man mehrere Netze auf ein Hardwareinterface legen.
 <P>
 <center><img src="images/router4.png" ALT=""></center>
@@ -694,7 +694,7 @@ Die Routing-Tabellen dazu sehen so aus:
 <tr><td>
 <table border=1 cellpadding=5 cellspacing=1 bgcolor="#CCCCCC">
 <tr><th colspan=2>Router 1</th></tr>
-<tr><td>Empfänger im Netzwerk</td><td>Zustellung über</td></tr>
+<tr><td>EmpfÃ¤nger im Netzwerk</td><td>Zustellung Ã¼ber</td></tr>
 <tr><td>192.168.0.0</td><td>direkt</td></tr>
 <tr><td>192.168.1.0</td><td>direkt</td></tr>
 <tr><td>192.168.2.0</td><td>192.168.1.2</td></tr>
@@ -702,7 +702,7 @@ Die Routing-Tabellen dazu sehen so aus:
 </td><td>
 <table border=1 cellpadding=5 cellspacing=1 bgcolor="#CCCCCC">
 <tr><th colspan=2>Router 2</th></tr>
-<tr><td>Empfänger im Netzwerk</td><td>Zustellung über</td></tr>
+<tr><td>EmpfÃ¤nger im Netzwerk</td><td>Zustellung Ã¼ber</td></tr>
 <tr><td>192.168.0.0</td><td>192.168.1.1</td></tr>
 <tr><td>192.168.1.0</td><td>direkt</td></tr>
 <tr><td>192.168.2.0</td><td>direkt</td></tr>
@@ -712,18 +712,18 @@ Die Routing-Tabellen dazu sehen so aus:
 
 <H3>Routingverfahren</H3>
 Das Routing (<I>Wegewahl</I>, <I>Pfadsteuerung</I>) hat die Aufgabe,
-Pfade für die Übertragung durch ein Netz festzulegen. Jeder
-Vermittlungsknoten fällt dabei eine Entscheidung auf welcher
-Übertragungsleitung ein eingelaufenes Paket weitergeleitet werden
-soll. Im Prinzip läuft die Entscheidung innerhalb des Routers
-folgendermaßen ab:
+Pfade fÃ¼r die Ãœbertragung durch ein Netz festzulegen. Jeder
+Vermittlungsknoten fÃ¤llt dabei eine Entscheidung auf welcher
+Ãœbertragungsleitung ein eingelaufenes Paket weitergeleitet werden
+soll. Im Prinzip lÃ¤uft die Entscheidung innerhalb des Routers
+folgendermaÃŸen ab:
 <P>
 <center><img src="images/router5.png"></center>
 <P>
 
 Beim Routing werden diverse Ziele verfolgt:
 <UL>
-<LI>Geringe Paketverzögerung
+<LI>Geringe PaketverzÃ¶gerung
 <LI>Hoher Durchsatz
 <LI>Geringe Kosten
 <LI>Fehlertoleranz
@@ -735,16 +735,16 @@ und Dynamik unterscheiden:
 Wo werden Wegewahlen getroffen?
   <UL>
   <LI>Zentral, in einem Netzkontrollzentrum.
-  <LI>Dezentral, verteilt über die Vermittlungsknoten.
+  <LI>Dezentral, verteilt Ã¼ber die Vermittlungsknoten.
   </UL>
 <LI>Dynamik:<BR>
-Welche Größen beeinflussen die Wegewahlen?
+Welche GrÃ¶ÃŸen beeinflussen die Wegewahlen?
   <UL>
   <LI>Nicht-adaptive Verfahren. Wegewahl sind fest vorgegeben
   oder lange Zeit konstant. Der Zustand eines Netzes hat keinen
-  Einfluß auf die Wegewahl.
-  <LI>Adaptive Verfahren. Wegewahlen hängen vom Zustand des
-  Netzes ab (Topologie, Lastveränderungen usw.).
+  EinfluÃŸ auf die Wegewahl.
+  <LI>Adaptive Verfahren. Wegewahlen hÃ¤ngen vom Zustand des
+  Netzes ab (Topologie, LastverÃ¤nderungen usw.).
   </UL>
 </UL>
 <P>
@@ -752,13 +752,13 @@ Welche Größen beeinflussen die Wegewahlen?
 Routing-Algorithmen benutzen zwei grundlegende Verfahrensweisen:
 <ul>
 <li>Teile der Welt mit, wer deine Nachbarn sind: Link-State-Routing-Protokolle
-(z. B. OSPF) sorgen dafür, daß nach einiger Zeit jeder Router die
-vollständige Topologie des Netzwerkes kennt und sich die kürzesten
+(z. B. OSPF) sorgen dafÃ¼r, daÃŸ nach einiger Zeit jeder Router die
+vollstÃ¤ndige Topologie des Netzwerkes kennt und sich die kÃ¼rzesten
 Wege darin selbst ausrechnen kann.
-<li>Teile deinen Nachbarn mit, wie für sie die Welt aussieht: Bei Distanzvektor-Protokollen
+<li>Teile deinen Nachbarn mit, wie fÃ¼r sie die Welt aussieht: Bei Distanzvektor-Protokollen
 (z. B. RIP) teilen sich die Router untereinander nur mit, wie "gut" sie an
-verschiedene Zielknoten angebunden sind. Durch Auswahl des für ein
-bestimmtes Ziel optimalen Nachbarn wird die Suche nach dem kürzesten Weg
+verschiedene Zielknoten angebunden sind. Durch Auswahl des fÃ¼r ein
+bestimmtes Ziel optimalen Nachbarn wird die Suche nach dem kÃ¼rzesten Weg
 auf mehrere Router verteilt.
 <li>Eine etwas verallgemeinerte Form der Distanzvektorprotokolle mit einer
 verbesserten Form der Schleifenerkennung sind die Pfadvektor-Protokolle (z. B.
@@ -770,18 +770,18 @@ Weiterhin werden Routing-Algorithmen nach Ihrer Zentralisierung und Dynamik beur
 <li>Zentralisierung: Wo ist der Algorithmus lokalisiert? Zentral in einem
 Netzkontrollzentrum oder dezentral verteilt auf die Vermittlungsknoten?
 <li>Dynamik: Bei nicht adaptiven Verfahren bleibt die Routingtabelle im
-Vermittlungsknoten, verglichen mit der Verkehrsänderung, über längere
-Zeit konstant. Ist das Verfahren adaptiv, hängen die Routingentscheidungen vom
-Zustand des Netzes ab (Topologie, Lastverhältnisse).
+Vermittlungsknoten, verglichen mit der VerkehrsÃ¤nderung, Ã¼ber lÃ¤ngere
+Zeit konstant. Ist das Verfahren adaptiv, hÃ¤ngen die Routingentscheidungen vom
+Zustand des Netzes ab (Topologie, LastverhÃ¤ltnisse).
 </ul>
 
 Aus diesen Punkten ergibt sich ein Zielkonflikt, da zentrale, nicht adaptive
-Verfahren das Netz weniger mit Routingnachrichten belasten, aber möglicherweise
-veraltete und unvollständige Informationen über den Zustand des Netzes benutzen.
+Verfahren das Netz weniger mit Routingnachrichten belasten, aber mÃ¶glicherweise
+veraltete und unvollstÃ¤ndige Informationen Ã¼ber den Zustand des Netzes benutzen.
 Je adaptiver und verteilter die Routingverfahren sind, desto besser sind die
-Informationen über das Netz verteilt. Durch den Austausch von häufigen Nachrichten
-mit Routinginformationen wird das Netz jedoch stärker belastet. Die Routingverfahren
-suchen hier einen möglichst idealen Mittelweg.
+Informationen Ã¼ber das Netz verteilt. Durch den Austausch von hÃ¤ufigen Nachrichten
+mit Routinginformationen wird das Netz jedoch stÃ¤rker belastet. Die Routingverfahren
+suchen hier einen mÃ¶glichst idealen Mittelweg.
 <P>
 
 Routingverfahren lassen sich auf dieser Basis in folgende Teile aufteilen:
@@ -789,7 +789,7 @@ Routingverfahren lassen sich auf dieser Basis in folgende Teile aufteilen:
 <LI>Paketweiterleitung:
   <UL>
   <LI>Verbindungslose Vermittlung (Datagramme)<BR>
-  Für jedes Datagramm wird die Wegewahl neu getroffen.
+  FÃ¼r jedes Datagramm wird die Wegewahl neu getroffen.
   <LI>Verbindungsorientierte Vermittlung (Session-Routing)<BR>
   Die Wegewahl wird bei der Verbindungserstellung getroffen.
   Alle Pakete einer (virtuellen) Verbindung verwenden denselben Weg.
@@ -797,7 +797,7 @@ Routingverfahren lassen sich auf dieser Basis in folgende Teile aufteilen:
 <LI>Wegewahl (Routing):<BR>
   <UL>
   <LI>Routing-Protokoll (Protokoll zum Austausch von Informationen,
-  die für die Wegewahl benötigt werden).
+  die fÃ¼r die Wegewahl benÃ¶tigt werden).
   <LI>Routing-Algorithmen (Verfahren zur Bestimmung von Wegen).
   <LI>Routing-Tabellen (Datenstrukturen, die die Wegeinformationen
   speichern).
@@ -807,17 +807,17 @@ Routingverfahren lassen sich auf dieser Basis in folgende Teile aufteilen:
 
 <H4>Statisches Routing</H4>
 Statisches Routing (<I>Static Routing</I>, <I>Directory Routing</I>)
-ist nicht adaptiv und einfach aber sehr häufig benutzt. Die
+ist nicht adaptiv und einfach aber sehr hÃ¤ufig benutzt. Die
 Eigenschaften sind:
 <UL>
-<LI>Jeder Knoten unterhält eine Routing-Tabelle, in der jeder
-mögliche Zielknoten durch eine Zeile gekennzeichnet ist.
-<LI>Jede Zeile enthält ein oder mehrere Einträge für die zu
-verwendende Übertragungsleitung in Richtung des Zieles. Jeder Eintrag
-enthält auch eine relative Gewichtung.
+<LI>Jeder Knoten unterhÃ¤lt eine Routing-Tabelle, in der jeder
+mÃ¶gliche Zielknoten durch eine Zeile gekennzeichnet ist.
+<LI>Jede Zeile enthÃ¤lt ein oder mehrere EintrÃ¤ge fÃ¼r die zu
+verwendende Ãœbertragungsleitung in Richtung des Zieles. Jeder Eintrag
+enthÃ¤lt auch eine relative Gewichtung.
 <LI>Zum Weiterleiten eines Paketes wird sein Ziel bestimmt, die
 entsprechende Zeile aus der Tabelle gesucht und aus ihr die "beste"
-Übertragungsleitung ausgewählt. Auf dieser wird das Paket
+Ãœbertragungsleitung ausgewÃ¤hlt. Auf dieser wird das Paket
 weitergesendet.
 </UL>
 <P>
@@ -830,43 +830,43 @@ Control Center RCC</I>). Es handelt sich um ein adaptives Verfahren:
 (wie den Leitungszustand, Auslastung, Verkehr usw.).
 <LI>Das RCC sammelt diese Informationen und berechnet optimale
 Wege durch das gesamte Netz.
-<LI>Das RCC übermittelt Routingtabellen zu jedem Knoten.
+<LI>Das RCC Ã¼bermittelt Routingtabellen zu jedem Knoten.
 </UL>
-In großen Netzen dauert die Berechnung sehr lange. Durch Ausfall des
+In groÃŸen Netzen dauert die Berechnung sehr lange. Durch Ausfall des
 RCC kann das gesamte Netz inoperabel werden.
 <P>
 
 <H4>Isoliertes Routing</H4>
 Beim isolierten Routing wird die Wegewahl von jedem Knoten nur aufgrund
 von Informationen, die er selber sammelt, getroffen. Eine Anpassung
-an den globalen Zustand eines Netzes ist nur mit Hilfe beschränkter
-Informationen möglich.
+an den globalen Zustand eines Netzes ist nur mit Hilfe beschrÃ¤nkter
+Informationen mÃ¶glich.
 <P>
 
 <H4>Verteiltes adaptives Routing</H4>
 Diese Verfahren sind gekennzeichnet durch:
 <UL>
-<LI>Jeder Knoten tauscht periodisch Informationen für die
+<LI>Jeder Knoten tauscht periodisch Informationen fÃ¼r die
 Routing-Entscheidungen mit seinen Nachbarn aus.
 <LI>Routingtabellen werden anhand der Informationen von den Nachbarn bestimmt.
 <LI>Routing-Informationen werden entweder in bestimmten Intervallen
 synchron ausgetauscht.
-<LI>Routing-Informationen werden asynchron bei lokalen Änderungen
+<LI>Routing-Informationen werden asynchron bei lokalen Ã„nderungen
 an die Nachbarn weitergegeben.
 </UL>
 <P>
 
 <H4>Hierarchisches Routing</H4>
-Bei großen Netzen ist die Speicherung und Übermittlung von Routing-Tabellen
-kaum noch möglich (Speicherplatz, Netzbelastung). Desweiteren verlangsamt
+Bei groÃŸen Netzen ist die Speicherung und Ãœbermittlung von Routing-Tabellen
+kaum noch mÃ¶glich (Speicherplatz, Netzbelastung). Desweiteren verlangsamt
 das Durchsuchen langer Tabellen die Weiterleitung der Pakete erheblich.
-Daher verfährt man wie folgt:
+Daher verfÃ¤hrt man wie folgt:
 <UL>
 <LI>Aufteilung des Netzes in Regionen.
 <LI>Die Knoten in den Regionen haben nur Routing-Informationen
-über die eigene Region.
+Ã¼ber die eigene Region.
 <LI>Mindestens ein Knoten dient als Schnittstelle zu anderen Regionen.
-<LI>Eine Hierarchisierung in Regionen, Zonen usw. ist möglich.
+<LI>Eine Hierarchisierung in Regionen, Zonen usw. ist mÃ¶glich.
 </UL>
 <P>
 
@@ -877,18 +877,18 @@ Arten von Routing:
 <li>Intradomain-Routing findet innerhalb eines autonomen Systems statt
 (Intranet).
 Es verwendet sogenannte Interior Gateway-Protokolle (IGP). Es geht in den
-meisten Fällen um eine technisch effizienten Nutzung des Netzwerkes.
-Typisch ist eine Wegewahl entlang kürzester Pfade. Der Administrator
+meisten FÃ¤llen um eine technisch effizienten Nutzung des Netzwerkes.
+Typisch ist eine Wegewahl entlang kÃ¼rzester Pfade. Der Administrator
 versucht, durch geschicktes Konfigurieren des Routings das durch das Netzwerk
-übertragene Datenvolumen zu maximieren (Traffic Engineering).
+Ã¼bertragene Datenvolumen zu maximieren (Traffic Engineering).
 
 <li>Interdomain-Routing bezeichnet das Routing zwischen autonomen Systemen.
 Es verwendet sogenannte Exterior Gateway-Protokolle (EGP), meist das
 Border Gateway Protocol (BGP). Da Interdomain-Routing das Routing zwischen
 verschiedenen Providern regelt, liegt der Fokus beim Interdomain-Routing
 normalerweise auf einer finanziell effizienten Nutzung des Netzes.
-Dem zugrunde liegt die Idee, daß ein autonomes System nicht allen
-seinen Nachbarn die gleichen Informationen (Routen) zukommen lässt.
+Dem zugrunde liegt die Idee, daÃŸ ein autonomes System nicht allen
+seinen Nachbarn die gleichen Informationen (Routen) zukommen lÃ¤sst.
 Welche Informationen ausgetauscht werden, wird vertraglich geregelt
 und dementsprechend die Router konfiguriert. Man spricht in diesem
 Zusammenhang auch von "policy-basiertem Routing".
@@ -898,12 +898,12 @@ Zusammenhang auch von "policy-basiertem Routing".
 hat nichts mit den "DNS-Domains" zu tun.)
 
 <h4>Zusammenwirken von Protokollen</h4>
-Abhängig davon, ob ein Router Teil eines autonomen Systems ist oder
+AbhÃ¤ngig davon, ob ein Router Teil eines autonomen Systems ist oder
 dessen Grenze bildet, verwendet er oftmals gleichzeitig Routing-Protokolle
 aus verschiedenen Klassen:
 <ul>
 <li>Interior Gateway Protocols (IGPs)<br>
-tauschen Routing-Informationen in einem einzelnen autonomen System aus. Häufig verwendet werden:
+tauschen Routing-Informationen in einem einzelnen autonomen System aus. HÃ¤ufig verwendet werden:
   <ul>
   <li>IGRP/EIGRP (Interior Gateway Routing Protocol/ Enhanced IGRP)
   <li>OSPF (Open Shortest Path First)
@@ -912,10 +912,10 @@ tauschen Routing-Informationen in einem einzelnen autonomen System aus. Häufig v
   <li>MPLS (Multi-Protocol Label Switching)
   </ul>
 <li>Exterior Gateway Protocols (EGPs)<br>
-regeln das Routing zwischen verschiedenen autonomen Systemen. Dazu gehören:
+regeln das Routing zwischen verschiedenen autonomen Systemen. Dazu gehÃ¶ren:
   <ul>
   <li>BGP (Border Gateway Protocol) ist heute weltweit der de-facto-Standard (BGP4).
-  <li>EGP (Exterior Gateway Protocol) verband früher die Internet-Backbones.
+  <li>EGP (Exterior Gateway Protocol) verband frÃ¼her die Internet-Backbones.
       Es ist inzwischen veraltet.
   </ul>
 <li>Ad hoc Routing-Protokolle<br>
@@ -923,225 +923,225 @@ werden in Netzen mit wenig oder keiner Infrastruktur verwendet.
   <ul>
   <li>OLSR (Optimized_Link_State_Routing) findet meist Verwendung im mobilen Bereich.
   <li>AODV (Ad-hoc On-demand Distance Vector-Routing) findet in kleineren Netzen mit
-      hauptsächlich statischem Traffic Verwendung.
+      hauptsÃ¤chlich statischem Traffic Verwendung.
   </ul>
 </ul>
 
 
 <H2><A NAME="7.8">Layer-3-Switching</A></H2>
-Layer-3-Switching ist eine neue Technologie. Sie kombiniert leistungsfähiges
-Switching (Layer 2) mit skalierbarem Routing (Layer 3). Herkömmliche Switches
+Layer-3-Switching ist eine neue Technologie. Sie kombiniert leistungsfÃ¤higes
+Switching (Layer 2) mit skalierbarem Routing (Layer 3). HerkÃ¶mmliche Switches
 verwenden die MAC-Adresse der Ethernet-Frames zur Entscheidung, wohin die Frames
-transportiert werden sollen, während Router Datenpakete anhand von Routingtabellen
+transportiert werden sollen, wÃ¤hrend Router Datenpakete anhand von Routingtabellen
 und Accesslisten auf Layer-3-weitervermitteln. Router sind in vielen Installationen als
 reine LAN-to-LAN-Router im Einsatz, um Subnetze zu verbinden und die
-Nebeneffekte von rein geswitchten Netzen, wie z. B. Broadcast-Stürme, fehlendes
+Nebeneffekte von rein geswitchten Netzen, wie z. B. Broadcast-StÃ¼rme, fehlendes
 Subnetting etc. zu verhindern. Router, die auf der Transportebene arbeiten,
-müssen jedes IP-Paket aus den Ethernet-Frames zusammenbauen und vielfältige
-Operationen an IP-Paketen durchführen. Dies führt zu einer
-Verzögerungszeit und, im Vergleich zu Switches, geringerem Datendurchsatz.
+mÃ¼ssen jedes IP-Paket aus den Ethernet-Frames zusammenbauen und vielfÃ¤ltige
+Operationen an IP-Paketen durchfÃ¼hren. Dies fÃ¼hrt zu einer
+VerzÃ¶gerungszeit und, im Vergleich zu Switches, geringerem Datendurchsatz.
 In reinen IP-Netzen kann das Layer-3-Switching, auch "Fast IP" genannt, diese
 LAN-to-LAN-Router ersetzen. Der Layer-3-Switch liest beim ersten IP-Paket
-sämtliche Frames dieses Paketes, analysiert die Absender- und
-Empfänger-IP-Adressen und leitet das IP-Paket weiter. Alle nachfolgenden Frames
-dieses Stationspaars können daraufhin anhand der MAC-Adresse
+sÃ¤mtliche Frames dieses Paketes, analysiert die Absender- und
+EmpfÃ¤nger-IP-Adressen und leitet das IP-Paket weiter. Alle nachfolgenden Frames
+dieses Stationspaars kÃ¶nnen daraufhin anhand der MAC-Adresse
 weitergeleitet werden. Der Layer-3-Switch behandelt IP-Pakete beim ersten Mal wie ein
-Router, nachfolgende Daten können auf Frame-Ebene geswitcht werden. Nicht-IP-Daten,
+Router, nachfolgende Daten kÃ¶nnen auf Frame-Ebene geswitcht werden. Nicht-IP-Daten,
 wie z. B. IPX-Pakete, werden vom Layer-3-Switch auf Layer 2 geswitcht.
 Das Konzept des Layer-3-Switching bedingt eine Erweiterung des
-Ethernet-Frameformats und ist bisher nur proprietär implementiert. Die
+Ethernet-Frameformats und ist bisher nur proprietÃ¤r implementiert. Die
 Erweiterung des Layer-3-Switching auf andere Layer-3-Protokolle wie z.B. IPX ist
-geplant. Es ist anzunehmen, daß die herstellerspezifischen Implementationen in einen
-gemeinsamen Standard münden.
+geplant. Es ist anzunehmen, daÃŸ die herstellerspezifischen Implementationen in einen
+gemeinsamen Standard mÃ¼nden.
 <P>
 
 <H2><A NAME="7.9">Terminalserver</A></H2>
-Ein Terminal-Server dient dazu, einem beliebigen Endgerät, sofern es
+Ein Terminal-Server dient dazu, einem beliebigen EndgerÃ¤t, sofern es
 eine serielle, asynchrone V.24 (RS 232 C)-Schnittstelle besitzt, die Verbindung
-zu einem Rechner herzustellen. Der Terminal-Server ist über einen Transceiver
+zu einem Rechner herzustellen. Der Terminal-Server ist Ã¼ber einen Transceiver
 an das Ethernet angeschlossen und stellt dem Terminal-Benutzer eine Kommandoschnittstelle
-zur Verfügung, so daß er Verbindungen aufbauen, abbauen und Parameter
+zur VerfÃ¼gung, so daÃŸ er Verbindungen aufbauen, abbauen und Parameter
 (z.B. Echo) setzen kann. Ein Terminal kann meist mehrere Verbindungen haben
-und zwischen ihnen wechseln. Es gibt Terminal-Server für verschiedene
-Protokolle, z. B. für TCP/IP (Telnet) und DECnet (LAT) oder auch beides
-zugleich. Die meisten Terminal-Server haben acht Ports zum Anschluß
-von Endgeräten, sie können auch kaskadiert werden. Der Einsatz
-eines Terminal-Servers ist immer nötig, wenn es für das Endgerät
-keine Möglichkeit gibt, eine Ethernet-Karte einzubauen.
+und zwischen ihnen wechseln. Es gibt Terminal-Server fÃ¼r verschiedene
+Protokolle, z. B. fÃ¼r TCP/IP (Telnet) und DECnet (LAT) oder auch beides
+zugleich. Die meisten Terminal-Server haben acht Ports zum AnschluÃŸ
+von EndgerÃ¤ten, sie kÃ¶nnen auch kaskadiert werden. Der Einsatz
+eines Terminal-Servers ist immer nÃ¶tig, wenn es fÃ¼r das EndgerÃ¤t
+keine MÃ¶glichkeit gibt, eine Ethernet-Karte einzubauen.
 <P>
 
 <H2><A NAME="7.10">Gateway</A></H2>
-Gateways können völlig unterschiedliche (heterogene) Netze miteinander
+Gateways kÃ¶nnen vÃ¶llig unterschiedliche (heterogene) Netze miteinander
 koppeln. Sie stellen einen gemeinsamen (virtuellen) Knoten dar, der zu beiden
-Netzen gehört und den netzübergreifenden Datenverkehr abwickelt.
-Gateways werden einerseits für die LAN-WAN-Kopplung (oder die LAN-WAN-LAN-Kopplung)
-andererseits für den Übergang zwischen unterschiedlichen Diensten
+Netzen gehÃ¶rt und den netzÃ¼bergreifenden Datenverkehr abwickelt.
+Gateways werden einerseits fÃ¼r die LAN-WAN-Kopplung (oder die LAN-WAN-LAN-Kopplung)
+andererseits fÃ¼r den Ãœbergang zwischen unterschiedlichen Diensten
 verwendet (z. B. das Absetzen von Fax-Nachrichten aus einem LAN).
 <P>
 Ein Gateway ist ein aktiver Netzknoten, der von beiden Seiten aus adressiert
 werden kann. Er kann auch mehr als zwei Netze miteinander koppeln.
 Gateways behandeln auf beiden Seiten unterschiedliche Protokolle bis hinauf
-zur Schicht 7. Insbesondere ist das Routing über Netzgrenzen (korrekte
+zur Schicht 7. Insbesondere ist das Routing Ã¼ber Netzgrenzen (korrekte
 Adressierung!) hinweg eine wichtige Aufgabe des Gateways. Man unterscheidet
 im wesentlichen zwei Typen:<BR>
 <UL>
-<LI>Medienkonvertierende Gateways (Translatoren), die bei gleichem Übertragungsverfahren
+<LI>Medienkonvertierende Gateways (Translatoren), die bei gleichem Ãœbertragungsverfahren
 die Verbindung zwischen unterschiedlichen Protokollen der unteren beiden
 Ebenen (bei unterschiedlichem Transportmedium) herstellen - also dort, wo
-ein Router nicht mehr ausreichen würde.
+ein Router nicht mehr ausreichen wÃ¼rde.
 <LI>Protokollkonvertierende Gateways, die unterschiedliche Protokolle der
-Ebenen 3 und 4 abwickeln und ineinander überführen.
+Ebenen 3 und 4 abwickeln und ineinander Ã¼berfÃ¼hren.
 </UL>
 <P>
-Der Gateway unterstützt hauptsächlich zwei wichtige Dienste: Die
-Übermittlung aufeinanderfolgender Nachrichten zwischen Quelle und Ziel
-als unabhängige Einheit und das Etablieren einer logischen Verbindung
+Der Gateway unterstÃ¼tzt hauptsÃ¤chlich zwei wichtige Dienste: Die
+Ãœbermittlung aufeinanderfolgender Nachrichten zwischen Quelle und Ziel
+als unabhÃ¤ngige Einheit und das Etablieren einer logischen Verbindung
 zwischen Quelle und Ziel. Um auf die unterschiedlichen Anforderungen der
-Flußkontrolle der zu verbindenen Netze eingehen zu können, muß
+FluÃŸkontrolle der zu verbindenen Netze eingehen zu kÃ¶nnen, muÃŸ
 der Gateway gegebenfalls Daten zwischenspeichern. Ist eines der beteiligten
-Netze leistungsfähiger als das andere, muß der Gateway dies erkennen
+Netze leistungsfÃ¤higer als das andere, muÃŸ der Gateway dies erkennen
 und das "schnellere" Netz bremsen. Arbeiten beide Netze mit unterschiedlichen
-Paketgrößen, müssen Datenpakete "umgepackt" werden.
-Dies kann ganz einfach dadurch geschehen, daß zu große Pakete
+PaketgrÃ¶ÃŸen, mÃ¼ssen Datenpakete "umgepackt" werden.
+Dies kann ganz einfach dadurch geschehen, daÃŸ zu groÃŸe Pakete
 in kleinere Pakete aufgespalten und am Ziel gegebenenfalls wieder zusammengesetzt
 werden.
 <P>
 
 <H2><A NAME="7.11">Firewall-Rechner</A></H2>
-Als Schutz vor Einbruchsversuchen in lokale Netze, die über einen Anschluß
-an öffentliche Netze verfügen (z. B. Internet, aber auch ISDN),
-haben sich Firewall-Rechner, kurz 'Firewalls' bewährt. Ähnlich
-der Zugbrücke einer Burg erlauben sie den Zugang nur an einer definierten
-Stelle. Damit läßt sich der Datenverkehr von und nach außen
+Als Schutz vor Einbruchsversuchen in lokale Netze, die Ã¼ber einen AnschluÃŸ
+an Ã¶ffentliche Netze verfÃ¼gen (z. B. Internet, aber auch ISDN),
+haben sich Firewall-Rechner, kurz 'Firewalls' bewÃ¤hrt. Ã„hnlich
+der ZugbrÃ¼cke einer Burg erlauben sie den Zugang nur an einer definierten
+Stelle. Damit lÃ¤ÃŸt sich der Datenverkehr von und nach auÃŸen
 kontrollieren. Normalerweise sind zahlreiche Rechner des Unternehmens, die
-unter diversen Betriebssystemen laufen, direkt aus dem öffentlichen
+unter diversen Betriebssystemen laufen, direkt aus dem Ã¶ffentlichen
 Netz erreichbar. Eine Firewall kanalisiert die Kommunikation, indem alle
-Daten von und nach außen über dieses System laufen müssen.
-Die Kanalisierung erhöht zudem die Chancen, einen Einbruchversuch anhand
-ausführlicher Protokoll-Dateien zu erkennen, da der Eindringling erst
-die Firewall passieren muß.<BR>
+Daten von und nach auÃŸen Ã¼ber dieses System laufen mÃ¼ssen.
+Die Kanalisierung erhÃ¶ht zudem die Chancen, einen Einbruchversuch anhand
+ausfÃ¼hrlicher Protokoll-Dateien zu erkennen, da der Eindringling erst
+die Firewall passieren muÃŸ.<BR>
 Eine Firewall kann aus einer einzelnen Maschine oder aus einer mehrstufigen
 Anordnung bestehen. Eine mehrstufige Anordnung ist vor allem dann sinnvoll,
-wenn man bestimmte Dienste der Öffentlichkeit zur Verfügung stellen
-will, etwa einen WWW- oder FTP-Server. Die entsprechenden Hosts können
+wenn man bestimmte Dienste der Ã–ffentlichkeit zur VerfÃ¼gung stellen
+will, etwa einen WWW- oder FTP-Server. Die entsprechenden Hosts kÃ¶nnen
 dann in einem Zwischennetz isoliert werden.
 <P>
 <H4>Architektur mit Dualhomed-Host</H4>
 Eine Architektur mit Dualhomed-Host wird um einen Rechner herum aufgebaut, der
-über mindestens zwei Netzwerkschnittstellen verfügt. Ein solcher Host
+Ã¼ber mindestens zwei Netzwerkschnittstellen verfÃ¼gt. Ein solcher Host
 ist als Router zwischen den Netzen einsetzbar, die an die Schnittstellen
-angeschlossen sind. Er kann dann IP-Pakete von Netz zu Netz routen. Für
-diese Firewall-Architektur muß diese Routingfunktion jedoch deaktiviert
+angeschlossen sind. Er kann dann IP-Pakete von Netz zu Netz routen. FÃ¼r
+diese Firewall-Architektur muÃŸ diese Routingfunktion jedoch deaktiviert
 werden.
 <P>
 <CENTER><img src="images/fw1.png"></CENTER>
 <P>
 IP-Pakete werden somit nicht direkt von dem einen Netz (dem Internet) in das andere
-Netz (das interne, geschützte Netz) geroutet. Systeme innerhalb der Firewall und
-Systeme außerhalb (im Internet) können jeweils mit dem Dualhomed-Host,
+Netz (das interne, geschÃ¼tzte Netz) geroutet. Systeme innerhalb der Firewall und
+Systeme auÃŸerhalb (im Internet) kÃ¶nnen jeweils mit dem Dualhomed-Host,
 aber nicht direkt miteinander kommunizieren. Der IP-Verkehr zwischen ihnen wird
-vollständig blockiert. Die Netzarchitektur für eine Firewall mit
+vollstÃ¤ndig blockiert. Die Netzarchitektur fÃ¼r eine Firewall mit
 Dualhomed-Host ist denkbar einfach: der Dualhomed-Host sitzt in der Mitte, wobei
 er mit dem Internet und dem internen Netz verbunden ist. Ein Dualhomed-Host kann
 Dienste nur anbieten, indem er entsprechende Proxies (Stellvertreter) oder
-Gateways einsetzt. Es ist jedoch auch möglich, direkte Nutzerzugriffe zu
+Gateways einsetzt. Es ist jedoch auch mÃ¶glich, direkte Nutzerzugriffe zu
 gestatten (Sicherheitsrisiko).
 <P>
 
-<H4>Architektur mit überwachtem Host</H4>
+<H4>Architektur mit Ã¼berwachtem Host</H4>
 Die "screened host architecture" bietet Dienste von einem Rechner an, der nur
 an das interne Netz direkt angeschlossen ist, wobei ein getrennter Router
 verwendet wird. Der Bastion-Host befindet sich im inneren Netz. Auf diesem
 Router verhindern Paketfilter das Umgehen des Bastion-Host. Die Paketfilterung
-auf dem Sicherheitsrouter muß so konfiguriert werden, daß der
+auf dem Sicherheitsrouter muÃŸ so konfiguriert werden, daÃŸ der
 Bastion-Host das einzige System im internen Netz darstellt, zu dem Rechner aus
-dem Internet Verbindungen aufbauen können (das einzige "nach außen
-sichtbare" System). Zusätzlich sind nur gewisse Dienste zugelassen.
+dem Internet Verbindungen aufbauen kÃ¶nnen (das einzige "nach auÃŸen
+sichtbare" System). ZusÃ¤tzlich sind nur gewisse Dienste zugelassen.
 <P>
 <CENTER><img src="images/fw2.png"></CENTER>
 <P>
 Alle externen Systeme, die auf interne Systeme zugreifen wollen, und auch alle
-internen Systeme, die externe Dienste wahrnehmen wollen, müssen sich mit
-diesem Rechner verbinden. Daraus ergibt sich ein besonderes Schutzbedürfnis
-für diesen Bastion-Host. Der Vorteil bei dieser Konstruktion ist die Tatsache,
-daß ein Router leichter zu verteidigen ist. Dies liegt u. a. daran, daß
-auf ihm keine Dienste angeboten werden. Nachteilig wirkt sich aus, daß bei
-einer eventuellen Erstürmung des Bastion-Host das interne Netz vollkommen
+internen Systeme, die externe Dienste wahrnehmen wollen, mÃ¼ssen sich mit
+diesem Rechner verbinden. Daraus ergibt sich ein besonderes SchutzbedÃ¼rfnis
+fÃ¼r diesen Bastion-Host. Der Vorteil bei dieser Konstruktion ist die Tatsache,
+daÃŸ ein Router leichter zu verteidigen ist. Dies liegt u. a. daran, daÃŸ
+auf ihm keine Dienste angeboten werden. Nachteilig wirkt sich aus, daÃŸ bei
+einer eventuellen ErstÃ¼rmung des Bastion-Host das interne Netz vollkommen
 schutzlos ist.
 <P>
 
-<H4>Architektur mit überwachtem Teilnetz</H4>
-Die "screened subnet architecture" erweitert die Architektur mit überwachtem
+<H4>Architektur mit Ã¼berwachtem Teilnetz</H4>
+Die "screened subnet architecture" erweitert die Architektur mit Ã¼berwachtem
 Host um eine Art Pufferzone, die als Grenznetz das interne Netz vom Internet
 isoliert. Diese Isolierzone wird auch "Demilitarisierte Zone" (DMZ) genannt.
 <P>
 <CENTER><img src="images/fw3.png"></CENTER>
 <P>
-Bastion-Hosts sind von ihrer Art her die gefährdetsten Rechner in einer
-Firewallkonstruktion. Auch wenn sie in der Regel mit allen Mitteln geschützt
-sind, werden sie doch am häufigsten angegriffen. Die Ursache liegt darin,
-daß ein Bastion-Host als einziges System Kontakt zur Außenwelt
-unterhält.
+Bastion-Hosts sind von ihrer Art her die gefÃ¤hrdetsten Rechner in einer
+Firewallkonstruktion. Auch wenn sie in der Regel mit allen Mitteln geschÃ¼tzt
+sind, werden sie doch am hÃ¤ufigsten angegriffen. Die Ursache liegt darin,
+daÃŸ ein Bastion-Host als einziges System Kontakt zur AuÃŸenwelt
+unterhÃ¤lt.
 <P>
 Zur Software-Konfiguration einer Firewall existieren zwei Grundstrategien:
 <P><UL>
 <LI>'Es ist alles erlaubt, was nicht verboten ist'<BR>
-Dieser Ansatz schließt die Nutzung bestimmter Dienste (z. B. tftp,
+Dieser Ansatz schlieÃŸt die Nutzung bestimmter Dienste (z. B. tftp,
 nfs) generell aus. Er ist benutzerfreundlich, da neue Dienste automatisch
-erlaubt sind, aber auch gefährlich, da der Administrator das Verhalten
-der Nutzer ständig beobachten und rechtzeitig Gegenmaßnahmen
-treffen muß.<BR>
+erlaubt sind, aber auch gefÃ¤hrlich, da der Administrator das Verhalten
+der Nutzer stÃ¤ndig beobachten und rechtzeitig GegenmaÃŸnahmen
+treffen muÃŸ.<BR>
 <P>
 <LI>'Es ist alles verboten, was nicht erlaubt ist'<BR>
-Diese Strategie könnte von den Nutzern als hinderlich angesehen werden,
-da diese neue Dienste erst umständlich beantragen müssen. Sie
-schützt aber auch vor Sicherheitslücken im Betriebssystem und
+Diese Strategie kÃ¶nnte von den Nutzern als hinderlich angesehen werden,
+da diese neue Dienste erst umstÃ¤ndlich beantragen mÃ¼ssen. Sie
+schÃ¼tzt aber auch vor SicherheitslÃ¼cken im Betriebssystem und
 in Anwendungsprogrammen, da sie den Zugriff auf unbekannte Ports unterbindet.
 </UL>
 <P>
 Es gibt drei Arten von Firewall-Softwaresystemen:<BR>
 <P><UL>
-<LI>Paketfilter überprüfen die Quell- und Zieladresse (IP-Adresse
+<LI>Paketfilter Ã¼berprÃ¼fen die Quell- und Zieladresse (IP-Adresse
 und TCP/UDP-Port) eines Pakets und entscheiden, ob es passieren darf oder
-nicht. Der Vorteil besteht in der Transparenz für den Anwender. Diese
-Transparenz ist aber zugleich von Nachteil: Paketfilter können nicht
+nicht. Der Vorteil besteht in der Transparenz fÃ¼r den Anwender. Diese
+Transparenz ist aber zugleich von Nachteil: Paketfilter kÃ¶nnen nicht
 zwischen Nutzern und deren Rechten unterscheiden. Paketfilter sind im allgemeinen
 auf Routern angesiedelt und werden heute von den meisten Herstellern mitgeliefert.
-Intelligente Paketfilter analysieren zusätzlich den Inhalt der Pakete
-und erkennen auch die Zulässigkeit von Verbindungen, die einfache Paketfilter
-nicht erlauben würden (z. B. Datenverbindung bei ftp).
+Intelligente Paketfilter analysieren zusÃ¤tzlich den Inhalt der Pakete
+und erkennen auch die ZulÃ¤ssigkeit von Verbindungen, die einfache Paketfilter
+nicht erlauben wÃ¼rden (z. B. Datenverbindung bei ftp).
 <P>
 <LI>Circuit Level Gateways sind mit Paketfiltern vergleichbar, arbeiten jedoch
 auf einer anderen Ebene des Protokollstacks. Verbindungen durch solch ein
-Gateway erscheinen einer entfernten Maschine, als bestünden sie mit
-dem Firewall-Host. Somit lassen sich Infomationen über geschützte
+Gateway erscheinen einer entfernten Maschine, als bestÃ¼nden sie mit
+dem Firewall-Host. Somit lassen sich Infomationen Ã¼ber geschÃ¼tzte
 Netzwerke verbergen.
 <P>
 <LI>Application Gateways, auch 'Proxy' (Stellvertreter) genannt, stellen ein
-anderes Firewall-Konzept dar. Hierbei wird auf dem Firewall-Host für
-jede zulässige Anwendung ein eigenes Gateway-Programm installiert.
-Der Client muß sich dabei oftmals gegenüber dem Proxy-Programm
-authentifizieren. Dieser Proxy führt dann alle Aktionen im LAN stellvertretend
-für den Client aus. Damit lassen sich zum einen benutzerspezifische
+anderes Firewall-Konzept dar. Hierbei wird auf dem Firewall-Host fÃ¼r
+jede zulÃ¤ssige Anwendung ein eigenes Gateway-Programm installiert.
+Der Client muÃŸ sich dabei oftmals gegenÃ¼ber dem Proxy-Programm
+authentifizieren. Dieser Proxy fÃ¼hrt dann alle Aktionen im LAN stellvertretend
+fÃ¼r den Client aus. Damit lassen sich zum einen benutzerspezifische
 Zugangsprofile (welche Zeiten, welche Dienste, welche Rechner) erstellen,
-zum anderen kann man die Festlegung der zulässigen Verbindungen anwendungsbezogen
-vornehmen. Die daraus resultierenden separaten kleinen Regelsätze bleiben
-besser überschaubar als der komplexe Regelsatz eines Paketfilters.
+zum anderen kann man die Festlegung der zulÃ¤ssigen Verbindungen anwendungsbezogen
+vornehmen. Die daraus resultierenden separaten kleinen RegelsÃ¤tze bleiben
+besser Ã¼berschaubar als der komplexe Regelsatz eines Paketfilters.
 Application Gateways sind typische Vertreter der 'Verboten-was-nicht-erlaubt'-Strategie
-und als die sicherste, aber auch aufwendigste Lösung einzuschätzen.
+und als die sicherste, aber auch aufwendigste LÃ¶sung einzuschÃ¤tzen.
 <BR>
-Da beim Proxy alle Zugriffe nach außen über eine Instanz laufen,
+Da beim Proxy alle Zugriffe nach auÃŸen Ã¼ber eine Instanz laufen,
 kann man den Proxy gleichzeitig als Cache (Pufferspeicher) benutzen. Der
-Proxy speichert alle erhaltenen WWW-Seiten zwischen, so daß er bei
+Proxy speichert alle erhaltenen WWW-Seiten zwischen, so daÃŸ er bei
 einem erneuten Zugriff darauf - egal, ob vom selben oder einem anderen Anwender
-- keine Verbindung nach außen aufbauen muß.<BR>
+- keine Verbindung nach auÃŸen aufbauen muÃŸ.<BR>
 </UL>
 <P>
 Der Einsatz von Firewalls bietet sich auch innerhalb einer Organisation
-an, um Bereiche unterschiedlicher Sensitivität von einander abzugrenzen.
-Firewalls bieten jedoch niemals hundertprozentige Sicherheit! Sie schützen
-nicht vor dem Fehlverhalten eines authorisierten Anwenders und können,
-etwa durch eine zusätzliche Modem-Verbindung, umgangen werden.
+an, um Bereiche unterschiedlicher SensitivitÃ¤t von einander abzugrenzen.
+Firewalls bieten jedoch niemals hundertprozentige Sicherheit! Sie schÃ¼tzen
+nicht vor dem Fehlverhalten eines authorisierten Anwenders und kÃ¶nnen,
+etwa durch eine zusÃ¤tzliche Modem-Verbindung, umgangen werden.
 </UL>
 <P>
 Mehr zu diesem Thema finden Sie im
@@ -1153,76 +1153,76 @@ Firewall-Kapitel des Sicherheits-Skripts</A>.
 <H2><A NAME="7.12">VLAN - virtuelle lokale Netzwerke</A></H2>
 
 <H4>Was ist ein VLAN?</H4>
-Die Abkürzung VLAN steht für "virtuelles LAN", also eine Netzstruktur mit
-allen Eigenschaften eines gewöhnlichen LAN, jedoch ohne räumliche Bindung.
-Während die Stationen eines LAN nicht beliebig weit
-auseinander liegen können, ermöglicht es ein VLAN hingegen, weiter entfernte
+Die AbkÃ¼rzung VLAN steht fÃ¼r "virtuelles LAN", also eine Netzstruktur mit
+allen Eigenschaften eines gewÃ¶hnlichen LAN, jedoch ohne rÃ¤umliche Bindung.
+WÃ¤hrend die Stationen eines LAN nicht beliebig weit
+auseinander liegen kÃ¶nnen, ermÃ¶glicht es ein VLAN hingegen, weiter entfernte
 Knoten zu einem virtuellen lokalen Netzwerk zu verbinden.
 <P>
-VLANs sind geswitchte Netze, die logisch segmentiert werden können. Ohne
-Beschränkung durch die räumliche Position ist möglich, Server und Workstations
-nach ihrer Funktion zu dynamischen Arbeitsgruppen zusammenzufassen. VLANs können
-transparent und ohne physikalische Veränderungen des Netzes eingerichtet werden.
-Eine Umgliederung ist ohne Umpatchen oder Verlegen von Rechnern möglich, im
-Idealfall kann sie über Software erfolgen.
+VLANs sind geswitchte Netze, die logisch segmentiert werden kÃ¶nnen. Ohne
+BeschrÃ¤nkung durch die rÃ¤umliche Position ist mÃ¶glich, Server und Workstations
+nach ihrer Funktion zu dynamischen Arbeitsgruppen zusammenzufassen. VLANs kÃ¶nnen
+transparent und ohne physikalische VerÃ¤nderungen des Netzes eingerichtet werden.
+Eine Umgliederung ist ohne Umpatchen oder Verlegen von Rechnern mÃ¶glich, im
+Idealfall kann sie Ã¼ber Software erfolgen.
 <P>
-Ein VLAN ist weiters eine Broadcast- und Kollisionsdomäne, die sich auch über
+Ein VLAN ist weiters eine Broadcast- und KollisionsdomÃ¤ne, die sich auch Ã¼ber
 mehrere Switches erstrecken kann. Der Broadcastverkehr ist nur in dem VLAN
-sichtbar. Diese Möglichkeit, VLANs komplett voneinander zu isolieren, erhöht die
-Sicherheit. Der Verkehr zwischen VLANs muß geroutet werden,  hier gibt es
-Lösungen, die die Geschwindigkeit von Switches erreichen. Innerhalb des VLAN ist
-hingegen kein Routing nötig.
+sichtbar. Diese MÃ¶glichkeit, VLANs komplett voneinander zu isolieren, erhÃ¶ht die
+Sicherheit. Der Verkehr zwischen VLANs muÃŸ geroutet werden,  hier gibt es
+LÃ¶sungen, die die Geschwindigkeit von Switches erreichen. Innerhalb des VLAN ist
+hingegen kein Routing nÃ¶tig.
 <P>
-Beliebige Netzteilnehmer aus verschiedenen Segmenten können nach
+Beliebige Netzteilnehmer aus verschiedenen Segmenten kÃ¶nnen nach
 unterschiedlichen Kriterien (Switch-Port, MAC-Adresse, Protokoll der Netzwerkschicht,
 logische Netzwerkadresse, Applikation) zu einem virtuellen Netz vereint
-werden, ohne daß das Netz physikalisch umstrukturiert werden muß.
+werden, ohne daÃŸ das Netz physikalisch umstrukturiert werden muÃŸ.
 <P>
 
 <H4>Warum virtuelle Netze?</H4>
 <UL>
-<LI>Broadcasts werden nicht über das gesamte Netzsegment verbreitet
+<LI>Broadcasts werden nicht Ã¼ber das gesamte Netzsegment verbreitet
 <LI>Einfache Abbildung der Organisationsstruktur auf die Netzwerkstruktur
-<LI>Unterstützung dynamischer Workgroups
-<LI>Räumliche Entfernung der Mitarbeiter spielt keine Rolle bei der
+<LI>UnterstÃ¼tzung dynamischer Workgroups
+<LI>RÃ¤umliche Entfernung der Mitarbeiter spielt keine Rolle bei der
 Aufgabenverteilung
 <LI>Jeder Mitarbeiter zieht etwa alle paar Jahre innerhalb des Unternehmens
 um, verbleibt aber in seiner logischen Arbeitsgruppe
-<LI>Server in zentralen Technikräumen werden entfernten Arbeitsgruppen
+<LI>Server in zentralen TechnikrÃ¤umen werden entfernten Arbeitsgruppen
 zugeordnet
-<LI>Teilweise kein Routing mehr nötig
+<LI>Teilweise kein Routing mehr nÃ¶tig
 </UL>
 Bisher wurden Netze mit Hilfe von Routern segmentiert. Router sind teuer,
 es entstehen viele Subnetze, die Router beanspruchen viel Rechenzeit und der
 IP-Adressraum wird schnell zu klein. VLANs vereinigen die Vorteile von Bridges
-und Routern: Eine Station kann leicht hinzugefügt, entfernt oder geändert werden
-und das Netz kann strukturiert werden. Es können beispielsweise virtuelle
+und Routern: Eine Station kann leicht hinzugefÃ¼gt, entfernt oder geÃ¤ndert werden
+und das Netz kann strukturiert werden. Es kÃ¶nnen beispielsweise virtuelle
 Benutzergruppen gebildet werden und es ist nicht mehr erforderlich, Benutzer
-nur deshalb verschiedenen Subnetzen zuzuordnen, weil ihre räumliche Entfernung
-zu groß ist. Server, die in zentralen Räumen untergebracht sind, können
-räumlich entfernten Workgroups zugeordnet werden. <BR>
-VLANs können helfen, Geld zu sparen, denn Switches sind billiger als Router
-und leichter zu administrieren. Gerade das Ändern von Subnetzadressen, das mit
-VLANs vermieden wird, ist in großen Netzen sehr aufwändig und damit teuer.
-Der Broadcast-Traffic wird nicht auf alle Ports übertragen, sondern bleibt im
+nur deshalb verschiedenen Subnetzen zuzuordnen, weil ihre rÃ¤umliche Entfernung
+zu groÃŸ ist. Server, die in zentralen RÃ¤umen untergebracht sind, kÃ¶nnen
+rÃ¤umlich entfernten Workgroups zugeordnet werden. <BR>
+VLANs kÃ¶nnen helfen, Geld zu sparen, denn Switches sind billiger als Router
+und leichter zu administrieren. Gerade das Ã„ndern von Subnetzadressen, das mit
+VLANs vermieden wird, ist in groÃŸen Netzen sehr aufwÃ¤ndig und damit teuer.
+Der Broadcast-Traffic wird nicht auf alle Ports Ã¼bertragen, sondern bleibt im
 entsprechenden VLAN. Broadcasts in fremden VLANs sind nicht sichtbar.
 <P>
 
 <H4>Realisierung von VLANs</H4>
-VLANs werden mittels Switches gebildet. Diese unterstützen an jedem Port
+VLANs werden mittels Switches gebildet. Diese unterstÃ¼tzen an jedem Port
 die volle Bandbreite und transportieren die Daten schneller als Router.
-Netzteilnehmer können nach verschiedenen Kriterien zu virtuellen Netzen
-vereinigt werden, und eine Management-Software ermöglicht ggf. eine
+Netzteilnehmer kÃ¶nnen nach verschiedenen Kriterien zu virtuellen Netzen
+vereinigt werden, und eine Management-Software ermÃ¶glicht ggf. eine
 komfortable Verwaltung und Konfiguration der VLANs.<BR>
-Zur Inter-VLAN-Kommunikation muß Routing eingesetzt werden. Entweder ist
-ein Router über mehrere physische Ports als Teil mehrerer VLANs eingerichtet,
-oder es wird VLAN-Trunking eingesetzt. In diesem Fall muß der Router VLAN-Tags
-erkennen und verändern können.
+Zur Inter-VLAN-Kommunikation muÃŸ Routing eingesetzt werden. Entweder ist
+ein Router Ã¼ber mehrere physische Ports als Teil mehrerer VLANs eingerichtet,
+oder es wird VLAN-Trunking eingesetzt. In diesem Fall muÃŸ der Router VLAN-Tags
+erkennen und verÃ¤ndern kÃ¶nnen.
 <P>
 <I>Abbilden von Ports auf VLANs</I><BR>
 Ausgangsbasis sind ein Switch oder mehrere miteinander verbundene Switches, bei denen
-die Ports unterschiedlichen VLANs zugeordnet werden. Die einfachste Form wäre
-ein Switch, bei dem die Hälfte der Ports dem VLAN A und die andere Hälfte
+die Ports unterschiedlichen VLANs zugeordnet werden. Die einfachste Form wÃ¤re
+ein Switch, bei dem die HÃ¤lfte der Ports dem VLAN A und die andere HÃ¤lfte
 dem VLAN B zugeordnet ist. Um den Geltungsbereich eines VLANs festzulegen, gibt
 es mehrere Strategien:
 <OL>
@@ -1230,7 +1230,7 @@ es mehrere Strategien:
 <LI>Der Switch kann mit einer VLAN/Port-Zuordnung konfiguriert werden.
 <LI>Der Switch kann mit einer VLAN/MAC-Adressen-Zuordnung konfiguriert
 werden. Er bestimmt dann dynamisch die VLAN/Port-Zuordnung aufgrund der MAC-Adresse.
-<LI>Der Switch kann mit einer VLAN/IP-Präfix-Zuordnung konfiguriert werden.
+<LI>Der Switch kann mit einer VLAN/IP-PrÃ¤fix-Zuordnung konfiguriert werden.
 Er bestimmt dann dynamisch die VLAN/Port-Zuordnung aufgrund der Quell-IP-Adresse.
 <LI>Der Switch kann mit einer VLAN/Protokoll-Zuordnung konfiguriert werden.
 Er bestimmt dann dynamisch die VLAN/Port-Zuordnung aufgrund des Protokolltyps.
@@ -1241,29 +1241,29 @@ drei von "Level-2-VLANs" und den letzten Punkten von "Protokoll-basierenden VLAN
 
 <I>Port-basierende VLANs</I><BR>
 Die Ports eines Switches werden unterschiedlichen VLANs zugeordnet. An einem
-Port können immer nur Angehörige desselben VLANs angeschlossen sein.
+Port kÃ¶nnen immer nur AngehÃ¶rige desselben VLANs angeschlossen sein.
 Die starre Zuordnung zwischen Port und VLAN vereinfacht die Fehlersuche. Soll
-eine Station zu mehreren VLANs gehören, so sind aber mehrere Netzwerk-Adapter
-nötig. Bei Broadcasts ist eine hohe Sicherheit gewährleistet.
-Die Flexibilität bei Umzügen ist nicht groß, denn ein Umzug einer Station
-muß durch den Administrator im VLAN-Manager nachgeführt werden. Im Gegensatz zu
-der Gruppierung nach MAC-Adressen oder IP-Adressen kann das Engerät nicht
+eine Station zu mehreren VLANs gehÃ¶ren, so sind aber mehrere Netzwerk-Adapter
+nÃ¶tig. Bei Broadcasts ist eine hohe Sicherheit gewÃ¤hrleistet.
+Die FlexibilitÃ¤t bei UmzÃ¼gen ist nicht groÃŸ, denn ein Umzug einer Station
+muÃŸ durch den Administrator im VLAN-Manager nachgefÃ¼hrt werden. Im Gegensatz zu
+der Gruppierung nach MAC-Adressen oder IP-Adressen kann das EngerÃ¤t nicht
 einfach den Umzug bekannt geben und das VLAN automatisch umgestaltet werden.
 Dieses Verfahren ist weit verbreitet, es ist durch IEEE 802.1Q standardisiert
-und wird von vielen Herstellern unterstützt.
+und wird von vielen Herstellern unterstÃ¼tzt.
 <P>
 
 <I>Level-2-VLANs</I><BR>
-Die Zugehörigkeit zu einem VLAN richtet sich nach der MAC-Adresse.
-Der Switch muß bei jedem empfangenen Datenpaket entscheiden, zu
-welchem VLAN es gehört. So können an einem Port auch Stationen verschiedener
+Die ZugehÃ¶rigkeit zu einem VLAN richtet sich nach der MAC-Adresse.
+Der Switch muÃŸ bei jedem empfangenen Datenpaket entscheiden, zu
+welchem VLAN es gehÃ¶rt. So kÃ¶nnen an einem Port auch Stationen verschiedener
 VLANs angeschlossen sein, aber es kann in diesem Fall auch zu Performance-Verlusten
 kommen.
-Der Umzug von Stationen ist leicht möglich, da die Zuordnung zum VLAN ja
+Der Umzug von Stationen ist leicht mÃ¶glich, da die Zuordnung zum VLAN ja
 erhalten bleibt. Problematisch ist die Initialisierung, da die MAC-Adressen
-aller Endgeräte erfasst werden müssen. Gerade in großen Netzen, wo
-häufig VLANs eingerichtet werden müssen, ist dann aber die VLAN-Konfiguration
-der einzelnen Arbeitsplätze wieder sehr zeitaufwendig.
+aller EndgerÃ¤te erfasst werden mÃ¼ssen. Gerade in groÃŸen Netzen, wo
+hÃ¤ufig VLANs eingerichtet werden mÃ¼ssen, ist dann aber die VLAN-Konfiguration
+der einzelnen ArbeitsplÃ¤tze wieder sehr zeitaufwendig.
 <P>
 <img src="images/vlan1.png">
 <P>
@@ -1274,143 +1274,143 @@ der Pakete. Es kann aber im Unterschied zu dieser parallel arbeiten und
 mehrere Pakete gleichzeitig weiterleiten, etwa von Port A nach C und von
 B nach D.
 <P>
-Sobald jedoch mehrere Switches vernetzt sind, muß sichergestellt
-werden, daß die Adreßtabellen in allen Switches konsistent
-sind. Dazu müssen regelmäßig Informationen über das
-Netz übertragen werden. Genau dies ist aber das Hauptproblem der VLANs.
-Jeder Hersteller verwendet für diesen Informationsabgleich eigene
+Sobald jedoch mehrere Switches vernetzt sind, muÃŸ sichergestellt
+werden, daÃŸ die AdreÃŸtabellen in allen Switches konsistent
+sind. Dazu mÃ¼ssen regelmÃ¤ÃŸig Informationen Ã¼ber das
+Netz Ã¼bertragen werden. Genau dies ist aber das Hauptproblem der VLANs.
+Jeder Hersteller verwendet fÃ¼r diesen Informationsabgleich eigene
 Verfahren. Deshalb verstehen sich die Switches verschiedener Produzenten
 oft nicht. U. a. gibt es:
 <UL>
-<LI>den regelmäßigen Austausch der Adreßtabellen mit
+<LI>den regelmÃ¤ÃŸigen Austausch der AdreÃŸtabellen mit
 MAC-Adressen und VLAN-Nummer. Die Tabellen werden etwa einmal pro Minute
 ausgetauscht.
 <LI>das Frame Tagging, bei dem die VLAN-Nummer als Tag vor das MAC-Paket
-gesetzt. Die zulässige Paketlänge kann dabei überschritten werden.
+gesetzt. Die zulÃ¤ssige PaketlÃ¤nge kann dabei Ã¼berschritten werden.
 <LI>das Zeitmultiplexverfahren, bei dem der Backbone zwischen den Switches in
 Zeit-Slots aufgeteilt wird, die fest den einzelnen VLANs zugeordnet sind.
 </UL>
 <P>
 
 <I>Protokoll-basierende VLANs</I><BR>
-Layer-3-Switches bieten zusätzliche Möglichkeiten durch
-Basis-Routing-Funktionalität wie z.B. ARP. Der externe Router wird
-somit oft überflüssig. Diese Variante ist langsamer, da auch
-Layer-3-Informationen ausgewertet werden müssen. Die Zuordnung einzelner
+Layer-3-Switches bieten zusÃ¤tzliche MÃ¶glichkeiten durch
+Basis-Routing-FunktionalitÃ¤t wie z.B. ARP. Der externe Router wird
+somit oft Ã¼berflÃ¼ssig. Diese Variante ist langsamer, da auch
+Layer-3-Informationen ausgewertet werden mÃ¼ssen. Die Zuordnung einzelner
 Datenpakete zu verschiedenen virtuellen LANs geschieht durch Auswertung
 der Subnetzadressen oder portbasiert. Innerhalb eines VLAN wird auf Layer
-2 geswitcht. Bei der Verwendung nicht routingfähiger Protokolle treten
-Schwierigkeiten auf und dynamische Adresszuordnungsverfahren können nicht
+2 geswitcht. Bei der Verwendung nicht routingfÃ¤higer Protokolle treten
+Schwierigkeiten auf und dynamische Adresszuordnungsverfahren kÃ¶nnen nicht
 eingesetzt werden.
 <P>
 <img src="images/vlan2.png">
 <P>
 Layer-3-Switches verwenden Routerfunktionen zur Definition virtueller Netze.
-Um effizient arbeiten zu können, wird innerhalb eines VLAN nur gebridged.
+Um effizient arbeiten zu kÃ¶nnen, wird innerhalb eines VLAN nur gebridged.
 <P>
 
 <I>Regelbasierende VLANs</I><BR>
-Hier werden logische Zuordnungen eingesetzt und die VLAN-Zugehörigkeit
+Hier werden logische Zuordnungen eingesetzt und die VLAN-ZugehÃ¶rigkeit
 wird anhand des Ports, der MAC-Adresse, des Protokolls oder der Netzadresse
 bestimmt.
 Das System ist besonders flexibel, der Administrator kann selbst eine Balance
-zwischen Sicherheit, Verkehrsoptimierung und Kontrolle erreichen, aber dafür ist
+zwischen Sicherheit, Verkehrsoptimierung und Kontrolle erreichen, aber dafÃ¼r ist
 die Einrichtung aufwendig. Durch die Abarbeitung der einzelnen Regeln ergibt
 sich eine hohe Latenzzeit.
 <P>
 
 <H4>Layer-2-Switches</H4>
-Layer-2-Switches arbeiten unabhängig von darüber liegenden
+Layer-2-Switches arbeiten unabhÃ¤ngig von darÃ¼ber liegenden
 Protokollen auf der Data-Link-Layer und garantieren eine transparente Verbindung
-der Endgeräte.
-Während des Betriebs lernt ein Switch alle MAC-Adressen und ordnet
+der EndgerÃ¤te.
+WÃ¤hrend des Betriebs lernt ein Switch alle MAC-Adressen und ordnet
 sie in einer MAC-Tabelle den Anschlussports zu. In dieser Tabelle sucht
 der Switch nach der Zieladresse und dem zugeordneten Zielport.
-Die Adresstabellen der Switches müssen um die Adressen der
-VLANs ergänzt und immer am aktuellen Stand gehalten werden. Dafür
-stehen hauptsächlich folgende Verfahren zur Verfügung:
+Die Adresstabellen der Switches mÃ¼ssen um die Adressen der
+VLANs ergÃ¤nzt und immer am aktuellen Stand gehalten werden. DafÃ¼r
+stehen hauptsÃ¤chlich folgende Verfahren zur VerfÃ¼gung:
 <P>
 
 <UL>
 <LI>Austausch der MAC-Adresstabellen<BR>
 Wie beim Routing tauschen auch die Switches Informationen aus um
 ihre Adresstabellen abzugleichen. Wird eine neue Station an das Netz angeschlossen,
-so erkennt der lokale Switch am Port, zu welchem VLAN die Station gehört
-und ergänzt seine Adresstabelle. Dann sendet er die MAC-Adresse und
+so erkennt der lokale Switch am Port, zu welchem VLAN die Station gehÃ¶rt
+und ergÃ¤nzt seine Adresstabelle. Dann sendet er die MAC-Adresse und
 die Adresse des VLANs an die anderen Switches. Wenn alle Switches die neue
-Endstation kennen, können deren Daten übertragen werden.
+Endstation kennen, kÃ¶nnen deren Daten Ã¼bertragen werden.
 
 <LI>Time Division Multiplexing (TDM)<BR>
 Beim Zeitmultiplexverfahren wird der Backbone, der die Switches
-verbindet, in Zeitslots aufgeteilt und jedes VLAN erhält exklusiv
-einen oder mehrere Slots zur Datenübertragung. Die Switches müssen
-nur wissen, welcher Zeitslot welchem VLAN zugeordnet ist. Es entfällt
+verbindet, in Zeitslots aufgeteilt und jedes VLAN erhÃ¤lt exklusiv
+einen oder mehrere Slots zur DatenÃ¼bertragung. Die Switches mÃ¼ssen
+nur wissen, welcher Zeitslot welchem VLAN zugeordnet ist. Es entfÃ¤llt
 zwar der Overhead durch den Austausch von Adresstabellen oder aufgrund
 von Tags, aber Bandbreite, die von einem VLAN nicht genutzt wird, steht
-nicht für andere VLANs zur Verfügung. Für den sinnvollen
-Einsatz dieses Verfahrens ist eine an das tatsächliche Netzverhalten
-angepasste Zuordnung der Zeitslots nötig.
+nicht fÃ¼r andere VLANs zur VerfÃ¼gung. FÃ¼r den sinnvollen
+Einsatz dieses Verfahrens ist eine an das tatsÃ¤chliche Netzverhalten
+angepasste Zuordnung der Zeitslots nÃ¶tig.
 
 <LI>Frame Tagging<BR>
-Das Frame Tagging wird am häufigsten eingesetzt. Beim <B>impliziten Tagging</B>
-werden keine zusätzlichen Informationen in das Datenpaket
-eingefügt, sondern die Tagging-Information wird aus der vorhandenen
+Das Frame Tagging wird am hÃ¤ufigsten eingesetzt. Beim <B>impliziten Tagging</B>
+werden keine zusÃ¤tzlichen Informationen in das Datenpaket
+eingefÃ¼gt, sondern die Tagging-Information wird aus der vorhandenen
 Header-Information hergeleitet und vom Switch in Tabellen gespeichert.
 Dadurch werden vorhandene Standards nicht verletzt.
 <P>
 Beim <B>expliziten Tagging</B> wird in den Ethernet-Frame ein Marker (Tag)
-eingesetzt (VLAN-ID), der angibt, zu welchem VLAN das Datenpaket gehört.
-Dadurch ist kein Austausch von Adresstabellen nötig.
-Der erste Switch, der ein bestimmtes Datenpaket erhält, analysiert
-es auf seine VLAN-Zugehörigkeit und fügt die Kennung des VLANs
+eingesetzt (VLAN-ID), der angibt, zu welchem VLAN das Datenpaket gehÃ¶rt.
+Dadurch ist kein Austausch von Adresstabellen nÃ¶tig.
+Der erste Switch, der ein bestimmtes Datenpaket erhÃ¤lt, analysiert
+es auf seine VLAN-ZugehÃ¶rigkeit und fÃ¼gt die Kennung des VLANs
 als Tag an. Das Paket wird am Backbone von Switch zu Switch weitergeleitet,
-der letzte Switch entfernt das Tag und übergibt das Paket der Endstation.
-Die Switches müssen sehr leistungsfähig sein, um möglichst
+der letzte Switch entfernt das Tag und Ã¼bergibt das Paket der Endstation.
+Die Switches mÃ¼ssen sehr leistungsfÃ¤hig sein, um mÃ¶glichst
 mit Wirespeed die Paketinformationen auswerten und mit den Tabellen vergleichen
-zu können.
-<p>Das Einfügen von zusätzlicher Information in das Paket ist
-problematisch, wenn die Datenpakete schon die maximal zulässige Länge
-erreicht haben. Durch das Hinzufügen eines weiteren Tags würden
+zu kÃ¶nnen.
+<p>Das EinfÃ¼gen von zusÃ¤tzlicher Information in das Paket ist
+problematisch, wenn die Datenpakete schon die maximal zulÃ¤ssige LÃ¤nge
+erreicht haben. Durch das HinzufÃ¼gen eines weiteren Tags wÃ¼rden
 dann die Vorgaben des MAC-Protokolls verletzt, das Paket als fehlerhaft
 erkannt und vernichtet. Daher setzen die Hersteller spezifische Techniken
 zur Vermeidung dieses Problems ein (Kapselung - Encapsulation) - siehe unten.
 <P>
 Layer-2-Systeme sind leichter zu konfigurieren als Ebene-3-VLANs,
-benötigen weniger Software und sind meist preisgünstiger und
-schneller. Außerdem sind sie protokollunabhängig und können
+benÃ¶tigen weniger Software und sind meist preisgÃ¼nstiger und
+schneller. AuÃŸerdem sind sie protokollunabhÃ¤ngig und kÃ¶nnen
 auch nicht routbare Protokolle bedienen.
 <P>
 
 <H4>Layer-3-Switches</H4>
 Layer-3-Switches arbeiten auf der Netzwerkebene (Layer 3 des ISO/OSI-Modells).
-Sie integrieren Routing-Funktionalität in die VLANs und machen externe
-Router zur Verbindung der VLANs überflüssig. Daher werden sie
+Sie integrieren Routing-FunktionalitÃ¤t in die VLANs und machen externe
+Router zur Verbindung der VLANs Ã¼berflÃ¼ssig. Daher werden sie
 auch als "Switched Router" bezeichnet.
-Layer-3-Switches können Ebene-3-Informationen auswerten und deshalb
-VLANs auch abhängig vom verwendeten Protokolltyp definieren. So kann
-man z.B. alle IP-Stationen oder alle Netware-Stationen ortsunabhängig
+Layer-3-Switches kÃ¶nnen Ebene-3-Informationen auswerten und deshalb
+VLANs auch abhÃ¤ngig vom verwendeten Protokolltyp definieren. So kann
+man z.B. alle IP-Stationen oder alle Netware-Stationen ortsunabhÃ¤ngig
 zu einem VLAN zusammenfassen. In Schicht-3-VLANs werden eigentlich
-nicht Endgeräte, sondern Datenpakete den VLANs zugeordnet. Diese Zuordnung
+nicht EndgerÃ¤te, sondern Datenpakete den VLANs zugeordnet. Diese Zuordnung
 geschieht durch Auswerten der Subnetzadressen und es ist kein Informationsaustausch
-zwischen den Switches wie bei den Layer-2-Systemen nötig.<BR>
-Obwohl auch die Ebene-3-Informationen ausgewertet werden, muß die
-Routing-Funktionalität nur zwischen den VLANs eingesetzt werden.
-Layer-3-Switches müssen auch Routing-Protokolle beherrschen.
+zwischen den Switches wie bei den Layer-2-Systemen nÃ¶tig.<BR>
+Obwohl auch die Ebene-3-Informationen ausgewertet werden, muÃŸ die
+Routing-FunktionalitÃ¤t nur zwischen den VLANs eingesetzt werden.
+Layer-3-Switches mÃ¼ssen auch Routing-Protokolle beherrschen.
 Unbekannte Datenpakete werden innerhalb des VLANs an alle Stationen
 geschickt (Broadcast). Der Broadcast-Traffic kann aber durch Bildung von
-Subnetzen eingedämmt werden.<BR>
+Subnetzen eingedÃ¤mmt werden.<BR>
 Im Vergleich zu klassischen Routern erlauben Layer-3-Switches einen
-sehr schnellen Durchsatz auf Ebene 3, da die Zuweisung der Daten über
+sehr schnellen Durchsatz auf Ebene 3, da die Zuweisung der Daten Ã¼ber
 spezielle Hardware erfolgt. "Wirespeed Switched Router" sind in der Lage,
-Pakete ohne Verzögerung, also mit Leitungsgeschwindigkeit, weiterzuleiten.
-Für den Umzug von Mitarbeitern ist keine manuelle Rekonfiguration
-des Netzwerks nötig, sondern der Switch lernt automatisch die neuen
+Pakete ohne VerzÃ¶gerung, also mit Leitungsgeschwindigkeit, weiterzuleiten.
+FÃ¼r den Umzug von Mitarbeitern ist keine manuelle Rekonfiguration
+des Netzwerks nÃ¶tig, sondern der Switch lernt automatisch die neuen
 Verbindungen und baut daraus Routing- bzw. Switching-Tabellen auf.
 <P>
-Layer-3-Systeme sind für komplexe Netzwerke besser geeignet, der
-Overhead zur Synchronisation fällt weg. Broadcast kann gezielter
-übertragen werden und es stehen Filtermöglichkeiten zur Sicherung
-der VLANs zur Verfügung.
+Layer-3-Systeme sind fÃ¼r komplexe Netzwerke besser geeignet, der
+Overhead zur Synchronisation fÃ¤llt weg. Broadcast kann gezielter
+Ã¼bertragen werden und es stehen FiltermÃ¶glichkeiten zur Sicherung
+der VLANs zur VerfÃ¼gung.
 <P>
 
 <H4>Dynamische VLAN-Bindung, Switch-Switch</H4>
@@ -1419,58 +1419,58 @@ angeschlossen ist:
 <P>
 <CENTER><img src="images/vlan5.png"></CENTER>
 <P>
-Auf der Verbindung zwischen den beiden Switches können Pakete entweder
-zu VLAN 1 oder VLAN 2 gehören. Das Schema zum Hinzufügen
+Auf der Verbindung zwischen den beiden Switches kÃ¶nnen Pakete entweder
+zu VLAN 1 oder VLAN 2 gehÃ¶ren. Das Schema zum HinzufÃ¼gen
 von zusatzlichen Informationen zu einem Paket ist vom IEEE standardisiert.
-Es handelt sich um die "VLAN-Marke", damit Switches wissen, für welches
-VLAN ein Paket bestimmt ist. Ein Endgerät wäre jedoch verwirrt, wenn
-es ein Paket mit einer VLAN-Marke erhalten würde. Folglich müssen die
-Switches wissen, an welche Ports Switches und an welche Ports Endgeräte
+Es handelt sich um die "VLAN-Marke", damit Switches wissen, fÃ¼r welches
+VLAN ein Paket bestimmt ist. Ein EndgerÃ¤t wÃ¤re jedoch verwirrt, wenn
+es ein Paket mit einer VLAN-Marke erhalten wÃ¼rde. Folglich mÃ¼ssen die
+Switches wissen, an welche Ports Switches und an welche Ports EndgerÃ¤te
 angeschlossen sind. Ein Switch entfernt die VLAN-Marke vom Paket, bevor
 er es zu einem Nicht-Nachbarswitch-Port weiterleitet.<BR>
-Die VLAN-Marke ist eine 2-Byte-Zahl, die drei Bits für die Prioriät,
-zwölf Bits für eine VLAN-ID und ein Bit enthält, das anzeigt, ob
+Die VLAN-Marke ist eine 2-Byte-Zahl, die drei Bits fÃ¼r die PrioriÃ¤t,
+zwÃ¶lf Bits fÃ¼r eine VLAN-ID und ein Bit enthÃ¤lt, das anzeigt, ob
 die Adressen im kanonischen Format vorliegen. Durch den Ethernet-Typ <B>81-00</B>
-wird angezeigt, daß eine VLAN-Marke vorhanden ist.
-Beispielsweise ist ein Ethernet-Paket folgendermaßen aufgebaut:
+wird angezeigt, daÃŸ eine VLAN-Marke vorhanden ist.
+Beispielsweise ist ein Ethernet-Paket folgendermaÃŸen aufgebaut:
 <P>
 <CENTER><img src="images/vlan6.png"></CENTER>
 <P>
 <CENTER><img src="images/vlan3.png"></CENTER>
 <P>
 </UL>
-Dasselbe Paket mit VLAN-Marke sieht dann folgendermaßen aus:
+Dasselbe Paket mit VLAN-Marke sieht dann folgendermaÃŸen aus:
 <P>
 <CENTER><img src="images/vlan7.png"></CENTER>
 <P>
 <CENTER><img src="images/vlan4.png"></CENTER>
 <P>
 Ein Paket im 802.3-Format wird in ein Format mit einer VLAN-Marke
-umgesetzt, indem dieselben vier Bytes (81-00 für Ethertype und die 2-Byte-VLAN-Marke)
-wie im Ethernet-Paket hinzugefügt wurden. Die Längenangabe und weitere
+umgesetzt, indem dieselben vier Bytes (81-00 fÃ¼r Ethertype und die 2-Byte-VLAN-Marke)
+wie im Ethernet-Paket hinzugefÃ¼gt wurden. Die LÃ¤ngenangabe und weitere
 Felder werden analog nach hinten verschoben.<BR>
-Auf anderen LANs als 802.3 ist es nicht möglich, das Ethernet-Format zu verwenden.
-In diesem Fall wird eine andere Kodierung verwendet, um die VLAN-Marke einzufügen.
+Auf anderen LANs als 802.3 ist es nicht mÃ¶glich, das Ethernet-Format zu verwenden.
+In diesem Fall wird eine andere Kodierung verwendet, um die VLAN-Marke einzufÃ¼gen.
 <P>
-Ein Switch kann alle VLANs "lernen", die auf dem Port verügbar sind, der ihn mit
+Ein Switch kann alle VLANs "lernen", die auf dem Port verÃ¼gbar sind, der ihn mit
 einem anderen Switch verbindet. Er tut dies auf der Grundlage der VLAN-Marken in den
-Paketen, die auf diesem Port empfangen werden. Da die Endgeräte die VLAN-Marke
-nicht verstehen, muß der Switch so konfiguriert sein, daß er niemals ein
-Paket mit einer VLAN-Marke zu einem Port sendet, auf dem sich ein Endgerät befinden
-könnte. Einige Switch-Anbieter haben einen anbieterspezifischen Mechanismus
-zum Informationsaustausch darüber, welche VLANs auf dem Switch-zu-Switch-Port
-erreichbar sind. Auf diese Art lernt der Switch die VLANs über explizite
-Protokollnachrichten. Bisher existiert jedoch kein Standard dafür.
+Paketen, die auf diesem Port empfangen werden. Da die EndgerÃ¤te die VLAN-Marke
+nicht verstehen, muÃŸ der Switch so konfiguriert sein, daÃŸ er niemals ein
+Paket mit einer VLAN-Marke zu einem Port sendet, auf dem sich ein EndgerÃ¤t befinden
+kÃ¶nnte. Einige Switch-Anbieter haben einen anbieterspezifischen Mechanismus
+zum Informationsaustausch darÃ¼ber, welche VLANs auf dem Switch-zu-Switch-Port
+erreichbar sind. Auf diese Art lernt der Switch die VLANs Ã¼ber explizite
+Protokollnachrichten. Bisher existiert jedoch kein Standard dafÃ¼r.
 <P>
 
 <CENTER><TABLE BORDER=0 WIDTH="100%">
 <TR>
 <TD ALIGN=LEFT VALIGN=BOTTOM><img src="images/left.png" BORDER=0> <A HREF="netz6.html">Zum vorhergehenden Abschnitt</A></TD>
 <TD ALIGN=CENTER VALIGN=BOTTOM><img src="images/up.png" BORDER=0> <A HREF="index.html">Zum Inhaltsverzeichnis</A></TD>
-<TD ALIGN=RIGHT VALIGN=BOTTOM><img src="images/right.png" BORDER=0> <A HREF="twisted.html">Zum nächsten Abschnitt</A></TD>
+<TD ALIGN=RIGHT VALIGN=BOTTOM><img src="images/right.png" BORDER=0> <A HREF="twisted.html">Zum nÃ¤chsten Abschnitt</A></TD>
 </TR></TABLE></CENTER>
 <P><HR>
-<h6><i>Copyright &copy; Hochschule München, FK 04, Prof. Jürgen Plate</i><br>
+<h6><i>Copyright &copy; Hochschule MÃ¼nchen, FK 04, Prof. JÃ¼rgen Plate</i><br>
 Letzte Aktualisierung: <SCRIPT LANGUAGE="JavaScript">document.write(document.lastModified);</SCRIPT></I></H6>
 </BODY>
 </HTML>

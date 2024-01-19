@@ -8,14 +8,14 @@
 <meta NAME="Reply-To" CONTENT="webmaster@netzmafia.de">
 
 <meta NAME="keywords" CONTENT="LAN WAN TCP/IP Computernetze Ethernet Vernetzung Router Hub Switch Protokolle">
-<meta NAME="description" CONTENT="Praxisorientierte Einführung in den Aufbau und die Funktionsweise von Computernetzen.">
+<meta NAME="description" CONTENT="Praxisorientierte EinfÃ¼hrung in den Aufbau und die Funktionsweise von Computernetzen.">
 <title>Grundlagen Computernetze</title>
 </head>
 <BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" ALINK="#FF0000" VLINK="#FF00FF">
 <CENTER><TABLE BORDER=0 WIDTH="90%" >
 <TR><TD ALIGN=LEFT><img src="images/eyes.png"></TD>
 <TD ALIGN=RIGHT><H3>Grundlagen Computernetze</H3> 
-<BR><B><I>Prof. Jürgen Plate</I></B></TD></TR>
+<BR><B><I>Prof. JÃ¼rgen Plate</I></B></TD></TR>
 </TABLE></CENTER>
 <HR>
 
@@ -23,137 +23,137 @@
 Poweline Communication, Funknetze</h1>
 
 
-<H2><A NAME="10.1">Übertragungsmedien für Weitverkehrsnetze</A></H2>
+<H2><A NAME="10.1">Ãœbertragungsmedien fÃ¼r Weitverkehrsnetze</A></H2>
 
 <H3>Datex-Netz (veraltet)</H3>
 <H4>DATEX-L</H4>
-DATEX ist eine Abkürzung für "Data Exchange" (Datenaustausch). Das L sagt aus, 
-daß es sich um ein leitungsvermitteltes Netz handelt, d. h. es wird ein 
-Leitungsweg zwischen zwei Kommunikationspartnern zur Verfügung gestellt. 
-Beide Partnerstationen müssen in Datenrate, Code und Protokoll 
-übereinstimmen. Der Vorteil gegenüber dem Telefonnetz liegt im schnellen 
+DATEX ist eine AbkÃ¼rzung fÃ¼r "Data Exchange" (Datenaustausch). Das L sagt aus, 
+daÃŸ es sich um ein leitungsvermitteltes Netz handelt, d. h. es wird ein 
+Leitungsweg zwischen zwei Kommunikationspartnern zur VerfÃ¼gung gestellt. 
+Beide Partnerstationen mÃ¼ssen in Datenrate, Code und Protokoll 
+Ã¼bereinstimmen. Der Vorteil gegenÃ¼ber dem Telefonnetz liegt im schnellen 
 Verbindungsaufbau (0.4 - 1 Sekunde). Da heute Datex-L keine Vorteile mehr
-gegenüber ISDN hat, ist Datex-L ein auslaufendes Modell.
+gegenÃ¼ber ISDN hat, ist Datex-L ein auslaufendes Modell.
 <P>
 
 <H4>DATEX-P</H4>
-Das P steht für "Paket-Vermittlung". Die Daten werden in Form genormter 
-und mit Adressinformation versehener Datenblöcke (Datenpakete) übertragen. 
-Stationen, die nicht zur Paketübertragung in der Lage sind, werden über 
+Das P steht fÃ¼r "Paket-Vermittlung". Die Daten werden in Form genormter 
+und mit Adressinformation versehener DatenblÃ¶cke (Datenpakete) Ã¼bertragen. 
+Stationen, die nicht zur PaketÃ¼bertragung in der Lage sind, werden Ã¼ber 
 einen Umsetzer (PAD = Packet Assembly Disassembly) versorgt. Die 
-angeschlossenen Stationen können mit unterschiedlichen Datenraten 
-arbeiten. Die Paketübertragung selbst erfolgt im Netz mit 64 KBit/s, wobei
+angeschlossenen Stationen kÃ¶nnen mit unterschiedlichen Datenraten 
+arbeiten. Die PaketÃ¼bertragung selbst erfolgt im Netz mit 64 KBit/s, wobei
 derzeit das Netz auf 1,92 MBit/s ausgebaut wird.
-Jedes Datenpaket wird auf dem günstigsten Weg ohne Rücksicht auf die 
-logische Reihenfolge übertragen. Zwischen zwei über DATEX-P verbundenen 
-Partnern können u. U. mehrere Übertragungswege existieren. Beim 
-Empfänger wird die korrekte Reihenfolge der Pakete wiederhergestellt.
-Inzwischen ist aber der Bedarf an schnellerer Datenübertragung erheblich 
+Jedes Datenpaket wird auf dem gÃ¼nstigsten Weg ohne RÃ¼cksicht auf die 
+logische Reihenfolge Ã¼bertragen. Zwischen zwei Ã¼ber DATEX-P verbundenen 
+Partnern kÃ¶nnen u. U. mehrere Ãœbertragungswege existieren. Beim 
+EmpfÃ¤nger wird die korrekte Reihenfolge der Pakete wiederhergestellt.
+Inzwischen ist aber der Bedarf an schnellerer DatenÃ¼bertragung erheblich 
 gestiegen, so dass als Nachfolgetechnik nun vorzugsweise Frame Relay verwendet wird.
 <P>
 
 <H3>Fernsprechnetze und ISDN/DSL</H3>
 Das Fernsprechnetz ist das mit Abstand am weitesten ausgebaute
-Weitverkehrsnetz. Es dient vor allem zur Übertragung von
-Telefongesprächen, aber auch für die Datenkommunikation. Das
-Telefonnetz ist ein Beispiel für ein Leitungsvermitteltes Netz. Jedem
-Verbindungskanal steht eine Bandbreite von 64 kBit/s zur Verfügung. 
+Weitverkehrsnetz. Es dient vor allem zur Ãœbertragung von
+TelefongesprÃ¤chen, aber auch fÃ¼r die Datenkommunikation. Das
+Telefonnetz ist ein Beispiel fÃ¼r ein Leitungsvermitteltes Netz. Jedem
+Verbindungskanal steht eine Bandbreite von 64 kBit/s zur VerfÃ¼gung. 
 Auf analogen Leitungen (Modem) wird diese Grenze allerdings nicht
-erreicht. Die Datenrate kann hier bei bester Leitungsqualität bis zu
-56 kBit/s betragen. Bei einem Zugang über eine Mobilfunkstrecke ist
+erreicht. Die Datenrate kann hier bei bester LeitungsqualitÃ¤t bis zu
+56 kBit/s betragen. Bei einem Zugang Ã¼ber eine Mobilfunkstrecke ist
 die Bandbreite allerdings noch geringer. 
 <P>
-ISDN steht für "Integrated Services Digital Network" = diensteintegrierendes Netz 
+ISDN steht fÃ¼r "Integrated Services Digital Network" = diensteintegrierendes Netz 
 (Siehe auch <A HREF="http://www.netzmafia.de/skripten/modem/dfue2.html#2.2">
-Näheres im Modem-Skript</A>).
-Der ISDN-Basisanschluß bietet zwei Kanäle mit einer Bandbreite 64 kBit/s pro
-Kanal. Aufgrund der digitalen Übertragungsweise steht diese
-durchgehend zur Verfügung. Neben den beiden Basiskanälen steht noch
-der Signalisierungskanal (D-Kanal) mit 16 kBit/s zur Verfügung. Dieser
-wird nur für die Signalisierung genutzt, während die beiden B-Kanäle
-der eingentlichen Datenübertragung dienen.
-Neben dem Standardanschluß mit 64 kBit/s wird noch der 
-ISDN-Primärmultiplexanschluß (PMxA) PMxA angeboten, der
+NÃ¤heres im Modem-Skript</A>).
+Der ISDN-BasisanschluÃŸ bietet zwei KanÃ¤le mit einer Bandbreite 64 kBit/s pro
+Kanal. Aufgrund der digitalen Ãœbertragungsweise steht diese
+durchgehend zur VerfÃ¼gung. Neben den beiden BasiskanÃ¤len steht noch
+der Signalisierungskanal (D-Kanal) mit 16 kBit/s zur VerfÃ¼gung. Dieser
+wird nur fÃ¼r die Signalisierung genutzt, wÃ¤hrend die beiden B-KanÃ¤le
+der eingentlichen DatenÃ¼bertragung dienen.
+Neben dem StandardanschluÃŸ mit 64 kBit/s wird noch der 
+ISDN-PrimÃ¤rmultiplexanschluÃŸ (PMxA) PMxA angeboten, der
 eine Bandbreite von 2 MBit/s bietet.
-Der PMxA hat 30 B-Kanäle mit einer Datenrate von jeweils 64 kBit/s.
+Der PMxA hat 30 B-KanÃ¤le mit einer Datenrate von jeweils 64 kBit/s.
 Dazu kommt noch ein D-Kanal, der hier im Unterschied zum ISDN-Ba auch
-eine Datenrate von 64 kBit/s hat, sowie ein weiterer Kanal für
+eine Datenrate von 64 kBit/s hat, sowie ein weiterer Kanal fÃ¼r
 Rahmenbildung und Rahmenerkennung mit einer Rate von ebenfalls 64
 kBit/s. 
 <P>
-Die Bandbreite für Modems ist selbst bei gutem Signal/Rausch-Abstand auf 
+Die Bandbreite fÃ¼r Modems ist selbst bei gutem Signal/Rausch-Abstand auf 
 analogen Telefonleitungen ausgereitzt. Jedoch stellen die geringen
-Übertragungsraten kein Problem der Kupferadern des Telefonanschlusses bis 
+Ãœbertragungsraten kein Problem der Kupferadern des Telefonanschlusses bis 
 zur Vermittlungsstelle dar. Das Problem liegt im Zusammenspiel aller
-beteiligten Komponenten des Netzes: Der Weg vom Anschluß zur Vermittlungsstelle, 
-die Übertragungstechnik der Vermittlungsstellen untereinander und der
-Weg zu dem Anschluß der angewählt wurde. Ende der 80er Jahre hat man SDSL (Single 
+beteiligten Komponenten des Netzes: Der Weg vom AnschluÃŸ zur Vermittlungsstelle, 
+die Ãœbertragungstechnik der Vermittlungsstellen untereinander und der
+Weg zu dem AnschluÃŸ der angewÃ¤hlt wurde. Ende der 80er Jahre hat man SDSL (Single 
 Line Digital Subscriber Line) und HDSL (High Data Rate Digital
-Subscriber Line) entwickelt. So war es nun endlich möglich kostengünstige 
-2-MBit-Systeme anzubieten. HDSL hat einige Vorteile gegenüber SDSL: Drei-
-bis vierfache Leitungslänge ohne Regeneratoren durch Verwendugn eines andern 
-Leitungsprotokolls und einer leistungsstarken Echokompensation. Außerdem
-verursacht HDSL relativ geringe Störungen der benachbarten Adern, diese können 
-bei SDSL wegen der starken Einstrahlung kaum für andere Anwendungen
+Subscriber Line) entwickelt. So war es nun endlich mÃ¶glich kostengÃ¼nstige 
+2-MBit-Systeme anzubieten. HDSL hat einige Vorteile gegenÃ¼ber SDSL: Drei-
+bis vierfache LeitungslÃ¤nge ohne Regeneratoren durch Verwendugn eines andern 
+Leitungsprotokolls und einer leistungsstarken Echokompensation. AuÃŸerdem
+verursacht HDSL relativ geringe StÃ¶rungen der benachbarten Adern, diese kÃ¶nnen 
+bei SDSL wegen der starken Einstrahlung kaum fÃ¼r andere Anwendungen
 (Telefonie) verwendet werden.
 ADSL (Asymetric Digital Subscriber Line) und VDSL (Very High Data Rate Digital 
 Subscriber Line) wurden ebenfalls Anfang der 90er Jahre entwickelt,
-hierdurch wird noch mehr Bandbreite zur Verfügung gestellt. 
+hierdurch wird noch mehr Bandbreite zur VerfÃ¼gung gestellt. 
 Mehr dazu im <A HREF="../modem/dfue2.html#2.3"> Modem-Skript</a>.
 <P>
 
 <H3>Frame Relay</H3>
 Aufgrund des immer breiteren Einsatzes von Glasfaserleitungen ist die
-Fehleranfälligkeit der Datenübertragung zurückgegangen. Die
-Rechenleistung der Endgeräte ist zudem mittlerweile genügend hoch, um
-auch Aufgaben der Flußsteuerung und Verbindungsüberwachung zu
-übernehmen. Aus diesem Grunde kann hier das Prinzip des "Fast Packet
+FehleranfÃ¤lligkeit der DatenÃ¼bertragung zurÃ¼ckgegangen. Die
+Rechenleistung der EndgerÃ¤te ist zudem mittlerweile genÃ¼gend hoch, um
+auch Aufgaben der FluÃŸsteuerung und VerbindungsÃ¼berwachung zu
+Ã¼bernehmen. Aus diesem Grunde kann hier das Prinzip des "Fast Packet
 Switching" (schnelle Paketvermittlung) zum Einsatz kommen. Das Verfahren 
 ist als "Frame Relay" standardisiert worden.  Das Frame-Relay-Verfahren 
-arbeitet mit Datenpaketen variabler Länge, die allerdings ohne 
+arbeitet mit Datenpaketen variabler LÃ¤nge, die allerdings ohne 
 Fehlerkorrektur vermittelt werden.
-Beim Frame-Relay-Verfahren findet die Datenübertragung über virtuelle
-Verbindungen statt. Die zugehörigkeit eines Datenpaketes zu einer
-virtuellen Verbindung wird im Paketheader codiert. Hierfür ist das
+Beim Frame-Relay-Verfahren findet die DatenÃ¼bertragung Ã¼ber virtuelle
+Verbindungen statt. Die zugehÃ¶rigkeit eines Datenpaketes zu einer
+virtuellen Verbindung wird im Paketheader codiert. HierfÃ¼r ist das
 DLCI (Data Link Connection Identifier) Feld vorgesehen, das insgesamt
 10 Bit breit ist. Insgesamt sind maximal 1024 virtuelle Verbindungen
-gleichzeitig möglich. Die Zahl der virtuellen Verbindungen wird durch
+gleichzeitig mÃ¶glich. Die Zahl der virtuellen Verbindungen wird durch
 die Anzahl der Bits im Paketheader, die zur Codierung einer Verbindung
-dienen begrenzt. Mit 10 Bit können demnach 2<SUP>10</SUP> = 1024 virtuelle
+dienen begrenzt. Mit 10 Bit kÃ¶nnen demnach 2<SUP>10</SUP> = 1024 virtuelle
 Verbindungen dargestellt werden.
 Effektiv nutzbar sind allerdings nur 976 virtuelle Verbindungen, da
-einige DLCI für Sonderaufgaben reserviert sind.
+einige DLCI fÃ¼r Sonderaufgaben reserviert sind.
 <P>
 Eine virtuelle Verbindung kann dauerhaft eingerichtete werden oder
 erst bei Bedarf aufgebaut und nachher abgebaut werden. Im Falle der
 dauerhaften Verbindung spricht man von einer "Permanent Virtual
-Circuit", abgekürzt PVC, anderenfalls von einer "Switched Virtual
+Circuit", abgekÃ¼rzt PVC, anderenfalls von einer "Switched Virtual
 Circuit" (SVC).
 Die SVCs werden beispielsweise dann eingesetzt, wenn die Verbindung nur
-selten punktuell genutzt wird. Eine dauerhafte Verbindung würde in
-einem solchen Falle nur unnötige Kosten verursachen. Ein Beispiel
-hierfür ist z.B. die Anbindung von Telearbeitsplätzen an das
+selten punktuell genutzt wird. Eine dauerhafte Verbindung wÃ¼rde in
+einem solchen Falle nur unnÃ¶tige Kosten verursachen. Ein Beispiel
+hierfÃ¼r ist z.B. die Anbindung von TelearbeitsplÃ¤tzen an das
 Rechnernetz des Betriebes.
 <P>
-Das Frame-Relay-Verfahren ermöglicht zwar einen schnellen
-Datenaustausch in paktetvermittelten Datennetzen, doch die Übertragung
-von Sprache und anderen echtzeitkritischen Datenströmen kann hiermit
-nicht erfolgen. Bei der Übertragung eines Datenpaktes ist die Leitung
-für die Zeit der Übertragung blockiert; eine begonnene Übertragung
+Das Frame-Relay-Verfahren ermÃ¶glicht zwar einen schnellen
+Datenaustausch in paktetvermittelten Datennetzen, doch die Ãœbertragung
+von Sprache und anderen echtzeitkritischen DatenstrÃ¶men kann hiermit
+nicht erfolgen. Bei der Ãœbertragung eines Datenpaktes ist die Leitung
+fÃ¼r die Zeit der Ãœbertragung blockiert; eine begonnene Ãœbertragung
 eines Paketes kann nicht mehr unterbrochen werden. Aufgrund der
-variablen Größe der Datenpaktete bei Frame Relay kann die Übertragung
-daher eine längere Zeit inanspruch nehmen. Ein Weg dieses Problem zu
-lösen wäre es, die Datenpaketgröße drastisch zu reduzieren, wie es
+variablen GrÃ¶ÃŸe der Datenpaktete bei Frame Relay kann die Ãœbertragung
+daher eine lÃ¤ngere Zeit inanspruch nehmen. Ein Weg dieses Problem zu
+lÃ¶sen wÃ¤re es, die DatenpaketgrÃ¶ÃŸe drastisch zu reduzieren, wie es
 z.B. beim ATM-Verfahren festgelegt wurde.
 <P>
-Während das Datex-Netz bis zur Schicht 3 hinauf definiert ist, umfaßt der
+WÃ¤hrend das Datex-Netz bis zur Schicht 3 hinauf definiert ist, umfaÃŸt der
 Standard von Frame-Relay nur noch die Schichten 1 und 2. Die Eigenschaften
 in Stichpunkten:
 <UL>
-<LI> Paketorientiertes Protokoll mit variabler Paketlänge
+<LI> Paketorientiertes Protokoll mit variabler PaketlÃ¤nge
 <LI> Frames werden in derselben Reihenfolge Empfangen wie sie abgeschickt
-wurden, es ist also keine Zwischenspeicherung und Sortierung nötig.
-<LI> Keine Empfangsbestätigung, keine Flußkontrolle (bleibt höheren
+wurden, es ist also keine Zwischenspeicherung und Sortierung nÃ¶tig.
+<LI> Keine EmpfangsbestÃ¤tigung, keine FluÃŸkontrolle (bleibt hÃ¶heren
 Protokollen vorbehalten).
 <LI> Fehlererkennung, aber keine Fehlerkorrektur.
 <LI> Nur fehlerfreie Frames werden weitergeleitet.
@@ -163,148 +163,148 @@ Protokollen vorbehalten).
 
 <H3>FPS</H3>
 FPS (fast packet switching) ist ein schneller Paketvermittlungsdienst, bei
-dem Rahmen fester Länge vermittelt werden. Die Rahmen werden auch als
+dem Rahmen fester LÃ¤nge vermittelt werden. Die Rahmen werden auch als
 Zellen bezeichnet, man spricht von Zellenvermittlung (cell switching).
 ATM basiert auf FPS. FPS zeichnet sich durch eine variable Bandbreitenzuordnung 
 aus. Nur die Informationen im Informationsteil (Header) der Zellen sind mit 
-einer Fehlererkennung ausgestattet. Die Zellen werden wie bei ATM über 
-virtuelle Verbindungen durch das Netz übertragen (zu virtuellen Verbindungen 
-siehe 'ATM'). Zellen werden ununterbrochen generiert und übertragen, nicht 
+einer Fehlererkennung ausgestattet. Die Zellen werden wie bei ATM Ã¼ber 
+virtuelle Verbindungen durch das Netz Ã¼bertragen (zu virtuellen Verbindungen 
+siehe 'ATM'). Zellen werden ununterbrochen generiert und Ã¼bertragen, nicht 
 belegte Zellen werden im Header als 'leer' gekennzeichnet.
 <P>
 
 <H3>ATM</H3>
-ATM steht für asynchronous transfer mode = asynchrone Übertragungsart.
-Diese Hochgeschwindigkeits-Paketvermittlung wurde für Breitband-ISDN (B-ISDN) 
-als Vermittlungstechnik entwickelt und ist für Daten, Sprache, Text und Bilder 
-gleichermaßen geeignet. Es gilt als die Technologie der Zukunft. ATM 
+ATM steht fÃ¼r asynchronous transfer mode = asynchrone Ãœbertragungsart.
+Diese Hochgeschwindigkeits-Paketvermittlung wurde fÃ¼r Breitband-ISDN (B-ISDN) 
+als Vermittlungstechnik entwickelt und ist fÃ¼r Daten, Sprache, Text und Bilder 
+gleichermaÃŸen geeignet. Es gilt als die Technologie der Zukunft. ATM 
 basiert auf FPS (fast packet switching). Dabei werden die Daten zu Paketen 
-zusammengefaßt und zum Ziel geroutet. Das zuständige Normungs- und 
+zusammengefaÃŸt und zum Ziel geroutet. Das zustÃ¤ndige Normungs- und 
 Standardisierungsgremium ist nicht das IEEE, sondern das ATM-Forum.
 Im folgenden soll die Funktion von ATM vereinfacht dargestellt werden.
-ATM arbeitet verbindungsorientiert, d. h. vor der Übertragung muß eine 
+ATM arbeitet verbindungsorientiert, d. h. vor der Ãœbertragung muÃŸ eine 
 Verbindung erst geschaltet werden. Wie bei der klassischen Telefontechnik 
-wird die Verbindung "irgendwie" geschaltet; wenn der kürzeste Weg bereits 
+wird die Verbindung "irgendwie" geschaltet; wenn der kÃ¼rzeste Weg bereits 
 ausgelastet ist, wird ein Ausweichweg verwendet (salopp gesagt: Wenn 
-die Strecke Nürnberg-München ausgelastet ist, wird eben der Weg 
-Nürnberg-Flensburg-München gewählt). 
+die Strecke NÃ¼rnberg-MÃ¼nchen ausgelastet ist, wird eben der Weg 
+NÃ¼rnberg-Flensburg-MÃ¼nchen gewÃ¤hlt). 
 <P>
 Im Kontrollfeld (Header) werden auch keine expliziten Quell- und Zieladressen 
 angegeben, sondern ein virtueller Pfad und ein virtueller Kanal. <BR>
-Ein virtueller Pfad (virtual path, VP) ist eine für kurze Zeit geschaltete 
-Verbindung, die während ihrer Existenz so aussieht wie eine richtige 
+Ein virtueller Pfad (virtual path, VP) ist eine fÃ¼r kurze Zeit geschaltete 
+Verbindung, die wÃ¤hrend ihrer Existenz so aussieht wie eine richtige 
 Festverbindung (Standleitung). 
 Dieser geschaltete Weg durch das Netz wird als virtuell bezeichnet, weil 
-er nicht permanent fest geschaltet ist, sondern nur für die kurze Zeit der 
-Datenübertragung. <BR>
+er nicht permanent fest geschaltet ist, sondern nur fÃ¼r die kurze Zeit der 
+DatenÃ¼bertragung. <BR>
 Zur Kennzeichnung wird ihr ein VPI (virtual path identifier) 
 als Bezeichnung zugeordnet. Ein virtueller Kanal (virtual channel, VC) ist 
-ein Übertragungskanal, der genau wie der virtuelle Pfad nur während der 
-Datenübertragung existiert. Zur Kennzeichnung wird ihm ein VCI 
+ein Ãœbertragungskanal, der genau wie der virtuelle Pfad nur wÃ¤hrend der 
+DatenÃ¼bertragung existiert. Zur Kennzeichnung wird ihm ein VCI 
 (virtual channel identifier) als Bezeichnung zugeordnet. <BR>
-Ein virtueller Pfad besteht aus mehreren virtuellen Kanälen, komplexe Anwendungen 
-können mehrere virtuelle Kanäle gleichzeitig belegen. Die klassischen 
-Standleitungen enthalten ebenfalls mehrere Übertragungskanäle, doch können 
-die virtuellen Kanäle bei ATM die virtuellen Pfade (Leitungen) wechseln. 
-Wenn beispielsweise zwei virtuelle Kanäle auf Pfad 1 ankommen, kann Kanal 
+Ein virtueller Pfad besteht aus mehreren virtuellen KanÃ¤len, komplexe Anwendungen 
+kÃ¶nnen mehrere virtuelle KanÃ¤le gleichzeitig belegen. Die klassischen 
+Standleitungen enthalten ebenfalls mehrere ÃœbertragungskanÃ¤le, doch kÃ¶nnen 
+die virtuellen KanÃ¤le bei ATM die virtuellen Pfade (Leitungen) wechseln. 
+Wenn beispielsweise zwei virtuelle KanÃ¤le auf Pfad 1 ankommen, kann Kanal 
 1 durchaus auf Pfad 2 und Kanal 2 auf Pfad 1 zum selben Zielnetz geschaltet 
 werden.
 <P>
 <UL>
-<LI> Bei VP-Switches bleiben die Kanäle den virtuellen Pfaden fest zugeordnet, 
+<LI> Bei VP-Switches bleiben die KanÃ¤le den virtuellen Pfaden fest zugeordnet, 
 die Pfade werden durch das Netz geschaltet. 
-<LI> Bei VC-Switches werden die Kanäle über verschiedene Pfade geschaltet. 
+<LI> Bei VC-Switches werden die KanÃ¤le Ã¼ber verschiedene Pfade geschaltet. 
 Bei den geschalteten Verbindungen gibt es zwei wichtige Arten: 
   <UL>
   <LI> Eine PVC (permanent virtual circuit = permanente virtuelle Verbindung) 
   bleibt auch im unbenutzten Fall so lange geschaltet, bis sie wieder gewollt 
   abgebaut wird. 
   <LI> Eine SVC (switched virtual circuit = geschaltete vinuelle Verbindung) 
-  bleibt nur für die Dauer der Übertragung geschaltet und wird nach 
-  Übertragungsende automatisch wieder abgebaut. 
+  bleibt nur fÃ¼r die Dauer der Ãœbertragung geschaltet und wird nach 
+  Ãœbertragungsende automatisch wieder abgebaut. 
   </UL>
 </UL>
 <P>
 Bei der Wegewahl wird eine einfache Art des Routings verwendet, um die 
 Datenpakete durch das Netz zu senden. Der Weg, den das Datenpaket durch 
-das ATM-Netz zurücklegt, besteht dabei aus drei Hauptabschnitten:
+das ATM-Netz zurÃ¼cklegt, besteht dabei aus drei Hauptabschnitten:
 <OL>
 <LI> Vom Absender zum Switch, an dem der Absender angeschlossen ist.
 <LI> Vermittlung innerhalb des ATM-Netzes von Switch zu Switch.
-<LI> Vom Switch, an dem der Empfänger angeschlossen ist, zum Empfänger.
+<LI> Vom Switch, an dem der EmpfÃ¤nger angeschlossen ist, zum EmpfÃ¤nger.
 </OL>
-Als Übertragungsverfahren wird bei ATM das Paketvermittlungsverfahren Cell 
+Als Ãœbertragungsverfahren wird bei ATM das Paketvermittlungsverfahren Cell 
 Relay ("Zellenvermittlung") verwendet. Bei diesen Zellen handelt es sich 
-um Rahmen fester Länge mit 5 Byte Header für Adressierung und Steueranweisungen 
+um Rahmen fester LÃ¤nge mit 5 Byte Header fÃ¼r Adressierung und Steueranweisungen 
 sowie 48 Byte Nutzdaten, insgesamt also 53 Byte. Dabei wird zwischen zwei 
 unterschiedlichen Zelltypen unterschieden. 
 <UL>
 <LI> Die UNI-Zellen (user network interface) werden an der Schnittstelle 
-zwischen Anwender und ATM-Netz verwendet und besitzen im Header 8 Bit für 
-die Angabe des virtuellen Pfades und 4 Bit für die Flußkontrolle. 
+zwischen Anwender und ATM-Netz verwendet und besitzen im Header 8 Bit fÃ¼r 
+die Angabe des virtuellen Pfades und 4 Bit fÃ¼r die FluÃŸkontrolle. 
 <LI>Die NNI-Zellen (network node interface) werden zwischen den 
-Netzwerkknoten (ATM-Switches) verwendet und besitzen 12 Bit für die Angabe 
-des virtuellen Pfades, jedoch keine Flußkontrolle. 
+Netzwerkknoten (ATM-Switches) verwendet und besitzen 12 Bit fÃ¼r die Angabe 
+des virtuellen Pfades, jedoch keine FluÃŸkontrolle. 
 </UL>
 Die Zellen werden von den Switches an den entsprechenden Trennstellen im 
 ATM-Netz automatisch umgewandelt. Durch die sogenannte 'cell loss priority', 
-die Verlustpriorität, wird festgelegt, welche Zellen auch bei sehr hoher 
-Auslastung des Netzes noch unbedingt übertragen werden müssen (z. B. 
+die VerlustprioritÃ¤t, wird festgelegt, welche Zellen auch bei sehr hoher 
+Auslastung des Netzes noch unbedingt Ã¼bertragen werden mÃ¼ssen (z. B. 
 kritische Daten oder Synchronisationsanweisungen) und welche gegebenenfalls 
-auch verloren gehen können (z. B. Bildinformation bei Bildtelefonie). 
-Die Fehlerkontrolle bezieht sich nur auf den 5 Byte großen Header, nicht 
-jedoch auf die Daten. Es ist ATM völlig egal, was übertragen wird, wichtig 
-ist nur wohin und wie. Das ist auch ein Grund für die Schnelligkeit.
-Die wichtigsten Übertragungsraten sind 622 MBit/s (Lichtwellenleiter),
+auch verloren gehen kÃ¶nnen (z. B. Bildinformation bei Bildtelefonie). 
+Die Fehlerkontrolle bezieht sich nur auf den 5 Byte groÃŸen Header, nicht 
+jedoch auf die Daten. Es ist ATM vÃ¶llig egal, was Ã¼bertragen wird, wichtig 
+ist nur wohin und wie. Das ist auch ein Grund fÃ¼r die Schnelligkeit.
+Die wichtigsten Ãœbertragungsraten sind 622 MBit/s (Lichtwellenleiter),
 155 MBit/s (LWL und Kupferleitungen), 100 MBit/s (LWL und FDDI) und
 26 MBit/s (Kupferleitungen).
 <P>
-ATM kann Datenströme unterschiedlicher Bitraten flexibel übertragen und
-vermitteln. Die Übertragungsrate ist skalierbar, d. h. Übertragungsbandbreite
-wird flexibel bereitgestellt. Jedem Endgerät kann statisch (also vorab) oder 
+ATM kann DatenstrÃ¶me unterschiedlicher Bitraten flexibel Ã¼bertragen und
+vermitteln. Die Ãœbertragungsrate ist skalierbar, d. h. Ãœbertragungsbandbreite
+wird flexibel bereitgestellt. Jedem EndgerÃ¤t kann statisch (also vorab) oder 
 dynamisch (also bei konkretem Bedarf) Bandbreite zugewiesen werden, die 
-Netzleistung wächst also mit. Durch die transparente Übertragung in den 
-Zellen werden bei den Netzübergängen keine Gateways benötigt, um von LAN- 
-auf WAN-Protokolle umzusetzen. ATM ist gleichermaßen für LANs, schnelle 
+Netzleistung wÃ¤chst also mit. Durch die transparente Ãœbertragung in den 
+Zellen werden bei den NetzÃ¼bergÃ¤ngen keine Gateways benÃ¶tigt, um von LAN- 
+auf WAN-Protokolle umzusetzen. ATM ist gleichermaÃŸen fÃ¼r LANs, schnelle 
 Backbones und WANs geeignet.
 <P>
 ATM ist verbindungsorientiert und baut immer eine Punkt-zu-Punkt-Verbindung 
-auf. Für eine Übertragung muß also immer eine Verbindung zwischen zwei 
+auf. FÃ¼r eine Ãœbertragung muÃŸ also immer eine Verbindung zwischen zwei 
 Stationen geschaltet werden (ATM basiert auf der Vermittlungstechnik).
 Klassische LANS sind verbindungslos, jede Station ist zu jeder Zeit mit 
 allen anderen Stationen fest verbunden, alle teilen sich dasselbe 
-Übertragungsmedium. ATM als LAN (lokales ATM, L-ATM) benötigt eine 
+Ãœbertragungsmedium. ATM als LAN (lokales ATM, L-ATM) benÃ¶tigt eine 
 LAN-Emulation. So entsteht ein virtuelles Netz, bei dem das ATM-Netz  
-mehreren Teilnehmern (Geräte/Software) ein nichtexistierendes 
-LAN vorspiegeln muß. Dabei sind verschiedene Ansätze allerdings
+mehreren Teilnehmern (GerÃ¤te/Software) ein nichtexistierendes 
+LAN vorspiegeln muÃŸ. Dabei sind verschiedene AnsÃ¤tze allerdings
 noch in Diskussion. Diese LAN-Emulationen arbeiten alle auf Schicht 2 des
-ISO-Schichtenmodells, dadurch eignen sie sich für routebare und nicht 
-routebare Protokolle gleichermaßen. Für die Übertragung von IP-Paketen 
-über ATM haben sich die nachfolgend beschriebenen 3 Verfahren heute etabliert.
+ISO-Schichtenmodells, dadurch eignen sie sich fÃ¼r routebare und nicht 
+routebare Protokolle gleichermaÃŸen. FÃ¼r die Ãœbertragung von IP-Paketen 
+Ã¼ber ATM haben sich die nachfolgend beschriebenen 3 Verfahren heute etabliert.
 <UL>
 <LI><I>CLIP</I><BR>
-  Dies ist die Abkürzung für "Classical IP". Hier werden die Datenpakete
-  aus unterschiedlichen Netzen über ATM transportiert. Die Datenpakete
-  aus verschiedenen Netzformen (wie Ethernet, Token-Ring) können in
+  Dies ist die AbkÃ¼rzung fÃ¼r "Classical IP". Hier werden die Datenpakete
+  aus unterschiedlichen Netzen Ã¼ber ATM transportiert. Die Datenpakete
+  aus verschiedenen Netzformen (wie Ethernet, Token-Ring) kÃ¶nnen in
   einem Fall nach der "Logical Link Control Encapsulation"-Methode alle
-  über eine virtuelle Verbindung übertragen werden. Die ATM-Zellen
-  werden mit Header-Informationen über den Protokolltyp des
+  Ã¼ber eine virtuelle Verbindung Ã¼bertragen werden. Die ATM-Zellen
+  werden mit Header-Informationen Ã¼ber den Protokolltyp des
   transportierten Datenpaketes versehen. Zur effizienten Gestaltung
   des Datentransportes kann auch je Protokolltyp eine virtuelle
-  Verbindung aufgebaut werden. Das Feld mit der Typangabe für die
-  transportierten Pakete kann enfallen, so das mehr Raum für
-  Nutzinformationen zur Verfügung steht. Die mittels CLIP
-  transportierten Datenpakete können allerdings hinsichtlich der
+  Verbindung aufgebaut werden. Das Feld mit der Typangabe fÃ¼r die
+  transportierten Pakete kann enfallen, so das mehr Raum fÃ¼r
+  Nutzinformationen zur VerfÃ¼gung steht. Die mittels CLIP
+  transportierten Datenpakete kÃ¶nnen allerdings hinsichtlich der
   IP-Adressen nur immer innerhalb eines IP-Subnetzes transportiert
-  werden, da hier keine Möglichkeit des Routings über ATM besteht.
+  werden, da hier keine MÃ¶glichkeit des Routings Ã¼ber ATM besteht.
   <P>
 <LI><I>LANE</I><BR>
-  Das LAN-Emulationsverfahren (LANE) simuliert die Abläufe
-  und Funktionen eines herkömmlichen LAN. Hierdurch kann eine
+  Das LAN-Emulationsverfahren (LANE) simuliert die AblÃ¤ufe
+  und Funktionen eines herkÃ¶mmlichen LAN. Hierdurch kann eine
   existierendes LAN auf ATM abgebildet werden. Das emulierte LAN (ELAN)
-  hat eine Client/Serverarchitektur, bei der jedes Endgerät einen
+  hat eine Client/Serverarchitektur, bei der jedes EndgerÃ¤t einen
   softwareseitigen "LAN Emulation Client" (LEC) besitzt. Dieser
-  unterhält Steuerverbindungen zu den einzelnen LANE-Servern. Eine
+  unterhÃ¤lt Steuerverbindungen zu den einzelnen LANE-Servern. Eine
   Nutzdatenverbindung kann direkt zu den anderen LEC aufgebaut werden.
   Daneben kann auch eine Broadcastsendung verschickt werden, indem
   einen Nachricht an den "Broadcast and Unknown Server" (BUS) geschickt
@@ -312,26 +312,26 @@ routebare Protokolle gleichermaßen. Für die Übertragung von IP-Paketen
   wird von einem "LAN Emulation Configuration Server" konfiguriert.
   Daneben ist noch ein LAN-Emulations-Server installiert, der zur
   Registrierung einzelner Clients und zur Ermittlung von Adressen
-  dient. Die Teilnehmer des emulierten LAN gehören alle zu einem
-  Subnetz. Es besteht mittels LANE keine Möglichkeit, Datenpakete
+  dient. Die Teilnehmer des emulierten LAN gehÃ¶ren alle zu einem
+  Subnetz. Es besteht mittels LANE keine MÃ¶glichkeit, Datenpakete
   zwischen einzelnen LANE-Netzen zu routen. Auch die Garantie einer
-  Dienstgüte ist bei LANE nicht möglich.
+  DienstgÃ¼te ist bei LANE nicht mÃ¶glich.
   <P>
 <LI><I>MPoA</I><BR>
   Das "Multiprotocol Encapsulation over ATM"-Verfahren
   beseitigt die Nachteile der anderen beiden Verfahren hinsichtlich
-  des Routings zwischen den Subnetzen. Zudem kann hier die Dienstegüte
-  für einzelne Dienste garantiert werden. Das Netz besteht aus 
+  des Routings zwischen den Subnetzen. Zudem kann hier die DienstegÃ¼te
+  fÃ¼r einzelne Dienste garantiert werden. Das Netz besteht aus 
   MPoA-Servern und MPoA-Clients. 
   Die MPoA-Server dienen als virtelle Router, welche die Aufgabe haben,
   die Route zum Zielnetz zu ermitteln. Im Gegensatz zu den
-  herkömmlichen Routern, die auch den Transport der Daten übernehmen,
-  sind die Router hier allerdings nur für die Wegewahl zuständig. Die
+  herkÃ¶mmlichen Routern, die auch den Transport der Daten Ã¼bernehmen,
+  sind die Router hier allerdings nur fÃ¼r die Wegewahl zustÃ¤ndig. Die
   MPoA-Clients bauen mit den Informationen der MPoA-Server die
-  gewünschte Verbindung auf, und übernehmen den eigentlichen
+  gewÃ¼nschte Verbindung auf, und Ã¼bernehmen den eigentlichen
   Datentransport.
 </UL>
-<H3>Gegenüberstellung der Technologien</H3>
+<H3>GegenÃ¼berstellung der Technologien</H3>
 <P><UL>
 <TABLE BORDER=1 CELLPADDING=3 CELLSPACING=0>
 <TR>
@@ -356,7 +356,7 @@ routebare Protokolle gleichermaßen. Für die Übertragung von IP-Paketen
 <TD ALIGN="LEFT">nein</TD>
 </TR>
 <TR>
-<TD ALIGN="LEFT">Paketgröße</TD>
+<TD ALIGN="LEFT">PaketgrÃ¶ÃŸe</TD>
 <TD ALIGN="LEFT">keine Pakete</TD>
 <TD ALIGN="LEFT">variabel</TD>
 <TD ALIGN="LEFT">variabel</TD>
@@ -379,40 +379,40 @@ routebare Protokolle gleichermaßen. Für die Übertragung von IP-Paketen
 <P>
 
 <H3>Punkt-zu-Punkt-Verbindungen</H3>
-Bei größeren Entfernungen zwischen zwei Punkten kommen 
-fast ausschließlich Glasfaserleitungen zum Einsatz. Sie bieten
-theoretisch mögliche Kapazitäten im TBit/s-Bereich. 
+Bei grÃ¶ÃŸeren Entfernungen zwischen zwei Punkten kommen 
+fast ausschlieÃŸlich Glasfaserleitungen zum Einsatz. Sie bieten
+theoretisch mÃ¶gliche KapazitÃ¤ten im TBit/s-Bereich. 
 In der Boom-Phase des Internet um die Jahrteusendwende vergruben die 
 Telekommunikationsunternehmen zehntausende Kilometer teures Glasfaserkabel 
-in ganz Europa. Einige Energieversorger sind ins Geschäft mit den 
+in ganz Europa. Einige Energieversorger sind ins GeschÃ¤ft mit den 
 Lichtwellenstrecken eingestiegen und machen sich dabei ihre bestehende 
-Infrastruktur zunutze. Der Bedarf blieb jedoch hinter den Erwartungen zurück.
+Infrastruktur zunutze. Der Bedarf blieb jedoch hinter den Erwartungen zurÃ¼ck.
 <P>
-<center><img src="images/bw_wachs.jpg"></center><br>
+<center><img src="images/bw_wachs.png"></center><br>
 <small>Quelle: TeleGeography Research, PriMetrica Inc, 
 <a href="http://www.telegeography.com">www.telegeography.com</a></small>
 <P>
 Angemietet wurden die Lichtwellenleiter von den Providern meist "dunkel" 
 (Dark Fiber), also unbeschaltet. Wenn ein IP-Carrier neue Punkt-zu-Punkt-Strecken 
-benötigt, kann er bei den Dark-Fiber-Versorgern Faser(n) anmieten. 
+benÃ¶tigt, kann er bei den Dark-Fiber-Versorgern Faser(n) anmieten. 
 Der Dark-Fiber-Anbieter verlegt Kabel verschiedener Hersteller. In einem 
 LEAF-Kabel (Large Effective Area Fiber) beispielsweise stehen 144 Fasern zur 
-Verfügung. Mit welcher Kapazität der Carrier die Fasern beschaltet, 
-liegt in seinem Ermessen. Die technische Ausstattung dafür richtet er selbst ein.
+VerfÃ¼gung. Mit welcher KapazitÃ¤t der Carrier die Fasern beschaltet, 
+liegt in seinem Ermessen. Die technische Ausstattung dafÃ¼r richtet er selbst ein.
 <p>
-Um eine flächendeckende Versorgung mit seinem Backbone-Netz zu gewährleisten, 
-muss ein IP-Carrier zumindest in mehreren Großstädten vertreten sein. Dazu 
-betreibt er dann "Points of Presence" (PoPs), die über Punkt-zu-Punkt-Glasfasertrassen 
-verbunden sind. Von dort aus führen sie außerdem IP-Leitungen zu ihren Kunden. 
-Außerdem arbeiten die IP-Carrier oft auch als Internet Service Provider. In 
-den PoPs finden überdies noch Router von kleineren lokalen Carriern Platz, die 
-mit dem großen Nachbarn IP-Daten austauschen. Die PoPs dienen innerhalb des 
+Um eine flÃ¤chendeckende Versorgung mit seinem Backbone-Netz zu gewÃ¤hrleisten, 
+muss ein IP-Carrier zumindest in mehreren GroÃŸstÃ¤dten vertreten sein. Dazu 
+betreibt er dann "Points of Presence" (PoPs), die Ã¼ber Punkt-zu-Punkt-Glasfasertrassen 
+verbunden sind. Von dort aus fÃ¼hren sie auÃŸerdem IP-Leitungen zu ihren Kunden. 
+AuÃŸerdem arbeiten die IP-Carrier oft auch als Internet Service Provider. In 
+den PoPs finden Ã¼berdies noch Router von kleineren lokalen Carriern Platz, die 
+mit dem groÃŸen Nachbarn IP-Daten austauschen. Die PoPs dienen innerhalb des 
 Carrier_netzes als Datendrehscheibe. Um mehr Bandbreite aus einer Faser herhauszuholen, 
 hat sich das "Dense Wavelength Division Multiplexing" (DWDM) durchgesetzt. Dabei werden 
-mehrere Signale multiplex in den Lichtwellenleiter eingespeist. Pro Wellenlänge und 
+mehrere Signale multiplex in den Lichtwellenleiter eingespeist. Pro WellenlÃ¤nge und 
 Faser lassen sich heutzutage Bitraten von 1 GBit/s bis 40 GBit/s erreichen. 
-Auf dem Weg durch den Lichtwellenleiter wird das Signal gedäpft. Etwa alle hundert 
-Kilometer müssen Repeaterstationen stehen, die mit optischen Faserverstärkern 
+Auf dem Weg durch den Lichtwellenleiter wird das Signal gedÃ¤pft. Etwa alle hundert 
+Kilometer mÃ¼ssen Repeaterstationen stehen, die mit optischen FaserverstÃ¤rkern 
 ausgestattet sind. Je nach Bedarf wird bei dieser Gelegenheit auch noch eine Abzweigung 
 eingerichtet, um regionale Kunden zu versorgen.
 <p>
@@ -423,75 +423,75 @@ in Transport-Container ("Synchrone Transport-Module", STM) verpackt und mit eine
 versehen. Jedes Paket hat je nach Streckenbandbreite eine bestimmte "Byte-Breite", dauert
 aber stets 125 Nanosekunden.
 <p>
-SDH gestattet den Verkauf von Kapazitäten je nach Bandbreite. Im Angebot stehen 
+SDH gestattet den Verkauf von KapazitÃ¤ten je nach Bandbreite. Im Angebot stehen 
 beispielsweise STM-1 (155 MBit/s), STM-4 (622 MBit/s), STM-16 (2,5 GBit/s) und STM-64 (10 GBit/s). 
 In den USA bietet der SONET-Standard die gleichen Geschwindigkeitsstufen unter anderen 
 Bezeichnungen: Eine STM-4-Leitung entspricht in SONET einer OC-12-Verbindung ("OC = 
-Optical Carrier"), STM-16 entspricht OC-48, usw. Diese Klassifizierung ist für 
+Optical Carrier"), STM-16 entspricht OC-48, usw. Diese Klassifizierung ist fÃ¼r 
 die Provider wichtig. Inoffiziell teilen sich die Unternehmen in "Tier"-Klassen ein 
-(englisch "tier" = Stufe, Rang). "Tier 1" bedeutet über weite Strecken mindestens 
+(englisch "tier" = Stufe, Rang). "Tier 1" bedeutet Ã¼ber weite Strecken mindestens 
 STM-16, ein autonomes System mit nationaler oder globaler Ausdehnung und rege Beziehungen 
-zu anderen Carriern. "Tier-2"-Anbieter sind deutlich kleiner, und "Tier-3"-Provider verfügen 
-über ein lokal beschränktes Glasfasernetz.
+zu anderen Carriern. "Tier-2"-Anbieter sind deutlich kleiner, und "Tier-3"-Provider verfÃ¼gen 
+Ã¼ber ein lokal beschrÃ¤nktes Glasfasernetz.
 <p>
-Der Betrieb von Austauschknoten oder Transitpunkten benötigt Hardware und Wartung. 
-Daher haben sich weltweit einige große öffentliche Knoten etabliert. Europas  
-größter Knoten ist der "London Internet Exchange"(LINX). An den Knoten können 
+Der Betrieb von Austauschknoten oder Transitpunkten benÃ¶tigt Hardware und Wartung. 
+Daher haben sich weltweit einige groÃŸe Ã¶ffentliche Knoten etabliert. Europas  
+grÃ¶ÃŸter Knoten ist der "London Internet Exchange"(LINX). An den Knoten kÃ¶nnen 
 die Provider ihre Daten kostenneutral von einem Netz ins andere leiten ("Commercial Internet 
-Exchange", CIX). Sie sorgen dabei selbst für die Zuführung zum CIX und die Kosten. 
-National existieren kleinere Knoten, in Deutschland beispielsweise der INXS in München, 
+Exchange", CIX). Sie sorgen dabei selbst fÃ¼r die ZufÃ¼hrung zum CIX und die Kosten. 
+National existieren kleinere Knoten, in Deutschland beispielsweise der INXS in MÃ¼nchen, 
 der BCIX in Berlin und der HHCIX in Hamburg sowie der internationam bedeutende DeCIX in Frankfurt
 (betrieben vom Provider-Verband eco). 141 Carrier und Provider sind dort derzeit angebunden. 
 <P>
-<center><img src="images/bw_cix.jpg"></center><br>
+<center><img src="images/bw_cix.png"></center><br>
 <small>IP-Routen zwischen London, Paris und Frankfurt</small>
 <p>
-Statistiken über die Datenmenge, die durch den DeCIX rauscht erhalten Sie unter
+Statistiken Ã¼ber die Datenmenge, die durch den DeCIX rauscht erhalten Sie unter
 <A HREF="http://www.decix.com/info/traffic.html">http://www.decix.com/info/traffic.html</A>.
 <P>
 
-Weiterführende Informationen zu diesem Thema:<br>
+WeiterfÃ¼hrende Informationen zu diesem Thema:<br>
 Roland Kiefer, Peter Winterling: Optische Netze, Technik, Trends und Perspektiven, c't 2/03, S. 152<br>
-Holger Bleich, Jürgen Kuri, Petra Vogt: Zwischen Boom und Baustopp, Schweinezyklus beim 
+Holger Bleich, JÃ¼rgen Kuri, Petra Vogt: Zwischen Boom und Baustopp, Schweinezyklus beim 
 Ausbau der Internet-Backbones, c't 21/03, S. 184<br>
-Irene Heinen: Daten-Disponenten, Neue Internet-Knoten verkürzen Wegstrecken auf dem 
+Irene Heinen: Daten-Disponenten, Neue Internet-Knoten verkÃ¼rzen Wegstrecken auf dem 
 Daten-Highway, c't 25/03, S. 92<br>
 Holger Bleich: Bosse der Fasern, Die Infrastruktur des Internet, c't 07/05, S. 88
 <P>
 
 <H2><A NAME="10.2">Voice over IP</A></H2>
 Der klassische Telefondienst wird heute im Fernbereich, Mobilkommunikation sogar 
-generell über digitale Paketvermittlungsnetzwerke (ATM, Frame-Relay etc.) abgewickelt,
-auch wenn er natürlich weiterhin leitungsvermittelt zu sein scheint. Die Konvergenz 
-von Internet und Telekommunikation ist ein Trend von erheblicher Bedeutung für 
+generell Ã¼ber digitale Paketvermittlungsnetzwerke (ATM, Frame-Relay etc.) abgewickelt,
+auch wenn er natÃ¼rlich weiterhin leitungsvermittelt zu sein scheint. Die Konvergenz 
+von Internet und Telekommunikation ist ein Trend von erheblicher Bedeutung fÃ¼r 
 die gesamte Informatik.
-Unternehmen mit eigenen Computernetzen und/oder festen Internet-Anschlüssen 
-gehen deshalb dazu über, die TCP/IP-Netze auch zur internen bzw. externen 
+Unternehmen mit eigenen Computernetzen und/oder festen Internet-AnschlÃ¼ssen 
+gehen deshalb dazu Ã¼ber, die TCP/IP-Netze auch zur internen bzw. externen 
 Sprachkommunikation zu nutzen. Die verwendeten Protokolle in der Anwendungsschicht 
 werden unter dem Oberbegriff "Voice-over-IP" (VoIP) zusammengefasst.
-Durch "Internet-Telefon-Gateways" läßt sich das klassische Telefonnetz mit dem
-IP-Netz verbinden, so daß von Telefon zu Telefon über das Internet telefoniert 
+Durch "Internet-Telefon-Gateways" lÃ¤ÃŸt sich das klassische Telefonnetz mit dem
+IP-Netz verbinden, so daÃŸ von Telefon zu Telefon Ã¼ber das Internet telefoniert 
 werden kann.
 <P>
 <center><img src="images/voip1.png"></center>
 <P>
-Bekanntester, aber wenig populärer Ableger ist die Internet-Telefonie. Zwar 
-läßt sich damit billig mit Gesprächspartnern in der ganzen Welt 
-telefonieren, dies müssen lediglich ebenfalls über ein Internet-Telefon 
-oder die entsprechende Software verfügen. Aber da der Datenstrom im Internet 
-unberechenbar ist und es keine Zustellgarantie für Datenpakete gibt, leidet die 
-Sprachqualität.
+Bekanntester, aber wenig populÃ¤rer Ableger ist die Internet-Telefonie. Zwar 
+lÃ¤ÃŸt sich damit billig mit GesprÃ¤chspartnern in der ganzen Welt 
+telefonieren, dies mÃ¼ssen lediglich ebenfalls Ã¼ber ein Internet-Telefon 
+oder die entsprechende Software verfÃ¼gen. Aber da der Datenstrom im Internet 
+unberechenbar ist und es keine Zustellgarantie fÃ¼r Datenpakete gibt, leidet die 
+SprachqualitÃ¤t.
 Im eigenen Firmennetz hingegen lassen sich Netzlast, Traffic, Laufzeiten und 
-Verbindungswege kontrollieren. Das ändert zwar nichts daran, daß 
-IP an sich ausschließlich zur Datenübertragung entwickelt wurde. 
+Verbindungswege kontrollieren. Das Ã¤ndert zwar nichts daran, daÃŸ 
+IP an sich ausschlieÃŸlich zur DatenÃ¼bertragung entwickelt wurde. 
 Das IP-Protokoll ist aber wesentlich flexibler, als es ihm viele zutrauen.
 <P>
-Firmen können Ihren gesamten internen Telefonverkehr über ihr Intranet kostenlos
-abwickeln. Privatanwendern und Firmen erschließen sich Kostenersparnisse bei
+Firmen kÃ¶nnen Ihren gesamten internen Telefonverkehr Ã¼ber ihr Intranet kostenlos
+abwickeln. Privatanwendern und Firmen erschlieÃŸen sich Kostenersparnisse bei
 Telefonaten ins Ausland oder zum Mobilfunknetz.
 Voice over IP stellt die erste Stufe der Konvergenz von Daten und Sprache dar. 
 Die Sprachintegration auf der flexibleren EDV-Infrastruktur auf der Basis von 
-IP bietet sich an. Die Schritte zur integrierten Telefonie bzw. der vollständigen 
+IP bietet sich an. Die Schritte zur integrierten Telefonie bzw. der vollstÃ¤ndigen 
 Vereinigung der Kommunikationsplattformen sind:
 <ol>
 <li>Gemeinsame Infrastruktur<br>
@@ -499,159 +499,159 @@ In die Telefonapparate werden Netzwerk-Schnittstellen eingebaut. Das Telefon ist
 in die gleichen Services- bzw. Netzumgebung eingebunden wie der PC
 <li>Gemeinsames Management<br>
 Die Funktionen der Telefonzentrale werden auf einem PC-Server integriert. Die 
-Verbindung ins öffentliche Telefonnetz erfolgt via Router. Die Sprache wird auf 
-dem Firmennetz gegenüber dem Datenverkehr privilegiert.
+Verbindung ins Ã¶ffentliche Telefonnetz erfolgt via Router. Die Sprache wird auf 
+dem Firmennetz gegenÃ¼ber dem Datenverkehr privilegiert.
 <li>Gemeinsame Anwendungen<br>
-Die Interaktion zwischen Daten und Sprache ist nun möglich: Eine Telefonnummer
-kann mit einer Produkt- oder Kunden-Nummer oder einer Homepage verknüpft 
+Die Interaktion zwischen Daten und Sprache ist nun mÃ¶glich: Eine Telefonnummer
+kann mit einer Produkt- oder Kunden-Nummer oder einer Homepage verknÃ¼pft 
 werden etc.
 <li>Mehrwertdienste<br>
-Die Internet-Telefonie bietet zusätzliche Leistungsmerkmale bei PC-Nutzung z. B. 
-Videoübertragung, Whiteboard oder gemeinsames Bearbeiten von Dokumenten.
+Die Internet-Telefonie bietet zusÃ¤tzliche Leistungsmerkmale bei PC-Nutzung z. B. 
+VideoÃ¼bertragung, Whiteboard oder gemeinsames Bearbeiten von Dokumenten.
 </OL>
 <p>
 Bei geringeren Kosten bietet die integrierte Telefonie bessere Leistung und ist 
-bereits sehr stark auf die kommenden Geschäftsanwendungen ausgerichtet.
+bereits sehr stark auf die kommenden GeschÃ¤ftsanwendungen ausgerichtet.
 Die Vorteile sind u. a.:
 <ul>
 <li>Mit dem Zusammenlegen der Infrastruktur und dem Management verringern sich 
 nicht nur die Investitionskosten (nur eine Verkabelung, nur ein Kommunikationsanschluss 
 pro Arbeitsplatz), sondern insbesondere auch die Betriebskosten. Der Unterhalt und 
-Betrieb eines einzigen Service für Sprache und Daten auf einer einzigen 
-Kommunikationsinfrastruktur schlägt gegenüber zwei getrennten Systemen 
+Betrieb eines einzigen Service fÃ¼r Sprache und Daten auf einer einzigen 
+Kommunikationsinfrastruktur schlÃ¤gt gegenÃ¼ber zwei getrennten Systemen 
 positiv zu Buche.
 <li>Die lokale Telefonie innerhalb eines Netzwerkes ist gratis. Die Infrastruktur 
-stellt einen lokalen Telefonanbieter dar; es fallen für lokale Gespräche 
+stellt einen lokalen Telefonanbieter dar; es fallen fÃ¼r lokale GesprÃ¤che 
 keine Kosten bei einem externen Carrier an.
 <li>Die Auslastung des bestehenden Netzwerkes wird optimiert. Die LAN-Architektur 
-bietet grösstmögliche Flexibilität für Anpassungen an die 
+bietet grÃ¶sstmÃ¶gliche FlexibilitÃ¤t fÃ¼r Anpassungen an die 
 Unternehmensstruktur.
 </UL>
 <P>
 <center><img src="images/voip2.png"></center>
 <P>
-Zu einem kompletten Voice-over-IP-System gehört zunächst einmal eine
+Zu einem kompletten Voice-over-IP-System gehÃ¶rt zunÃ¤chst einmal eine
 TK-Anlage auf Softwarebasis. Als Kommunikationszentrale verwaltet sie die
 Berechtigungen und Profile der Nutzer. Sie stellt Verbindungen her und sorgt
-für die richtige Zuordnung, ohne daß die eigentliche Kommunikation 
-über sie läuft. Der IP-Gateway ist der Mittler zwischen IP-Telefonie 
+fÃ¼r die richtige Zuordnung, ohne daÃŸ die eigentliche Kommunikation 
+Ã¼ber sie lÃ¤uft. Der IP-Gateway ist der Mittler zwischen IP-Telefonie 
 und der bisher genutzten Telefontechnologie wie etwa ISDN. 
 Am Ende der Leitung im VoIP-Netz steht entweder ein IP-Telefon oder ein Computer 
-mit Sound-Karte und IP-Telefonie-Software. Für die Sprachein- und -ausgabe 
-wird ein Headset verwendet. Herkömmliche Telefone lassen sich aber
-mit einer Adapterkarte ebenso computertauglich anschließen.
+mit Sound-Karte und IP-Telefonie-Software. FÃ¼r die Sprachein- und -ausgabe 
+wird ein Headset verwendet. HerkÃ¶mmliche Telefone lassen sich aber
+mit einer Adapterkarte ebenso computertauglich anschlieÃŸen.
 <p>
 Bei Datenpaketen kommt es nicht so sehr darauf an, in welcher Reihenfolge und 
-mit welcher Verzögerung sie übertragen werden. Der Empfänger 
+mit welcher VerzÃ¶gerung sie Ã¼bertragen werden. Der EmpfÃ¤nger 
 speichert die eingehenden Pakete und setzt sie wieder in der richtigen Reihenfolge 
-zusammen. Wird ein Paket beschädigt oder geht verloren, wird es erneut 
+zusammen. Wird ein Paket beschÃ¤digt oder geht verloren, wird es erneut 
 gesendet.<BR>
 Das funktioniert nicht bei zeitsynchronen Daten wie Sprache oder Video. Deshalb 
 wurden im neuen IP-Standard, IPv6, zwei neue Sub-Standards implementiert: 
 das Reservation Protocol (RSVP) und das Realtime Transport Protocol (RTP). 
 RSVP erlaubt zwei Endpunkten einer Verbindung, bestimmte Parameter auszuhandeln, 
-darunter eine maximale Verzögerung (Delay) und einen minimalen Durchsatz. 
-Das IP-Netz garantiert mittels verschiedener Verfahren, daß diese als 
+darunter eine maximale VerzÃ¶gerung (Delay) und einen minimalen Durchsatz. 
+Das IP-Netz garantiert mittels verschiedener Verfahren, daÃŸ diese als 
 "Flowspec" bezeichneten Quality of Service (QoS) eingehalten werden.
 <P>
 <center><img src="images/voip3.png"></center>
 <P>
 Am sichersten funktioniert das unter Verwendung des "Guaranteed-Service"-Verfahrens. 
 Hierbei wird anderer Traffic im Netz unterbunden, sobald dieser die Flowspec 
-gefährden könnte. Diesem starren, aber effizienten Verfahren steht 
-"Controlled Load" gegenüber. Hierbei dürfen auch andere Stationen 
+gefÃ¤hrden kÃ¶nnte. Diesem starren, aber effizienten Verfahren steht 
+"Controlled Load" gegenÃ¼ber. Hierbei dÃ¼rfen auch andere Stationen 
 IP-Pakete solange senden, wie eine mittels Flowspec ausgehandelte Verbindung 
-keine Beeinträchtigung in den vorgegebenen Parametern feststellt.
+keine BeeintrÃ¤chtigung in den vorgegebenen Parametern feststellt.
 "Controlled Load" bietet also mehr Dynamik und lastet das IP-Netz insgesamt besser 
-aus. Ein Vorurteil ist, daß für Voice over IP Anwendungen bestimmte 
+aus. Ein Vorurteil ist, daÃŸ fÃ¼r Voice over IP Anwendungen bestimmte 
 IP-Pakete mit Sprachdaten mittels RSVP priorisiert werden. Das stimmt nicht.
-RSVP dient nur zum Aushandeln und Überwachen der Verbindungsparameter. 
+RSVP dient nur zum Aushandeln und Ãœberwachen der Verbindungsparameter. 
 IP-Sprachpakete werden zwar in den meisten IP-Netzen von Routern und Switches 
-vorrangig behandelt, allerdings ist diese Priorisierung meist herstellerabhängig 
-und somit proprietär. Das birgt Probleme, wenn Netzkomponenten unterschiedlicher 
+vorrangig behandelt, allerdings ist diese Priorisierung meist herstellerabhÃ¤ngig 
+und somit proprietÃ¤r. Das birgt Probleme, wenn Netzkomponenten unterschiedlicher 
 Hersteller im IP-LAN Voice-Daten transportieren soll.
 <p>
-Dem soll RTP entgegenwirken. Jedes IP-Paket erhält seit IP 6 zusätzlich einen 
+Dem soll RTP entgegenwirken. Jedes IP-Paket erhÃ¤lt seit IP 6 zusÃ¤tzlich einen 
 Zeitstempel (Time Stamp) mit der Entstehungszeit sowie eine Folgenummer (Sequence 
-Information). Dies erlaubt es dem Empfänger, Pakete nicht nur in richtiger 
+Information). Dies erlaubt es dem EmpfÃ¤nger, Pakete nicht nur in richtiger 
 Reihenfolge, sondern auch zeitsynchron zusammenzusetzen. Das Real Time Control Protocol 
-(RTCP) koordiniert zudem Sender- und Empfängerprotokolle und sorgt für 
+(RTCP) koordiniert zudem Sender- und EmpfÃ¤ngerprotokolle und sorgt fÃ¼r 
 Monitoring und Management von Echtzeitverbindungen.<BR>
-Außerdem definiert RTP die Kodierung von Audiosignalen nach G.711 sowie 
+AuÃŸerdem definiert RTP die Kodierung von Audiosignalen nach G.711 sowie 
 G.723. Hierbei handelt es sich um Codecs (Coding/Decoding), die von der ITU zur 
-analogen und digitalen Verschlüsselung von Sprache in Telefonnetzen 
+analogen und digitalen VerschlÃ¼sselung von Sprache in Telefonnetzen 
 definiert wurden. G.711 entspricht in etwa dem ISDN-Standard, Sprachdaten werden 
-mit einem Datenstrom von 64 kbit pro Sekunde übertragen.
+mit einem Datenstrom von 64 kbit pro Sekunde Ã¼bertragen.
 <P>
-Für Voice over IP kommt G.711 jedoch nicht zum Einsatz, da sich die Datenlast durch 
-zusätzliche Komprimierung und bessere Abtastverfahren auf bis zu 9,6 kbps drücken 
-läßt (dies entspricht dem GSM-Standard). Verbreitet ist vor allem das 
+FÃ¼r Voice over IP kommt G.711 jedoch nicht zum Einsatz, da sich die Datenlast durch 
+zusÃ¤tzliche Komprimierung und bessere Abtastverfahren auf bis zu 9,6 kbps drÃ¼cken 
+lÃ¤ÃŸt (dies entspricht dem GSM-Standard). Verbreitet ist vor allem das 
 CELP-Verfahren (Codebook Excited Linear Predictive Coding), das mit einem komplizierten 
 mathematischen Modell der menschlichen Sprache arbeitet. Als Ergebnis entsteht ein 
-Datenstrom von 16 kbit pro Sekunde, der Telefonate in ISDN-Sprachqualität 
-überträgt.<br>
-Kombiniert mit Dualrate Speech Coding, definiert im G.723-Standard, genügt sogar 
-ein Datenstrom von nur 5,3 kbps. Außer der geringeren Netzlast bringt dies den 
-Vorteil, daß sich mehr Pakete puffern lassen, ohne die Echtzeitbedingung zu 
-gefährden. Die Qualität der Sprachübertragung im IP-Netz gewinnt 
-also, je kleiner die Datenrate für einen Sprachkanal ist.
+Datenstrom von 16 kbit pro Sekunde, der Telefonate in ISDN-SprachqualitÃ¤t 
+Ã¼bertrÃ¤gt.<br>
+Kombiniert mit Dualrate Speech Coding, definiert im G.723-Standard, genÃ¼gt sogar 
+ein Datenstrom von nur 5,3 kbps. AuÃŸer der geringeren Netzlast bringt dies den 
+Vorteil, daÃŸ sich mehr Pakete puffern lassen, ohne die Echtzeitbedingung zu 
+gefÃ¤hrden. Die QualitÃ¤t der SprachÃ¼bertragung im IP-Netz gewinnt 
+also, je kleiner die Datenrate fÃ¼r einen Sprachkanal ist.
 <p>
-Ein weiterer wichtiger Standard für Voice over IP kommt vom Videoconferencing. 
-H.323 umfaßt sowohl eine Codec-Technologie (wie G.723) wie auch die Signalisierung 
-und Verbindungssteuerung für Videokonferenzsysteme.
-Für IP-Telefonie wurden Teile des H.323-Standards übernommen. Über eine 
-TCP-Verbindung wird zwischen Sender und Empfänger das Signalisierungsprotokoll 
-H.245 ausgehandelt. Dies zeigt eingehende Rufe an und übermittelt Statusinformationen. 
-Die Datenübertragung selbst erfolgt über UDP. TCP-Pakete werden dadurch bei 
+Ein weiterer wichtiger Standard fÃ¼r Voice over IP kommt vom Videoconferencing. 
+H.323 umfaÃŸt sowohl eine Codec-Technologie (wie G.723) wie auch die Signalisierung 
+und Verbindungssteuerung fÃ¼r Videokonferenzsysteme.
+FÃ¼r IP-Telefonie wurden Teile des H.323-Standards Ã¼bernommen. Ãœber eine 
+TCP-Verbindung wird zwischen Sender und EmpfÃ¤nger das Signalisierungsprotokoll 
+H.245 ausgehandelt. Dies zeigt eingehende Rufe an und Ã¼bermittelt Statusinformationen. 
+Die DatenÃ¼bertragung selbst erfolgt Ã¼ber UDP. TCP-Pakete werden dadurch bei 
 jedem Hop auf Fehler kontrolliert und gegebenenfalls korrigiert beziehungsweise 
-zurückgewiesen. UDP läßt diese Kontrolle aus, UDP-Pakete erreichen den 
-Empfänger also schneller. Dafür muß der sich selbst um Fehlerkorrektur 
-bemühen. Voice over IP kodiert hierzu entweder im selben Paket oder im Folgepaket 
-Redundanz, aus der sich ein beschädigtes Paket beim Empfänger reparieren 
-läßt, womit ein erneutes Senden defekter IP-Pakete vermieden wird.
-Zusätzlich erfolgt die Verbindungssteuerung einer Sprachübertragung im IP-Netz 
-gemäß H.323 mit einem Q.931-konformen Signalisierungskanal. Dieser steuert die 
-Sprachverbindung und ist für Funktionen wie etwa Makeln oder 
-Rufnummernübermittlung zuständig.
+zurÃ¼ckgewiesen. UDP lÃ¤ÃŸt diese Kontrolle aus, UDP-Pakete erreichen den 
+EmpfÃ¤nger also schneller. DafÃ¼r muÃŸ der sich selbst um Fehlerkorrektur 
+bemÃ¼hen. Voice over IP kodiert hierzu entweder im selben Paket oder im Folgepaket 
+Redundanz, aus der sich ein beschÃ¤digtes Paket beim EmpfÃ¤nger reparieren 
+lÃ¤ÃŸt, womit ein erneutes Senden defekter IP-Pakete vermieden wird.
+ZusÃ¤tzlich erfolgt die Verbindungssteuerung einer SprachÃ¼bertragung im IP-Netz 
+gemÃ¤ÃŸ H.323 mit einem Q.931-konformen Signalisierungskanal. Dieser steuert die 
+Sprachverbindung und ist fÃ¼r Funktionen wie etwa Makeln oder 
+RufnummernÃ¼bermittlung zustÃ¤ndig.
 <p>
-Um Voice over IP im LAN einzuführen, müssen sämtliche Switches und Router 
-die entsprechenden Protokolle von IPv6 auf dem ISO/OSI-Level 3 unterstützen. 
-Wichtig sind vor allem die Verarbeitung von RTP sowie die Unterstützung von RSVP. 
-Für Konferenzen und Videodaten (die mittels der selben Verfahren wie Sprache 
-übertragen werden), wird außerdem das relativ neue IP-Multicast genutzt. 
-Dabei kopiert eine Netzkomponente einen eingehenden Datenstrom eigenständig und 
-sendet ihn an alle Empfänger weiter. Dies vermeidet zusätzliche Datenkanäle 
-zwischen dem Ursprung der Übertragung und jedem Empfänger. Statt dessen wird 
-der Datenfluß an beliebiger Stelle im Netz dupliziert.
+Um Voice over IP im LAN einzufÃ¼hren, mÃ¼ssen sÃ¤mtliche Switches und Router 
+die entsprechenden Protokolle von IPv6 auf dem ISO/OSI-Level 3 unterstÃ¼tzen. 
+Wichtig sind vor allem die Verarbeitung von RTP sowie die UnterstÃ¼tzung von RSVP. 
+FÃ¼r Konferenzen und Videodaten (die mittels der selben Verfahren wie Sprache 
+Ã¼bertragen werden), wird auÃŸerdem das relativ neue IP-Multicast genutzt. 
+Dabei kopiert eine Netzkomponente einen eingehenden Datenstrom eigenstÃ¤ndig und 
+sendet ihn an alle EmpfÃ¤nger weiter. Dies vermeidet zusÃ¤tzliche DatenkanÃ¤le 
+zwischen dem Ursprung der Ãœbertragung und jedem EmpfÃ¤nger. Statt dessen wird 
+der DatenfluÃŸ an beliebiger Stelle im Netz dupliziert.
 <p>
 Mittlerweile gibt es erste Ethernet-Telefone. Diese werden statt an eine Telefondose an 
 eine RJ-45-Buchse eines Ethernet-Hubs angeschlossen. Alternative hierzu bieten sich CTI 
-oder Wandlerkarten an. Auch etliche DSL-Router ermöglichen den Anschluß
-von herkömmlichen Analogtelefonen oder dienen sogar als Telefonanlage. Aber auch
-die Telefonie direkt am PC mit einem Headset und passender Software ist möglich
+oder Wandlerkarten an. Auch etliche DSL-Router ermÃ¶glichen den AnschluÃŸ
+von herkÃ¶mmlichen Analogtelefonen oder dienen sogar als Telefonanlage. Aber auch
+die Telefonie direkt am PC mit einem Headset und passender Software ist mÃ¶glich
 (sogenanntes Softphone).
 <p>
-VoIP läuft so zuverlässig wie die Internetverbindung selbst. Generell besteht damit 
-kein Unterschied zur Festnetzanschluss. Auch können Gespräche in die Fest- 
-und Mobilfunknetz geführt und entgegengenommen werden. Dazu erhalten Nutzer beim 
+VoIP lÃ¤uft so zuverlÃ¤ssig wie die Internetverbindung selbst. Generell besteht damit 
+kein Unterschied zur Festnetzanschluss. Auch kÃ¶nnen GesprÃ¤che in die Fest- 
+und Mobilfunknetz gefÃ¼hrt und entgegengenommen werden. Dazu erhalten Nutzer beim 
 VoIP-Provider kostenlos ihre Ortsrufnummer, der auch die Notrufe 110 und 112 bereitstellt. 
 <P>
-Bei Voice-over-IP (VoIP) bestehen Sicherheitsmängel, die sich aus der Internetnutzung 
+Bei Voice-over-IP (VoIP) bestehen SicherheitsmÃ¤ngel, die sich aus der Internetnutzung 
 ergeben. Telefonate von VoIP-Nutzern lassen sich innerhalb lokaler Netze mit Hilfe von 
-Software-Tools (Paket Sniffern) abhören und Rufnummern ausspionieren. 
-VoIP-Adapter und -Telefone sind empfindlich gegenüber Hacker-Attacken, insbesindere
-Denial-of-Service-Angriffen. Generell sollte auch die Konfigurationsoberfläche der 
-VoIP-Hardware durch ein Passwort geschützt werden. Eindringlinge könnten sonst 
+Software-Tools (Paket Sniffern) abhÃ¶ren und Rufnummern ausspionieren. 
+VoIP-Adapter und -Telefone sind empfindlich gegenÃ¼ber Hacker-Attacken, insbesindere
+Denial-of-Service-Angriffen. Generell sollte auch die KonfigurationsoberflÃ¤che der 
+VoIP-Hardware durch ein Passwort geschÃ¼tzt werden. Eindringlinge kÃ¶nnten sonst 
 bestehende Guthaben abtelefonieren und eingehende Anrufe entgegennehmen.
 <P>
-Im Gegensatz zur SPAM-Problematik bei E-Mail ist unerwünschte Werbung über 
-VoIP, sogenannter SPIT, derzeit noch kein Problem. Gegenüber E-Mail ist der VoIP-Bereich 
-nicht offen zugänglich, sondern abgeschottet. Realisiert wird dies durch die genaue 
+Im Gegensatz zur SPAM-Problematik bei E-Mail ist unerwÃ¼nschte Werbung Ã¼ber 
+VoIP, sogenannter SPIT, derzeit noch kein Problem. GegenÃ¼ber E-Mail ist der VoIP-Bereich 
+nicht offen zugÃ¤nglich, sondern abgeschottet. Realisiert wird dies durch die genaue 
 Zuordnung der VoIP-Rufnummern. Jeder Nutzer ist damit dem VoIP-Provider bekannt. Anrufe, 
-die außerhalb dieser vertrauenswürdigen Netze initiiert werden, sind nicht 
-kostenlos und deshalb uninteressant für SPITTER. Ein Problem stellt die Signalisierung
-zwischen den einzelnen Telefonanbietern dar, die gewissermaßen "auf Vertrauensbasis"
-abläft. Überwindet ein Hacker die Signalisierungsprotokolle, kann er so ziemlich
+die auÃŸerhalb dieser vertrauenswÃ¼rdigen Netze initiiert werden, sind nicht 
+kostenlos und deshalb uninteressant fÃ¼r SPITTER. Ein Problem stellt die Signalisierung
+zwischen den einzelnen Telefonanbietern dar, die gewissermaÃŸen "auf Vertrauensbasis"
+ablÃ¤ft. Ãœberwindet ein Hacker die Signalisierungsprotokolle, kann er so ziemlich
 alles machen was er will.
 <P>
 
@@ -659,172 +659,172 @@ alles machen was er will.
 <H2><A NAME="10.3">Powerline Communications</A></H2>
 <H4>die Stromleitung ist das Netzwerk</H4>
 Powerline Communications erlaubt die Obertragung von Daten mit Geschwindigkeiten 
-von mehr als einem Mbit/s bis zum Endbenutzer über das Niederspannungs-Energieverteilnetz. 
-Mit dieser Übertragungstechnik wird eine echte Alternative für die sogenannte 
-"Letzte Meile" geschaffen. Mit der Powerline Communications Systemlösung 
-von Siemens können Energieversorgungsunternehmen (EVU) und Stadtwerke vor 
+von mehr als einem Mbit/s bis zum Endbenutzer Ã¼ber das Niederspannungs-Energieverteilnetz. 
+Mit dieser Ãœbertragungstechnik wird eine echte Alternative fÃ¼r die sogenannte 
+"Letzte Meile" geschaffen. Mit der Powerline Communications SystemlÃ¶sung 
+von Siemens kÃ¶nnen Energieversorgungsunternehmen (EVU) und Stadtwerke vor 
 allem den privaten Stromkunden neue Dienste wie beispielsweise "Internet aus 
 der Steckdose" sowie Energie- und Mehrwertdienste auf eigener Infrastruktur 
-anbieten. Das Stromverteilnetz ist die weltweit größte flächendeckende 
-Kabelinfrastruktur bis in jeden Haushalt. Die bisher ausschließlich für 
+anbieten. Das Stromverteilnetz ist die weltweit grÃ¶ÃŸte flÃ¤chendeckende 
+Kabelinfrastruktur bis in jeden Haushalt. Die bisher ausschlieÃŸlich fÃ¼r 
 die Energieversorgung genutzte Verkabelung ist im deregulierten Telekommunikationsmarkt 
-der Schlüssel für den direkten Zugang zum privaten Kunden. Die EVUs können 
-ihr existierendes Stromnetz für neue Dienstangebote nutzen und sich dadurch 
-neue Einnahmequellen erschließen. Auf Basis der PLC Kommunikationsinfrastruktur 
+der SchlÃ¼ssel fÃ¼r den direkten Zugang zum privaten Kunden. Die EVUs kÃ¶nnen 
+ihr existierendes Stromnetz fÃ¼r neue Dienstangebote nutzen und sich dadurch 
+neue Einnahmequellen erschlieÃŸen. Auf Basis der PLC Kommunikationsinfrastruktur 
 werden EVUs weitere Anwendungen zur Effizienzsteigerung (z.B. Lastmanagement) 
-und zusätzliche Dienste (z.B. Security, Fernüberwachung) entwickeln und 
-so ihre Wettbewerbsposition in deregulierten Energiemärkten verbessern. 
-Im Unterschied zu anderen Lösungsansätzen ermöglicht die Powerline 
-Communications Lösung von Siemens die Nutzung des Niederspannungsnetzes bis 
-zur Steckdose im Haushalt. Über das Stromnetz können zusätzlich zur 
-Energie gleichzeitig Daten und Sprache übertragen werden. Bitraten von mehr 
-als einem Mbit/s machen aus jeder Steckdose einen leistungsfähigen Kommunikationsanschluß. 
-In die Lösung ist ein intelligentes Bandbreitenmanagement implementiert, das 
-ermöglicht, den Benutzern je nach Bedarf Bandbreite zur Verfügung zu stellen. 
-Siemens entwickelte für Powerline Communications ein neues, für das besondere 
-Übertragungsverhalten des Stromnetzes optimiertes Übertragungsverfahren. 
-Das Verfahren (Orthogonal Frequency Division Multiplexing, OFDM) ermöglicht 
-hohe Datenraten selbst bei starken Störungen auf dem Energienetz.  
+und zusÃ¤tzliche Dienste (z.B. Security, FernÃ¼berwachung) entwickeln und 
+so ihre Wettbewerbsposition in deregulierten EnergiemÃ¤rkten verbessern. 
+Im Unterschied zu anderen LÃ¶sungsansÃ¤tzen ermÃ¶glicht die Powerline 
+Communications LÃ¶sung von Siemens die Nutzung des Niederspannungsnetzes bis 
+zur Steckdose im Haushalt. Ãœber das Stromnetz kÃ¶nnen zusÃ¤tzlich zur 
+Energie gleichzeitig Daten und Sprache Ã¼bertragen werden. Bitraten von mehr 
+als einem Mbit/s machen aus jeder Steckdose einen leistungsfÃ¤higen KommunikationsanschluÃŸ. 
+In die LÃ¶sung ist ein intelligentes Bandbreitenmanagement implementiert, das 
+ermÃ¶glicht, den Benutzern je nach Bedarf Bandbreite zur VerfÃ¼gung zu stellen. 
+Siemens entwickelte fÃ¼r Powerline Communications ein neues, fÃ¼r das besondere 
+Ãœbertragungsverhalten des Stromnetzes optimiertes Ãœbertragungsverfahren. 
+Das Verfahren (Orthogonal Frequency Division Multiplexing, OFDM) ermÃ¶glicht 
+hohe Datenraten selbst bei starken StÃ¶rungen auf dem Energienetz.  
 Die Siemens AG, Bereich Information and Communication Networks und der Schweizer 
-Hersteller von Telekommunikationsausrüstung Ascom wollen die Entwicklung der 
-breitbandigen Powerline Communications (PLC)-Technik für den Einsatz auf dem 
-Niederspannungsnetz gemeinsam weiter vorantreiben. Beide Unternehmen führen 
-Gespräche, um offene Fragen für die Regulierung zu klären und Spezifikationen 
-für gemeinsame Schnittstellen zu erstellen. Heute gibt es bereits erste Feldversuche 
-und Labormuster für die neue Technik. Aus Kundensicht sind die derzeit auf 
-dem Markt angebotenen proprietären Lösungen jedoch nicht zufriedenstellend. 
+Hersteller von TelekommunikationsausrÃ¼stung Ascom wollen die Entwicklung der 
+breitbandigen Powerline Communications (PLC)-Technik fÃ¼r den Einsatz auf dem 
+Niederspannungsnetz gemeinsam weiter vorantreiben. Beide Unternehmen fÃ¼hren 
+GesprÃ¤che, um offene Fragen fÃ¼r die Regulierung zu klÃ¤ren und Spezifikationen 
+fÃ¼r gemeinsame Schnittstellen zu erstellen. Heute gibt es bereits erste Feldversuche 
+und Labormuster fÃ¼r die neue Technik. Aus Kundensicht sind die derzeit auf 
+dem Markt angebotenen proprietÃ¤ren LÃ¶sungen jedoch nicht zufriedenstellend. 
 Denn ein breiter Einsatz dieser PLC-Technik wird heute weniger durch den noch 
-frühen Entwicklungsstand, als durch die nicht vorhandene Kompatibilität 
-der Lösungen behindert.
+frÃ¼hen Entwicklungsstand, als durch die nicht vorhandene KompatibilitÃ¤t 
+der LÃ¶sungen behindert.
 <P>
 
-<H4>HomePlug: PC-Vernetzung über die Stromleitung</H4>
+<H4>HomePlug: PC-Vernetzung Ã¼ber die Stromleitung</H4>
 "Power-Line-Communications" ist dezeit relativ tot, aber seit 2002 gibt es
 etwas Neues, die "Home-Plug-Technologie" wieder. Mit der Powerline-Technologie 
 hat Home-Plug wenig zu tun. Jedoch haben die technischen Grundprinzipien 
-eine neue und sinnvole Anwendung gefunden: Rechner über existierende 
+eine neue und sinnvole Anwendung gefunden: Rechner Ã¼ber existierende 
 230-V-Leitungen im Haus miteinander zu vernetzen. Etliche Unternehmen bieten 
-entsprechende Adapter an, die alle ähnlich arbeiten. Bei der Develo AG 
-heißt  das Teil "Micro-Link-DLAN" und sieht aus wie ein Steckernetzteil.
-Die Home-Plug-Technologie nutzt die bestehenden 230-V-Leitungen im Haus für 
-die Datenübertragung. 
+entsprechende Adapter an, die alle Ã¤hnlich arbeiten. Bei der Develo AG 
+heiÃŸt  das Teil "Micro-Link-DLAN" und sieht aus wie ein Steckernetzteil.
+Die Home-Plug-Technologie nutzt die bestehenden 230-V-Leitungen im Haus fÃ¼r 
+die DatenÃ¼bertragung. 
 <P>
-<CENTER><img src="images/dlan.jpg"></CENTER>
+<CENTER><img src="images/dlan.png"></CENTER>
 <P>
-Mit einer maximalen Datenübertragungsrate von 14 Mbit/s und synchronem Up-
+Mit einer maximalen DatenÃ¼bertragungsrate von 14 Mbit/s und synchronem Up-
 und Download ist Home-Plug auch recht flott. In der Praxis lassen sich - je nach
-Leitungsqualität - Bandbreiten zwischen 5 Mbit/s und 7 Mbit/s gewährleisten,
-was z. B.für die Verlängerung des DSL-Anschlusses in jedes Zimmer eines 
-Hauses völlig ausreicht. Je nach Dämpfungsfaktor der Elektroinstallation 
-lassen sich mit MicrolinkDLAN (Direct-LAN) Entfernungen bis 200 m überbrücken 
-und beliebig viele Computer anschließen. Zusätzliche Geräte sind nicht 
-notwendig, da die Phasenkopplung durch ein "Übersprechen" stattfindet.
-Die Installation der DLAN-Komponenten gestaltet sich einfach: Über den DLAN-Adapter 
-verbindet man eine Netzkomponente an die nächstgelegene Steckdose, und sofort 
-lässt sich jede andere beliebige Stromsteckdose im Haus als Netzwerkzugang verwenden.
+LeitungsqualitÃ¤t - Bandbreiten zwischen 5 Mbit/s und 7 Mbit/s gewÃ¤hrleisten,
+was z. B.fÃ¼r die VerlÃ¤ngerung des DSL-Anschlusses in jedes Zimmer eines 
+Hauses vÃ¶llig ausreicht. Je nach DÃ¤mpfungsfaktor der Elektroinstallation 
+lassen sich mit MicrolinkDLAN (Direct-LAN) Entfernungen bis 200 m Ã¼berbrÃ¼cken 
+und beliebig viele Computer anschlieÃŸen. ZusÃ¤tzliche GerÃ¤te sind nicht 
+notwendig, da die Phasenkopplung durch ein "Ãœbersprechen" stattfindet.
+Die Installation der DLAN-Komponenten gestaltet sich einfach: Ãœber den DLAN-Adapter 
+verbindet man eine Netzkomponente an die nÃ¤chstgelegene Steckdose, und sofort 
+lÃ¤sst sich jede andere beliebige Stromsteckdose im Haus als Netzwerkzugang verwenden.
 Ein Ethernet- oder ein USB-Kabel - je nach Modell - koppelt den PC an einen weiteren 
 Micro-Link-DLAN-Adapter, dessen Stecker die Verbindung zum Heimnetz herstellt.
-Auf Grund automatischen Frequenzwechsels unterdrückt das System Einflüsse 
-in der Datenübertragung durch aktive und Störungen ins Stromnetz sendende 
-Haushaltsgeräte wie Waschmaschinen oder Kühlschränke. 
-Im Unterschied zu drahtlosen Funknetzen wirkt bei HomePlug der Stromzähler im Haus 
-als Sperre gegen unerwünschten Zugriff von außen (Signal wird stark gedäpft). 
-Zusätzliche Sicherheit bietet eine leistungsfähige DES-Verschlüsselung 
-(Datenverschlüsselung in Übertragungssystemen).
+Auf Grund automatischen Frequenzwechsels unterdrÃ¼ckt das System EinflÃ¼sse 
+in der DatenÃ¼bertragung durch aktive und StÃ¶rungen ins Stromnetz sendende 
+HaushaltsgerÃ¤te wie Waschmaschinen oder KÃ¼hlschrÃ¤nke. 
+Im Unterschied zu drahtlosen Funknetzen wirkt bei HomePlug der StromzÃ¤hler im Haus 
+als Sperre gegen unerwÃ¼nschten Zugriff von auÃŸen (Signal wird stark gedÃ¤pft). 
+ZusÃ¤tzliche Sicherheit bietet eine leistungsfÃ¤hige DES-VerschlÃ¼sselung 
+(DatenverschlÃ¼sselung in Ãœbertragungssystemen).
 <P>
-Die Geräte sind kompatibel zum Home-Plug-Standard 1.0. Im vergangenen Jahr verabschiedete 
-die Home-Plug-Powerline-Alliance diesen Standard, zu deren weltweit über 100 Mitgliedern 
+Die GerÃ¤te sind kompatibel zum Home-Plug-Standard 1.0. Im vergangenen Jahr verabschiedete 
+die Home-Plug-Powerline-Alliance diesen Standard, zu deren weltweit Ã¼ber 100 Mitgliedern 
 unter anderem Compaq, Intel, Motorola, AMD, Cisco Systems, 3Com, Panasonic und Texas Instruments 
-gehören. Die von der DLAN-Technik verwendeten Frequenzen liegen im Bereich von 4 MHz
-bis 21 MHz, somit werden die Rundfunkbänder nicht gestört (520 kHz bis 1605 kHz =
+gehÃ¶ren. Die von der DLAN-Technik verwendeten Frequenzen liegen im Bereich von 4 MHz
+bis 21 MHz, somit werden die RundfunkbÃ¤nder nicht gestÃ¶rt (520 kHz bis 1605 kHz =
 Mittelwelle; 150 kHz bis 285 kHz = Langwelle; 87,20 MHz bis 108,00 MHz = UKW). Die Technik 
-basiert auf dem Home-Plug-Standard, in dem die Sendepegel speziell in einigen Amateurfunkbändern 
-abgesenkt sind. "Abgesenkt" heiß aber, daß das Signal ist in der Nähe 
-durchaus noch feststellbar ist, teilweise sogar in störender Stärke. Übrigens betrifft 
-die Absenkung nur die klassischen KW-Amateurfunk-Bänder 40m, 20m und 15m. Die seit einigen 
-Jahren im Bereich 4 bis 21 MHz zusätzlich erlaubten Blöcke (30m und 17m) sehen keine 
-Absenkung. Wenn sich DRM (www.drm.org) weiter ausbreitet, dürften sich auch die neuen 
-Kurzwellendigitalrundfunkhörer über PLC ärgern - ebenso die Minderheit der
+basiert auf dem Home-Plug-Standard, in dem die Sendepegel speziell in einigen AmateurfunkbÃ¤ndern 
+abgesenkt sind. "Abgesenkt" heiÃŸ aber, daÃŸ das Signal ist in der NÃ¤he 
+durchaus noch feststellbar ist, teilweise sogar in stÃ¶render StÃ¤rke. Ãœbrigens betrifft 
+die Absenkung nur die klassischen KW-Amateurfunk-BÃ¤nder 40m, 20m und 15m. Die seit einigen 
+Jahren im Bereich 4 bis 21 MHz zusÃ¤tzlich erlaubten BlÃ¶cke (30m und 17m) sehen keine 
+Absenkung. Wenn sich DRM (www.drm.org) weiter ausbreitet, dÃ¼rften sich auch die neuen 
+KurzwellendigitalrundfunkhÃ¶rer Ã¼ber PLC Ã¤rgern - ebenso die Minderheit der
 Fernempfangsfreaks.
 <BR>
-Obwohl Home-Plug von der Leistungsfähigkeit herkömmlicher Ethernet-Verbindungen noch 
-ein gutes Stück entfernt ist, stellt es für viele Gebiete eine interessante Alternative 
-dar. Auch gegenüber Wireless-LAN bietet diese Technologie einige Vorteile. In der Praxis 
-hängt die erreichbare Übertragungsgeschwindigkeit allerdings vom Zustand der 
+Obwohl Home-Plug von der LeistungsfÃ¤higkeit herkÃ¶mmlicher Ethernet-Verbindungen noch 
+ein gutes StÃ¼ck entfernt ist, stellt es fÃ¼r viele Gebiete eine interessante Alternative 
+dar. Auch gegenÃ¼ber Wireless-LAN bietet diese Technologie einige Vorteile. In der Praxis 
+hÃ¤ngt die erreichbare Ãœbertragungsgeschwindigkeit allerdings vom Zustand der 
 Elektroinstallation im Haus und der Ausstattung der Steckdosen ab. Hier ist dann
 das Know-how des Elektroinstallateurs gefragt.
 <P>
 
 <H2><A NAME="10.4">Funk-LAN-Technologie</A></H2>
-Die Möglichkeit, Computer drahtlos zu vernetzen, ist auf den
+Die MÃ¶glichkeit, Computer drahtlos zu vernetzen, ist auf den
 ersten Blick verlockend, konnte sich aber im Vergleich zu
-kabelgebundenen Lösungen bisher nur für einige Spezialaufgaben
-durchsetzen. Das hat vor allem folgende Gründe:
+kabelgebundenen LÃ¶sungen bisher nur fÃ¼r einige Spezialaufgaben
+durchsetzen. Das hat vor allem folgende GrÃ¼nde:
 <ul>
     <li>Drahtlose Netzwerk-Adapter sind erheblich langsamer als
-        herkömmliche Netzwerkkarten. Selten wird eine
+        herkÃ¶mmliche Netzwerkkarten. Selten wird eine
         Geschwindigkeit von mehr als 22 MBit/s erreicht, meist
         erheblich weniger.
-    <li>Innerhalb der Reichweite (je nach Gebäudestruktur etwa
+    <li>Innerhalb der Reichweite (je nach GebÃ¤udestruktur etwa
         10...50 m) teilen sich die drahtlos vernetzten Computer
-        die Übertragungsleistung. Die Netto-Geschwindigkeit
+        die Ãœbertragungsleistung. Die Netto-Geschwindigkeit
         sinkt dadurch weiter.
-    <li>Die Kosten für drahtlose Adapter liegen 
-        über jenen für konventionelle 10-MBit/s-Netzwerkkarten.
-    <li>Bei den meisten Lösungen sind zusätzliche teure
-        "Access Points" nötig, die die Schnittstelle
+    <li>Die Kosten fÃ¼r drahtlose Adapter liegen 
+        Ã¼ber jenen fÃ¼r konventionelle 10-MBit/s-Netzwerkkarten.
+    <li>Bei den meisten LÃ¶sungen sind zusÃ¤tzliche teure
+        "Access Points" nÃ¶tig, die die Schnittstelle
         zwischen einem Kabel-Netzwerk und drahtlosen Workstations
         darstellen.
 </ul>
 <p>
-Die ersten "Radio LANs" arbeiteten überwiegend mit dem 
-gegenüber Störungen relativ unempfindlichen Spread-Spectrum-Verfahren, 
-bei dem die Daten auf viele Trägerfrequenzen verteilt werden, typisch auf einen
+Die ersten "Radio LANs" arbeiteten Ã¼berwiegend mit dem 
+gegenÃ¼ber StÃ¶rungen relativ unempfindlichen Spread-Spectrum-Verfahren, 
+bei dem die Daten auf viele TrÃ¤gerfrequenzen verteilt werden, typisch auf einen
 Bereich von 20 MHz bei einer Datenrate von 2 MBit/s. Das Spreizen des Signals erfolgte 
 entweder mit dem Zufallssystem Direct Sequence Spread Spectrum (DSSS) oder durch das 
-zyklische Springen zwischen mehreren Frequenzbändern (FHSS, Frequency Hopping Spread
-Spectrum). Sicherheitshalber werden die Daten verschlüsselt.
+zyklische Springen zwischen mehreren FrequenzbÃ¤ndern (FHSS, Frequency Hopping Spread
+Spectrum). Sicherheitshalber werden die Daten verschlÃ¼sselt.
 <p>
 Technisch entsprechen diese Netze einem Bus-System ohne Kabel oder die
 Schnurlos-Stationen bilden zusammen eine Bridge. Seit 1997 werden Funk-LANs mit 1 
 oder 2 MBit/s im 2,4-GHz-Bereich mit der Norm IEEE 802.11 standardisiert. Als 
-Sendeleistung ist maximal 1 Watt vorgesehen. Die Reichweite innerhalb von Gebäuden
-beträgt etwa 50 m, außerhalb davon einige hundert Meter. Neuere
+Sendeleistung ist maximal 1 Watt vorgesehen. Die Reichweite innerhalb von GebÃ¤uden
+betrÃ¤gt etwa 50 m, auÃŸerhalb davon einige hundert Meter. Neuere
 Entwicklungen erreichen bei 19 GHz bis zu 10 MBit/s, allerdings
 bei deutlich kleinerer Reichweite.
 <P>
 <center><img src="images/funklan1.png"></center>
 <P>
-Mit IEEE 802.11 (Teil der Standardisierungsbemühungen des IEEE-802-Komitees, 
-zuständig für lokale Netzwerktechnologien) ist 1997 ein erster Standard für 
+Mit IEEE 802.11 (Teil der StandardisierungsbemÃ¼hungen des IEEE-802-Komitees, 
+zustÃ¤ndig fÃ¼r lokale Netzwerktechnologien) ist 1997 ein erster Standard fÃ¼r 
 Funk-LAN-Produkte geschaffen worden. Mitte 1997 wurde der erste IEEE-802.11-Standard 
-(2 Mbit/s Funk-LAN-Technologie) veröffentlicht, welcher dann, im Oktober 1999, mit 
-IEEE 802.11b (High Rate) um einen Standard für 11-Mbit/s-Technologie erweitert 
-wurde. Der IEEE-802.11-Standard beschreibt die Übertragungsprotokolle bzw. Verfahren 
-für zwei unterschiedliche Arten, Funk-Netzwerke zu betreiben. 
+(2 Mbit/s Funk-LAN-Technologie) verÃ¶ffentlicht, welcher dann, im Oktober 1999, mit 
+IEEE 802.11b (High Rate) um einen Standard fÃ¼r 11-Mbit/s-Technologie erweitert 
+wurde. Der IEEE-802.11-Standard beschreibt die Ãœbertragungsprotokolle bzw. Verfahren 
+fÃ¼r zwei unterschiedliche Arten, Funk-Netzwerke zu betreiben. 
 <P>
 Der 802.11-Standard basiert auf CSMA/CA (Carrier Sense Multiple Access 
-with Collision Avoidance). Der WLAN Standard ist ähnlich aufgebaut wie der 
+with Collision Avoidance). Der WLAN Standard ist Ã¤hnlich aufgebaut wie der 
 Ethernet-Standard 802.3 (CSMA/CD), versucht aber, Kollisionen zu 
-minimieren. Der Grund liegt darin, daß z.B. zwei mobile Einheiten zwar von einem Access
-Point erreicht werden, sich aber gegenseitig nicht "hören". Damit kann die 
-wirkliche Verfügbarkeit des Access Points nicht in jedem Fall erkannt werden.
+minimieren. Der Grund liegt darin, daÃŸ z.B. zwei mobile Einheiten zwar von einem Access
+Point erreicht werden, sich aber gegenseitig nicht "hÃ¶ren". Damit kann die 
+wirkliche VerfÃ¼gbarkeit des Access Points nicht in jedem Fall erkannt werden.
 <P>
 <center><img src="images/csmaca.png"></center>
 <P>
-Wie bei CSMA/CD hören alle teilnehmenden Stationen den Verkehr auf dem 
-Funkkanal mit. Wenn eine Station übertragen will, wartet sie, bis das Medium 
+Wie bei CSMA/CD hÃ¶ren alle teilnehmenden Stationen den Verkehr auf dem 
+Funkkanal mit. Wenn eine Station Ã¼bertragen will, wartet sie, bis das Medium 
 frei ist. Danach wartet sie noch eine vorbestimmte Zeitperiode (DIFS) plus einer 
-zufällig gewählten Zeitspanne, bevor sie ihren Frame übertragen will. Auch in 
-dieser Zeitspanne (Wettbewerbsfenster) wird der Funkkanal weiter überwacht. Wenn 
-keine andere Station innerhalb des Wettbewerbsfensters vor dem gewählten Zeitpunkt
-mit der Übertragung beginnt, sendet die Station ihren Frame. Hat aber eine andere 
-Station innerhalb der Wartezeit mit der Übertragung begonnen, wird der Zeitzähler 
-angehalten und nach der Übertragung der anderen Station weiter benutzt. Auf diese 
-Weise gewinnen Stationen, die nicht übertragen durften, an Priorität und kommen 
-mit einer erhöhten Wahrscheinlichkeit in den nächsten Wettbewerbsfenstern zum Zug. 
+zufÃ¤llig gewÃ¤hlten Zeitspanne, bevor sie ihren Frame Ã¼bertragen will. Auch in 
+dieser Zeitspanne (Wettbewerbsfenster) wird der Funkkanal weiter Ã¼berwacht. Wenn 
+keine andere Station innerhalb des Wettbewerbsfensters vor dem gewÃ¤hlten Zeitpunkt
+mit der Ãœbertragung beginnt, sendet die Station ihren Frame. Hat aber eine andere 
+Station innerhalb der Wartezeit mit der Ãœbertragung begonnen, wird der ZeitzÃ¤hler 
+angehalten und nach der Ãœbertragung der anderen Station weiter benutzt. Auf diese 
+Weise gewinnen Stationen, die nicht Ã¼bertragen durften, an PrioritÃ¤t und kommen 
+mit einer erhÃ¶hten Wahrscheinlichkeit in den nÃ¤chsten Wettbewerbsfenstern zum Zug. 
 Eine Kollision kann nur entstehen, wenn zwei oder mehrere Stationen den gleichen 
-Zeitslot auswählen. Diese Stationen müssen die Wettbewerbsprozedur erneut 
+Zeitslot auswÃ¤hlen. Diese Stationen mÃ¼ssen die Wettbewerbsprozedur erneut 
 durchlaufen. 
 <P>
 
@@ -832,61 +832,61 @@ durchlaufen.
 Das erste Funk-Netz-Szenario 
 beschreibt die Kommunikation in einfachen "<b>Ad-hoc</b>"-Netzwerken. Hierbei sind mehrere 
 Arbeitsrechner in einem begrenzten Sendebereich miteinander verbunden. Zentrale 
-Übermittlungs- bzw. Kontrollsysteme, sogenannte "Access-Points" sind bei diesem 
-Anwendungsfall nicht vorgesehen. Ein derartiges "Ad-hoc" Netzwerk könnte zum 
-Beispiel zwischen den tragbaren Computersystemen während einer Besprechung in 
+Ãœbermittlungs- bzw. Kontrollsysteme, sogenannte "Access-Points" sind bei diesem 
+Anwendungsfall nicht vorgesehen. Ein derartiges "Ad-hoc" Netzwerk kÃ¶nnte zum 
+Beispiel zwischen den tragbaren Computersystemen wÃ¤hrend einer Besprechung in 
 einem Konferenzraum aufgebaut werden.
 <P>
 Im zweiten Anwendungsfall, dem sogenannten "<b>Infratruktur-Modus</b>", kommen 
-"Access-Points" zum Einsatz. Bei diesen Geräten handelt es sich 
+"Access-Points" zum Einsatz. Bei diesen GerÃ¤ten handelt es sich 
 um Netzwerkkomponenten, welche die Kommunikation innerhalb eines Funk-LANs, zwischen 
-einzelnen Funk-LAN-Zellen und die Verbindung zwischen Funk-LANs und herkömmlichen 
-LANs (Kabel basierend) ermöglichen und kontrollieren. Access-Points regeln die 
-"gerechte" Verteilung der zur Verfügung stehenden Übertragungszeit im 
-Funk-Netzwerk. Des Weiteren ermöglichen diese Komponenten mobilen Arbeitsstationen 
-das unterbrechungsfreie Wechseln (Roaming) von einer Funk-LAN-Zelle in die Nächste.
+einzelnen Funk-LAN-Zellen und die Verbindung zwischen Funk-LANs und herkÃ¶mmlichen 
+LANs (Kabel basierend) ermÃ¶glichen und kontrollieren. Access-Points regeln die 
+"gerechte" Verteilung der zur VerfÃ¼gung stehenden Ãœbertragungszeit im 
+Funk-Netzwerk. Des Weiteren ermÃ¶glichen diese Komponenten mobilen Arbeitsstationen 
+das unterbrechungsfreie Wechseln (Roaming) von einer Funk-LAN-Zelle in die NÃ¤chste.
 <P>
 <center><img src="images/funklan2.png"></center>
 <P>
-Verschiedene Systeme können mittels einer speziellen Frequenzwahl bis zu acht
-unterschiedliche Kanäle im Frequenzband alternativ oder
+Verschiedene Systeme kÃ¶nnen mittels einer speziellen Frequenzwahl bis zu acht
+unterschiedliche KanÃ¤le im Frequenzband alternativ oder
 teilweise auch gleichzeitig nutzen. Durch dieses Verfahren
-können in bestimmten Fällen z. B. auch durch
-Störungen belastete Frequenzen umgangen werden, um so die
-Übertragung zu sichern. Des weiteren können durch den
+kÃ¶nnen in bestimmten FÃ¤llen z. B. auch durch
+StÃ¶rungen belastete Frequenzen umgangen werden, um so die
+Ãœbertragung zu sichern. Des weiteren kÃ¶nnen durch den
 Einsatz mehrere Accesspoints parallele Funkzellen auf
 unterschiedlichen Frequenzen aufgebaut werden und so die
-Gesamtübertragungskapazität eines WLANs erweitern. Die
-dadurch entstehende Möglichkeit unterschiedliche Frequenzen
-zur Datenübertragung mit getrennten Benutzergruppen zu nutzen,
+GesamtÃ¼bertragungskapazitÃ¤t eines WLANs erweitern. Die
+dadurch entstehende MÃ¶glichkeit unterschiedliche Frequenzen
+zur DatenÃ¼bertragung mit getrennten Benutzergruppen zu nutzen,
 kann den Datendurchsatz in einem solchen Funknetz vervielfachen, da
 die einzelnen Frequenzsegmente jeweils die volle Bandbreite
-für den Datenstrom zur Verfügung stellen.
+fÃ¼r den Datenstrom zur VerfÃ¼gung stellen.
 <P>
 Eine wichtige Frage, die sich im Hinblick auf den Einsatz von Funk-Technologie immer 
-wieder stellt, ist die mögliche gegenseitige Störung von elektronischen 
-Geräten (nicht nur von Funk-Sendern und Empfängern). Oftmals werden sogar 
-Bedenken zu einem möglichen Gesundheitsrisiko durch die Nutzung von auf Funk 
-basierenden Produkten geäußert.<BR>
-Auf Funk basierende Geräte müssen einer Vielzahl von Standards und strengen 
-gesetzlichen Richtlinien entsprechen, die sicherstellen, daß die Beeinflussung 
+wieder stellt, ist die mÃ¶gliche gegenseitige StÃ¶rung von elektronischen 
+GerÃ¤ten (nicht nur von Funk-Sendern und EmpfÃ¤ngern). Oftmals werden sogar 
+Bedenken zu einem mÃ¶glichen Gesundheitsrisiko durch die Nutzung von auf Funk 
+basierenden Produkten geÃ¤uÃŸert.<BR>
+Auf Funk basierende GerÃ¤te mÃ¼ssen einer Vielzahl von Standards und strengen 
+gesetzlichen Richtlinien entsprechen, die sicherstellen, daÃŸ die Beeinflussung 
 zwischen verschiedenen auf Funk basierenden 
-Geräten und auch anderen elektronischen Geräten entweder unmöglich ist, 
-oder die festgelegten Grenzwerte nicht überschreiten, welche die internationalen 
-und nationalen bzw. europäischen Standardisierungs-Gremien festlegen.
+GerÃ¤ten und auch anderen elektronischen GerÃ¤ten entweder unmÃ¶glich ist, 
+oder die festgelegten Grenzwerte nicht Ã¼berschreiten, welche die internationalen 
+und nationalen bzw. europÃ¤ischen Standardisierungs-Gremien festlegen.
 <P>
 Alle in Deutschland zugelassenen WLAN Systeme
-benutzen ein offiziell für industrielle und andere Zwecke
+benutzen ein offiziell fÃ¼r industrielle und andere Zwecke
 reserviertes ISM-Frequenzband (<B>I</B>ndustrial <B>S</B>cientific
-<B>M</B>edia) zwischen 2,400 und 2,483 GHz und übertragen durch
-Nutzung eines Teils der darin verfügbaren Frequenzen mit
+<B>M</B>edia) zwischen 2,400 und 2,483 GHz und Ã¼bertragen durch
+Nutzung eines Teils der darin verfÃ¼gbaren Frequenzen mit
 Datenraten von bis zu 11 Mbps (802.11b) oder 22 Mbps (802.11g). Der Standard
 802.11a beschreibt Systeme, die im 5-GHz-Band betrieben werden und Brutto-Datenraten
-bis zu 54 Mbps ermöglichen. Im 5-GHz-Band steht ein größeres
-Frequenzband zur Verfügung - und damit mehr Kanäle. Wichtig ist auch,
-daß dieses Band ausschließlich für WLAN reserviert ist.
+bis zu 54 Mbps ermÃ¶glichen. Im 5-GHz-Band steht ein grÃ¶ÃŸeres
+Frequenzband zur VerfÃ¼gung - und damit mehr KanÃ¤le. Wichtig ist auch,
+daÃŸ dieses Band ausschlieÃŸlich fÃ¼r WLAN reserviert ist.
 <P>
-Die Kanäle von 802.11b und ihre Frequenzen.
+Die KanÃ¤le von 802.11b und ihre Frequenzen.
 <p>
 <ul><ul><table border=1 cellpadding=3 cellspacing=0>
     <tr><th width="25%">Kanal</td><th width="25%">Mittenfrequenz<br>(GHz)</td>
@@ -902,155 +902,155 @@ Die Kanäle von 802.11b und ihre Frequenzen.
 <p>
 <ul>
 <li>Die Abstufung erfolgt in 5 MHz Schritten (ausgenommen Kanal 14).
-<li>In den USA sind die Kanäle 1 - 11 verfügbar.
-<li>In Europa sind die Kanäle 1 - 13 verfügbar.
-<li>In Frankreich sind die Kanäle 10 - 13 verfügbar.
-<li>In Japan ist Kanal 14 verfügbar.
+<li>In den USA sind die KanÃ¤le 1 - 11 verfÃ¼gbar.
+<li>In Europa sind die KanÃ¤le 1 - 13 verfÃ¼gbar.
+<li>In Frankreich sind die KanÃ¤le 10 - 13 verfÃ¼gbar.
+<li>In Japan ist Kanal 14 verfÃ¼gbar.
 </ul></ul>
 <P>  
-Da Funk-LAN-Produkte speziell für den Einsatz in Büros und 
+Da Funk-LAN-Produkte speziell fÃ¼r den Einsatz in BÃ¼ros und 
 anderen Arbeitsumgebungen entwickelt wurden, senden sie auch mit einer entsprechend 
 niedrigen, gesundheitlich unbedenklichen Leistung. Diese Leistung liegt unter einem 
 maximalen Wert von 100 mW und damit z. B. signifikant unter der Sendeleistung von 
-gebräuchlichen GSM Telefonen (ca. 2 W bei Geräten GSM Klasse 4, d. h. 
-Frequenzbereich 880-960 MHz). Erhöhte Gesundheitsrisiken konnten deshalb beim 
+gebrÃ¤uchlichen GSM Telefonen (ca. 2 W bei GerÃ¤ten GSM Klasse 4, d. h. 
+Frequenzbereich 880-960 MHz). ErhÃ¶hte Gesundheitsrisiken konnten deshalb beim 
 Umgang mit Funk-LANs im 2.4 GHz Frequenzband nicht festgestellt werden.
 <P>
-Die größten Bedenken gelten üblicherweise der Technologie Funk selbst. 
-Aber unberechtigtes "Mithören" erweist sich in der Praxis sogar als wesentlich 
-schwieriger und aufwendiger als bei herkömmlichen auf Kupferkabeln basierenden 
+Die grÃ¶ÃŸten Bedenken gelten Ã¼blicherweise der Technologie Funk selbst. 
+Aber unberechtigtes "MithÃ¶ren" erweist sich in der Praxis sogar als wesentlich 
+schwieriger und aufwendiger als bei herkÃ¶mmlichen auf Kupferkabeln basierenden 
 Netzwerken. Sogenannte "Walls" sichern den Datenverkehr mittels eines
 Verfahrens zur Bandspreizung (Spread-Spectrum, SS) gegen
-Abhören und Störungen, dieses Verfahren entspricht einer
-komplexen Kodierung, die ein Abhören schon durch die
+AbhÃ¶ren und StÃ¶rungen, dieses Verfahren entspricht einer
+komplexen Kodierung, die ein AbhÃ¶ren schon durch die
 eingesetzten technischen Prinzipien sehr schwer macht. Alle z. Zt.
 bekannten zugelassenen WLAN Systeme setzen zwei verschiedene
 Techniken ein, das sogenannte Direct Sequence SS (DSSS) und das
 Frequency Hopping SS (FHSS) Prinzip.
 <P>
-Direct Sequence SS verschlüsselt jedes Bit in
+Direct Sequence SS verschlÃ¼sselt jedes Bit in
 eine Bitfolge, den Chip, und sendet diesen auf das Frequenzband
-aufgespreizt. Für unbefugte Lauscher verschwindet das Signal
+aufgespreizt. FÃ¼r unbefugte Lauscher verschwindet das Signal
 dadurch im Hintergrundrauschen, erst der autorisierte
-Empfänger kann es wieder ausfiltern. Das DSSS System ist
-unempfindlicher gegen Störungen und hat sich als Lösung
-mit den meisten installierten Geräten in diesem Markt
+EmpfÃ¤nger kann es wieder ausfiltern. Das DSSS System ist
+unempfindlicher gegen StÃ¶rungen und hat sich als LÃ¶sung
+mit den meisten installierten GerÃ¤ten in diesem Markt
 durchgesetzt.
 <P>
 <center><img src="images/dsss.png"></center>
 <P>
 Beim Frequence Hopping vereinbaren Sender und
-Empfänger während des Verbindungsaufbaus eine Folge, nach
+EmpfÃ¤nger wÃ¤hrend des Verbindungsaufbaus eine Folge, nach
 der einige Male pro Sekunde die Sendefrequenz umgeschaltet wird.
-Ein nicht autorisierter Zuhörer kann diesen Sprüngen
+Ein nicht autorisierter ZuhÃ¶rer kann diesen SprÃ¼ngen
 nicht folgen, die Synchronisation zwischen Sender und
-Empfänger bedeutet jedoch zusätzlichen Ballast (Overhead)
-in der Datenübertragung.
+EmpfÃ¤nger bedeutet jedoch zusÃ¤tzlichen Ballast (Overhead)
+in der DatenÃ¼bertragung.
 <P>
 <P>
 <center><img src="images/fhss.png"></center>
 <P>
 Um das komplette Signal erfolgreich empfangen und interpretieren zu 
-können, muß der Empfänger den korrekten Entschlüsselungsalgorithmus 
-kennen. Daten während der Übertragung abzufangen und zu entschlüsseln 
-wird dadurch recht schwierig. Die Sicherheit von Funk-LAN-Produkten beschränkt sich 
-selbstverständlich nicht nur auf die Wahl von DSSS als Übertragungsverfahren. 
-So sieht der IEEE-802.11-Standard optional auch verschiedene Methoden für 
-Authentisierung und Verschlüsselung vor. Unter Authentisierung versteht man dabei 
-all jene Mechanismen mit denen überprüft bzw. kontrolliert wird, welche 
-Verbindungen im Funk-LAN zulässig sind. Mit der zusätzlichen 
-Verschlüsselungstechnik WEP (Wired Equivalent Privacy), welche auf dem 
-RC4-Verschlüsselungsalgorithmus basiert, wird ein Sicherheitsniveau erreicht, 
-welches dem herkömmlicher LAN-Technologien mehr als entspricht. Als weitere sehr 
+kÃ¶nnen, muÃŸ der EmpfÃ¤nger den korrekten EntschlÃ¼sselungsalgorithmus 
+kennen. Daten wÃ¤hrend der Ãœbertragung abzufangen und zu entschlÃ¼sseln 
+wird dadurch recht schwierig. Die Sicherheit von Funk-LAN-Produkten beschrÃ¤nkt sich 
+selbstverstÃ¤ndlich nicht nur auf die Wahl von DSSS als Ãœbertragungsverfahren. 
+So sieht der IEEE-802.11-Standard optional auch verschiedene Methoden fÃ¼r 
+Authentisierung und VerschlÃ¼sselung vor. Unter Authentisierung versteht man dabei 
+all jene Mechanismen mit denen Ã¼berprÃ¼ft bzw. kontrolliert wird, welche 
+Verbindungen im Funk-LAN zulÃ¤ssig sind. Mit der zusÃ¤tzlichen 
+VerschlÃ¼sselungstechnik WEP (Wired Equivalent Privacy), welche auf dem 
+RC4-VerschlÃ¼sselungsalgorithmus basiert, wird ein Sicherheitsniveau erreicht, 
+welches dem herkÃ¶mmlicher LAN-Technologien mehr als entspricht. Als weitere sehr 
 flexible Sicherheitsfunktion, erweisen sich auch Filter auf MAC-Adress-Ebene, die im 
-Access-Point konfiguriert werden können. Über diese Filter kann die 
-Kommunikation über den Access-Point sehr wirkungsvoll gesteuert werden.
+Access-Point konfiguriert werden kÃ¶nnen. Ãœber diese Filter kann die 
+Kommunikation Ã¼ber den Access-Point sehr wirkungsvoll gesteuert werden.
 <P>
-Funk-LAN-Technologie und -Produkte ergänzen in idealer Weise die "klassischen" 
-LAN-Lösungen. 
+Funk-LAN-Technologie und -Produkte ergÃ¤nzen in idealer Weise die "klassischen" 
+LAN-LÃ¶sungen. 
 Die Bandbreite wird jedoch dann zu einem entscheidenden Faktor beim Einsatz von 
-Funk-LAN-Installationen, wenn eine große Anzahl von Arbeitsstationen angebunden 
+Funk-LAN-Installationen, wenn eine groÃŸe Anzahl von Arbeitsstationen angebunden 
 werden soll und der Einsatz sehr "bandbreitenintensiver" Multimedia-Anwendungen geplant 
-ist. Man sollte nicht übersehen, daß Funk-LAN-Technologie sich wie jedes 
-andere "Shared-Medium" verhält und damit sehr ähnlich zu Ethernet-Lösungen ist.
+ist. Man sollte nicht Ã¼bersehen, daÃŸ Funk-LAN-Technologie sich wie jedes 
+andere "Shared-Medium" verhÃ¤lt und damit sehr Ã¤hnlich zu Ethernet-LÃ¶sungen ist.
 <P>
 Ein weiterer wichtiger, zu beachtender Aspekt bei Planung und Einsatz von 
-Funk-LAN-Lösungen, liegt in den oftmals schwer einschätzbaren 
-Umgebungseinflüssen, welche die Übertragungsqualität und 
-Übertragungsreichweite vermindern können. So können Reichweite und 
-Qualität der Übertragung nicht nur durch die Positionierung und Anordnung 
+Funk-LAN-LÃ¶sungen, liegt in den oftmals schwer einschÃ¤tzbaren 
+UmgebungseinflÃ¼ssen, welche die ÃœbertragungsqualitÃ¤t und 
+Ãœbertragungsreichweite vermindern kÃ¶nnen. So kÃ¶nnen Reichweite und 
+QualitÃ¤t der Ãœbertragung nicht nur durch die Positionierung und Anordnung 
 der Arbeitsstationen und Access-Points beeinflusst werden, sondern es entsteht auch 
-eine, zum Teil gravierende, Beeinträchtigung durch die zu durchdringenden 
-Hindernisse (Ziegelwände, Stahlbeton, etc.). 
+eine, zum Teil gravierende, BeeintrÃ¤chtigung durch die zu durchdringenden 
+Hindernisse (ZiegelwÃ¤nde, Stahlbeton, etc.). 
 <P>
-Für die Realisierung eines Funk-Lan stehen zwei Betriebsarten zur Verfügung:
+FÃ¼r die Realisierung eines Funk-Lan stehen zwei Betriebsarten zur VerfÃ¼gung:
 <UL>
 <LI>Im <B>Infrastructure Mode</B> hingegen vermittelt eine spezielle Basisstation, 
 Access Point genannt, zwischen den Clients. Er dient zum einen als Bridge 
 zum drahtgebundenen Netz, vermittelt also Pakete zwischen den Netzen hin 
 und her. Zum anderen arbeitet ein Access Point als Repeater, das 
-heißt er empfängt die Pakete der Stationen und leitet sie an 
-andere weiter - dabei sinkt natürlich der Durchsatz. Letztlich kann 
+heiÃŸt er empfÃ¤ngt die Pakete der Stationen und leitet sie an 
+andere weiter - dabei sinkt natÃ¼rlich der Durchsatz. Letztlich kann 
 ein Access Point die Reichweite verdoppeln, wenn er zentral aufgestellt 
-ist: Er lässt zwei Stationen miteinander kommunizieren, die so weit 
-voneinander entfernt stehen, daß sie sich im Ad-hoc-Modus nicht 
-"sehen" könnten.
+ist: Er lÃ¤sst zwei Stationen miteinander kommunizieren, die so weit 
+voneinander entfernt stehen, daÃŸ sie sich im Ad-hoc-Modus nicht 
+"sehen" kÃ¶nnten.
 Bei der Raumabdeckung ist mit einem Radius von rund 50 Metern zu rechnen,
 innerhalb dessen sich die mobilen Stationen um einen Access-Point bewegen
-können. 
+kÃ¶nnen. 
 <LI>Im <b>Ad-hoc-Modus</b> 
 kommunizieren die Stationen direkt miteinander. Im Grunde genommen handelt 
 es sich um Punkt-zu-Punkt-Verbindungen, da aber jeder Rechner mehrere 
 dieser Verbindungen unterhalten kann, spielt das praktisch keine Rolle. 
-Mit einer Ausnahme: Es ist möglich, daß weit voneinander entfernte 
-Stationen einander nicht "sehen" können, beide sehr wohl 
+Mit einer Ausnahme: Es ist mÃ¶glich, daÃŸ weit voneinander entfernte 
+Stationen einander nicht "sehen" kÃ¶nnen, beide sehr wohl 
 aber eine dritte Station dazwischen. Der Ad-hoc-Modus ist letztlich am 
-besten geeignet, wenn man gar kein großes Funknetz aufbauen will, 
+besten geeignet, wenn man gar kein groÃŸes Funknetz aufbauen will, 
 sondern nur zwei Netze oder Systeme verbinden will.<br>
 Der Ad-hoc-Modus hat aber Haken: Viele Hersteller haben dieser 
 Betriebsart anfangs wenig Aufmerksamkeit gewidmet und statt der 
-verabschiedeten Standards proprietäre Verfahren implementiert. So 
-kann es sein, daß die Karten zweier Hersteller im Ad-hoc-Modus 
+verabschiedeten Standards proprietÃ¤re Verfahren implementiert. So 
+kann es sein, daÃŸ die Karten zweier Hersteller im Ad-hoc-Modus 
 nicht zueinander finden.
 </uL>
-Zur Inbetriebnahme eines Ad-hoc-Netzes muß man auf allen Clients einen 
-einheitlichen Namen für das Funknetz einstellen. Bei einem Netz mit 
-Access Point reicht es hingegen, dort den gewünschten Namen 
+Zur Inbetriebnahme eines Ad-hoc-Netzes muÃŸ man auf allen Clients einen 
+einheitlichen Namen fÃ¼r das Funknetz einstellen. Bei einem Netz mit 
+Access Point reicht es hingegen, dort den gewÃ¼nschten Namen 
 einzutragen; bei der Einstellung "any" auf den Clients erhalten 
-diese automatisch den Namen übermittelt. Unter Umständen kann es 
+diese automatisch den Namen Ã¼bermittelt. Unter UmstÃ¤nden kann es 
 im Ad-hoc-Netz Sinn machen, den Kanal vorzugeben, auf dem die Stationen 
-funken sollen; im Normalfall finden sie aber selbstständig einen 
+funken sollen; im Normalfall finden sie aber selbststÃ¤ndig einen 
 gemeinsamen Kanal. Eine gute Hilfestellung bietet die Software, die 
 viele Hersteller ihren Funkkarten beilegen. 
 <p>
-<img src="images/funk-hard.jpg">
+<img src="images/funk-hard.png">
 <br>
-<H5>WLAN-MIni-PCI-Karte und Adapter für den PCI-Bus im PC.</H5>
+<H5>WLAN-MIni-PCI-Karte und Adapter fÃ¼r den PCI-Bus im PC.</H5>
 <P>
 
 <H3>Die Funk-LAN-Standards</H3>
 Ein gravierender Nachteil der ersten WLAN-Standards ist die geringe Datenrate von 11 MBit/s.
-Selbst bei guten Empfangsbedingungen ist nur etwa die Hälfte für Nutzdaten
-einsetzbar. Abhilfe versprach zunächst die Verdoppelung auf 22 MBit/s. Diese Erweiterung
-war aber proprietär. IEEE 802.11a ist mit nominell 54 MBit/s noch schneller, die Geräte
-arbeiten jedoch im 5-GHz-Bereich - bei einem Wechsel muß die gesamte Infrastruktur
+Selbst bei guten Empfangsbedingungen ist nur etwa die HÃ¤lfte fÃ¼r Nutzdaten
+einsetzbar. Abhilfe versprach zunÃ¤chst die Verdoppelung auf 22 MBit/s. Diese Erweiterung
+war aber proprietÃ¤r. IEEE 802.11a ist mit nominell 54 MBit/s noch schneller, die GerÃ¤te
+arbeiten jedoch im 5-GHz-Bereich - bei einem Wechsel muÃŸ die gesamte Infrastruktur
 ausgetauscht werden. Zudem verschlechtert sich mit der doppelten Frequenz
 die Reichweite.<br>
-Dagegen haben sich die Standards der Reihe IEEE 802.11 etabliert. Geräte nach dem 
-Standard IEEE 802.11g sind abwärtskompatibel zu 802.11b und senden ebenfalls im 2,4-GHz-Bereich, 
-verwenden gegenüber der 11-MBit/s-Technik jedoch mehrere Kanäle und kommen so auf eine
-Bruttodatenrate von 54 MBit/s. So lassen sich auf den 13 WLAN-Kanälen aber
+Dagegen haben sich die Standards der Reihe IEEE 802.11 etabliert. GerÃ¤te nach dem 
+Standard IEEE 802.11g sind abwÃ¤rtskompatibel zu 802.11b und senden ebenfalls im 2,4-GHz-Bereich, 
+verwenden gegenÃ¼ber der 11-MBit/s-Technik jedoch mehrere KanÃ¤le und kommen so auf eine
+Bruttodatenrate von 54 MBit/s. So lassen sich auf den 13 WLAN-KanÃ¤len aber
 nur vier 802.11g-Netze am gleichen Ort nebeneinander betreiben. 
-Fremde Netze nach 802.11b im Empfangsbereich können die 54-Bit/s-Technik jedoch
-ausbremsen: Im ungünstigsten Fall verteilen sich die langsamen
-Netze quer über die Kanäle, sodass keine Bündelung für die Breitbandtechnik
-mehr möglich ist. Weitere Störfaktoren sind Bluetooth-Geräte, auch sie arbeiten
-im 2,4-GHz-Bereich. An exponierten Standorten im Stadtgebiet können Access Points nach IEEE
+Fremde Netze nach 802.11b im Empfangsbereich kÃ¶nnen die 54-Bit/s-Technik jedoch
+ausbremsen: Im ungÃ¼nstigsten Fall verteilen sich die langsamen
+Netze quer Ã¼ber die KanÃ¤le, sodass keine BÃ¼ndelung fÃ¼r die Breitbandtechnik
+mehr mÃ¶glich ist. Weitere StÃ¶rfaktoren sind Bluetooth-GerÃ¤te, auch sie arbeiten
+im 2,4-GHz-Bereich. An exponierten Standorten im Stadtgebiet kÃ¶nnen Access Points nach IEEE
 802.11g wohl kaum ihre Leistung ausspielen, es gibt einfach zu viele langsame
-WLAN-Netze. Für den Betrieb in Gebäuden ist die Technik aber durchaus interessant:
-Störungen von außen gibt es hier kaum. Eigene Access Points nach 802.11b
-werden bei Kanalüberschneidungen umkonfiguriert oder kurzerhand ersetzt,
-die Workstations merken wegen der Abwärtskompatibilität von IEEE 802.11g
+WLAN-Netze. FÃ¼r den Betrieb in GebÃ¤uden ist die Technik aber durchaus interessant:
+StÃ¶rungen von auÃŸen gibt es hier kaum. Eigene Access Points nach 802.11b
+werden bei KanalÃ¼berschneidungen umkonfiguriert oder kurzerhand ersetzt,
+die Workstations merken wegen der AbwÃ¤rtskompatibilitÃ¤t von IEEE 802.11g
 zu 802.11b nichts davon. Die bisherigen Standards zeigt folgende Tabelle:
 <P>
 <center>
@@ -1063,329 +1063,329 @@ Im einzelnen besitzen die Standards folgende Eigenschaften:
 Die erste Version des WLAN-Standards wurde 1997 unter der Nummer IEEE 802.11 verabschiedet 
 und erlaubt Datentransferraten von 1 Mbit/s und 2 Mbit/s im lizenzfreien 2,4-GHz-ISM-Band 
 (Industrial, Scientific, Medical). Im Jahr 1999 folgte die Erweiterung IEEE 802.11 b, die 
-Datenübertragungsraten bis 11 Mbit/s im 2,4-GHz-ISM-Band ermöglichte.
+DatenÃ¼bertragungsraten bis 11 Mbit/s im 2,4-GHz-ISM-Band ermÃ¶glichte.
 
 <h4>IEEE 802.11 a</h4>
 Ebenfalls im Jahr 1999 wurde der im 5-GHzBand arbeitende Standard IEEE 802.11 a
 verabschiedet. Dieser Standard nutzt als Modulationsverfahren OFDM (Orthogonal 
-Frequency Division Multiplex). Der genutzte Frequenzbereich ist grundsätzlich 
-für den WLAN-Bereich reserviert, jedoch nutzen Militär und Flugsicherung ebenfalls 
-diesen Bereich. Daher kann dieser Standard in Europa nur innerhalb von Gebäuden und mit 
-verringerter Sendeleistung eingeschränkt eingesetzt werden. Auf Grund des Modulations
-verfahrens sind aber Übertragungsraten von bis zu 54 Mbit/s möglich.
+Frequency Division Multiplex). Der genutzte Frequenzbereich ist grundsÃ¤tzlich 
+fÃ¼r den WLAN-Bereich reserviert, jedoch nutzen MilitÃ¤r und Flugsicherung ebenfalls 
+diesen Bereich. Daher kann dieser Standard in Europa nur innerhalb von GebÃ¤uden und mit 
+verringerter Sendeleistung eingeschrÃ¤nkt eingesetzt werden. Auf Grund des Modulations
+verfahrens sind aber Ãœbertragungsraten von bis zu 54 Mbit/s mÃ¶glich.
 
 <h4>IEEE 802.11 e</h4>
 Dieser Standard beschreibt einen erweiterten Kanalzugriff, der eine Priorisierung verschiedener 
 Verkehrsklassen und eine durch den Access-Point gesteuerte Kanalvergabe erlaubt. Mit dem 
-Standard IEEE 802.11 e wird das Konzept des "Quality-of-Service", also die Dienstgüte, unterstützt. 
-Besonders interessant ist dieser Standard für Echtzeitanwendungen wie beispielsweise Voice over 
+Standard IEEE 802.11 e wird das Konzept des "Quality-of-Service", also die DienstgÃ¼te, unterstÃ¼tzt. 
+Besonders interessant ist dieser Standard fÃ¼r Echtzeitanwendungen wie beispielsweise Voice over 
 IP.
 
 <h4>IEEE 802.11 g</h4> 
 Beim Standard IEEE 802.11 g handelt es sich um die Nutzung des OFDM-Modulationsverfahrens im 
-Frequenzbereich von 2,4 Ghlz. Da der IEEE 802.11 g-Standard abwärtskompatibel zum älteren 
+Frequenzbereich von 2,4 Ghlz. Da der IEEE 802.11 g-Standard abwÃ¤rtskompatibel zum Ã¤lteren 
 IEEE-802,11 b-Standard ist, hat sich der neue Standard sehr schnell verbreitet und wird in den 
-nächsten Jahren den Standard IEEE 802.11 b ablösen. Eine Datentransferrate von 54 Mbit/s wird 
-erreicht, jedoch ist die Anzahl der benötigten Antennen relativ hoch, damit ein voller Datendurchsatz 
-gewährleistet werden kann.
+nÃ¤chsten Jahren den Standard IEEE 802.11 b ablÃ¶sen. Eine Datentransferrate von 54 Mbit/s wird 
+erreicht, jedoch ist die Anzahl der benÃ¶tigten Antennen relativ hoch, damit ein voller Datendurchsatz 
+gewÃ¤hrleistet werden kann.
 
 <h4>IEEE 802.11 h</H4>
-Der Standard IEEE 802.11 h bietet 54 Mbit/s Datenübertragungsrate und arbeitet im 5-GHz
-Bereich. Dieser Standard ergänzt den Standard IEEE 802.11 a um die Funktionalitäten
+Der Standard IEEE 802.11 h bietet 54 Mbit/s DatenÃ¼bertragungsrate und arbeitet im 5-GHz
+Bereich. Dieser Standard ergÃ¤nzt den Standard IEEE 802.11 a um die FunktionalitÃ¤ten
 DFS (Dynamic Frequency Selection) und TPC (Transmit Power Control). Damit fallen
-die Einschränkungen des Standards IEEE 802.11 a fort, und das 5-GHz-Band kann so
-mit auch im Außenbereich genutzt werden.
+die EinschrÃ¤nkungen des Standards IEEE 802.11 a fort, und das 5-GHz-Band kann so
+mit auch im AuÃŸenbereich genutzt werden.
 
 <h4>IEEE 802.11 i</h4>
-Die Arbeitsgruppe für WLAN-Sicherheit hat im Jahr 2004 den Standard IEEE 802.11 i 
+Die Arbeitsgruppe fÃ¼r WLAN-Sicherheit hat im Jahr 2004 den Standard IEEE 802.11 i 
 verabschiedet. Bereits seit dem Jahr 2002 gab es mit WPA (WiFi Protected Access) 
-übergangsweise einen Standard, der als sicher galt und die wichtigsten Sicherheitslücken
-von WEP (Wired Equivalent Privacy) schloss. Der WPA-Standard bietet gegenüber WEP
-besseren Schutz durch dynamische Schlüssel, die auf dem TKIP (Temporal Key Integrity
-Protocol) beruhen und abwärtskompatibel sind. Weiterhin wird durch die Nutzer-Authentifizierung 
+Ã¼bergangsweise einen Standard, der als sicher galt und die wichtigsten SicherheitslÃ¼cken
+von WEP (Wired Equivalent Privacy) schloss. Der WPA-Standard bietet gegenÃ¼ber WEP
+besseren Schutz durch dynamische SchlÃ¼ssel, die auf dem TKIP (Temporal Key Integrity
+Protocol) beruhen und abwÃ¤rtskompatibel sind. Weiterhin wird durch die Nutzer-Authentifizierung 
 mittels PSK (Pre-Shared Key) oder EAP (Extensible Authentication Protocol) die
-Sicherheit erhöht. Der Standard IEEE 802.11 i ist bereits in allen neueren WLAN-Produkten
-integriert. Darüber hinaus ermöglicht der Standard IEEE 802.11 i die Verwendung von
-AES (Advanced Encryption Standard) zur Verschlüsselung der übertragenen Daten.
+Sicherheit erhÃ¶ht. Der Standard IEEE 802.11 i ist bereits in allen neueren WLAN-Produkten
+integriert. DarÃ¼ber hinaus ermÃ¶glicht der Standard IEEE 802.11 i die Verwendung von
+AES (Advanced Encryption Standard) zur VerschlÃ¼sselung der Ã¼bertragenen Daten.
 
 <h4>IEEE 802.11 n</h4>
-Drahtlose Netzwerke auf Basis des neuen Standards IEEE 802.11 n versprechen erheblich höhere 
-Datenübertragungsraten von bis zu 600 Mbit/s. Um diese Werte zu erreichen, wird zur Modulation 
-das MCS (Modulation Coding Scheme) genutzt. Hierbei berücksichtigen die beteiligten Geräte 
-möglichst viele Parameter, wie beispielsweise Interferenzen, Bewegung des Senders oder 
-Abschwächung des Signals und optimieren so die Datenübertragung. In WLANs nach IEEE 802.11 n 
+Drahtlose Netzwerke auf Basis des neuen Standards IEEE 802.11 n versprechen erheblich hÃ¶here 
+DatenÃ¼bertragungsraten von bis zu 600 Mbit/s. Um diese Werte zu erreichen, wird zur Modulation 
+das MCS (Modulation Coding Scheme) genutzt. Hierbei berÃ¼cksichtigen die beteiligten GerÃ¤te 
+mÃ¶glichst viele Parameter, wie beispielsweise Interferenzen, Bewegung des Senders oder 
+AbschwÃ¤chung des Signals und optimieren so die DatenÃ¼bertragung. In WLANs nach IEEE 802.11 n 
 werden zwei bis vier Antennen genutzt. Dadurch kann ein Funkkanal im selben Frequenzbereich 
-räumlich mehrfach eingesetzt werden und ermöglicht somit eine parallele Datenübertragung. 
-Hierdurch wird nicht nur die Geschwindigkeit, sondern auch die Reichweite erhöht. Dieser 
+rÃ¤umlich mehrfach eingesetzt werden und ermÃ¶glicht somit eine parallele DatenÃ¼bertragung. 
+Hierdurch wird nicht nur die Geschwindigkeit, sondern auch die Reichweite erhÃ¶ht. Dieser 
 Mechanismus wird als MIMO (Multiple Input, Multiple Output) bezeichnet.
 <p>
-Auch für die Zukunft sind bereits neue Spezifikationen innerhalb des Standards IEEE
-802.11 angekündigt, beispielsweise der Standard IEEE 802.11 p für den Einsatz in
+Auch fÃ¼r die Zukunft sind bereits neue Spezifikationen innerhalb des Standards IEEE
+802.11 angekÃ¼ndigt, beispielsweise der Standard IEEE 802.11 p fÃ¼r den Einsatz in
 Fahrzeug-zu-Fahrzeug-Netzen.
 <P>
 
 <H3>Modulationsverfahren</H3>
-Bei CCK wird nur eine Trägerfrequenz moduiert
+Bei CCK wird nur eine TrÃ¤gerfrequenz moduiert
 <p>
-Die Komplementäre Code-Umtastung CCK dient als Basismodulation gegenwärtiger 
-WiFi-Systeme nach IEEE 802.11b und moduliert nur einen Träger. 
+Die KomplementÃ¤re Code-Umtastung CCK dient als Basismodulation gegenwÃ¤rtiger 
+WiFi-Systeme nach IEEE 802.11b und moduliert nur einen TrÃ¤ger. 
 <p>
 <img src="images/funk-bild1.png">
 <p>
-Bei der komplementären Code-Umtastung werden sowohl Präambel/Header 
+Bei der komplementÃ¤ren Code-Umtastung werden sowohl PrÃ¤ambel/Header 
 als auch die Nutzinformation in CCK-Moduation ausgesendet.
 <p>
 <img src="images/funk-bild2.png">
 <p>
-Parallele Datenübertragung im Frequenzmultiplex, kurz OFDM, ist eine 
-Technologie, die gerade in den Markt drahtloser lANs eingeführt wird 
-und sich in Geräten nach IEEE 802.11a für das 5-GHz-Band findet. 
-Bis vor Kurzem verhinderten FCC-Vorschriften nämlich den Einsatz 
-von OFDM im 2,4-GHz-Band. Dies änderte sich im Mai 2001: Seitdem 
-ist OFDM auch für das 2,4-GHz-Band zugelassen, so daß jetzt beide 
-Bänder (2,4 und 5 GHz) mit einem einzigen Modulationsformat abgedeckt 
-werden können. OFDM ist ein Mehrträger-Modulationsverfahren, 
-bei dem die Daten auf mehrere, eng beieinander liegende Unterträger 
+Parallele DatenÃ¼bertragung im Frequenzmultiplex, kurz OFDM, ist eine 
+Technologie, die gerade in den Markt drahtloser lANs eingefÃ¼hrt wird 
+und sich in GerÃ¤ten nach IEEE 802.11a fÃ¼r das 5-GHz-Band findet. 
+Bis vor Kurzem verhinderten FCC-Vorschriften nÃ¤mlich den Einsatz 
+von OFDM im 2,4-GHz-Band. Dies Ã¤nderte sich im Mai 2001: Seitdem 
+ist OFDM auch fÃ¼r das 2,4-GHz-Band zugelassen, so daÃŸ jetzt beide 
+BÃ¤nder (2,4 und 5 GHz) mit einem einzigen Modulationsformat abgedeckt 
+werden kÃ¶nnen. OFDM ist ein MehrtrÃ¤ger-Modulationsverfahren, 
+bei dem die Daten auf mehrere, eng beieinander liegende UntertrÃ¤ger 
 aufgeteilt werden. 
-Eine andere entscheidende Eigenschaft von OFDM ist die kürzere Präambel: 
-Nur 16 ms gegenüber 72 ms bei CCK. Eine kürzere Präambel 
-ist vorteilhaft, da sie weniger Grundaufwand für das Netzwerk bedeutet.
+Eine andere entscheidende Eigenschaft von OFDM ist die kÃ¼rzere PrÃ¤ambel: 
+Nur 16 ms gegenÃ¼ber 72 ms bei CCK. Eine kÃ¼rzere PrÃ¤ambel 
+ist vorteilhaft, da sie weniger Grundaufwand fÃ¼r das Netzwerk bedeutet.
 <p>
 <img src="images/funk-bild3.png">
 <p>
-Auch wenn die Präambel ein unverzichtbarer Teil des Datenpaketes ist, stört 
-doch die von ihr beanspruchte Zeit, die für eine Nutzdatenübertragung 
-nicht mehr verfügbar ist. Mit der kurzen Präambel bei OFDM steigt 
+Auch wenn die PrÃ¤ambel ein unverzichtbarer Teil des Datenpaketes ist, stÃ¶rt 
+doch die von ihr beanspruchte Zeit, die fÃ¼r eine NutzdatenÃ¼bertragung 
+nicht mehr verfÃ¼gbar ist. Mit der kurzen PrÃ¤ambel bei OFDM steigt 
 also die Nutzdatenrate - eine gute Sache! Reine OFDM-Systeme setzen OFDM 
-sowohl für Präambel/Header als auch für die Nutzdaten ein.
+sowohl fÃ¼r PrÃ¤ambel/Header als auch fÃ¼r die Nutzdaten ein.
 Wie der Name schon andeutet, handelt es sich bei CCK/OFDM um ein hybrides 
 Verfahren, das als Option im Standardentwurf IEEE 802.11g enthalten ist. 
-Wie in Bild 5 verdeutlicht, setzt CCK/OFDM die CCK-Modulation für 
-Präambel/Header und OFDM für die Nutzdaten ein. Dabei bleiben 
-die Modulationsarten mit dem Übergang zwischen Präambel/Header 
+Wie in Bild 5 verdeutlicht, setzt CCK/OFDM die CCK-Modulation fÃ¼r 
+PrÃ¤ambel/Header und OFDM fÃ¼r die Nutzdaten ein. Dabei bleiben 
+die Modulationsarten mit dem Ãœbergang zwischen PrÃ¤ambel/Header 
 und Nutzdatenstrom separat und zeitlich getrennt.
 <p>
 <img src="images/funk-bild4.png">
 <p>
 Dies wirft sofort eine naheliegende Frage auf: Wozu diese Trennung? Wie sich zeigen 
-wird, gibt es gute Gründe dafür, die optionalen Hybridverfahren 
-in den Standardentwurf aufzunehmen. Wenn nämlich ein Betrieb in Anwesenheit 
-existierender WiFi-Geräte stattfindet, sorgt der ausgesendete CCK-Header 
-dafür, daß alle WiFi-Geräte den Beginn einer Sendung mitbekommen, 
+wird, gibt es gute GrÃ¼nde dafÃ¼r, die optionalen Hybridverfahren 
+in den Standardentwurf aufzunehmen. Wenn nÃ¤mlich ein Betrieb in Anwesenheit 
+existierender WiFi-GerÃ¤te stattfindet, sorgt der ausgesendete CCK-Header 
+dafÃ¼r, daÃŸ alle WiFi-GerÃ¤te den Beginn einer Sendung mitbekommen, 
 und vor allem, wie lange (in ms) diese Sendung dauern wird. Daraufhin 
-folgt die Nutzinformation in OFDM. Auch wenn existierende WiFi-Geräte 
+folgt die Nutzinformation in OFDM. Auch wenn existierende WiFi-GerÃ¤te 
 nicht in der lage sind, diese Nutzinformation aufzunehmen, wissen sie 
 doch, wie lange die Sendung dauern wird, und starten in dieser Zeit keine 
-Sendeversuche: Dies vermeidet Kollisionen und sorgt für friedliche 
-Koexistenz mit neueren Geräten nach IEEE 802.11g mit CCK/OFDM-Modulation. 
-Da hier die Präambel länger ist als bei reinem OFDM, steigt 
+Sendeversuche: Dies vermeidet Kollisionen und sorgt fÃ¼r friedliche 
+Koexistenz mit neueren GerÃ¤ten nach IEEE 802.11g mit CCK/OFDM-Modulation. 
+Da hier die PrÃ¤ambel lÃ¤nger ist als bei reinem OFDM, steigt 
 der Grundaufwand. Allerdings kann dies leicht in Kauf genommen werden, 
-da CCK/OFDM höhere Datenraten zulässt (über 20 Mbit/s), 
+da CCK/OFDM hÃ¶here Datenraten zulÃ¤sst (Ã¼ber 20 Mbit/s), 
 was diesen Zeitverlust mehr als wettmacht, gleichzeitig aber 
-Rückwärtskompatibilität mit existierenden CCK-Systemen sicherstellt.
+RÃ¼ckwÃ¤rtskompatibilitÃ¤t mit existierenden CCK-Systemen sicherstellt.
 <p>
-Es ist immer daran zu denken, daß CCK/OFDM lediglich als Option im angenommenen 
+Es ist immer daran zu denken, daÃŸ CCK/OFDM lediglich als Option im angenommenen 
 Standardentwurf IEEE 802.11g enthalten ist. Die verbindlich festgelegte OFDM-Modulation 
-kann ebenfalls neben vorhandenen WiFi-Geräten existieren und mit 
-ihnen zusammenarbeiten. Allerdings ist dafür eine andere Methode 
+kann ebenfalls neben vorhandenen WiFi-GerÃ¤ten existieren und mit 
+ihnen zusammenarbeiten. Allerdings ist dafÃ¼r eine andere Methode 
 notwendig, die unter RTS/CTS bekannt ist. Diese wird im letzten Abschnitt 
-des Artikels näher betrachtet.
+des Artikels nÃ¤her betrachtet.
 <p>
 <img src="images/funk-bild5.png">
 <p>
 Das Modulationsverfahren PBCC (Packet Binary Convolutional Coding) basiert 
-auf einem Träger, unterscheidet sich aber wesentlich von CCK. Es 
-nutzt eine komplexere Signalkonstellation (8-PSK für PBCC statt BPSK/QPSK 
-für CCK) und einen Konvolutions-Code statt des Block-Codes bei CCK. 
+auf einem TrÃ¤ger, unterscheidet sich aber wesentlich von CCK. Es 
+nutzt eine komplexere Signalkonstellation (8-PSK fÃ¼r PBCC statt BPSK/QPSK 
+fÃ¼r CCK) und einen Konvolutions-Code statt des Block-Codes bei CCK. 
 Damit unterscheidet sich der Decodier-Mechanismus sehr von den bisher 
 besprochenen Verfahren. Wie bei CCK/ OFDM handelt es sich bei PBCC auch 
-um ein hybrides Verfahren: CCK für Präambel/Header und PBCC 
-für die Nutzdaten. Dies ermöglicht höhere Datenraten 
-bei gewahrter Rückwärtskompatibilität mit existierenden 
-WiFi-Systemen in gleicher Weise, wie oben für CCK/OFDM beschrieben 
+um ein hybrides Verfahren: CCK fÃ¼r PrÃ¤ambel/Header und PBCC 
+fÃ¼r die Nutzdaten. Dies ermÃ¶glicht hÃ¶here Datenraten 
+bei gewahrter RÃ¼ckwÃ¤rtskompatibilitÃ¤t mit existierenden 
+WiFi-Systemen in gleicher Weise, wie oben fÃ¼r CCK/OFDM beschrieben 
 wurde.
 <p>
 <img src="images/funk-bild6.png">
 <p>
 Als maximale 
-Datenrate für PBCC sind im Standardentwurf IEEE 802.11g 33 Mbit/s 
-festgelegt. Dieser Wert liegt unter den Spitzenwerten für das vorgeschriebene 
-OFDM und auch des optional möglichen CCK/OFDM. Hier ist festzustellen, 
-daß PBCC als optionales Element auch im ursprünglichen Standard 
-IEEE 802.11b enthalten ist, wobei aber noch keine Geräte auf den 
+Datenrate fÃ¼r PBCC sind im Standardentwurf IEEE 802.11g 33 Mbit/s 
+festgelegt. Dieser Wert liegt unter den Spitzenwerten fÃ¼r das vorgeschriebene 
+OFDM und auch des optional mÃ¶glichen CCK/OFDM. Hier ist festzustellen, 
+daÃŸ PBCC als optionales Element auch im ursprÃ¼nglichen Standard 
+IEEE 802.11b enthalten ist, wobei aber noch keine GerÃ¤te auf den 
 Markt gebracht wurden, die nach diesem Verfahren arbeiten.
 <p>
 <H4>Verborgene Teilnehmer und RTS/CTS</H4>
-Unter üblichen Betriebsbedingungen können sich alle Teilnehmer 
-in einem gemeinsamen Kanal auch gegenseitig hören. Es gibt aber 
+Unter Ã¼blichen Betriebsbedingungen kÃ¶nnen sich alle Teilnehmer 
+in einem gemeinsamen Kanal auch gegenseitig hÃ¶ren. Es gibt aber 
 Situationen, in denen die Partner Kontakt zur Basisstation haben, sich 
-aber untereinander nicht hören können. Hier nützt der Grundsatz 
-"Erst hören, dann sprechen" nichts: Wenn ein Teilnehmer 
+aber untereinander nicht hÃ¶ren kÃ¶nnen. Hier nÃ¼tzt der Grundsatz 
+"Erst hÃ¶ren, dann sprechen" nichts: Wenn ein Teilnehmer 
 einen vermeintlich freien Kanal feststellt und zur Basisstation zu senden 
-beginnt, während diese gerade der Sendung eines anderen Teilnehmers 
+beginnt, wÃ¤hrend diese gerade der Sendung eines anderen Teilnehmers 
 lauscht, dann gibt es ein Problem, das auch als das Hidden-Node-Problem 
 bekannt ist.
 <p>
 <img src="images/funk-bild7.png">
 <p>
-Zur Lösung dieses Problems hält der Standard 802.11 einen bekannten 
-Mechanismus bereit: RTS/ CTS (Request-To-Send/Clear-To-Send). Dazu muß 
+Zur LÃ¶sung dieses Problems hÃ¤lt der Standard 802.11 einen bekannten 
+Mechanismus bereit: RTS/ CTS (Request-To-Send/Clear-To-Send). Dazu muÃŸ 
 jeder Teilnehmer eine Sendeanforderung RTS an die Basisstation senden 
 und eine CTS-Antwort von der Basisstation abwarten, bevor er seine Sendung 
 starten kann. Die Situation von CCK- und OFDM-Partnern, die im gleichen 
-Kanal arbeiten, ähnelt sehr dem Hidden-Node-Problem, da die CCK-Partner 
-keine OFDM-Sendungen hören können. Mit dem RTS/CTS-Mechanismus 
-ist es also möglich, daß OFDM-Teilnehmer ohne Kollision im gleichen 
-Kanal wie WiFi-Geräte arbeiten können. Für den RTS/CTS-Ablauf 
-ist eine zusätzliche Verkehrssteuerung im Netz notwendig. 
+Kanal arbeiten, Ã¤hnelt sehr dem Hidden-Node-Problem, da die CCK-Partner 
+keine OFDM-Sendungen hÃ¶ren kÃ¶nnen. Mit dem RTS/CTS-Mechanismus 
+ist es also mÃ¶glich, daÃŸ OFDM-Teilnehmer ohne Kollision im gleichen 
+Kanal wie WiFi-GerÃ¤te arbeiten kÃ¶nnen. FÃ¼r den RTS/CTS-Ablauf 
+ist eine zusÃ¤tzliche Verkehrssteuerung im Netz notwendig. 
 <p>
 
 <h3>Sicherheit von Funknetzen</h3>
-Der größte Vorteil des Mediums Funk ist auch gleichzeitig sein 
-größter Nachteil: Die Funkwellen gehen überall hin, auch 
+Der grÃ¶ÃŸte Vorteil des Mediums Funk ist auch gleichzeitig sein 
+grÃ¶ÃŸter Nachteil: Die Funkwellen gehen Ã¼berall hin, auch 
 dorthin, wo sie nicht hin sollen. Drahtlose Netze bestehen in der Regel aus 
 einem Access-Point und einer Anzahl Clients mit drahtlosen Netzwerkkarten. 
-Immer häufiger sind die notwendigen Zugangspunkte zum Internet, so genannte 
-"Hotspots", an Flughäfen, in Cafes oder Hotels der Großstädte 
-zu finden. Auch zuhause können sich Notebook-Nutzer recht einfach 
-mit entsprechendem Zubehör einen Hotspot installieren und die Vorteile des 
-kabellosen Surfens genießen. Bei vielen handelsüblichen Geräten ist der AP in 
+Immer hÃ¤ufiger sind die notwendigen Zugangspunkte zum Internet, so genannte 
+"Hotspots", an FlughÃ¤fen, in Cafes oder Hotels der GroÃŸstÃ¤dte 
+zu finden. Auch zuhause kÃ¶nnen sich Notebook-Nutzer recht einfach 
+mit entsprechendem ZubehÃ¶r einen Hotspot installieren und die Vorteile des 
+kabellosen Surfens genieÃŸen. Bei vielen handelsÃ¼blichen GerÃ¤ten ist der AP in 
 einen DSL-Router integriert. <br>
-Im Lieferzustand sind die Geräte nach dem Auspacken betriebsbereit, nach dem 
-Einschalten können sich drahtlose Geräte bereits mit dem Accesspoint verbinden.
-In diesem Betriebsmodus besteht aber keinerlei Schutz des Netzwerks gegenüber 
-der unerwünschten Mitbenutzung durch andere Teilnehmer, es ist auf jeden Fall eine 
+Im Lieferzustand sind die GerÃ¤te nach dem Auspacken betriebsbereit, nach dem 
+Einschalten kÃ¶nnen sich drahtlose GerÃ¤te bereits mit dem Accesspoint verbinden.
+In diesem Betriebsmodus besteht aber keinerlei Schutz des Netzwerks gegenÃ¼ber 
+der unerwÃ¼nschten Mitbenutzung durch andere Teilnehmer, es ist auf jeden Fall eine 
 Konfiguration seitens des Netzwerkbetreibers erforderlich. 
 <p>
-Ein großes Sicherheitsrisiko, 
+Ein groÃŸes Sicherheitsrisiko, 
 das Nutzer von kabellosen Netzwerken haben, ist der Vertraulichkeitsverlust 
-durch einen "Lauschangriff". Mittels Notebook und einer WLAN-Karte ist es für 
-Dritte nicht allzu schwer, von außen in ein solches Netzwerk zu gelangen. 
+durch einen "Lauschangriff". Mittels Notebook und einer WLAN-Karte ist es fÃ¼r 
+Dritte nicht allzu schwer, von auÃŸen in ein solches Netzwerk zu gelangen. 
 Dabei "schmuggelt" sich der Eindringling in die Verbindung zwischen dem HotSpot 
 und dem Notebook ein, quasi als "Man-in-the-Middle". Ohne Probleme gelangt 
-er so an persönliche Daten oder kann sogar auf Kosten des Besitzers im 
-Internet surfen, was viele noch mehr "schmerzen" dürfte.
+er so an persÃ¶nliche Daten oder kann sogar auf Kosten des Besitzers im 
+Internet surfen, was viele noch mehr "schmerzen" dÃ¼rfte.
 <p>
 Inzwischen ist allein durch das Erlauschen des Datenverkehrs ein passiver 
-Angriff auf WEP mit handelsübliche Hardware und frei erhältliche 
-Software gelungen. Er beruht auf der Tatsache, daß WEP einen berechneten 
-und nicht einen zufälligen Initialisierungsvektor im Klartext überträgt.
-So kann aus den erlauschten Daten der bei WEP verwendeten Schlüssel errechnet
-werden. Nach Schätzungen dauert das Berechnen eines 40-Bit-WEP-Schlüssels 
-eine Viertelstunde, die bessere 128-Bit-Variante mit 104 Bit langem Schlüssel 
-würde nur rund 40 Minuten dauern.
+Angriff auf WEP mit handelsÃ¼bliche Hardware und frei erhÃ¤ltliche 
+Software gelungen. Er beruht auf der Tatsache, daÃŸ WEP einen berechneten 
+und nicht einen zufÃ¤lligen Initialisierungsvektor im Klartext Ã¼bertrÃ¤gt.
+So kann aus den erlauschten Daten der bei WEP verwendeten SchlÃ¼ssel errechnet
+werden. Nach SchÃ¤tzungen dauert das Berechnen eines 40-Bit-WEP-SchlÃ¼ssels 
+eine Viertelstunde, die bessere 128-Bit-Variante mit 104 Bit langem SchlÃ¼ssel 
+wÃ¼rde nur rund 40 Minuten dauern.
 <p>
 
-<I>Adresse für den Access-Point (SSID) setzen</I><br>
+<I>Adresse fÃ¼r den Access-Point (SSID) setzen</I><br>
 Der <b>Service Set Identifier</b> (SSID) stellt quasi den Namen des Funknetzes 
 dar. Sie wird vom Hersteller des AP auf einen Standardnamen gesetzt.
 Mit dem SSID bestimmt der Administrator, 
-auf welche Access-Points Notebooks oder PCs zugreifen können. 
+auf welche Access-Points Notebooks oder PCs zugreifen kÃ¶nnen. 
 Der SSID benennt einen oder eine Gruppe von Access Points 
 (AP). Damit der Anwender drahtlos auf das Netz zugreifen kann, 
-müssen auf den Notebooks die entsprechenden SSIDs hinterlegt 
+mÃ¼ssen auf den Notebooks die entsprechenden SSIDs hinterlegt 
 sein. Der SSID funktioniert wie ein einfaches Passwort, wobei 
-der Name des Access-Points vom Endgerät übermittelt 
-wird. Jeder AP ist über seinen mit einem konkreten Wireless LAN 
-verknüpft. Sendet das Notebook nicht die korrekte Adresse des Access 
-Points, so erhält der Anwender keinen Zugriff auf die Daten.
+der Name des Access-Points vom EndgerÃ¤t Ã¼bermittelt 
+wird. Jeder AP ist Ã¼ber seinen mit einem konkreten Wireless LAN 
+verknÃ¼pft. Sendet das Notebook nicht die korrekte Adresse des Access 
+Points, so erhÃ¤lt der Anwender keinen Zugriff auf die Daten.
 <p>
-Eine Sicherheitslücke entsteht, wenn der Access-Point so konfiguriert ist, 
+Eine SicherheitslÃ¼cke entsteht, wenn der Access-Point so konfiguriert ist, 
 dass er seine SSIDs denjenigen Notebooks, die sich anmelden wollen, per 
 Broadcastverfahren mitteilt.Ein weiteres Risiko besteht darin, dass die 
 Anwender ihre Systeme selbst konfigurieren und anderen Personen die SSIDs 
-möglicherweise mitteilen. Nach der Einrichtung von WEP/WPA und MAC-Filtern 
+mÃ¶glicherweise mitteilen. Nach der Einrichtung von WEP/WPA und MAC-Filtern 
 sollte das SSID-Broadcasting abgeschaltet werden, da die Clients fest eingerichtet 
 sind und eine zyklische Bekanntgabe des Netzwerknamen (SSID-Broadcasting) 
 nur noch ein Sicherheitsrisiko darstellt.
 <p>
-Es versteht sich von selbst, daß alle voreingestellten Passwörter
-(z.B. beim AP) geändert werden.
+Es versteht sich von selbst, daÃŸ alle voreingestellten PasswÃ¶rter
+(z.B. beim AP) geÃ¤ndert werden.
 <P>
 
-<I>MAC-Adresse des Endgeräts speichern</I><br>
+<I>MAC-Adresse des EndgerÃ¤ts speichern</I><br>
 Anhand der MAC-Adresse kann der Administrator des AP festlegen, welche 
-Endgeräte Daten über einen Access Point senden oder empfangen 
-können. Die  MAC-Adresse benennt das Laptop oder den Handheld-Computer. 
-Um die Sicherheit in einem drahtlosen Netz zu erhöhen, lässt sich 
+EndgerÃ¤te Daten Ã¼ber einen Access Point senden oder empfangen 
+kÃ¶nnen. Die  MAC-Adresse benennt das Laptop oder den Handheld-Computer. 
+Um die Sicherheit in einem drahtlosen Netz zu erhÃ¶hen, lÃ¤sst sich 
 das System mit einer Liste von MAC-Adressen derjenigen Notebooks programmieren, 
 denen Zugriff aufs LAN gestattet ist. Clienten,deren Adresse nicht in der 
 Liste enthalten ist, erhalten keinen Zugang zum Access Point.
 <p>
-Nachteile: Die Liste der Adressen muß vom Administrator in jeden 
+Nachteile: Die Liste der Adressen muÃŸ vom Administrator in jeden 
 Access Point manuell eingegeben und aktualisiert werden.<br> 
 Viele Netzwerkinterfaces erlauben die Konfiguration einer beliebigen MAC-Adresse, 
 wodurch die Sperre unterlaufen werden kann.<br>
-Erst in Kombination mit einer Verschlüsselung stellt diese Maßnahme 
+Erst in Kombination mit einer VerschlÃ¼sselung stellt diese MaÃŸnahme 
 eine weitere Steigerung der Sicherheit dar.
-Die MAC-Adresse eines Windows-Clients können Sie übrigens durch die
+Die MAC-Adresse eines Windows-Clients kÃ¶nnen Sie Ã¼brigens durch die
 kommandos <tt>ipconfig /all</tt> bzw. <tt>winipcfg</tt> ermitteln.
 <P>
 
-<I>Verschlüsselung der Datenpakete</I><br>
-Die WEP-Verschlüsselung (Wired Equivalent Privacy) soll die Kommunikation 
+<I>VerschlÃ¼sselung der Datenpakete</I><br>
+Die WEP-VerschlÃ¼sselung (Wired Equivalent Privacy) soll die Kommunikation 
 innerhalb eines WLANs (Wireless Local Area Network) vor Lauschangriffen 
-schützen. Damit Access Point und Notebook miteinander Daten 
-ver- und entschlüsseln können, benutzen sie einen identischen 
-Code. Das Verschlüsselungssystem codiert Datenpakete mit 128 Bit.
+schÃ¼tzen. Damit Access Point und Notebook miteinander Daten 
+ver- und entschlÃ¼sseln kÃ¶nnen, benutzen sie einen identischen 
+Code. Das VerschlÃ¼sselungssystem codiert Datenpakete mit 128 Bit.
 Die Codierung dient als Zugangskontrolle: Einem Notebook wird der 
-Zugriff auf einen AP verweigert, wenn die Schlüssel der beiden 
-Komponenten nicht übereinstimmen.
+Zugriff auf einen AP verweigert, wenn die SchlÃ¼ssel der beiden 
+Komponenten nicht Ã¼bereinstimmen.
 <p>
-Der 802.11-WLAN-Standard sieht kein Protokoll für das Key-Management 
-vor, so dass alle Schlüssel in einem Netz manuell administriert werden 
-müssen. Die WEP-Sicherheit ist in Ad-hoc-Netzen, die keinen Access-Point 
-benötigen, nicht verfügbar. Die WEP-Verschlüsselung ist mit
+Der 802.11-WLAN-Standard sieht kein Protokoll fÃ¼r das Key-Management 
+vor, so dass alle SchlÃ¼ssel in einem Netz manuell administriert werden 
+mÃ¼ssen. Die WEP-Sicherheit ist in Ad-hoc-Netzen, die keinen Access-Point 
+benÃ¶tigen, nicht verfÃ¼gbar. Die WEP-VerschlÃ¼sselung ist mit
 relativ geringem Aufwand zu knacken. 
 Im Ernstfall ist die Aufzeichnung und die Analyse von ca. 25 GB Datenverkehr 
-ausreichend, um eine WEP-basierende Verschlüsselung zu knacken und 
-erfolgreich über ein drahtloses Netzwerk in die Gesamtstruktur eines 
+ausreichend, um eine WEP-basierende VerschlÃ¼sselung zu knacken und 
+erfolgreich Ã¼ber ein drahtloses Netzwerk in die Gesamtstruktur eines 
 Unternehmensnetzweks einzudringen.<br>
-Bei Verlust eines Notebooks muß der Administrator bei allen anderen 
-Geräten und APs den Schlüssel ändern.
+Bei Verlust eines Notebooks muÃŸ der Administrator bei allen anderen 
+GerÃ¤ten und APs den SchlÃ¼ssel Ã¤ndern.
 <p>
-Im Rahmen der Einrichtung ist es zweckmäßig, einen drahtgebundenen 
+Im Rahmen der Einrichtung ist es zweckmÃ¤ÃŸig, einen drahtgebundenen 
 Zugang zum AP zu haben, um unbeabsichtigte Selbstaussperrungen zu vermeiden.
-Viele Geräte gestatten die Eingabe eines Schlüsseltextes (im Regelfall 
-13 Buchstaben oder Ziffern) zur Erzeugung eines Schlüsselcodes. Dieses 
-Verfahren ist jedoch zwischen den verschiedenen Geräten nicht kompatibel, 
+Viele GerÃ¤te gestatten die Eingabe eines SchlÃ¼sseltextes (im Regelfall 
+13 Buchstaben oder Ziffern) zur Erzeugung eines SchlÃ¼sselcodes. Dieses 
+Verfahren ist jedoch zwischen den verschiedenen GerÃ¤ten nicht kompatibel, 
 bei Problemen sollte hier ein 26-stelliger Hexadezimalcode verwendet werden 
-(Schlüssellänge von 128 Bit). 
+(SchlÃ¼ssellÃ¤nge von 128 Bit). 
 <p>
  
 <I>VPN im WLAN</I><br>
-Ursprünglich bietet das VPN (Virtual Private Network) einen sicheren "Tunnel" 
-durch das weltweite öffentliche Netz, seine Sicherheitsverfahren 
+UrsprÃ¼nglich bietet das VPN (Virtual Private Network) einen sicheren "Tunnel" 
+durch das weltweite Ã¶ffentliche Netz, seine Sicherheitsverfahren 
 lassen sich aber auch auf ein lokales drahtloses Netzwerk anwenden.
-In Verbindung mit zentralisierten Authentifizierungslösungen 
+In Verbindung mit zentralisierten AuthentifizierungslÃ¶sungen 
 wie RADIUS-Servern kommen dabei verschiedene Tunneling-Protokolle zum Einsatz.
 <p>
-Die bereits vorhandene VPN-Infrastruktur im Unternehmen lässt sich leicht 
+Die bereits vorhandene VPN-Infrastruktur im Unternehmen lÃ¤sst sich leicht 
 auf das Wireless LAN erweitern. Der Administrationsaufwand ist klein, da sich 
-der VPN-Server zentral verwalten lässt.Es gibt noch Schwächen 
+der VPN-Server zentral verwalten lÃ¤sst.Es gibt noch SchwÃ¤chen 
 beim Roaming: Bewegen sich die Anwender von einem zum anderen 
 drahtlosen Netz, werden sie zu einem erneuten Log-In aufgefordert.
 <P>
-Für die Absicherung von Funknetzen bleiben damit nur Techniken, wie 
-sie in Virtual Private Networks (VPNs) gebräuchlich sind - also 
-Verfahren, die auf höheren Netzwerkebenen greifen. Das erfordert 
+FÃ¼r die Absicherung von Funknetzen bleiben damit nur Techniken, wie 
+sie in Virtual Private Networks (VPNs) gebrÃ¤uchlich sind - also 
+Verfahren, die auf hÃ¶heren Netzwerkebenen greifen. Das erfordert 
 allerdings einige Umstellungen: Anstatt die Access Points schlicht in die 
 bestehende LAN-Infrastruktur zu integrieren, muss man ein separates Netz 
-für sie aufbauen. An einem Übergabepunkt zwischen WLAN und LAN 
-muss dann die Zugriffsberechtigung überprüft werden. Man sollte 
-dabei nicht nur von der normalen Benutzerverwaltung getrennte Passwörter 
-verwenden, sondern diese möglichst lang machen. Deutlich sicherer geht es 
+fÃ¼r sie aufbauen. An einem Ãœbergabepunkt zwischen WLAN und LAN 
+muss dann die Zugriffsberechtigung Ã¼berprÃ¼ft werden. Man sollte 
+dabei nicht nur von der normalen Benutzerverwaltung getrennte PasswÃ¶rter 
+verwenden, sondern diese mÃ¶glichst lang machen. Deutlich sicherer geht es 
 mit IPsec. 
 <p>
 
 <I>Physische Sicherheit</I>
 Man sollte gegebenenfalls die physischen Bedingungen in das Sicherheitskonzept 
-mit einbeziehen. Bei der Abdeckung eines Geländes oder eines Gebäudes 
+mit einbeziehen. Bei der Abdeckung eines GelÃ¤ndes oder eines GebÃ¤udes 
 ist durch Auswahl der AP-Standorte, der Antennen und der Sendeleistung eine 
-Einschränkung der Abdeckung auf den erwünschten Bereich möglich. 
-So kann beispielsweise die Installation der APs in den Kellerräumen eine 
-Abdeckung des Gebäudes und des naheliegenden Bereiches bieten, jedoch 
-eine Absrahlung auf angrenzende Grundstücke wirkungsvoll vermieden werden.
+EinschrÃ¤nkung der Abdeckung auf den erwÃ¼nschten Bereich mÃ¶glich. 
+So kann beispielsweise die Installation der APs in den KellerrÃ¤umen eine 
+Abdeckung des GebÃ¤udes und des naheliegenden Bereiches bieten, jedoch 
+eine Absrahlung auf angrenzende GrundstÃ¼cke wirkungsvoll vermieden werden.
 Die Verwendung von Antennen mit bestimmter Abstrahlungscharakteristik kann 
 bei komplexen Umgebungen einen deutlichen Sicherheitsgewinn bringen.
 <p>
@@ -1393,59 +1393,59 @@ bei komplexen Umgebungen einen deutlichen Sicherheitsgewinn bringen.
 <img src="images/warchalking.png" align=left hspace=10 vspace=10>
 <I>Warchalking</I>
 <p>
-Unter Warchalking versteht man die öffentliche Kennzeichnung offener drahtloser 
-Netzwerke (Wireless LAN Hotspots) etwa durch Kreidezeichen an Hauswänden und auf 
-Bürgersteigen. Genau wie die Reisenden früherer Zeiten sich durch Graffiti über 
-die Qualität der lokalen Infrastruktur austauschten tun dies auch moderne 
-Informationsnomaden. Um überall mit dem Internet verbunden zu sein nutzen sie 
+Unter Warchalking versteht man die Ã¶ffentliche Kennzeichnung offener drahtloser 
+Netzwerke (Wireless LAN Hotspots) etwa durch Kreidezeichen an HauswÃ¤nden und auf 
+BÃ¼rgersteigen. Genau wie die Reisenden frÃ¼herer Zeiten sich durch Graffiti Ã¼ber 
+die QualitÃ¤t der lokalen Infrastruktur austauschten tun dies auch moderne 
+Informationsnomaden. Um Ã¼berall mit dem Internet verbunden zu sein nutzen sie 
 oft auch die (unzureichend gesicherten oder absichtlich offen gelassenen) Wireless 
-LANs von Institutionen und Privatpersonen, um über diese Netzwerke Verbindung 
-mit dem Netz der Netze aufzunehmen. Welche WLAN-Hotspots in Deutschland frei zugäglich
-sind erfährt man unter <A HREF="http://mobileaccess.de/wlan/">
+LANs von Institutionen und Privatpersonen, um Ã¼ber diese Netzwerke Verbindung 
+mit dem Netz der Netze aufzunehmen. Welche WLAN-Hotspots in Deutschland frei zugÃ¤glich
+sind erfÃ¤hrt man unter <A HREF="http://mobileaccess.de/wlan/">
 mobileaccess.de/wlan/</A><br clear=all>
 <P>
 
 <h3>Technische Probleme</h3>
 WLANs benutzen sehr hohe Frequenzen 2,4 bis 2,5 GHz. In diesem Frequenzbereich
-ändern sich die Ausbreitungsbedingungen im Nahfeld schon mit kleinsten 
-Veränderungen der Antennenposition und des Umfeldes der Antenne. So 
-stören metallische Gegenstände in der Nähe der Antenne teilweise 
-gewaltig. Um die starken Beeinflussungen der Ausbreitung zu verstehen, muß 
-man die verwendete Wellenlänge berücksichtigen: 2,4 GHz entsprechen 
-etwa 12,7 cm Wellenlänge. Jeder Gegenstand, der ungefähr so groß 
-ist wie die Wellenlänge, kann die Abstrahlung der Antenne beeinflussen. 
-Also nehmen Wasser, Pflanzen, Gebäude die Sendeenergie auf und setzen diese
-in Wärme um. Diese Energie steht dann nicht mehr für weitere Ausbreitung 
-zur Verfügung. 
+Ã¤ndern sich die Ausbreitungsbedingungen im Nahfeld schon mit kleinsten 
+VerÃ¤nderungen der Antennenposition und des Umfeldes der Antenne. So 
+stÃ¶ren metallische GegenstÃ¤nde in der NÃ¤he der Antenne teilweise 
+gewaltig. Um die starken Beeinflussungen der Ausbreitung zu verstehen, muÃŸ 
+man die verwendete WellenlÃ¤nge berÃ¼cksichtigen: 2,4 GHz entsprechen 
+etwa 12,7 cm WellenlÃ¤nge. Jeder Gegenstand, der ungefÃ¤hr so groÃŸ 
+ist wie die WellenlÃ¤nge, kann die Abstrahlung der Antenne beeinflussen. 
+Also nehmen Wasser, Pflanzen, GebÃ¤ude die Sendeenergie auf und setzen diese
+in WÃ¤rme um. Diese Energie steht dann nicht mehr fÃ¼r weitere Ausbreitung 
+zur VerfÃ¼gung. 
 <P>
-Ein weiterer Störfaktor sind Reflektionen. HF Energie wird von manchen 
-Oberflächen hervorragend reflektiert oder abgelenkt. Dabei kann es zur 
-Überlagerung des Originalsignals mit dem abgelenkten Signal kommen, was zu 
-völliger Auslöschung aber auch zu einer Verstärkung führen kann. 
-Durch Reflexionen verändert sich oft auch die Polarisation der Welle. Idealerweise 
+Ein weiterer StÃ¶rfaktor sind Reflektionen. HF Energie wird von manchen 
+OberflÃ¤chen hervorragend reflektiert oder abgelenkt. Dabei kann es zur 
+Ãœberlagerung des Originalsignals mit dem abgelenkten Signal kommen, was zu 
+vÃ¶lliger AuslÃ¶schung aber auch zu einer VerstÃ¤rkung fÃ¼hren kann. 
+Durch Reflexionen verÃ¤ndert sich oft auch die Polarisation der Welle. Idealerweise 
 sollten Sende- und Empfangsantenne die gleiche Polarisation haben, also beide vertikal 
-oder beide horizontal. Ein konkrete, zuverlässige Vorhersage welche Antennen 
-welche Reichweiten bringen ist ohne genaue Betrachtung der Umgebung nicht möglich. 
+oder beide horizontal. Ein konkrete, zuverlÃ¤ssige Vorhersage welche Antennen 
+welche Reichweiten bringen ist ohne genaue Betrachtung der Umgebung nicht mÃ¶glich. 
 <P>
-Wünschenswert sind dünne Kabel wegen ihrer größeren Flexibilität, 
-Aber gerade die dünnen Kabel sogen für eine starke KabelDämpfung, die in
+WÃ¼nschenswert sind dÃ¼nne Kabel wegen ihrer grÃ¶ÃŸeren FlexibilitÃ¤t, 
+Aber gerade die dÃ¼nnen Kabel sogen fÃ¼r eine starke KabelDÃ¤mpfung, die in
 in dB/100 m angegeben wird.
-Verringern lässt sich die Kabeldämpfung nur durch dickere Kabel, das liegt an
-der Physik. Das Problem ist, daß man zwar mit dicken Kabel im Aussenbereich
+Verringern lÃ¤sst sich die KabeldÃ¤mpfung nur durch dickere Kabel, das liegt an
+der Physik. Das Problem ist, daÃŸ man zwar mit dicken Kabel im Aussenbereich
 und an einer festmontierten Antenne gut arbeiten kann, ein Notebook oder
 ein leichter Accesspoint aber vom dicken Kabel einfach weggehoben werden
-würde. Dadurch wird die Mobilität des WLANs wieder eingeschränkt. 
+wÃ¼rde. Dadurch wird die MobilitÃ¤t des WLANs wieder eingeschrÃ¤nkt. 
 Um dieses Problem zu umgehen, wird mit sogenannten "Pigtails" gearbeitet. Dies sind kurze,
-hochflexible Kabelstücke mit den entsprechenden Steckern, die vom Notebook
+hochflexible KabelstÃ¼cke mit den entsprechenden Steckern, die vom Notebook
 oder AP auf das dicke Kabel adaptieren. Dadurch kommt zwar wieder ein etwas
-stärker dämpfendes Kabel ins Spiel, aber das System bleibt flexibel. 
-Dazu kommt noch das die üblichen Winzigstecker der Accesspoints oder PCMCIA-Karten 
-gar nicht an ein dickes Kabel montiert werden können.  Die folgende Tabelle zeigt
-typische Dämpfungswerte von HF-Kabeln:
+stÃ¤rker dÃ¤mpfendes Kabel ins Spiel, aber das System bleibt flexibel. 
+Dazu kommt noch das die Ã¼blichen Winzigstecker der Accesspoints oder PCMCIA-Karten 
+gar nicht an ein dickes Kabel montiert werden kÃ¶nnen.  Die folgende Tabelle zeigt
+typische DÃ¤mpfungswerte von HF-Kabeln:
 <P>
 <table border="1" cellspacing="0" cellpadding="3">
 <tr><td valign="top"><b>Kabeltyp</b></td>
-<td valign="top"><b>Dämpfung bei 2.4 Ghz db/100m</b></td>
+<td valign="top"><b>DÃ¤mpfung bei 2.4 Ghz db/100m</b></td>
 </tr><tr>
 <td valign="top">RG58</td><td valign="top">107</td>
 </tr><tr>
@@ -1467,7 +1467,7 @@ Passt nur an RG-316- oder RG-174-Kabel.
 </td><td>Sehr kleiner Stecker der nur bei PCMCIA Karte Verwendung findet. Passt nur
 an RG-316 und RG-174 Kabel.z.b. bei Cisco Aironet 350.</tr>
 <tr><td valign="top">SMA
-</td><td>Kleiner Stecker für Access-Points, PCI-Karten o.ä. Kann an RG-316-, 
+</td><td>Kleiner Stecker fÃ¼r Access-Points, PCI-Karten o.Ã¤. Kann an RG-316-, 
 RG-58- und RG213-Kabel angeschlagen werden.<br>SMA-Stecker: Innengewinde und innen Stift.
 <br>SMA-Buchse: Aussengewinde und innen Kelch.</tr>
 <tr><td valign="top">Reverse-SMA
@@ -1475,13 +1475,13 @@ RG-58- und RG213-Kabel angeschlagen werden.<br>SMA-Stecker: Innengewinde und inn
 <br>Reverse-SMA-Stecker: Innengewinde und innen Kelch. <br>Reverse-SMA-Buchse: 
 Aussengewinde und innen einen Stift.</tr>
 <tr><td valign="top">TNC
-</td><td>Etwas größerer Stecker, wird gelegentlich an WLAN-Accesspoints und 
+</td><td>Etwas grÃ¶ÃŸerer Stecker, wird gelegentlich an WLAN-Accesspoints und 
 -Clients gefunden. Passt an RG-316-, RG-58- und RG213-Kabel. Achtung: Es gibt dieses
-System umgekehrt: Buchse (Kelch) anstelle des Stiftes für den Innenleiter, es nennt 
-sich dann "Reverse-TNC". Wird häufiger im WLAN-Bereich verwendet. z.B. von Cisco. </tr>
+System umgekehrt: Buchse (Kelch) anstelle des Stiftes fÃ¼r den Innenleiter, es nennt 
+sich dann "Reverse-TNC". Wird hÃ¤ufiger im WLAN-Bereich verwendet. z.B. von Cisco. </tr>
 <tr><td valign="top">N
-</td><td>Der Stecker für professionelle Montage und praktisch alle Kabeltypen. Dicke
-Kabel zur Antenne sollte man immer mit N-Stecker ausrüsten. Die Verbindung zum Notebook/AP 
+</td><td>Der Stecker fÃ¼r professionelle Montage und praktisch alle Kabeltypen. Dicke
+Kabel zur Antenne sollte man immer mit N-Stecker ausrÃ¼sten. Die Verbindung zum Notebook/AP 
 wird dann mit einem Pigtail mit N-Buchse adaptiert.</tr>
 </table>
 <p>
@@ -1489,200 +1489,200 @@ wird dann mit einem Pigtail mit N-Buchse adaptiert.</tr>
 <H2><A NAME="10.5">Weitere drahtlose Verfahren</A></H2>
 Das Nebeneinander verschiedener kabelloser
 Vernetzungstechniken ist nicht leicht zu durchschauen. Hier ein
-Überblick über Technik und Anwendung gängiger
-Systeme, die für den Heimbereich geeignet sind.
+Ãœberblick Ã¼ber Technik und Anwendung gÃ¤ngiger
+Systeme, die fÃ¼r den Heimbereich geeignet sind.
 <P>
 <H4>WiMAX</H4>
 Die Wireless-Technologie Worldwide Interer operability for 
 Microwave Access (WiMAX) hat nicht zuletzt aufgrund ihrer 
-vielfältigen Anwendungsmöglichkeiten eine beachtliche
-Zukunft vor sich. Vor allem die breitbandige High-Speed-Übertragung 
-zu mobilen Endgeräten nach dem Standard IEEE 802.16e verspricht 
+vielfÃ¤ltigen AnwendungsmÃ¶glichkeiten eine beachtliche
+Zukunft vor sich. Vor allem die breitbandige High-Speed-Ãœbertragung 
+zu mobilen EndgerÃ¤ten nach dem Standard IEEE 802.16e verspricht 
 eine weitergehende Verbreitung. Das Spektrum der WiMAX-Anwendungen
 reicht von der "Richtfunk-Anbindung" von Wohngebieten oder 
-Industriekomplexen über die Versorgung mobiler Laptops bis hin 
-zur Datenversorgung in Städten oder auch in größeren Gebieten, in 
-denen sich wegen der dünnen Besiedelung das Verlegen von Kabeln nicht 
+Industriekomplexen Ã¼ber die Versorgung mobiler Laptops bis hin 
+zur Datenversorgung in StÃ¤dten oder auch in grÃ¶ÃŸeren Gebieten, in 
+denen sich wegen der dÃ¼nnen Besiedelung das Verlegen von Kabeln nicht 
 lohnt (Gebiete also, die niemals in den Genuss von DSL kommen werden). 
 Die Funkzellendurchmesser betragen bis zu 20 km (typisch 10 km oder
 weniger). Auch die Installationskosten sind relativ niedrig, sie
-betragen etwa ein Drittel der Kosten für das
+betragen etwa ein Drittel der Kosten fÃ¼r das
 Universal-Mobile-Telecommunications-System (UMTS).
-Die (Mobil-)Übertragungsraten liegen in der Praxis zwischen
-5 Mbit/s und etwa 25 Mbit/s. Die heute bereits in vielen Ländern zur 
+Die (Mobil-)Ãœbertragungsraten liegen in der Praxis zwischen
+5 Mbit/s und etwa 25 Mbit/s. Die heute bereits in vielen LÃ¤ndern zur 
 drahtlosen Breitband-Versorgung eingesetzte WiMAX-Technik beruht auf 
 dem Standard IEEE 802.16. Bei der aktuellen Version ist der Wechsel der 
-Funkzelle noch nicht möglich, die Anwendung ist also auf echte 
+Funkzelle noch nicht mÃ¶glich, die Anwendung ist also auf echte 
 Festverbindungen ausgerichtet. Ende 2005 hat das IEEE-Gremium dann die
 Version 802.1 6e verabschiedet, womit auch der Wechsel der Funkzelle mit 
-mobilen Endgeräten möglich sein wird. Die notwendigen Frequenzbereiche
-bei 2,5 GHz und 3,5 GHz sind verfügbar. Es wurde auch ein Quality of Service
-festgelegt, der auch Sprachübertragung erlaubt.
+mobilen EndgerÃ¤ten mÃ¶glich sein wird. Die notwendigen Frequenzbereiche
+bei 2,5 GHz und 3,5 GHz sind verfÃ¼gbar. Es wurde auch ein Quality of Service
+festgelegt, der auch SprachÃ¼bertragung erlaubt.
 <P>
 <H4>IrDA</H4>
 Der IrDA (Infrared Data Association) - Standard
-für den Kurzstreckenbereich (wenige Meter) gehört schon
+fÃ¼r den Kurzstreckenbereich (wenige Meter) gehÃ¶rt schon
 fast zu den Veteranen der drahtlosen Technologien. Entsprechende
-Hardware ist sehr preisgünstig und heute Grundausstattung in
+Hardware ist sehr preisgÃ¼nstig und heute Grundausstattung in
 Notebooks, Palm-, Handspring- und CE-Plattformen sowie Handys.
 Mobile Telefone mit Infrarotschnittstelle gibt es beispielsweise
 von Siemens, Nokia, Qualcomm, Motorola und Ericsson. Seit einigen
 Monaten wird die Infrarot-Technologie mit 16 MBit/s-Transceiver
 ausgeliefert. Ein schwerwiegendes Handikap hat die IrDA-Technik,
-denn Sender und Empfänger benötigen eine direkte
+denn Sender und EmpfÃ¤nger benÃ¶tigen eine direkte
 Sichtverbindung. Dieses Manko hat sich in der Praxis als so
-drastisch erwiesen, daß die Akzeptanz von IrDA sehr nachgelassen
-hat. Die Hersteller haben bereits reagiert - in vielen Fällen
-wird wohl IrDA demnächst von Bluetooth ersetzt, obwohl IrDA
-mit seinem Licht-Übertragungsmedium keine Rangeleien um
-Funkfrequenzen kennt und natürlich auch keinerlei
-möglicherweise gesundheitsschädliche
-Mikrowellen-Strahlung emittiert. Eine weitere Einschränkung
+drastisch erwiesen, daÃŸ die Akzeptanz von IrDA sehr nachgelassen
+hat. Die Hersteller haben bereits reagiert - in vielen FÃ¤llen
+wird wohl IrDA demnÃ¤chst von Bluetooth ersetzt, obwohl IrDA
+mit seinem Licht-Ãœbertragungsmedium keine Rangeleien um
+Funkfrequenzen kennt und natÃ¼rlich auch keinerlei
+mÃ¶glicherweise gesundheitsschÃ¤dliche
+Mikrowellen-Strahlung emittiert. Eine weitere EinschrÃ¤nkung
 der IrDA-Anwendung: Es sind nur Punkt-zu-Punkt-Verbindungen
-möglich.
+mÃ¶glich.
 <P>
 <H4>Bluetooth</H4>
-Über 200 Hersteller ziehen an einem Strang und entwickeln ein Verfahren zur 
-drahtlosen Integration mobiler Geräte. Aus dem Projekt mit Codenamen "Bluetooth" 
+Ãœber 200 Hersteller ziehen an einem Strang und entwickeln ein Verfahren zur 
+drahtlosen Integration mobiler GerÃ¤te. Aus dem Projekt mit Codenamen "Bluetooth" 
 ging bis zur CeBIT 1999 die erste Version einer Spezifikation hervor. 
 Wer oder was ist "Bluetooth"? Der Held, um den es hier geht, regierte vor 1000 
-Jahren Dänemark und hieß Harald Blaatand, zu deutsch Blauzahn. Eines 
-der wenigen Zeugnisse für die Existenz des Königs legt ein jütländischer 
-Runenstein ab, auf dem steht: "... Harald, der ganz Dänemark und Norwegen 
-gewann und die Dänen christianisierte." Was dieser Herrscher vergangener 
-Tage mit drahtlosem Datenaustausch zu tun hat, versucht eine Powerpoint-Präsentation 
+Jahren DÃ¤nemark und hieÃŸ Harald Blaatand, zu deutsch Blauzahn. Eines 
+der wenigen Zeugnisse fÃ¼r die Existenz des KÃ¶nigs legt ein jÃ¼tlÃ¤ndischer 
+Runenstein ab, auf dem steht: "... Harald, der ganz DÃ¤nemark und Norwegen 
+gewann und die DÃ¤nen christianisierte." Was dieser Herrscher vergangener 
+Tage mit drahtlosem Datenaustausch zu tun hat, versucht eine Powerpoint-PrÃ¤sentation 
 der "Bluetooth Special Interest Group" zu deuten: "Harald glaubt, 
-daß mobile PCs und Handys kabellos miteinander kommunizieren sollten." 
-Im Frühjahr 1998 beschlossen die Hersteller Ericsson, IBM, Intel, Nokia und 
-Toshiba, gemeinsam eine Technik für die kurzreichweitige Funkverbindung von 
-PCs, digitalen Kameras, Mobiltelefonen und anderen tragbaren Geräten zu entwickeln. 
-Als Forum für den Austausch von Ideen gründeten sie die "Bluetooth Special 
-Interest Group", eine Arbeitsgruppe, die zunächst Rahmenbedingungen formulierte 
+daÃŸ mobile PCs und Handys kabellos miteinander kommunizieren sollten." 
+Im FrÃ¼hjahr 1998 beschlossen die Hersteller Ericsson, IBM, Intel, Nokia und 
+Toshiba, gemeinsam eine Technik fÃ¼r die kurzreichweitige Funkverbindung von 
+PCs, digitalen Kameras, Mobiltelefonen und anderen tragbaren GerÃ¤ten zu entwickeln. 
+Als Forum fÃ¼r den Austausch von Ideen grÃ¼ndeten sie die "Bluetooth Special 
+Interest Group", eine Arbeitsgruppe, die zunÃ¤chst Rahmenbedingungen formulierte 
 und nach und nach einen Standard festlegen sollte. Die Initiatoren hatten ein 
 Verfahren im Visier, das Anwendern von Notebooks das Leben erleichtert. Dementsprechend 
 sollte die drahtlose Technik
 <UL> 
-<tr> Stimme und Daten übertragen, 
-<tr> überall funktionieren, 
+<tr> Stimme und Daten Ã¼bertragen, 
+<tr> Ã¼berall funktionieren, 
 <tr> automatisch Verbindungen aufbauen, 
-<tr> Störeinflüssen von Mikrowellenherden widerstehen, 
+<tr> StÃ¶reinflÃ¼ssen von Mikrowellenherden widerstehen, 
 <tr> mit kleinen Chips arbeiten, die auch in Handys passen, 
 <tr> wenig Strom verbrauchen, 
 <tr> auf offenen Standards beruhen und 
 <tr> sehr billig sein. 
 </UL>
 Am 20. Mai 1998 gab die Special Interest Group Einzelheiten zur Technik bekannt 
-und begrüßte neue Mitglieder: 3Com, Axis, Cetecom, Compaq, Dell, Lucent, 
-Motorola, Puma, Qualcomm, Symbionics TDK, VLSI und Xircom. Fünf Monate später 
+und begrÃ¼ÃŸte neue Mitglieder: 3Com, Axis, Cetecom, Compaq, Dell, Lucent, 
+Motorola, Puma, Qualcomm, Symbionics TDK, VLSI und Xircom. FÃ¼nf Monate spÃ¤ter 
 wurde von bis dahin mehr als 200 Mitgliedern auf einer Entwicklerkonferenz in 
 Atlanta die Version 0.7 der Bluetooth-Spezifikation aus der Taufe gehoben. Heute 
-zählt die Teilnehmerliste rund 520 Einträge. 
-Nun steht die Herausgabe der endgültigen Fassung 1.0 des Reglements kurz bevor. 
+zÃ¤hlt die Teilnehmerliste rund 520 EintrÃ¤ge. 
+Nun steht die Herausgabe der endgÃ¼ltigen Fassung 1.0 des Reglements kurz bevor. 
 Nach dem Kalender der Bluetooth-Gruppe sollte das Dokument im 1. Quartal 1999 
-erscheinen, nach Möglichkeit bis zur CeBIT. Bis dahin blieben Detailinformationen 
-in den Händen der Mitglieder. Kurz nach der Veröffentlichung, so lauten 
-die Pläne, werden Entwicklungswerkzeuge für Bluetooth-Anwendungen erhältlich 
-sein. Die ersten Produkte schließlich, welche die Technik umsetzen, könnten 
-dann in der zweiten Jahreshälfte auf den Markt gehen. Auch wenn es bislang 
-nocht keine Bluetooth-Chips zu kaufen gibt, können wir schon davon träumen; 
+erscheinen, nach MÃ¶glichkeit bis zur CeBIT. Bis dahin blieben Detailinformationen 
+in den HÃ¤nden der Mitglieder. Kurz nach der VerÃ¶ffentlichung, so lauten 
+die PlÃ¤ne, werden Entwicklungswerkzeuge fÃ¼r Bluetooth-Anwendungen erhÃ¤ltlich 
+sein. Die ersten Produkte schlieÃŸlich, welche die Technik umsetzen, kÃ¶nnten 
+dann in der zweiten JahreshÃ¤lfte auf den Markt gehen. Auch wenn es bislang 
+nocht keine Bluetooth-Chips zu kaufen gibt, kÃ¶nnen wir schon davon trÃ¤umen; 
 die Web-Site der Arbeitsgruppe (<A HREF="http://www.bluetooth.org">http://www.bluetooth.org</A>) 
-versorgt uns mit genügend Stoff:  
+versorgt uns mit genÃ¼gend Stoff:  
 <UL>
 <tr> Handys schalten am Arbeitsplatz automatisch auf den kostenlosen Betrieb im firmeninternen 
 Telefonnetz um und funktionieren zu Hause als Schnurlosapparate im Festnetz. 
 <tr> Die Teilnehmer einer Konferenz brauchen ihre Notebooks nur einzuschalten, um 
 sie miteinander zu verbinden. Auch der Referent braucht kein Kabel, wenn er den 
-Projektor an einen PC anschließt. 
-<tr> E-Mail, die der Anwender im Flugzeug auf seinem Notebook verfaßt, wird 
+Projektor an einen PC anschlieÃŸt. 
+<tr> E-Mail, die der Anwender im Flugzeug auf seinem Notebook verfaÃŸt, wird 
 abgeschickt, sobald er nach der Landung sein Handy auf Stand-by schaltet. 
-<tr> Der PDA des Außendienstmitarbeiters tauscht selbständig mit dem PC 
-im Büro Informationen aus und aktualisiert seine Daten. 
+<tr> Der PDA des AuÃŸendienstmitarbeiters tauscht selbstÃ¤ndig mit dem PC 
+im BÃ¼ro Informationen aus und aktualisiert seine Daten. 
 </UL>
-Das Verfahren, nach dem Bluetooth-Geräte arbeiten, gründet zum Teil auf 
+Das Verfahren, nach dem Bluetooth-GerÃ¤te arbeiten, grÃ¼ndet zum Teil auf 
 dem Standard 802.11 des Institute of Electrical and Electronics Engineers (IEEE). 
-Eine 9 mal 9 Zentimeter große Chipkarte sendet im Mikrowellenbereich von 
-2,4 GHz bis 2,48 GHz. Dieser Abschnitt des gebührenfreien ISM-Bands (ISM = 
+Eine 9 mal 9 Zentimeter groÃŸe Chipkarte sendet im Mikrowellenbereich von 
+2,4 GHz bis 2,48 GHz. Dieser Abschnitt des gebÃ¼hrenfreien ISM-Bands (ISM = 
 Industrial, Scientific and Medical) liegt sehr nahe an der Arbeitsfrequenz eines 
-Mikrowellenherds, dessen Magnetron in der Regel mit 2,450 GHz schwingt. Daß 
-der Funkverkehr trotzdem störungsfrei verläuft und auch neben anderen 
+Mikrowellenherds, dessen Magnetron in der Regel mit 2,450 GHz schwingt. DaÃŸ 
+der Funkverkehr trotzdem stÃ¶rungsfrei verlÃ¤uft und auch neben anderen 
 Wireless-Netzen funktioniert, soll eine Technik garantieren, die sich in dem sogenannten 
-Baseband-Protokoll manifestiert. Hierin ist festgelegt, daß die Trägerfrequenz 
+Baseband-Protokoll manifestiert. Hierin ist festgelegt, daÃŸ die TrÃ¤gerfrequenz 
 nicht konstant bleibt, sondern in einer zeitlichen Abfolge verschiedene Werte 
 aus einer festen Menge von Frequenzen annimmt. Der Sender springt bis zu 1600 
-mal in der Sekunde zwischen 79 Stufen einer Frequenztreppe, die mit 1 MHz großen 
-Abständen den Bereich von 2402 MHz bis 2480 MHz abdecken. Ein Gerät, das 
-die Nachricht empfangen will, muß mit dem Sender synchronisiert sein und 
-genau die gleiche Sprungfolge für die Trägerfrequenz verwenden. Nur Nachrichten, 
+mal in der Sekunde zwischen 79 Stufen einer Frequenztreppe, die mit 1 MHz groÃŸen 
+AbstÃ¤nden den Bereich von 2402 MHz bis 2480 MHz abdecken. Ein GerÃ¤t, das 
+die Nachricht empfangen will, muÃŸ mit dem Sender synchronisiert sein und 
+genau die gleiche Sprungfolge fÃ¼r die TrÃ¤gerfrequenz verwenden. Nur Nachrichten, 
 die diesen Fingerabdruck tragen, landen bei den Teilnehmern eines Bluetooth-Netzes, 
-Signale anderer Quellen werden herausgefiltert. Die Daten schließlich werden 
-der Sprungfolge durch eine binäre Frequenzmodulation angehängt.  
-Bluetooth kann in einem asynchronen Modus Pakete übertragen, wobei in der 
-Regel auf einen Slot, das heißt pro Element der Sprungfolge, ein Paket zu 
+Signale anderer Quellen werden herausgefiltert. Die Daten schlieÃŸlich werden 
+der Sprungfolge durch eine binÃ¤re Frequenzmodulation angehÃ¤ngt.  
+Bluetooth kann in einem asynchronen Modus Pakete Ã¼bertragen, wobei in der 
+Regel auf einen Slot, das heiÃŸt pro Element der Sprungfolge, ein Paket zu 
 liegen kommt. Der Austausch erfolgt entweder symmetrisch mit einer Datenrate von 
 432 KBit/s oder asymmetrisch mit 721 KBit/s in einer Richtung und 57,6 KBit/s 
-in der anderen. Reservierte Zeitfenster ermöglichen dabei einen Full-Duplex-Betrieb, 
-bei dem Kommunikationspartner zur selben Zeit senden und empfangen dürfen. 
-Alternativ zur Datenleitung kann eine Verbindung auch gleichzeitig drei Sprachkanäle 
+in der anderen. Reservierte Zeitfenster ermÃ¶glichen dabei einen Full-Duplex-Betrieb, 
+bei dem Kommunikationspartner zur selben Zeit senden und empfangen dÃ¼rfen. 
+Alternativ zur Datenleitung kann eine Verbindung auch gleichzeitig drei SprachkanÃ¤le 
 mit jeweils 64 KBit/s Bandbreite unterbringen. Zum Umwandeln von Sprache in ein 
 digitales Signal dient "Continuous Variable Slope Delta Modulation", ein 
-Verfahren, das gegenüber Bitfehlern als vergleichsweise unempfindlich eingeschätzt 
+Verfahren, das gegenÃ¼ber Bitfehlern als vergleichsweise unempfindlich eingeschÃ¤tzt 
 wird. 
 <P> 
 Ein Bluetooth-Netz ist aus einzelnen Blasen, sogenannten Piconets, aufgebaut, 
-die jeweils maximal acht Geräte aufnehmen. Damit auch mehrere Teilnehmer drahtlos 
-kommunizieren können, treten bis zu zehn Piconets eines Empfangsbereichs miteinander 
-in Kontakt. Der Gründer eines Teilnetzes, nämlich das Gerät, welches 
-die erste Verbindung herstellt, nimmt unter den übrigen Mitgliedern eine primäre 
-Stellung ein und gibt die innerhalb des Piconet gebräuchliche Sprungfolge 
-vor. Damit die anderen Geräte Schritt halten, schickt der Master Synchronisationssignale. 
-Außerdem führt er Buch über die drei Bit langen Mac-Adressen der 
-Piconet-Teilnehmer und versetzt diese nach Bedarf in eingeschränkte Betriebszustände. 
+die jeweils maximal acht GerÃ¤te aufnehmen. Damit auch mehrere Teilnehmer drahtlos 
+kommunizieren kÃ¶nnen, treten bis zu zehn Piconets eines Empfangsbereichs miteinander 
+in Kontakt. Der GrÃ¼nder eines Teilnetzes, nÃ¤mlich das GerÃ¤t, welches 
+die erste Verbindung herstellt, nimmt unter den Ã¼brigen Mitgliedern eine primÃ¤re 
+Stellung ein und gibt die innerhalb des Piconet gebrÃ¤uchliche Sprungfolge 
+vor. Damit die anderen GerÃ¤te Schritt halten, schickt der Master Synchronisationssignale. 
+AuÃŸerdem fÃ¼hrt er Buch Ã¼ber die drei Bit langen Mac-Adressen der 
+Piconet-Teilnehmer und versetzt diese nach Bedarf in eingeschrÃ¤nkte BetriebszustÃ¤nde. 
 <P>
-Den Aufbau einer Verbindung übernimmt das Software-Modul "Link-Manager". 
-Dieses entdeckt andere Link-Manager in einem Empfangsbereich, mit denen es über 
+Den Aufbau einer Verbindung Ã¼bernimmt das Software-Modul "Link-Manager". 
+Dieses entdeckt andere Link-Manager in einem Empfangsbereich, mit denen es Ã¼ber 
 ein eigenes Protokoll, das Link-Manager-Protokoll, Daten austauscht. Das Modul 
-authentifiziert Geräte, behandelt Adreßanfragen, verfügt über 
-eine einfache Namensauflösung und sendet und empfängt Anwendungsdaten. 
-Darüber hinaus handelt es mit dem Kommunikationspartner den Verbindungstyp 
-aus, der bestimmt, ob Sprache oder Daten über den Äther gehen. Auch an 
-die Sicherheit haben die Entwickler gedacht. Bluetooth-Geräte weisen sich 
-gegenseitig mit einem Challenge/Response-Mechanismus aus und kodieren Datenströme 
-mit Schlüsseln von bis zu 64 Bit Länge. Abgesehen davon haben es Mithörer 
-wegen der großen Zahl möglicher Sprungfolgen schwer, sich in ein Piconet 
+authentifiziert GerÃ¤te, behandelt AdreÃŸanfragen, verfÃ¼gt Ã¼ber 
+eine einfache NamensauflÃ¶sung und sendet und empfÃ¤ngt Anwendungsdaten. 
+DarÃ¼ber hinaus handelt es mit dem Kommunikationspartner den Verbindungstyp 
+aus, der bestimmt, ob Sprache oder Daten Ã¼ber den Ã„ther gehen. Auch an 
+die Sicherheit haben die Entwickler gedacht. Bluetooth-GerÃ¤te weisen sich 
+gegenseitig mit einem Challenge/Response-Mechanismus aus und kodieren DatenstrÃ¶me 
+mit SchlÃ¼sseln von bis zu 64 Bit LÃ¤nge. Abgesehen davon haben es MithÃ¶rer 
+wegen der groÃŸen Zahl mÃ¶glicher Sprungfolgen schwer, sich in ein Piconet 
 einzuklinken. 
 <P>
-Eine Mitgliedschaft in der Special Interest Group ist für Unternehmen der 
+Eine Mitgliedschaft in der Special Interest Group ist fÃ¼r Unternehmen der 
 EDV-Branche aus zweierlei Hinsicht interessant. Zum einen erhalten Entwickler 
 die Gelegenheit, die Spezifikation nach ihren Vorstellungen mitzugestalten. So ist von 
-den Gründern der Gruppe die Firma Ericsson für weite Teile des Baseband-Protokolls 
-verantwortlich, während die Module für die PC-Integration von Toshiba 
-und IBM stammen, Intel Wissen über integrierte Schaltungen einbringt und Nokia 
-Software für Mobiltelefone liefert. Zum anderen bekommen Teilnehmer Zutritt 
-zu den Vorabversionen des Standards und können frühzeitig mit der Entwicklung 
-von Bluetooth-konformen Geräten und Programmen beginnen. Wer sich in die Gruppe 
+den GrÃ¼ndern der Gruppe die Firma Ericsson fÃ¼r weite Teile des Baseband-Protokolls 
+verantwortlich, wÃ¤hrend die Module fÃ¼r die PC-Integration von Toshiba 
+und IBM stammen, Intel Wissen Ã¼ber integrierte Schaltungen einbringt und Nokia 
+Software fÃ¼r Mobiltelefone liefert. Zum anderen bekommen Teilnehmer Zutritt 
+zu den Vorabversionen des Standards und kÃ¶nnen frÃ¼hzeitig mit der Entwicklung 
+von Bluetooth-konformen GerÃ¤ten und Programmen beginnen. Wer sich in die Gruppe 
 aufnehmen lassen will, besucht die Bluetooth-Web-Site und schickt unter dem Link 
-"Members" eine E-Mail mit verschiedenen Angaben an eines der fünf Gründungsmitglieder. 
-Kurz darauf erhält der Bewerber in elektronischer Form zwei Vertragsformulare, 
-die er unterschrieben per Post zurückschickt. Das eine, genannt "Adopters 
-Agreement", sichert dem Teilnehmer die gebührenfreie Benutzung der Spezifikation 
-für eigene Produkte, die ein Bluetooth-Label tragen dürfen. Wie das lauten 
-wird, heißt es dort - denn Bluetooth ist lediglich ein vorläufiger Codename 
+"Members" eine E-Mail mit verschiedenen Angaben an eines der fÃ¼nf GrÃ¼ndungsmitglieder. 
+Kurz darauf erhÃ¤lt der Bewerber in elektronischer Form zwei Vertragsformulare, 
+die er unterschrieben per Post zurÃ¼ckschickt. Das eine, genannt "Adopters 
+Agreement", sichert dem Teilnehmer die gebÃ¼hrenfreie Benutzung der Spezifikation 
+fÃ¼r eigene Produkte, die ein Bluetooth-Label tragen dÃ¼rfen. Wie das lauten 
+wird, heiÃŸt es dort - denn Bluetooth ist lediglich ein vorlÃ¤ufiger Codename 
 des Projekts -, entscheidet Ericsson. Die Vertragsanlage "Early Adopter Amendment" 
-verpflichtet jene, die vor der Veröffentlichung des Standards beitreten, die 
+verpflichtet jene, die vor der VerÃ¶ffentlichung des Standards beitreten, die 
 Dokumente vertraulich zu behandeln. 
 <P>
-Damit Produkte das Bluetooth-Label erhalten, müssen sie nicht nur das Baseband-Protokoll 
-unterstützen. Je nach ihrem Einsatzgebiet müssen sie auch mit Protokollen 
+Damit Produkte das Bluetooth-Label erhalten, mÃ¼ssen sie nicht nur das Baseband-Protokoll 
+unterstÃ¼tzen. Je nach ihrem Einsatzgebiet mÃ¼ssen sie auch mit Protokollen 
 der Anwendungsebene arbeiten und verschiedene Datenobjekte integrieren. Mobiltelefone 
 zum Beispiel sollten mit PCs oder PDAs elektronische Visitenkarten des V-Card-Standards 
-austauschen, wohingegen ein Kopfhörer weniger Aufgaben zu erledigen hat. Bluetooth-Geräte 
-bauen dabei nicht nur selbständig Verbindung zu ihren Kollegen auf, sie erkennen 
-auch, mit welchen Fähigkeiten diese ausgestattet sind. 
+austauschen, wohingegen ein KopfhÃ¶rer weniger Aufgaben zu erledigen hat. Bluetooth-GerÃ¤te 
+bauen dabei nicht nur selbstÃ¤ndig Verbindung zu ihren Kollegen auf, sie erkennen 
+auch, mit welchen FÃ¤higkeiten diese ausgestattet sind. 
 <P>
-Die Datenrate eignet sich eher für
+Die Datenrate eignet sich eher fÃ¼r
 Anwendungen mit seltenem Datenaustausch in meist kleinem Umfang. So
 bildet Bluetooth keine Konkurrenz zu Wireless-LANs (WLANs), da dort
-inzwischen Bandbreiten von 11 MBit/s eingeführt wurden. Die
+inzwischen Bandbreiten von 11 MBit/s eingefÃ¼hrt wurden. Die
 wesentlichen Bluetooth-Applikationen, die in Betrieben von
 Mitarbeitern angenommen werden, bestehen aus unternehmenseigen
 Anwendungen wie Messaging, Knowledge Management (Unwired Portal),
@@ -1691,38 +1691,38 @@ Datenbankabfragen usw. sowie dem Zugang zum Internet.
 
 <h2>Breitband-Netze (Kabelnetz)</h3>
 Ein Breitbandnetz ist ein Datennetz, das die digitalen Daten nicht im Basisband
-überträgt, sondern auf einen oder mehrere hochfrequente Träger aufmoduliert. 
-Dabei werden in der Regel verschiedene Frequenzbereiche für Sende- und 
+Ã¼bertrÃ¤gt, sondern auf einen oder mehrere hochfrequente TrÃ¤ger aufmoduliert. 
+Dabei werden in der Regel verschiedene Frequenzbereiche fÃ¼r Sende- und 
 Empfangsdaten benutzt. Die Breitbandtechnik erlaubte in den 1980er Jahren 
 die Kabelfernsehtechnik. Heutige Anwendungen der Breitbandtechnik sind 
-das Rundfunk-Kabelnetz und Internetanschlüsse über  dieses Kabelnetze.
+das Rundfunk-Kabelnetz und InternetanschlÃ¼sse Ã¼ber  dieses Kabelnetze.
 <P>
 Mit dem analogen und digitalen Kabelfernsehangebot begann die Ausbreitung der 
 Kabelnetzte. Inzwischen haben fast alle Kabelnetzbetreiber ihre Netze auf 
-breitbandige Dienste mit Rückkanal erweitert. Dadurch kann der Kunde unter 
+breitbandige Dienste mit RÃ¼ckkanal erweitert. Dadurch kann der Kunde unter 
 Benutzung eines Kabelmodems Telefonie- und internetbasierende Dienste 
 den Breitband-Kabelzugang nutzen. Das zentrale Element der Kabelnetz-Architektur 
 ist das CMTS (Cable Modem Termination System) in der Kopfstation, die 
 Vermittlungsstelle im Kabelsystem. Hier laufen alle Verbindungen zusammen.
-Um eine schnelle Datenübertragung zu realisieren besteht das Netz aus einer 
+Um eine schnelle DatenÃ¼bertragung zu realisieren besteht das Netz aus einer 
 Kombination von Glasfaser- und Koaxialkabeln. In der Kopfstation werden von 
 der Master-Kopfstation die TV- und Radio-Programme sowie ggf. die Telefonie-
 und die Internet-Verbindung eingespeist. 
 <p>
-An der Kopfstation sind mehrere Hubs angeschlossen. Von den Hubs aus verläuft 
+An der Kopfstation sind mehrere Hubs angeschlossen. Von den Hubs aus verlÃ¤uft 
 das verzweigte Koaxial-Kabelnetz, an dem die einzelnen Kunden angeschlossen sind. 
-In regelmäßigen Abständen sind Signalverstärker für die Aufbereitung des Signals 
+In regelmÃ¤ÃŸigen AbstÃ¤nden sind SignalverstÃ¤rker fÃ¼r die Aufbereitung des Signals 
 verantwortlich.
 <p>
 <center><img src="images/kabelnetz.png"></center>
 <p>
-Bei Mehrfamilienhäusern sorgt ein spezieller Kabelverteiler für die Verstärkung 
-des Signals und für die Verteilung in die einzelnen Wohnungen. Er sorgt auch
-für die Rückkanalfähigkeit der Hausanlage. Vom Hub ausgehend handelt es sich um
-das eigentliche Kabelnetz mit baumförmiger Struktur. Prinzipiell erlaubt eine 
+Bei MehrfamilienhÃ¤usern sorgt ein spezieller Kabelverteiler fÃ¼r die VerstÃ¤rkung 
+des Signals und fÃ¼r die Verteilung in die einzelnen Wohnungen. Er sorgt auch
+fÃ¼r die RÃ¼ckkanalfÃ¤higkeit der Hausanlage. Vom Hub ausgehend handelt es sich um
+das eigentliche Kabelnetz mit baumfÃ¶rmiger Struktur. Prinzipiell erlaubt eine 
 solche Struktur nur eine Punkt-zu-Mehrpunkt-Kommunikation. Das Kabel ist ein 
-"shared medium". An einem Ast hängen immer mehrere Teilnehmer. Das bedeutet, 
-dass sich alle Teilnehmer an einem Hub die vorhandene Bandbreite teilen müssen. 
+"shared medium". An einem Ast hÃ¤ngen immer mehrere Teilnehmer. Das bedeutet, 
+dass sich alle Teilnehmer an einem Hub die vorhandene Bandbreite teilen mÃ¼ssen. 
 Im Durchschnitt kann jeder Hub etwa 5000 Teilnehmer ohne Probleme bedienen.
 <p>
 
@@ -1730,10 +1730,10 @@ Im Durchschnitt kann jeder Hub etwa 5000 Teilnehmer ohne Probleme bedienen.
 <TR>
 <TD ALIGN=LEFT VALIGN=BOTTOM><img src="images/left.png" BORDER=0> <A HREF="netz9.html">Zum vorhergehenden Abschnitt</A></TD>
 <TD ALIGN=CENTER VALIGN=BOTTOM><img src="images/up.png" BORDER=0> <A HREF="index.html">Zum Inhaltsverzeichnis</A></TD>
-<TD ALIGN=RIGHT VALIGN=BOTTOM><img src="images/right.png" BORDER=0> <A HREF="netz11.html">Zum nächsten Abschnitt</A></TD>
+<TD ALIGN=RIGHT VALIGN=BOTTOM><img src="images/right.png" BORDER=0> <A HREF="netz11.html">Zum nÃ¤chsten Abschnitt</A></TD>
 </TR></TABLE></CENTER>
 <P><HR>
-<h6><i>Copyright &copy; Hochschule München, FK 04, Prof. Jürgen Plate</i><br>
+<h6><i>Copyright &copy; Hochschule MÃ¼nchen, FK 04, Prof. JÃ¼rgen Plate</i><br>
 Letzte Aktualisierung: <SCRIPT LANGUAGE="JavaScript">document.write(document.lastModified);</SCRIPT></I></H6>
 </BODY>
 </HTML>

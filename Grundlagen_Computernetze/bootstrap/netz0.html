@@ -8,87 +8,87 @@
 <meta NAME="Reply-To" CONTENT="webmaster@netzmafia.de">
 
 <meta NAME="keywords" CONTENT="LAN WAN TCP/IP Computernetze Ethernet Vernetzung Router Hub Switch Protokolle">
-<meta NAME="description" CONTENT="Praxisorientierte Einführung in den Aufbau und die Funktionsweise von Computernetzen.">
+<meta NAME="description" CONTENT="Praxisorientierte EinfÃ¼hrung in den Aufbau und die Funktionsweise von Computernetzen.">
 <title>Grundlagen Computernetze</title>
 </head>
 <BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" ALINK="#FF0000" VLINK="#FF00FF">
 <CENTER><TABLE BORDER=0 WIDTH="90%" >
 <TR><TD ALIGN=LEFT><img src="images/eyes.png"></TD>
 <TD ALIGN=RIGHT><H3>Grundlagen Computernetze</H3>
-<BR><B><I>Prof. Jürgen Plate</I></B></TD></TR>
+<BR><B><I>Prof. JÃ¼rgen Plate</I></B></TD></TR>
 </TABLE></CENTER>
 <HR>
 
 <H1 align=center>Grundlagen Computernetze</H1>
 
-<H2><A NAME="0.1">Einführung</A></H2>
-Der Zusammenschluß von diversen Computern und Peripheriegeräten
-zu Netzen gewinnt immer stärkere Bedeutung. Netze (Netzwerke) sind
+<H2><A NAME="0.1">EinfÃ¼hrung</A></H2>
+Der ZusammenschluÃŸ von diversen Computern und PeripheriegerÃ¤ten
+zu Netzen gewinnt immer stÃ¤rkere Bedeutung. Netze (Netzwerke) sind
 Verbindungssysteme, an die mehrere Teilnehmer zum Zweck der Datenkommunikation
 angeschlossen sind.<BR>
-Lokale Netze (LAN, Local Area Network) sind Netze in einem örtlich
-begrenzten Bereich (Raum, Gebäude, Gelände), der sich im Besitz
+Lokale Netze (LAN, Local Area Network) sind Netze in einem Ã¶rtlich
+begrenzten Bereich (Raum, GebÃ¤ude, GelÃ¤nde), der sich im Besitz
 einer einzigen Organisation (z. B. Firma) befindet. Die Verbindung mehrerer
-LAN-Segmente erfolgt über Koppelelemente (Hubs, Switches, Bridges,
+LAN-Segmente erfolgt Ã¼ber Koppelelemente (Hubs, Switches, Bridges,
 Router, etc.).<BR>
-Weitverkehrsnetze (WAN, Wide Area Network) sind Netze, die über weitere
-Entfernungen reichen (Stadt, Land, Welt). Die einzelnen Netze können
-über Router oder Gateways miteinander gekoppelt werden und dabei auch
-öffentliche Kommunikationsnetze nutzen.<BR>
+Weitverkehrsnetze (WAN, Wide Area Network) sind Netze, die Ã¼ber weitere
+Entfernungen reichen (Stadt, Land, Welt). Die einzelnen Netze kÃ¶nnen
+Ã¼ber Router oder Gateways miteinander gekoppelt werden und dabei auch
+Ã¶ffentliche Kommunikationsnetze nutzen.<BR>
 Jegliche Kommunikation zwischen zwei Partnern ist an bestimmte Voraussetzungen
-gebunden. Zum einen muß die Hardware der Partner und der Datenübertragungseinrichtungen
-über kompatible Schnittstellen verfügen und zum anderen müssen
-Vereinbarungen über die Art und Weise des Informationsaustausch getroffen
+gebunden. Zum einen muÃŸ die Hardware der Partner und der DatenÃ¼bertragungseinrichtungen
+Ã¼ber kompatible Schnittstellen verfÃ¼gen und zum anderen mÃ¼ssen
+Vereinbarungen Ã¼ber die Art und Weise des Informationsaustausch getroffen
 werden (Protokolle). Zur Festlegung von Schnittstellen und Protokollen gibt
 es zahlreiche Standards (nationale und internationale Normen, Firmenstandards).
 <P>
 Wie definiert die ISO (International Standardisation Organisation) ein LAN?
-&quot;Ein lokales Netz (LAN) ist ein Netz für bitserielle Übertragung
-von Informationen zwischen untereinander verbundenenen unabhängigen
-Geräten. Das Netz unterliegt vollständig der Zuständigkeit
-des Anwenders und ist auf ein Grundstück begrenzt.&quot; Es werden
-also nicht nur Computer miteinander vernetzt, sondern auch andere Geräte
-wie Drucker, Monitore, Massenspeicher, Kontrollgeräte, Steuerungen,
+&quot;Ein lokales Netz (LAN) ist ein Netz fÃ¼r bitserielle Ãœbertragung
+von Informationen zwischen untereinander verbundenenen unabhÃ¤ngigen
+GerÃ¤ten. Das Netz unterliegt vollstÃ¤ndig der ZustÃ¤ndigkeit
+des Anwenders und ist auf ein GrundstÃ¼ck begrenzt.&quot; Es werden
+also nicht nur Computer miteinander vernetzt, sondern auch andere GerÃ¤te
+wie Drucker, Monitore, Massenspeicher, KontrollgerÃ¤te, Steuerungen,
 Fernkopierer und anderes. Der Unterschied eines LAN zu anderen Netzen wird
 von der ISO durch folgende Eigenschaften festgelegt: begrenzte Ausdehnung,
-hohe Datenübertragungsrate, geringe Fehlerrate, dezentrale Steuerung,
-wahlfreier Zugriff und die Übertragung von Datenblöcken.
+hohe DatenÃ¼bertragungsrate, geringe Fehlerrate, dezentrale Steuerung,
+wahlfreier Zugriff und die Ãœbertragung von DatenblÃ¶cken.
 <P>
-Kern der Datenkommunikation ist der Transport der Daten, also die Datenübertragung
-von einem Sender mittels eines Übertragungskanals zu einem Empfänger.
-Die zu übertragenden Daten werden im Rhythmus eines Sendetaktes auf
-das Übertragungsmedium gegeben. Damit die Information korrekt wiedergewonnen
-werden kann, muß am Empfangsort eine Abtastung der Signale zum richtigen
+Kern der Datenkommunikation ist der Transport der Daten, also die DatenÃ¼bertragung
+von einem Sender mittels eines Ãœbertragungskanals zu einem EmpfÃ¤nger.
+Die zu Ã¼bertragenden Daten werden im Rhythmus eines Sendetaktes auf
+das Ãœbertragungsmedium gegeben. Damit die Information korrekt wiedergewonnen
+werden kann, muÃŸ am Empfangsort eine Abtastung der Signale zum richtigen
 Zeitpunkt erfolgen. Normalerweise verwendet man dazu eine Codierung, die
-eine Rückgewinnung des Taktes aus dem Signal erlaubt. Auf diese Weise
-kann sich der Empfänger jederzeit auf den Takt des Senders synchronisieren.
+eine RÃ¼ckgewinnung des Taktes aus dem Signal erlaubt. Auf diese Weise
+kann sich der EmpfÃ¤nger jederzeit auf den Takt des Senders synchronisieren.
 <P>
 
-<H2><A NAME="0.1">ISO-Referenzmodell für die Datenkommunikation</A></H2>
+<H2><A NAME="0.1">ISO-Referenzmodell fÃ¼r die Datenkommunikation</A></H2>
 Eine wesentliche Forderung in der Datenfernverarbeitung ist das Zusammenschalten
 unterschiedlicher Stationen (verschiedener Hersteller). Dazu ist eine
 Schematisierung und Gliederung des Kommunikationsprozesses in wohldefinierte,
 hierarchische Ebenen (Schichten, Layers) notwendig. Es erfolgt eine Zuordnung
 der einzelnen Kommunikationsfunktionen zu bestimmten logischen Schichten.
-Wird in einer Schicht eine Anpassung (Änderung, Erweiterung) vorgenommen,
-bleiben die anderen Ebenen davon unberührt.
+Wird in einer Schicht eine Anpassung (Ã„nderung, Erweiterung) vorgenommen,
+bleiben die anderen Ebenen davon unberÃ¼hrt.
 <P>
-ISO (International Standards Organisation) hat für offene Netze ein
+ISO (International Standards Organisation) hat fÃ¼r offene Netze ein
 7-Schicht-Modell, das OSI-Modell (OSI = Open Systems Interconnection),
-geschaffen. Dieses Modell liegt nahezu allen  Kommunikationsgeräten und
+geschaffen. Dieses Modell liegt nahezu allen  KommunikationsgerÃ¤ten und
 -Verfahren zugrunde (zur Not werden vorhandene Protokolle in das Schema von
-ISO/OSI gepreßt). Im OSI-Modell werden die grundsätzlichen
+ISO/OSI gepreÃŸt). Im OSI-Modell werden die grundsÃ¤tzlichen
 Funktionen der einzelnen Ebenen und die Schnittstellen zwischen den Ebenen
 festgelegt. So ergibt sich eine universell anwendbare logische Struktur
-für alle Anforderungen der Datenkommunikation verschiedener Systeme.
+fÃ¼r alle Anforderungen der Datenkommunikation verschiedener Systeme.
 <P>
 
 <H4>Das OSI-Model liefert</H4>
 <UL>
-<LI> Eine Basis für die Interpretation existierender Systeme und Protokolle
-in der Schichten-Perspektive (wichtig bei Änderungen).
-<LI> Eine Referenz für die Entwicklung neuer Kommunikationsverfahren und
-für die Definition neuer Protokolle, also eine Grundlage für kompatible
+<LI> Eine Basis fÃ¼r die Interpretation existierender Systeme und Protokolle
+in der Schichten-Perspektive (wichtig bei Ã„nderungen).
+<LI> Eine Referenz fÃ¼r die Entwicklung neuer Kommunikationsverfahren und
+fÃ¼r die Definition neuer Protokolle, also eine Grundlage fÃ¼r kompatible
 Protokolle.
 </UL>
 <P>
@@ -97,16 +97,16 @@ Wesensmerkmale der hierarchischen Schichtenstruktur bei Rechnernetzen sind:
 <LI> Das Gesamtsystem wird in eine geordnete Menge von Teilsystemen gegliedert.
 <LI> Teilsysteme des gleichen Ranges bilden eine Schicht (engl. Layer).
 <LI> Die einzelnen Schichten liegen entsprechend ihrer hierarchischen Rangordnung
-übereinander.
-<LI> Eine hierarchisch tieferliegende Schicht dient der Erfüllung der
-Kommunikationsfunktion der jeweils übergeordneten Schicht.
+Ã¼bereinander.
+<LI> Eine hierarchisch tieferliegende Schicht dient der ErfÃ¼llung der
+Kommunikationsfunktion der jeweils Ã¼bergeordneten Schicht.
 <LI> Jede Schicht stellt definierte Dienste bereit. Diese Dienste realisieren
 bestimmte Kommunikations- und Steuerungsaufgaben.
 </UL>
 <P>
 Die einzelnen Schichten stellen somit definierte Schnittstellen zu ihren Nachbarn
 bereit (Schicht 4 hat z. B. Schnittstellen zu den Schichten 3 und 5). Die
-Kommunikation findet nur über diese Schnittstellen statt (in der Grafik
+Kommunikation findet nur Ã¼ber diese Schnittstellen statt (in der Grafik
 senkrecht).<BR>
 Die rein logische Kommunikation zwischen den beteiligten Stationen A und
 B erfolgt jedoch auf der Basis gleicher Schichten (in der Grafik waagrecht,
@@ -122,26 +122,26 @@ physikalische Verbindung.
 <LI> Die Schichten 5 - 7 werden den Anwenderfunktionen zugeordnet
 </UL>
 <P>
-Zunächst eine kurze Beschreibung der einzelnen Schichten.
-Dabei ist auch der zur Schicht gehörende
-Datenblock gezeigt. Jede Schicht kann (muß aber nicht) die Daten mit
+ZunÃ¤chst eine kurze Beschreibung der einzelnen Schichten.
+Dabei ist auch der zur Schicht gehÃ¶rende
+Datenblock gezeigt. Jede Schicht kann (muÃŸ aber nicht) die Daten mit
 einem eigenen Header (bzw. Datenrahmen) versehen, der zur Kommunikationssteuerung
 auf dieser Schicht dient. Der Datenblock einer Schicht (mit Rahmen) wird
 von der Schicht als reine Nutzdaten betrachtet, sie kann so auch an dem
-Header der übergeorneten Schicht nichts ändern.
+Header der Ã¼bergeorneten Schicht nichts Ã¤ndern.
 <P>
 <UL>
 <LI> 7. Anwendungs-Schicht (Application)
 Verbindung zum Anwenderprogramm und Dialog mit den Programmen. Eine Standardisierung
-ist hier noch in weiter Ferne. Es gibt aber eine Reihe von grundsätzlichen
-Diensten, die angeboten werden müssen:
+ist hier noch in weiter Ferne. Es gibt aber eine Reihe von grundsÃ¤tzlichen
+Diensten, die angeboten werden mÃ¼ssen:
   <UL>
-  <LI> Austausch von Dateien, d. h. Dateizugriffsdienste über das Netz.
-  Für das eigentliche Anwenderprogramm ist nicht erkennbar, ob auf eine
-  Datei lokal oder über das Netz zugegriffen wird.
-  <LI> Verwaltungsprotokolle für Benutzerzugang, Dateizugriffsrechte,
+  <LI> Austausch von Dateien, d. h. Dateizugriffsdienste Ã¼ber das Netz.
+  FÃ¼r das eigentliche Anwenderprogramm ist nicht erkennbar, ob auf eine
+  Datei lokal oder Ã¼ber das Netz zugegriffen wird.
+  <LI> Verwaltungsprotokolle fÃ¼r Benutzerzugang, Dateizugriffsrechte,
   elektronische Post, usw.
-  <LI> Remote Job Entry, d. h. absetzen von Rechenaufträgen an entfernte
+  <LI> Remote Job Entry, d. h. absetzen von RechenauftrÃ¤gen an entfernte
   Systeme
   <LI> Virtuelle Terminals, d. h. Umleitung der Ein-/Ausgabe eines Programms
   auf dem fernen Rechner an den lokalen Bildschirm und die lokale Tastatur.
@@ -151,125 +151,125 @@ Diensten, die angeboten werden müssen:
 Die Schicht 7 besteht also trotz ihres Namens nicht aus den eigentlichen
 Anwenderprogrammen - diese setzen auf dieser Schicht auf. Das kann einerseits
 direkt geschehen, z. B. beim Zugriff auf Dateien eines anderen Rechners
-(Datei-Server) andererseits auch nur durch (lokale) Übergabe von Dateien
+(Datei-Server) andererseits auch nur durch (lokale) Ãœbergabe von Dateien
 an das Message-Handling-System.
 <P>
 <LI> 6. Darstellungs-Schicht (Presentation)
-Hier werden für die Anwendung die Daten interpretiert. Überwachung
+Hier werden fÃ¼r die Anwendung die Daten interpretiert. Ãœberwachung
 des Informationsaustausches und Codierung/Decodierung (z. B. EBCDIC in ASCII)
 der Daten sowie Festlegung der Formate und Steuerzeichen. Diese Schicht
 bildet oft eine Einheit mit der Anwendungsschicht oder sie fehlt ganz, falls
-sie nicht benötigt wird. Hier können z. B. &quot;virtuelle Terminals&quot;
-eingebunden werden. Wie wir früher schon besprochen haben, besitzen
-Terminals ganz unterschiedliche Codes für die Tastatur und die Steuerung
-der Darstellung auf dem Bildschirm. In Schicht 6 können diese Codes
-in einen einheitlichen Code übersetzt werden.
+sie nicht benÃ¶tigt wird. Hier kÃ¶nnen z. B. &quot;virtuelle Terminals&quot;
+eingebunden werden. Wie wir frÃ¼her schon besprochen haben, besitzen
+Terminals ganz unterschiedliche Codes fÃ¼r die Tastatur und die Steuerung
+der Darstellung auf dem Bildschirm. In Schicht 6 kÃ¶nnen diese Codes
+in einen einheitlichen Code Ã¼bersetzt werden.
 <P>
 <LI> 5. Kommunikationssteuerung (Session)
-Diese Ebene steuert die Aufbau, Durchführung und Beendigung der Verbindung.
-Überwachung der Betriebsparameter, Datenfluß-Steuerung (bei Bedarf
+Diese Ebene steuert die Aufbau, DurchfÃ¼hrung und Beendigung der Verbindung.
+Ãœberwachung der Betriebsparameter, DatenfluÃŸ-Steuerung (bei Bedarf
 mit Zwischenspeicherung der Daten), Wiederaufbau der Verbindung im Fehlerfall
-und Synchronisation. Der Verbindungsaufbau ist ein bestätigter Dienst,
-d. h. beide Partner tauschen Parameterübergabe und Bestätigung
+und Synchronisation. Der Verbindungsaufbau ist ein bestÃ¤tigter Dienst,
+d. h. beide Partner tauschen ParameterÃ¼bergabe und BestÃ¤tigung
 im Wechselspiel aus. Danach befinden sich beide Partner in einem definierten
 Zustand. <BR>
-Das trifft nicht für die nächste Phase, den Datentransfer zu.
-Es ist aus Zeitgründen z. B. nicht sinnvoll nach dem Senden eines Datenblocks
-auf die Bestätigung zu warten. Es wird gleich der nächste Block
-geschickt und die Bestätigungen laufen zeitversetzt ein (immerhin muß
+Das trifft nicht fÃ¼r die nÃ¤chste Phase, den Datentransfer zu.
+Es ist aus ZeitgrÃ¼nden z. B. nicht sinnvoll nach dem Senden eines Datenblocks
+auf die BestÃ¤tigung zu warten. Es wird gleich der nÃ¤chste Block
+geschickt und die BestÃ¤tigungen laufen zeitversetzt ein (immerhin muÃŸ
 alles die Schichten 4 - 1 durchlaufen). Durch sogenannte &quot;Synchronisation
 Points&quot; wird die Datentransferphase in Abschnitte unterteilt. Bei einer
-Störung oder Unterbrechung kann der Transfer an einen definierten Punkt
+StÃ¶rung oder Unterbrechung kann der Transfer an einen definierten Punkt
 wieder aufgenommen werden. <BR>
-Beide Partner können den Verbindungsaufbau beenden. Das kann ordnungsgemäß
+Beide Partner kÃ¶nnen den Verbindungsaufbau beenden. Das kann ordnungsgemÃ¤ÃŸ
 nach Beendigung aller Transfers geschehen (Ende mit Synchronisation) oder
 durch Unterbrechen der Verbindung (Ende ohne Synchronisation). <BR>
 In diese Ebene fallen auch das Ein- und Ausgliedern von Stationen beim Token-Ring
 und die Adressierung eines bestimmten Partners.
 <P>
 <LI> 4. Transport (Transport)
-Reine Transportfunktion. Diese Schicht stellt sicher, daß alle Datenpakete
- den richtigen Empfänger erreichen. Aufbau der Datenverbindung zwischen
-zwei Partnern, Datentransport, Flußkontrolle, Fehlererkennung und
+Reine Transportfunktion. Diese Schicht stellt sicher, daÃŸ alle Datenpakete
+ den richtigen EmpfÃ¤nger erreichen. Aufbau der Datenverbindung zwischen
+zwei Partnern, Datentransport, FluÃŸkontrolle, Fehlererkennung und
 -korrektur. Diese Schicht verbirgt die Charakteristika des Netzes (LAN,
-WAN, ...) vor den darüberliegenden Schichten. Die Transportschicht
-kann z. B. auch bei einer Forderung nach höherem Datendurchsatz mehrere
-Verbindungen zum Parner aufbauen und die Daten in Teilströmen leiten
-(splitting/combining). Auch das Aufteilen der Daten in passende Blöcke
-und die Flußkontrolle obliegen dieser Schicht. Die Dienste der Transportschicht
-werden in fünf Klassen unterschieden:
+WAN, ...) vor den darÃ¼berliegenden Schichten. Die Transportschicht
+kann z. B. auch bei einer Forderung nach hÃ¶herem Datendurchsatz mehrere
+Verbindungen zum Parner aufbauen und die Daten in TeilstrÃ¶men leiten
+(splitting/combining). Auch das Aufteilen der Daten in passende BlÃ¶cke
+und die FluÃŸkontrolle obliegen dieser Schicht. Die Dienste der Transportschicht
+werden in fÃ¼nf Klassen unterschieden:
   <UL>
-  <LI> Klasse 0 ist die einfachste. Es findet gegenüber der Schicht
+  <LI> Klasse 0 ist die einfachste. Es findet gegenÃ¼ber der Schicht
   3 keine Fehlerkontrolle statt und einer Transportverbindung enspricht genau
   eine Netzverbindung.
   <LI> In der Klasse 1 kommt zwar keine Fehlerbehandlung hinzu, es wird
   jedoch versucht, von der Schicht 3 gemeldete Fehler zu beheben und nicht
   an die Schicht 5 weiterzuleiten. Z. B. kann bei Unterbrechung der
   Transportverbindung versucht werden, diese wieder aufzubauen, ohne
-  daß dies oberhalb der Schicht 4 bemerkt wird.
+  daÃŸ dies oberhalb der Schicht 4 bemerkt wird.
   <LI> Klasse 2 kann mehrere Transportverbindungen aufbauen (Multiplexverbindung).
   In diesem Fall darf die Netzverbindung erst dann getrennt werden, wenn die
   letzte Transportverbindung abgebaut ist.
   <LI> Klasse 3 deckt die Leistungen der Klassen 1 und 2 ab, d. h. einfache
   Fehlerbehandlung und Multiplexen.
-  <LI>  Klasse 4 enthält neben den Funktionen der Klasse 3 zusätzliche
+  <LI>  Klasse 4 enthÃ¤lt neben den Funktionen der Klasse 3 zusÃ¤tzliche
   Mechanismen zur Fehlererkennung und -behandlung. Speziell bei Datagramm-orientieren
   Netzen (LAN) kann so ein verbindungsorientierter Dienst bereitgestellt werden
-  (Sicherstellen von Vollständigkeit, Eindeutigkeit und Reihenfolge der
-  Datenblöcke).
+  (Sicherstellen von VollstÃ¤ndigkeit, Eindeutigkeit und Reihenfolge der
+  DatenblÃ¶cke).
   </UL>
 <P>
 <LI> 3. Vermittlung-/Paket-Schicht (Network)
-Diese Ebene dient hauptsächlich der Datenpaket-Übertragung. Sie
-ist zusändig für die Wahl der Datenwege (routing), für das
-Multiplexen mehrerer Verbindungen über einzelne Teilstrecken, für
-Fehlerbehandlung und Flußkontrolle zwischen den Endpunkten einer Verbindung
+Diese Ebene dient hauptsÃ¤chlich der Datenpaket-Ãœbertragung. Sie
+ist zusÃ¤ndig fÃ¼r die Wahl der Datenwege (routing), fÃ¼r das
+Multiplexen mehrerer Verbindungen Ã¼ber einzelne Teilstrecken, fÃ¼r
+Fehlerbehandlung und FluÃŸkontrolle zwischen den Endpunkten einer Verbindung
 (nicht zwischen den Anwenderprozessen). <BR>
-Die Flußkontrolle auf dieser Ebene schützt den Endpunkt einer
-virtuellen Verbindung für Überlastung. Die Fehlerbehandlung in
-dieser Schicht bezieht sich nicht auf Übertragungsfehler (dafür
+Die FluÃŸkontrolle auf dieser Ebene schÃ¼tzt den Endpunkt einer
+virtuellen Verbindung fÃ¼r Ãœberlastung. Die Fehlerbehandlung in
+dieser Schicht bezieht sich nicht auf Ãœbertragungsfehler (dafÃ¼r
 ist Schicht 2 ausreichend), sondern auf Fehler, die bei der virtuellen Verbindung
 auftreten: Erkennen und Beseitigen von Duplikaten, Beseitigen permanent
-kreisender Blöcke, wiederherstellen der richtigen Datenpaket-Reihenfolge,
+kreisender BlÃ¶cke, wiederherstellen der richtigen Datenpaket-Reihenfolge,
 usw.  <BR>
 Bei WANs behandelt diese Schicht die Umsetzung eines Protokolls in ein anderes
 (internetworking). Man kann daher die Schicht 3 in drei Teilschichten unterteilen:
   <UL>
   <LI> 3a (Subnetwork Access): Abwickeln der  Protokolle des jeweiligen
   Teilnetzes.
-  <LI> 3b (Subnet Enhancement): Funktionen  der Teilnetze so ergänzen,
-  daß die Anforderungen von 3c erfüllt werden.
-  <LI> 3c (Internetworking): Teilnetzunabhängige  Protokolle abwickeln
+  <LI> 3b (Subnet Enhancement): Funktionen  der Teilnetze so ergÃ¤nzen,
+  daÃŸ die Anforderungen von 3c erfÃ¼llt werden.
+  <LI> 3c (Internetworking): TeilnetzunabhÃ¤ngige  Protokolle abwickeln
   (Routing, globale Adressierung)
   </UL>
 <P>
 <LI> 2. Sicherungs-Schicht (Data Link)
 Sicherstellen einer funktionierenden Verbindung zwischen zwei direkt benachbarten
-Stationen. Diese Schicht stellt einen definierten Rahmen für den Datentransport,
-die Fehlererkennung und die Synchronisierung der Daten zur Verfügung.
-Typische Protokolle: BSC, HDLC, usw. Die Information wird in Blöcke
-geeigneter Länge unterteilt, die als Datenrahmen (frames) bezeichnet
-werden und mit Prüfinfo für die Fehlererkennung und -korrektur
+Stationen. Diese Schicht stellt einen definierten Rahmen fÃ¼r den Datentransport,
+die Fehlererkennung und die Synchronisierung der Daten zur VerfÃ¼gung.
+Typische Protokolle: BSC, HDLC, usw. Die Information wird in BlÃ¶cke
+geeigneter LÃ¤nge unterteilt, die als Datenrahmen (frames) bezeichnet
+werden und mit PrÃ¼finfo fÃ¼r die Fehlererkennung und -korrektur
 versehen werden. <BR>
-Auf dieser Ebene erfolgt auch die Flußkontrolle für die Binärdaten.
-Es muß nicht jeder einzelne Rahmen bestätigt werden, sondern
+Auf dieser Ebene erfolgt auch die FluÃŸkontrolle fÃ¼r die BinÃ¤rdaten.
+Es muÃŸ nicht jeder einzelne Rahmen bestÃ¤tigt werden, sondern
 es kann auch eine vorgegebene Maximalzahl von Frames gesendet werden, bevor
-die Bestätigung abgewartet werden muß. Über die Bestätigung
-der Gegenstation wird der Datenfluß gesteuert. Datenrahmen und Bestätigungen
-müssen also nur innerhalb eines Bereichs (&quot;Fenster&quot;) liegen.
+die BestÃ¤tigung abgewartet werden muÃŸ. Ãœber die BestÃ¤tigung
+der Gegenstation wird der DatenfluÃŸ gesteuert. Datenrahmen und BestÃ¤tigungen
+mÃ¼ssen also nur innerhalb eines Bereichs (&quot;Fenster&quot;) liegen.
 Bei lokalen Netzen wird diese Schicht nochmals unterteilt:
   <UL>
   <LI> 2a (Media Access Control, MAC): Regelt den Zugriff auf das
-  Übertragungsmedium
-  <LI> 2b (Logical Link Control,  LLC): Vom übertragungsmedium abhängige
+  Ãœbertragungsmedium
+  <LI> 2b (Logical Link Control,  LLC): Vom Ã¼bertragungsmedium abhÃ¤ngige
   Funktionen der Schicht 2
   </UL>
 <P>
-<LI> 1. Bitübertragung (Physical)
-Hier erfolgt die physikalische Übertragung der Daten. Diese Ebene legt
+<LI> 1. BitÃ¼bertragung (Physical)
+Hier erfolgt die physikalische Ãœbertragung der Daten. Diese Ebene legt
 die elektrischen, mechanischen, funktionalen und prozeduralen Parameter
-für die physikalische Verbindung zweier Einheiten fest (z. B. Pegel,
-Modulation, Kabel, Stecker, Übertragungsrate, etc.)
+fÃ¼r die physikalische Verbindung zweier Einheiten fest (z. B. Pegel,
+Modulation, Kabel, Stecker, Ãœbertragungsrate, etc.)
 </UL>
 <P>
 
@@ -277,53 +277,53 @@ Modulation, Kabel, Stecker, Übertragungsrate, etc.)
 Das Beispiel arbeitet nur mit drei Schichten. Die Ausgangssituation besteht
 in zwei Wissenschaftlern in Arabien und China, die ein Problem diskutieren
 wollen. Nun sprechen beide nur Ihre Landessprache und auch Dolmetscher,
-die Arabisch und Chinesisch können, sind nicht aufzutreiben. Beide
-suchen sich nun Dolmetscher, die Englisch können. Der Weg der Nachrichten:
+die Arabisch und Chinesisch kÃ¶nnen, sind nicht aufzutreiben. Beide
+suchen sich nun Dolmetscher, die Englisch kÃ¶nnen. Der Weg der Nachrichten:
 <P>
 <center><img src="images/osi2.png"></center>
 <P>
 
 <H2><A NAME="0.3">Paketvermittlung vs. Leitungsvermittlung</A></H2>
-Hier soll kurz erklärt werden, wie die zu übertragenden
+Hier soll kurz erklÃ¤rt werden, wie die zu Ã¼bertragenden
 Informationen in den meisten Netzen von einem auf den anderen Rechner
-kommen. Die Daten werden paketweise übertragen. Man
+kommen. Die Daten werden paketweise Ã¼bertragen. Man
 spricht daher von einem paketvermittelten Netz. Zur
 Veranschaulichung ein Gegenbeispiel und ein Beispiel:
 <UL>
-<LI> Im Telefonnetz wird für jedes Gespräch eine Leitung
-zwischen zwei Gesprächspartnern benötigt. Diese Leitung
-bleibt auch belegt, wenn keine Information übertragen wird,
+<LI> Im Telefonnetz wird fÃ¼r jedes GesprÃ¤ch eine Leitung
+zwischen zwei GesprÃ¤chspartnern benÃ¶tigt. Diese Leitung
+bleibt auch belegt, wenn keine Information Ã¼bertragen wird,
 also keiner spricht. Hier handelt es sich um ein
 leitungsvermitteltes Netz.
 <LI>Im Briefverkehr wird dagegen ganz anders vorgegangen. Wenn
-Informationsübertragung ansteht, wird ein Brief geschrieben
+InformationsÃ¼bertragung ansteht, wird ein Brief geschrieben
 und dieser mit einer Adresse versehen. Sodann wird dieses
-Informationspaket dem Netz überlassen, indem man es in
-einen Briefkasten wirft. Das örtliche Postamt entscheidet
-dann aufgrund der Empfängeradresse, ob der Brief direkt an
-den Empfänger (wenn dieser also im Versorgungsbereich
+Informationspaket dem Netz Ã¼berlassen, indem man es in
+einen Briefkasten wirft. Das Ã¶rtliche Postamt entscheidet
+dann aufgrund der EmpfÃ¤ngeradresse, ob der Brief direkt an
+den EmpfÃ¤nger (wenn dieser also im Versorgungsbereich
 dieses Postamtes wohnt) auszuliefern ist, oder durch
 Einschalten von mehr oder weniger Zwischenstationen. In der
 Regel findet der Brief dann ein Postamt, das die Auslieferung
-des Briefes an den Empfänger aufgrund der Adresse
-vornehmen kann. Schwierigkeiten bei der Auslieferung können
+des Briefes an den EmpfÃ¤nger aufgrund der Adresse
+vornehmen kann. Schwierigkeiten bei der Auslieferung kÃ¶nnen
 dem Absender aufgrund der Absendeadresse mitgeteilt werden.
 </UL>
 <P>
 
 
 <H2><A NAME="0.4">Leistungsparameter</A></H2>
-Die Qualität, die ein Kommunikationssystem anbieten kann,
-bezeichnet man als Dienstgüte (engl.: Quality of Service, QoS).
-Qualitätsparameter sind hier:
+Die QualitÃ¤t, die ein Kommunikationssystem anbieten kann,
+bezeichnet man als DienstgÃ¼te (engl.: Quality of Service, QoS).
+QualitÃ¤tsparameter sind hier:
 <UL>
 <LI>Bandbreite [bit/s]<BR>
 Die physikalische obere Schranke des Durchsatzes, d.h. das
-Gesamtvolumen, das durch ein Netzwerk potentiell übertragen
+Gesamtvolumen, das durch ein Netzwerk potentiell Ã¼bertragen
 werden kann.
   <UL>
-  <LI>Übertragenes Datenvolumen pro Zeiteinheit
-  <LI>Maßeinheit: Bits pro Sekunde (bps)
+  <LI>Ãœbertragenes Datenvolumen pro Zeiteinheit
+  <LI>MaÃŸeinheit: Bits pro Sekunde (bps)
   <LI>Unterscheidung in Bandbreite der Leitung und
   Ende-zu-Ende Bandbreite (zwischen zwei Anwendungen)
   </UL>
@@ -332,88 +332,88 @@ Bandbreite und Signallaufzeit<BR>
   - Lange Nachrichten: Bandbreite dominiert
 <p>
 <LI>Durchsatz [bit/s]<BR>
-Anzahl übertragener Bits pro Sekunde über eine gewisse zeitliche
-Dauer. Hier werden alle Prozeßkommunikationen zusammengefaßt
-betrachtet &rarr; tatsächlich erreichte Bandbreite, also Datenmenge/Transferzeit.
+Anzahl Ã¼bertragener Bits pro Sekunde Ã¼ber eine gewisse zeitliche
+Dauer. Hier werden alle ProzeÃŸkommunikationen zusammengefaÃŸt
+betrachtet &rarr; tatsÃ¤chlich erreichte Bandbreite, also Datenmenge/Transferzeit.
 <p>
 <LI>Latenzzeit [s]<BR>
 Dies ist die Zeit, die eine leere Nachricht, d. h. eine Nachricht
-ohne Nutzinformation, vom Sendeprozeß durch die Kommunikationsschichten
-und das Netzwerk bis zum Empfangsprozeß braucht. Die Transferzeit
+ohne Nutzinformation, vom SendeprozeÃŸ durch die Kommunikationsschichten
+und das Netzwerk bis zum EmpfangsprozeÃŸ braucht. Die Transferzeit
 setzt sich zusammen aus:<BR>
-Signallaufzeit + Übertragungsdauer + Zeit für Pufferung in Zwischenknoten<br>
+Signallaufzeit + Ãœbertragungsdauer + Zeit fÃ¼r Pufferung in Zwischenknoten<br>
 <br>
 Signallaufzeit = Entfernung / Ausbreitungsgeschwindigkeit<br>
-Übertragungsdauer = Nachrichtenmenge / Bandbreite
+Ãœbertragungsdauer = Nachrichtenmenge / Bandbreite
 <p>
 <LI>Datentransferrate [bit/s]<BR>
 Darunter versteht man die Anzahl der Bits, die maximal zwischen
-zwei Prozessen pro Sekunde übertragen werden kann.
+zwei Prozessen pro Sekunde Ã¼bertragen werden kann.
 <p>
 <LI>Nachrichtentransferzeit [s]<BR>
 Die Nachrichtentransferzeit errechnet sich aus
-(Latenzzeit + Nachrichtenlänge/Datentransferrate).
+(Latenzzeit + NachrichtenlÃ¤nge/Datentransferrate).
 <p>
 <LI>Round-Trip-Time (RTT)<BR>
-Zeit, die benötigt wird, um eine Nachricht von A nach B 
-und wieder zurück zu schicken.
+Zeit, die benÃ¶tigt wird, um eine Nachricht von A nach B 
+und wieder zurÃ¼ck zu schicken.
 </UL>
 <P>
 
-Bei der Übertragung kontinuierlicher Medien sind noch weitere spezielle
-Qualitätsparameter relevant:
+Bei der Ãœbertragung kontinuierlicher Medien sind noch weitere spezielle
+QualitÃ¤tsparameter relevant:
 <UL>
-<LI>Verzögerung [s]<BR>
+<LI>VerzÃ¶gerung [s]<BR>
 Das ist die Zeit, die zwischen dem Abschicken und der Ankunft
 einer Nachricht verstreicht.
 <LI>Jitter [s]<BR>
-Variiert die Verzögerung einer Übertragung, so nennt man die
-Varianz der Verzögerung das Jitter.
+Variiert die VerzÃ¶gerung einer Ãœbertragung, so nennt man die
+Varianz der VerzÃ¶gerung das Jitter.
 </UL>
 <P>
 
-Ein Paket erfährt eine Verzögerung auf dem Weg von einem Ende zum anderen.
-Es gibt insgesamt vier Quellen für die Verzögerung bei jedem Knoten:
+Ein Paket erfÃ¤hrt eine VerzÃ¶gerung auf dem Weg von einem Ende zum anderen.
+Es gibt insgesamt vier Quellen fÃ¼r die VerzÃ¶gerung bei jedem Knoten:
 <P>
-<H4>Verarbeitungsverzögerung [einige Mikrosekunden]:</H4>
+<H4>VerarbeitungsverzÃ¶gerung [einige Mikrosekunden]:</H4>
 <UL>
-<LI>Überprüfen von Bitfehlern
-<LI>Bestimmen der Übertragungsverbindung
+<LI>ÃœberprÃ¼fen von Bitfehlern
+<LI>Bestimmen der Ãœbertragungsverbindung
 <LI>Weiterleiten zur Warteschlange im Router
 </UL>
 
-<H4>Warteschlangenverzögerung [Mikrosekunden ... einige Millisekunden]:</H4>
+<H4>WarteschlangenverzÃ¶gerung [Mikrosekunden ... einige Millisekunden]:</H4>
 <UL>
-<LI>Wartezeit bei der Ausgangverbindung auf die Übertragungsleitung
-<LI>Abhängig von der "Verstopfung" beim Router, d. h. wieviele Pakete bereits
+<LI>Wartezeit bei der Ausgangverbindung auf die Ãœbertragungsleitung
+<LI>AbhÃ¤ngig von der "Verstopfung" beim Router, d. h. wieviele Pakete bereits
 in der Warteschlange stehen
-<LI>Die W. von einem Paket zum nächsten kann stark variieren
+<LI>Die W. von einem Paket zum nÃ¤chsten kann stark variieren
 </UL>
 
-<H4>Übertragungsverzögerung [einige Mikrosekunden]:</H4>
+<H4>ÃœbertragungsverzÃ¶gerung [einige Mikrosekunden]:</H4>
 <UL>
-<LI>Auch als "Store-and-Forward-Verzögerung" bezeichnet
-<LI>Übliches Verfahren: "first come - first served"
+<LI>Auch als "Store-and-Forward-VerzÃ¶gerung" bezeichnet
+<LI>Ãœbliches Verfahren: "first come - first served"
 <LI>R = Verbindungsbandbreite [bit/s]
-<LI>L = Paketlänge [bit]
-<LI>Benötigte Zeit für die Übertragung auf die Verbindung = L/R
+<LI>L = PaketlÃ¤nge [bit]
+<LI>BenÃ¶tigte Zeit fÃ¼r die Ãœbertragung auf die Verbindung = L/R
 </UL>
 
-<H4>Ausbreitungsverzögerung [ms]:</H4>
+<H4>AusbreitungsverzÃ¶gerung [ms]:</H4>
 <UL>
-<LI>d = Länge der physikalischen Verbindung zwischen zwei Knoten
+<LI>d = LÃ¤nge der physikalischen Verbindung zwischen zwei Knoten
 <LI>s = Ausbreitungsgeschwindigkeit im Medium 
     (2*10<SUP>8</SUP> ... 3*10<SUP>8</SUP> m/s)
-<LI>Ausbreitungsverzögerung = d/s
+<LI>AusbreitungsverzÃ¶gerung = d/s
 </UL>
 <P>
 
-<H4>Unterschied zwischen Übertragungs- und Ausbreitungsverzögerung</H4>
-Die Übertragungsverzögerung ist die Zeit, die ein Router benötigt, um ein 
-Paket abzuschicken. Sie hängt ab von Paketlänge und Übertragungsrate der
-Verbindungsleitung - hat aber nichts mit der Länge der Leitung zu tun.
-Die Ausbreitungsverzögerung ist die Zeit, die ein Bit von einem Router
-zum nächsten braucht.
+<H4>Unterschied zwischen Ãœbertragungs- und AusbreitungsverzÃ¶gerung</H4>
+Die ÃœbertragungsverzÃ¶gerung ist die Zeit, die ein Router benÃ¶tigt, um ein 
+Paket abzuschicken. Sie hÃ¤ngt ab von PaketlÃ¤nge und Ãœbertragungsrate der
+Verbindungsleitung - hat aber nichts mit der LÃ¤nge der Leitung zu tun.
+Die AusbreitungsverzÃ¶gerung ist die Zeit, die ein Bit von einem Router
+zum nÃ¤chsten braucht.
 <P>
 
 
@@ -421,10 +421,10 @@ zum nächsten braucht.
 <TR>
 <TD ALIGN=LEFT VALIGN=BOTTOM><img src="images/left.png" BORDER=0> <A HREF="netz11.html">Zum vorhergehenden Abschnitt</A></TD>
 <TD ALIGN=CENTER VALIGN=BOTTOM><img src="images/up.png" BORDER=0> <A HREF="index.html">Zum Inhaltsverzeichnis</A></TD>
-<TD ALIGN=RIGHT VALIGN=BOTTOM><img src="images/right.png" BORDER=0> <A HREF="netz1.html">Zum nächsten Abschnitt</A></TD>
+<TD ALIGN=RIGHT VALIGN=BOTTOM><img src="images/right.png" BORDER=0> <A HREF="netz1.html">Zum nÃ¤chsten Abschnitt</A></TD>
 </TR></TABLE></CENTER>
 <P><HR>
-<h6><i>Copyright &copy; Hochschule München, FK 04, Prof. Jürgen Plate</i><br>
+<h6><i>Copyright &copy; Hochschule MÃ¼nchen, FK 04, Prof. JÃ¼rgen Plate</i><br>
 Letzte Aktualisierung: <SCRIPT LANGUAGE="JavaScript">document.write(document.lastModified);</SCRIPT></I></H6>
 </BODY>
 </HTML>

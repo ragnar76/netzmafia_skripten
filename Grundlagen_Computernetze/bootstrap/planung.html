@@ -8,14 +8,14 @@
 <meta NAME="Reply-To" CONTENT="webmaster@netzmafia.de">
 
 <meta NAME="keywords" CONTENT="LAN WAN TCP/IP Computernetze Ethernet Vernetzung Router Hub Switch Protokolle">
-<meta NAME="description" CONTENT="Praxisorientierte Einführung in den Aufbau und die Funktionsweise von Computernetzen.">
+<meta NAME="description" CONTENT="Praxisorientierte EinfÃ¼hrung in den Aufbau und die Funktionsweise von Computernetzen.">
 <title>Grundlagen Computernetze</title>
 </head>
 <BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" ALINK="#FF0000" VLINK="#FF00FF">
 <CENTER><TABLE BORDER=0 WIDTH="90%" >
 <TR><TD ALIGN=LEFT><img src="images/eyes.png"></TD>
 <TD ALIGN=RIGHT><H3>Grundlagen Computernetze</H3>
-<BR><B><I>Prof. Jürgen Plate</I></B></TD></TR>
+<BR><B><I>Prof. JÃ¼rgen Plate</I></B></TD></TR>
 </TABLE></CENTER>
 <HR>
 
@@ -24,47 +24,47 @@
 <A NAME="t.3"></A>
 <H3>Grundlegendes</H3>
 
-<img src="images/Rack-Verkabelung.jpg" ALIGN=RIGHT HSPACE=30>
-Derzeit rüsten viele Unternehmen ihr Ethernet um. Der erste und meist teuerste
+<img src="images/Rack-Verkabelung.png" ALIGN=RIGHT HSPACE=30>
+Derzeit rÃ¼sten viele Unternehmen ihr Ethernet um. Der erste und meist teuerste
 Schritt auf diesem Weg ist die Neuverkabelung mit Twisted-Pair-Leitungen.
-Danach können weitere Maßnahmen ergriffen werden. Die klassische
-Maßnahme, das 'Bridging', wurde in Koax-Netzen häufig eingesetzt
+Danach kÃ¶nnen weitere MaÃŸnahmen ergriffen werden. Die klassische
+MaÃŸnahme, das 'Bridging', wurde in Koax-Netzen hÃ¤ufig eingesetzt
 und lebt heute in den 'Switches'
 weiter. Das Aufteilen eines Netzes in mehrere Teilnetze, auch 'Collision
-Domains' genannt, läßt nicht mehr jedes Datenpaket zu jeder Station
-gelangen; es können so viele Transaktionen gleichzeitig stattfinden,
+Domains' genannt, lÃ¤ÃŸt nicht mehr jedes Datenpaket zu jeder Station
+gelangen; es kÃ¶nnen so viele Transaktionen gleichzeitig stattfinden,
 wie Collision Domains im Netz vorhanden sind - im Extremfall (Switch) ist
-jeder Hub-Anschluß einer eigenen Collision Domain zugeordnet. An die
-Switch-Anschlüsse können in der Regel wieder gewöhnliche
+jeder Hub-AnschluÃŸ einer eigenen Collision Domain zugeordnet. An die
+Switch-AnschlÃ¼sse kÃ¶nnen in der Regel wieder gewÃ¶hnliche
 Repeating Hubs angeschlossen werden; Switching kann so nach und nach im
-Netz eingeführt werden, um die Collision Domains immer weiter zu verkleinern
-- bis im Idealfall jedem Rechner ein privates Segment zur Verfügung
+Netz eingefÃ¼hrt werden, um die Collision Domains immer weiter zu verkleinern
+- bis im Idealfall jedem Rechner ein privates Segment zur VerfÃ¼gung
 steht.
 <P>
-Switches sind heute preiswerter als Hubs, daher spricht alles für eine
+Switches sind heute preiswerter als Hubs, daher spricht alles fÃ¼r eine
 Strukturierung des Netzes mit Switches. In einem Peer-to-Peer-Netz (z. B. Unix
-oder auch Windows) ohne zentrale Server genügt meistens ein reiner
-100BaseT-Switch. Gibt es einige, wenige Server, so kann der Server über
-mehrere Ethernet-Segmente parallel mit dem Switch verbunden werden, so daß
-der Datenverkehr zwischen Server und Netz gebündelt wird. Besser noch
+oder auch Windows) ohne zentrale Server genÃ¼gt meistens ein reiner
+100BaseT-Switch. Gibt es einige, wenige Server, so kann der Server Ã¼ber
+mehrere Ethernet-Segmente parallel mit dem Switch verbunden werden, so daÃŸ
+der Datenverkehr zwischen Server und Netz gebÃ¼ndelt wird. Besser noch
 ist die Serveranbindung mit Gigabit-Switches (Kupfer oder LWL), die gleichzeitig
-auch 100-Mbit-Anschlüsse besitzen, um alle Anwender im Netz deutlich 
-schneller mit Daten zu versorgen - ohne daß deren LAN-Adapter auch
-nur berührt werden müßten. Die Server und zentralen Switches
-werden am besten in einem 19"-Schrank untergebracht, der zusätzlich
-noch Belüftung und eine USV (unterbrechungsfrei Stromversorgung) aufnehmen
-kann. Die Schränke besitzen Einschübe für die Server und sind so
-gestaltet, daß man von vorne und hinten guten Zugang zu den Rechnern hat.
+auch 100-Mbit-AnschlÃ¼sse besitzen, um alle Anwender im Netz deutlich 
+schneller mit Daten zu versorgen - ohne daÃŸ deren LAN-Adapter auch
+nur berÃ¼hrt werden mÃ¼ÃŸten. Die Server und zentralen Switches
+werden am besten in einem 19"-Schrank untergebracht, der zusÃ¤tzlich
+noch BelÃ¼ftung und eine USV (unterbrechungsfrei Stromversorgung) aufnehmen
+kann. Die SchrÃ¤nke besitzen EinschÃ¼be fÃ¼r die Server und sind so
+gestaltet, daÃŸ man von vorne und hinten guten Zugang zu den Rechnern hat.
 Das Bild rechts zeigt den Blick von hinten auf die Server im Schrank. Die
-Verschliessbarkeit des Schranks sorgt auch für einen Schutz der Server vor
+Verschliessbarkeit des Schranks sorgt auch fÃ¼r einen Schutz der Server vor
 unberechtigtem Zugriff.
 <P>
 Da Twisted-Pair-Kabel heutzutage den Standard darstellen, sollte man auf jeden
-Fall bei der Neuverkabelung gleich Cat-6-Kabel oder bessere verwenden, um für die
-Datenrate von 100 MHz gerüstet zu sein. Leider ist der verwendete RJ45-Stecker
+Fall bei der Neuverkabelung gleich Cat-6-Kabel oder bessere verwenden, um fÃ¼r die
+Datenrate von 100 MHz gerÃ¼stet zu sein. Leider ist der verwendete RJ45-Stecker
 relativ filigran. Neben der Zerbrechlichkeit der Stecker kommt es bei
-Hochgeschwindigkeitsnetzen zu Problemen: Die Drähte und Kontakte werden über
-eine kleine Strecke parallel geführt, wodurch die Wirkung der Twisted-Pair-Kabel
+Hochgeschwindigkeitsnetzen zu Problemen: Die DrÃ¤hte und Kontakte werden Ã¼ber
+eine kleine Strecke parallel gefÃ¼hrt, wodurch die Wirkung der Twisted-Pair-Kabel
 aufgehoben wird. Ein weiterer Kritikpunkt an der RJ45-Technik ist die Einheitlichkeit
 der Dosen. Der Anwender am Arbeitsplatz kann nicht erkennen, welchem Dienst
 die Dose zugeordnet ist (Netz, analogens Telefon, ISDN, etc.). Selbst Farbkennzeichnung
@@ -72,109 +72,109 @@ oder Beschriftung hindert viele Leute nicht daran, 'es mal an der anderen
 Dose zu versuchen'. Und da kann die Rufspannung analoger Telefone schon
 einmal einen Netzwerkadapter 'killen'.
 <P>
-10 MBit/s (IEEE 802.3) und 100 MBit/s (IEEE 802.3u) verwenden eine Halbduplex-Übertragung
-über zwei Aderpaare. Bei einer Migration von 10 auf 100 MBit/s bleibt zumindest die
-Infrastruktur des Kabelnetzes bestehen. Demgegenüber setzt Gigabit-Ethernet
-(IEEE 802.3ab) auf eine Vollduplex-Übertragung über alle vier Paare.
-Zwar ermöglicht diese Technik die Verwendung der eigentlich nur bis 100 MHz
-spezifizierten CAT-5-Kabel, dazu müssen die Komponenten allerdings anders beschaltet
+10 MBit/s (IEEE 802.3) und 100 MBit/s (IEEE 802.3u) verwenden eine Halbduplex-Ãœbertragung
+Ã¼ber zwei Aderpaare. Bei einer Migration von 10 auf 100 MBit/s bleibt zumindest die
+Infrastruktur des Kabelnetzes bestehen. DemgegenÃ¼ber setzt Gigabit-Ethernet
+(IEEE 802.3ab) auf eine Vollduplex-Ãœbertragung Ã¼ber alle vier Paare.
+Zwar ermÃ¶glicht diese Technik die Verwendung der eigentlich nur bis 100 MHz
+spezifizierten CAT-5-Kabel, dazu mÃ¼ssen die Komponenten allerdings anders beschaltet
 werden.
 <BR CLEAR="ALL"><P>
 
-<H3>Strukturen der Gebäudeverkabelung</H3>
-Früher war eine "Bedarfsverkabelung" üblich. Die Netztechnik bestimmte
-die Art der Verkabelung (Ethernet: busförmige Koaxverkabelung, FDDI:
-ringförmig mit Lichtwellenleitern). Die Standorte der Rechner und
+<H3>Strukturen der GebÃ¤udeverkabelung</H3>
+FrÃ¼her war eine "Bedarfsverkabelung" Ã¼blich. Die Netztechnik bestimmte
+die Art der Verkabelung (Ethernet: busfÃ¶rmige Koaxverkabelung, FDDI:
+ringfÃ¶rmig mit Lichtwellenleitern). Die Standorte der Rechner und
 Terminals bestimmte die Netzausdehnung.
 <P>
-Die Standards für die Übertragungstechnik nach IEEE 802.3 beschreiben, wie die 
-Daten nach dem Ethernet-Standard zu übertragen sind, die sogenannten 
-<b>Verkabelungsstandards</b> beschreiben dagegen die dazugehörige Infrastruktur. 
-Sie beschreibt deren Aussehen sowie die Übertragungseigenschaften, abgeleitet aus 
-den Übertragungsanforderungen der IEEE 802.3. Diese <b>Strukturierte Verkabelung</b>, 
-auch als "Universelle Gebäudeverkabelung (UGV)" bezeichnet, stellt einen 
-einheitlichen Aufbauplan für die Verkabelungen der unterschiedlichen Dienste dar
+Die Standards fÃ¼r die Ãœbertragungstechnik nach IEEE 802.3 beschreiben, wie die 
+Daten nach dem Ethernet-Standard zu Ã¼bertragen sind, die sogenannten 
+<b>Verkabelungsstandards</b> beschreiben dagegen die dazugehÃ¶rige Infrastruktur. 
+Sie beschreibt deren Aussehen sowie die Ãœbertragungseigenschaften, abgeleitet aus 
+den Ãœbertragungsanforderungen der IEEE 802.3. Diese <b>Strukturierte Verkabelung</b>, 
+auch als "Universelle GebÃ¤udeverkabelung (UGV)" bezeichnet, stellt einen 
+einheitlichen Aufbauplan fÃ¼r die Verkabelungen der unterschiedlichen Dienste dar
 (Sprache, Daten, Video, Steuerungen, etc.). 
 Die strukturierte Verkabelung ist Teil der technischen Infrastruktur einer 
-Liegenschaft und wird in Primär-, Sekundär- und Tertiärbereiche eingeteilt.
+Liegenschaft und wird in PrimÃ¤r-, SekundÃ¤r- und TertiÃ¤rbereiche eingeteilt.
 <P>
 Das bedeutet, dass sich die Netztechnik an eine genormte Verkabelung anzupassen hat. 
 Jeder Arbeitsplatz bekommt automatisch eine Datennetzdose. Das bringt anfangs
-zwar höhere Investitionskosten, ist aber zukunftssicher. Fehler wirken
-sich nur lokal aus, denn jeder Anschluß hat sein eigenes Kabel.
+zwar hÃ¶here Investitionskosten, ist aber zukunftssicher. Fehler wirken
+sich nur lokal aus, denn jeder AnschluÃŸ hat sein eigenes Kabel.
 <P>
-Basis der heutigen Gebäudeverkabelung von Netzen sind die in den letzten
+Basis der heutigen GebÃ¤udeverkabelung von Netzen sind die in den letzten
 Jahren erarbeiteten Normen auf diesem Gebiet. Dabei gibt es im wesentlichen
-drei grundlegende Normen, die für bestimmte geographische Regionen von
+drei grundlegende Normen, die fÃ¼r bestimmte geographische Regionen von
 Bedeutung sind:
 <UL>
 <LI>CENELEC EN 50173 (1995): "Informationstechnik: Anwendungsneutrale Verkabelungssysteme",
 die in Deutschland auch als DIN EN 50173-1 und folgende in deutscher Sprache 
-veröffentlicht wurde.
+verÃ¶ffentlicht wurde.
 <LI>ISO/IEC 11801 (1995): Generic cabling for customer premises
 <LI>EIA/TIA 568 A/B (1994): Commercial building telecommunications cabling standard
 </UL>
 Die EN 50173 und die ISO/IEC 11801 haben im wesentlichen den
 gleichen Inhalt und enthalten auch die gleichen Anforderungen an die Kabel
-und Komponenten. Die EN 50173 ist eine europäische Norm, während die ISO/IEC
-11801 weltweit verwendet wird. Die EIA/TIA-568 A/B wurde speziell für den
+und Komponenten. Die EN 50173 ist eine europÃ¤ische Norm, wÃ¤hrend die ISO/IEC
+11801 weltweit verwendet wird. Die EIA/TIA-568 A/B wurde speziell fÃ¼r den
 nordamerikanischen Markt von der dortigen Telekommunikationsindustrie
 entwickelt. Sie ist eigentliche keine Norm, sondern lediglich eine
-Industrie-Spezifikation. Sie enthält auch geringere Anforderungen
-bezüglich der übertragungseigenschaften der Kabel als die anderen
+Industrie-Spezifikation. Sie enthÃ¤lt auch geringere Anforderungen
+bezÃ¼glich der Ã¼bertragungseigenschaften der Kabel als die anderen
 Bestimmungen. In der EN 50173 wird ebenso wie in der ISO/IEC 11801
-die Gebäudeverkabelung in vier Bereiche eingeteilt.
+die GebÃ¤udeverkabelung in vier Bereiche eingeteilt.
 <UL>
-<LI>Der Primär- oder Campusbereich verbindet die Gebäude eines Standortes 
-untereinander und wird auch als "Campusverkabelung" oder "Geländeverkabelung" 
+<LI>Der PrimÃ¤r- oder Campusbereich verbindet die GebÃ¤ude eines Standortes 
+untereinander und wird auch als "Campusverkabelung" oder "GelÃ¤ndeverkabelung" 
 bezeichnet. Er umfasst sowohl die Verbindungen des Standortverteilers mit den 
-Gebäudeverteilern als auch empfohlene Querverbindungen zwischen den 
-Gebäudeverteilern der verschiedenen Gebäude aus Redundanzgründen. Die verwendeten 
-Medien für datentechnische Anwendungen sind heute typischerweise Glasfaserkabel 
-(Single- oder Multimode) und für die analoge oder digitale Telefonie immer 
-noch Kupferkabel – außer man verwendet "Voice over IP" (VoIP). Sollten 
-Kabellängen von größer 2000 m notwendig sein oder
-extrem hohe Datenraten anfallen, können ebenso Kabel mit Singlemodefasern
+GebÃ¤udeverteilern als auch empfohlene Querverbindungen zwischen den 
+GebÃ¤udeverteilern der verschiedenen GebÃ¤ude aus RedundanzgrÃ¼nden. Die verwendeten 
+Medien fÃ¼r datentechnische Anwendungen sind heute typischerweise Glasfaserkabel 
+(Single- oder Multimode) und fÃ¼r die analoge oder digitale Telefonie immer 
+noch Kupferkabel â€“ auÃŸer man verwendet "Voice over IP" (VoIP). Sollten 
+KabellÃ¤ngen von grÃ¶ÃŸer 2000 m notwendig sein oder
+extrem hohe Datenraten anfallen, kÃ¶nnen ebenso Kabel mit Singlemodefasern
 verwendet werden. Die Faseranzahl sollte in jedem Fall so bemessen
-sein, daß zukünftiges Wachstum der Netzanforderungen erfüllt werden
+sein, daÃŸ zukÃ¼nftiges Wachstum der Netzanforderungen erfÃ¼llt werden
 kann. Als Faustregel sollte man 50% Reserve zum derzeitigen Bedarf
-addieren. Werden also derzeit acht Fasern benötigt, sollte ein Kabel
-mit zwölf Fasern verwendet werden.
+addieren. Werden also derzeit acht Fasern benÃ¶tigt, sollte ein Kabel
+mit zwÃ¶lf Fasern verwendet werden.
 <p>
-<LI>Der Sekundärbereich sorgt für die vertikale Stockwerksverkabelung, 
+<LI>Der SekundÃ¤rbereich sorgt fÃ¼r die vertikale Stockwerksverkabelung, 
 er wird auch als "Steigleitungsverkabelung" bezeichnet und umfasst die Verbindung 
-des Gebäudeverteilers mit den Etagenverteilern, als auch empfohlene Querverbindungen 
-zwischen den Etagenverteilern der verschiedenen Etagen aus Redundanzgründen. 
-Die verwendeten Medien für datentechnische Anwendungen sind heute typischerweise 
+des GebÃ¤udeverteilers mit den Etagenverteilern, als auch empfohlene Querverbindungen 
+zwischen den Etagenverteilern der verschiedenen Etagen aus RedundanzgrÃ¼nden. 
+Die verwendeten Medien fÃ¼r datentechnische Anwendungen sind heute typischerweise 
 Glasfaserkabel (Single- oder Multimode). Wenn im Steigleitungsbereich die Distanzen 
-zwischen dem Gebäude- und den Etagenverteiler oder zwischen den Etagenverteilern 
-kleiner als 100 m sind und Datenübertragungsraten nur bis 10 Gbit/s gefordert 
+zwischen dem GebÃ¤ude- und den Etagenverteiler oder zwischen den Etagenverteilern 
+kleiner als 100 m sind und DatenÃ¼bertragungsraten nur bis 10 Gbit/s gefordert 
 werden, lassen sich heute auch noch Kupferverkabelungen verwenden.
 <p>
-<LI>den Tertiär- oder Horizontalbereich dient der horizontalen Stockwerksverkabelung, 
+<LI>den TertiÃ¤r- oder Horizontalbereich dient der horizontalen Stockwerksverkabelung, 
 er wird auch als "Etagenverkabelung" bezeichnet, und er umfasst die Verkabelung 
-von den Etagenverteilern zu den Arbeitsplätzen. Die verwendeten Medien sind 
-typischerweise Kupferkabel und Glasfaserkabel (ausschließlich Multimode). Die 
-Länge der Segmente im Tertiärbereich sollte 100 m nicht überschreiten, wobei 
-die Gesamtlänge der Verkabelung der drei Bereiche (Primär, Sekundär, Tertiär) 
-in Bürogebäuden 2000 m nicht überschreiten sollte.
+von den Etagenverteilern zu den ArbeitsplÃ¤tzen. Die verwendeten Medien sind 
+typischerweise Kupferkabel und Glasfaserkabel (ausschlieÃŸlich Multimode). Die 
+LÃ¤nge der Segmente im TertiÃ¤rbereich sollte 100 m nicht Ã¼berschreiten, wobei 
+die GesamtlÃ¤nge der Verkabelung der drei Bereiche (PrimÃ¤r, SekundÃ¤r, TertiÃ¤r) 
+in BÃ¼rogebÃ¤uden 2000 m nicht Ã¼berschreiten sollte.
 </UL>
 <P>
 <CENTER><img src="images/struktur1.png"></CENTER>
 <P>
 
 <H4>Horizontalverkabelung und Arbeitsplatzbereich</H4>
-Im Horizontalbereich und für die Arbeitsplatzverkabelung werden
+Im Horizontalbereich und fÃ¼r die Arbeitsplatzverkabelung werden
 zumeist hochwertige, geschirmte symmetrische Kupferkabel und -komponenten
-eingesetzt, da hier der Anschluß an viele einzelne Schnittstellen
+eingesetzt, da hier der AnschluÃŸ an viele einzelne Schnittstellen
 vorgenommen wird.
 Wird auch im Horizontal- und Arbeitsplatzbereich mit Lichtwellenleitern
-(LWL) verkabelt, stehen damit höhere Bandbreiten zur Verfügung und
-es lassen sich längere Strecken realisieren. LWL-Verkabelung kann auch
-dann sinnvoll sein, wenn man einfach die EMV-Immunität und die
-übertragungssicherheit ausnutzen will. Die Einführung von "Fiber-to-the-desk",
-der LWL-Verkabelung bis zum Arbeitsplatz, ist wohl bald Realität. Es ist auch
-möglich, beispielsweise den Steig- und den Horizontalbereich durchgehend
+(LWL) verkabelt, stehen damit hÃ¶here Bandbreiten zur VerfÃ¼gung und
+es lassen sich lÃ¤ngere Strecken realisieren. LWL-Verkabelung kann auch
+dann sinnvoll sein, wenn man einfach die EMV-ImmunitÃ¤t und die
+Ã¼bertragungssicherheit ausnutzen will. Die EinfÃ¼hrung von "Fiber-to-the-desk",
+der LWL-Verkabelung bis zum Arbeitsplatz, ist wohl bald RealitÃ¤t. Es ist auch
+mÃ¶glich, beispielsweise den Steig- und den Horizontalbereich durchgehend
 mit LWL zu verkabeln, um damit Etagenverteiler einzusparen. Man spricht
 dann von einer zentralisierten Verkabelung.
 <P>
@@ -182,57 +182,57 @@ dann von einer zentralisierten Verkabelung.
 <H4>Netzstrukturen</H4>
 Die heutige Verkabelung wird im allgemeinen hierarchisch in einem
 physikalischen Stern aufgebaut. Der Standortverteiler (auch: Hauptverteiler)
-als zentrale Schaltstelle ist mit den Gebäudeverteilern in den einzelnen
-Gebäuden sternförmig verkabelt. In den Gebäuden werden die Etagen-
-verteiler ebenfalls sternförmig mit dem Gebäudeverteiler verkabelt. In der
-Horizontalebene schließlich findet eine ebenfalls sternförmige Verkabelung
-der Anschlußeinheiten wie der Wanddose mit dem Etagenverteiler statt.
-Als Verteiler zum Abschluß der Kabel werden Schränke und Gestelle in
-19"-Technik eingesetzt. 19"-Einschübe übernehmen in diesen Schränken
-die Kabelbefestigung, die Speicherung einer Reservelänge, die Unterbringung
-von Spleißkassetten (falls verwendet) und das Montieren der Stecker
+als zentrale Schaltstelle ist mit den GebÃ¤udeverteilern in den einzelnen
+GebÃ¤uden sternfÃ¶rmig verkabelt. In den GebÃ¤uden werden die Etagen-
+verteiler ebenfalls sternfÃ¶rmig mit dem GebÃ¤udeverteiler verkabelt. In der
+Horizontalebene schlieÃŸlich findet eine ebenfalls sternfÃ¶rmige Verkabelung
+der AnschluÃŸeinheiten wie der Wanddose mit dem Etagenverteiler statt.
+Als Verteiler zum AbschluÃŸ der Kabel werden SchrÃ¤nke und Gestelle in
+19"-Technik eingesetzt. 19"-EinschÃ¼be Ã¼bernehmen in diesen SchrÃ¤nken
+die Kabelbefestigung, die Speicherung einer ReservelÃ¤nge, die Unterbringung
+von SpleiÃŸkassetten (falls verwendet) und das Montieren der Stecker
 und Kupplungen bzw. Buchsen auf den Verteilerfeldern. Werden nur kleinere
-Faserzahlen benötigt, so können statt der 19"-Schränke die kompakteren
+Faserzahlen benÃ¶tigt, so kÃ¶nnen statt der 19"-SchrÃ¤nke die kompakteren
 Wandverteiler eingesetzt werden.
 <P>
 <CENTER><img src="images/struktur2.png"></CENTER>
 <P>
-Im Tertiärbereich werden zum Kabelabschluß Wand- und Bodentankdosen
-verwendet. Diese Anschlußeinheiten übernehmen hier die
-Kabelbefestigung, die Speicherung der Reservelänge und das Montieren
-der Buchsen bzw. Stecker und Kupplungen. Sie bilden den Abschluß der
-diensteunabhängigen Verkabelung. Das Endgerät (der PC, die Workstation,
+Im TertiÃ¤rbereich werden zum KabelabschluÃŸ Wand- und Bodentankdosen
+verwendet. Diese AnschluÃŸeinheiten Ã¼bernehmen hier die
+Kabelbefestigung, die Speicherung der ReservelÃ¤nge und das Montieren
+der Buchsen bzw. Stecker und Kupplungen. Sie bilden den AbschluÃŸ der
+diensteunabhÃ¤ngigen Verkabelung. Das EndgerÃ¤t (der PC, die Workstation,
 der Drucker, das Telefon, etc.) wird mit konfektionierten Kabeln an
 die Wanddose oder den Bodentank angeschlossen. Die Verteilung der Switch-
-oder Routerports auf die Endgerätedosen erfolgt über ein Patchfeld.
+oder Routerports auf die EndgerÃ¤tedosen erfolgt Ã¼ber ein Patchfeld.
 Es handelt sich dabei um ein Feld mit Netzwerk-Steckdosen (z. B. RJ-45-Dosen),
-an welche die Kabel zu den Anschlußdosen in den einzelnen Rämen
+an welche die Kabel zu den AnschluÃŸdosen in den einzelnen RÃ¤men
 angeschlossen sind. Die Verbindung zu den aktiven Komponenten erfolgt dann
-über kurze Patchkabel.
+Ã¼ber kurze Patchkabel.
 <P>
 <CENTER><img src="images/struktur3.png"></CENTER>
 <P>
-Die logische Netzstruktur der Verkabelung hängt davon ab, wie die
+Die logische Netzstruktur der Verkabelung hÃ¤ngt davon ab, wie die
 einzelnen Netzwerkknoten miteinander kommunizieren. Darunter sind die
 Protokolle, Zugriffsverfahren und Konventionen auf der elektronischen
-Ebene zu verstehen. Die heute am weitest verbreiteten Standards für
+Ebene zu verstehen. Die heute am weitest verbreiteten Standards fÃ¼r
 solche logischen Netzstrukturen sind:
 <UL>
-<LI>ISDN nach DIN EN 50098 für bis zu 2 Mbit/s in einer sternförmigen
+<LI>ISDN nach DIN EN 50098 fÃ¼r bis zu 2 Mbit/s in einer sternfÃ¶rmigen
 Verkabelung
-<LI>Ethernet nach IEEE 802.3 für 10 und 100 MHz übertragungsbandbreite
+<LI>Ethernet nach IEEE 802.3 fÃ¼r 10 und 100 MHz Ã¼bertragungsbandbreite
 als logischer Bus
-<LI>Token Ring nach IEEE 802.5 für 4 und 16 Mbit/s als logischer Ring
-<LI>FDDI bzw. TPDDI (PMD) nach ANSI X3T12 für bis zu 100 Mb/s als logischer
+<LI>Token Ring nach IEEE 802.5 fÃ¼r 4 und 16 Mbit/s als logischer Ring
+<LI>FDDI bzw. TPDDI (PMD) nach ANSI X3T12 fÃ¼r bis zu 100 Mb/s als logischer
 (Doppel-)Ring
-<LI>ATM definiert im ATM-Forum für bis zu 622 Mbit/s
+<LI>ATM definiert im ATM-Forum fÃ¼r bis zu 622 Mbit/s
 </UL>
-Für die Umsetzung von der logischen in die physikalische Netzstruktur
+FÃ¼r die Umsetzung von der logischen in die physikalische Netzstruktur
 haben sich Netzwerkkonzentratoren etabliert. Hier werden alle wichtigen
-Netzwerkaktivitäten zusammengefaßt, was auch die Verkabelung und die
-Fehlersuche wesentlich erleichtert. Dadurch ist es möglich, beispielsweise
+NetzwerkaktivitÃ¤ten zusammengefaÃŸt, was auch die Verkabelung und die
+Fehlersuche wesentlich erleichtert. Dadurch ist es mÃ¶glich, beispielsweise
 das Ethernet 10/100BaseT-Verfahren als logisches Bussystem
-in einer sternförmigen Verkabelung zu realisieren.
+in einer sternfÃ¶rmigen Verkabelung zu realisieren.
 <P>
 
 
@@ -241,13 +241,13 @@ in einer sternförmigen Verkabelung zu realisieren.
 
 <H3>Aufgaben der Netzplanung</H3>
 
-Festlegen der Netzstruktur, die den gewünschten Funktionen
+Festlegen der Netzstruktur, die den gewÃ¼nschten Funktionen
 des EDV-Systems gerecht wird.
 <UL>
 <LI> Umsetzen organisatorischer und topologischer Strukturen in die Netzstruktur
-<LI> Berücksichtigung von Datenschutz, Betriebs- und Einbruchssicherheit
+<LI> BerÃ¼cksichtigung von Datenschutz, Betriebs- und Einbruchssicherheit
 <LI> Koordination mit Provider, Registrierungs- und Ressourcenvergabestellen
-<LI> Netzwerkkomponenten, die zu berücksichtigen sind:
+<LI> Netzwerkkomponenten, die zu berÃ¼cksichtigen sind:
      <UL>
      <LI> Hubs, Bridges, Router, Gateways
      <LI> Paketfilter, Application Gateways
@@ -255,12 +255,12 @@ des EDV-Systems gerecht wird.
      </UL>
 <LI> Anforderungen an eine Netzwerkverkabelung
      <UL>
-     <LI> offen für verschiedene LAN-Techniken (heutige und zukünftige)
-     <LI> herstellerunabhängig
-     <LI> genügend übertragungskapazität auch für die Zukunft
-     <LI> zuverlässig, unempfindlich gegen Störeinflüsse
+     <LI> offen fÃ¼r verschiedene LAN-Techniken (heutige und zukÃ¼nftige)
+     <LI> herstellerunabhÃ¤ngig
+     <LI> genÃ¼gend Ã¼bertragungskapazitÃ¤t auch fÃ¼r die Zukunft
+     <LI> zuverlÃ¤ssig, unempfindlich gegen StÃ¶reinflÃ¼sse
      <LI> wartungsarm
-     <LI> wirtschaftlich gerechtfertigte Lösung
+     <LI> wirtschaftlich gerechtfertigte LÃ¶sung
      <LI> Integration bestehender Installationen
      <LI> vorhandene Komponenten sollen einbindbar sein
      </UL>
@@ -268,41 +268,41 @@ des EDV-Systems gerecht wird.
 <P>
 
 <H3>Ein grosses oder mehrere kleine Netze?</H3>
-Vorteile eines (grossen) zusammenhängenden Netzes:
+Vorteile eines (grossen) zusammenhÃ¤ngenden Netzes:
 <UL>
 <LI> einheitliche Administration einfacher
-<LI> bei geringer Netzlast höchste Kommunikationsgeschwindigkeit zwischen allen Rechnern
+<LI> bei geringer Netzlast hÃ¶chste Kommunikationsgeschwindigkeit zwischen allen Rechnern
 <LI> Manche Protokolle funktionieren nur auf einem (logischen) Netzwerkstrang, z. B.
      <UL>
-     <LI> bootp: Booten von Rechnern über ein Netzwerk
+     <LI> bootp: Booten von Rechnern Ã¼ber ein Netzwerk
      <LI> X-query: dynamisches Verbinden eines X-Terminals mit einer Workstation
-     <LI> Anschluß von Diskless Clients
+     <LI> AnschluÃŸ von Diskless Clients
      </UL>
 </UL>
 <P>
-Nachteile eines zusammenhängenden Netzes:
+Nachteile eines zusammenhÃ¤ngenden Netzes:
 <UL>
 <LI> Bei Ethernet kommt jedes Paket an jedem Rechner vorbei. Die Netzlast addiert
-sich also und Datenpakete können an allen Stellen des Netzes gelesen werden.
-<LI> Eine einzelne fehlerhafte Komponente stört das ganze Netz.
+sich also und Datenpakete kÃ¶nnen an allen Stellen des Netzes gelesen werden.
+<LI> Eine einzelne fehlerhafte Komponente stÃ¶rt das ganze Netz.
 </UL>
 <P>
 Vorteile kleinerer Teilnetze:
 <UL>
 <LI> Administrationsverantwortung leicht delegierbar
 <LI> Bessere Lastverteilung
-<LI> überwindung grösserer Entfernungen möglich
+<LI> Ã¼berwindung grÃ¶sserer Entfernungen mÃ¶glich
 </UL>
 Nachteile kleiner Teilnetze:
 <UL>
-<LI> Höherer Administrationsaufwand:
+<LI> HÃ¶herer Administrationsaufwand:
      Vergabe von Netznummern, Aufsetzen von Bridges/Routern und Routingtabellen
 <LI> Bei ungeschickter Vernetzung bilden Bridges/Router einen Flaschenhals.
 </UL>
-Man sollte Netze nicht aufteilen, solange sie überschaubar sind und keine
-Lastprobleme haben. Die Netze müssen aufgeteilt werden, wenn Last, Sicherheit
-oder Topologie es erfordern. Beim Aufteilen ist auf möglichst kurze
-Kommunikationswege zu achten. Die maximale Kabellänge und die Begrenzung
+Man sollte Netze nicht aufteilen, solange sie Ã¼berschaubar sind und keine
+Lastprobleme haben. Die Netze mÃ¼ssen aufgeteilt werden, wenn Last, Sicherheit
+oder Topologie es erfordern. Beim Aufteilen ist auf mÃ¶glichst kurze
+Kommunikationswege zu achten. Die maximale KabellÃ¤nge und die Begrenzung
 der hintereinander schaltbarer Komponenten spielt eine Rolle (max. 4 Hubs
 hintereinander, max. 7 Bridges/Switches hintereinander).
 <P>
@@ -310,9 +310,9 @@ hintereinander, max. 7 Bridges/Switches hintereinander).
 <H3>Auswahl der Verbindungskomponenten</H3>
 Kabelarten:<BR>
 <UL>
- * Primärbereich: Glasfaserverbindungen<BR>
- * Sekundärbereich: Glasfaser- oder Twisted Pair-Verbindungen<BR>
- * Tertiärbereich: Twisted Pair-Verbindungen<BR>
+ * PrimÃ¤rbereich: Glasfaserverbindungen<BR>
+ * SekundÃ¤rbereich: Glasfaser- oder Twisted Pair-Verbindungen<BR>
+ * TertiÃ¤rbereich: Twisted Pair-Verbindungen<BR>
 </UL>
 <P>
 
@@ -336,17 +336,17 @@ Switches:<BR>
 <P>
 Router:<BR>
 <UL>
- + logische Trennung der Netze, getrennte Administration leichter möglich<BR>
- + Gesicherter übergang durch Paketfilterung<BR>
- - höherer Konfigurationsaufwand<BR>
+ + logische Trennung der Netze, getrennte Administration leichter mÃ¶glich<BR>
+ + Gesicherter Ã¼bergang durch Paketfilterung<BR>
+ - hÃ¶herer Konfigurationsaufwand<BR>
 </UL>
 <P>
 
 <H3>Vergabe von IP-Nummern</H3>
-Soll das Netz (evtl. später) an das Internet angeschlossen werden
-und die IP-Nummern nach aussen sichtbar sein? Dann müssen global
+Soll das Netz (evtl. spÃ¤ter) an das Internet angeschlossen werden
+und die IP-Nummern nach aussen sichtbar sein? Dann mÃ¼ssen global
 eindeutige IP-Nummern beim Internet-Provider angefordert werden.
-Ansonsten verwendet man IP-Nummern für ausschließlich interne Verwendung
+Ansonsten verwendet man IP-Nummern fÃ¼r ausschlieÃŸlich interne Verwendung
 (gem. RFC 1918):
 <PRE>
  10.0.0.0   -  10.255.255.255   (ein Class-A-Netz)
@@ -354,9 +354,9 @@ Ansonsten verwendet man IP-Nummern für ausschließlich interne Verwendung
 192.168.0.0 - 192.168.255.255   (256 Class-C-Netze)
 </PRE>
 Zum Anschluss dieser Netze an das Internet ist ein Router mit NAT und
-IP-Maskierung nötig. Die interne Adressenverteilung erfolgt in jedem Fall
+IP-Maskierung nÃ¶tig. Die interne Adressenverteilung erfolgt in jedem Fall
 bevorzugt per DHCP-Protokoll (siehe unten), da in diesem Fall alle Clients
-gleich konfiguriert werden können und nur soviel Adressen gebraucht werden wie
+gleich konfiguriert werden kÃ¶nnen und nur soviel Adressen gebraucht werden wie
 Rechner aktiv sind.
 <P>
 
@@ -368,7 +368,7 @@ durch den Provider - sofern die Wunschdomain noch frei ist.
 
 <H3>Vergabe von Rechnernamen</H3>
 Sei <TT>netzmafia.de</TT> der benutzte Domainname. Dann sind
-gängige Aliase:
+gÃ¤ngige Aliase:
 <PRE>
 gate.netzmafia.de
 mail.netzmafia.de
@@ -407,23 +407,23 @@ Die Rechnernamen werden von mindestens zwei Nameservern verwaltet  (Ausfallsiche
 
 Beispiel-Szenario:
 <UL>
-<LI> Die Firma Netzmafia, Hard- und Softwareentwicklungen, möchte
-Internet-Anschluß. Das Unternehmen sitzt in zwei Gebäuden:
+<LI> Die Firma Netzmafia, Hard- und Softwareentwicklungen, mÃ¶chte
+Internet-AnschluÃŸ. Das Unternehmen sitzt in zwei GebÃ¤uden:
   <UL>
-  <LI>Gebäude 1: Geschäftsführung, Vertrieb, Verwaltung, Personalbüro
-  <LI>Gebäude 2: Hardware-Entwicklung, Software-Entwicklung, Technik
+  <LI>GebÃ¤ude 1: GeschÃ¤ftsfÃ¼hrung, Vertrieb, Verwaltung, PersonalbÃ¼ro
+  <LI>GebÃ¤ude 2: Hardware-Entwicklung, Software-Entwicklung, Technik
   </UL>
-<LI> Alle Mitarbeiter sollen per E-Mail erreichbar sein und auf das WWW zugreifen können.
+<LI> Alle Mitarbeiter sollen per E-Mail erreichbar sein und auf das WWW zugreifen kÃ¶nnen.
 <LI> Die Firma betreibt einen WWW-Server, auf dem die Entwicklungsabteilungen
-und der Vertrieb Informationen zur Verfügung stellen.
-<LI> Die Entwicklungsabteilungen stellen Patches und Treiber per FTP zur Verfügung.
+und der Vertrieb Informationen zur VerfÃ¼gung stellen.
+<LI> Die Entwicklungsabteilungen stellen Patches und Treiber per FTP zur VerfÃ¼gung.
 <LI> Die Hardware-Entwicklungsabteilung experimentiert gelegentlich mit
-instabilen Netzwerkkomponenten, während die übrigen Abteilungen
-auf ein zuverlässiges Netz angewiesen sind.
-<LI> Von sämtlichen Rechnern sollen regelmässig Backups angefertigt werden.
+instabilen Netzwerkkomponenten, wÃ¤hrend die Ã¼brigen Abteilungen
+auf ein zuverlÃ¤ssiges Netz angewiesen sind.
+<LI> Von sÃ¤mtlichen Rechnern sollen regelmÃ¤ssig Backups angefertigt werden.
 </UL>
 <P>
-Lösung (e pluribus unum):
+LÃ¶sung (e pluribus unum):
 <UL>
 <LI> Reservierung des Domainnamens <TT>netzmafia.de</TT>
 <LI> Anforderung eines kleinen Netzes, z. B. eine Class-C-Netzes (254 Knoten)
@@ -435,119 +435,119 @@ oder eines Class-C-Subnetzes (126, 62, 30 Knoten)
      srv2.netzmafia.de      141.39.253.2
      srv3.netzmafia.de      141.39.253.3
 </PRE>
-Dazu kommen noch Alias-Einträge:
+Dazu kommen noch Alias-EintrÃ¤ge:
 <PRE>
      ns.netzmafia.de        gate.netzmafia.de
      mail.netzmafia.de      srv3.netzmafia.de
      www.netzmafia.de       srv3.netzmafia.de
      ftp.netzmafia.de       srv2.netzmafia.de
 </PRE>
-<LI>Die übrigen Rechner erhalten interne IP-Nummer und können nur
-über Proxies auf <TT>gate.netzmafia.de</TT> auf das Internet zugreifen.
+<LI>Die Ã¼brigen Rechner erhalten interne IP-Nummer und kÃ¶nnen nur
+Ã¼ber Proxies auf <TT>gate.netzmafia.de</TT> auf das Internet zugreifen.
 </UL>
 <P>
 <CENTER><img src="images/netzplanung.png"></CENTER>
 <P>
-Eingehende Mail gelangt über einen Mail-Proxy an den Mailserver. Von dort
+Eingehende Mail gelangt Ã¼ber einen Mail-Proxy an den Mailserver. Von dort
 aus erfolgt die Verteilung per IMAP oder POP3. Ausgehende Mail wird direkt
-über den Mail-Proxy ins Internet verschickt.
-Der primäre Nameserver steht in Gebäude 2, der Secondary NS beim Provider.
-In Gebäude 2 ist zur Entlastung der Standleitung jeweils ein DNS- und WWW-Cache
+Ã¼ber den Mail-Proxy ins Internet verschickt.
+Der primÃ¤re Nameserver steht in GebÃ¤ude 2, der Secondary NS beim Provider.
+In GebÃ¤ude 2 ist zur Entlastung der Standleitung jeweils ein DNS- und WWW-Cache
 installiert. Das Testnetz der Hardwareabteilung ist abgetrennt, aber bei Bedarf
 manuell zuschaltbar.
 <BR CLEAR=ALL>
 <P>
 An diesem Beispiel lassen sich einige Aufgaben des Netzwerk-Managements feststellen:
 <UL>
-<LI>Planung der Protokoll-Konfiguration (Bezug der IP-Adresse über DHCP, Festlegung des Gateways und DNS-Servers)
-<LI>Bei Windows-basierten Systemen muß noch für jeden Client festgelegt werden, an welchem Fileserver er sich anmeldet und zu welcher Arbeitsgruppe er gehört.
-<LI>Der Anschluß von Druckern und anderen Peripheriegeräten wurde im Beispiel nicht berücksichtigt. Auch hier muß festgelegt werden, unter welchem Pfad die Drucker angesprochen werden können.
-<LI>ähnlich dem Internet Domain Name System (DNS) sind auch andere hierarchische Namensräume verfügbar, z. B. die Directory Services von Novell (NDS) oder die Directory Services und Domänen von Windows 2000/XP.
-<LI>Nach der Grundinstallation ist dann noch die Vergabe von Benutzer- und Zugriffsrechten nötig. Insbesondere die Zugriffsrechte auf bestimmte Geräte sind oft Restriktionen im Dienste des Benutzers. Man denke z. B. an einen freigegeben Drucker, der im Nachbargebäude steht. Die Benutzer würden in der Regel vergeblich am lokalen Drucker nach ihren  Ausdrucken suchen und sich beschweren.
-<LI>Auf den Servern muß ggf. Backup-Software installiert und getestet werden. Administrative Clients werden mit Software zur Netzwerküberwachung eingerichtet.
+<LI>Planung der Protokoll-Konfiguration (Bezug der IP-Adresse Ã¼ber DHCP, Festlegung des Gateways und DNS-Servers)
+<LI>Bei Windows-basierten Systemen muÃŸ noch fÃ¼r jeden Client festgelegt werden, an welchem Fileserver er sich anmeldet und zu welcher Arbeitsgruppe er gehÃ¶rt.
+<LI>Der AnschluÃŸ von Druckern und anderen PeripheriegerÃ¤ten wurde im Beispiel nicht berÃ¼cksichtigt. Auch hier muÃŸ festgelegt werden, unter welchem Pfad die Drucker angesprochen werden kÃ¶nnen.
+<LI>Ã¤hnlich dem Internet Domain Name System (DNS) sind auch andere hierarchische NamensrÃ¤ume verfÃ¼gbar, z. B. die Directory Services von Novell (NDS) oder die Directory Services und DomÃ¤nen von Windows 2000/XP.
+<LI>Nach der Grundinstallation ist dann noch die Vergabe von Benutzer- und Zugriffsrechten nÃ¶tig. Insbesondere die Zugriffsrechte auf bestimmte GerÃ¤te sind oft Restriktionen im Dienste des Benutzers. Man denke z. B. an einen freigegeben Drucker, der im NachbargebÃ¤ude steht. Die Benutzer wÃ¼rden in der Regel vergeblich am lokalen Drucker nach ihren  Ausdrucken suchen und sich beschweren.
+<LI>Auf den Servern muÃŸ ggf. Backup-Software installiert und getestet werden. Administrative Clients werden mit Software zur NetzwerkÃ¼berwachung eingerichtet.
 </UL>
 <P>
-Zusammen mit der Planung wird das Netz dokumentiert. Neben Angaben über die Topologie sind auch alle Kabelwege, Standorte von Netzkomponenten (Hub, Switches, Router, usw.),  Server und Peripheriegeräten zu dokumentieren. übersichtsgrafiken lassen sich recht schnell mit speziellen Tools wie Visio (Microsoft) oder Acrix (Autodesk) erstellen, für die Grafikbibliotheken mit speziellen Symbolen für die Netzkomponenten erhältlich sind. Unter UNIX gibt es ein Tool namens 'tkinetd', das die Rechner im Netz sucht und automatisch eine Grafik erzeugt. Die Standorte der Komponenten und Dosen trägt man am besten auf der Kopie des Bauplans ein.
+Zusammen mit der Planung wird das Netz dokumentiert. Neben Angaben Ã¼ber die Topologie sind auch alle Kabelwege, Standorte von Netzkomponenten (Hub, Switches, Router, usw.),  Server und PeripheriegerÃ¤ten zu dokumentieren. Ã¼bersichtsgrafiken lassen sich recht schnell mit speziellen Tools wie Visio (Microsoft) oder Acrix (Autodesk) erstellen, fÃ¼r die Grafikbibliotheken mit speziellen Symbolen fÃ¼r die Netzkomponenten erhÃ¤ltlich sind. Unter UNIX gibt es ein Tool namens 'tkinetd', das die Rechner im Netz sucht und automatisch eine Grafik erzeugt. Die Standorte der Komponenten und Dosen trÃ¤gt man am besten auf der Kopie des Bauplans ein.
 <P>
 
 <h3>Server- und Netzwerkschrank</h3>
 Auch bei kleinen Netzen sollte ein eigener Serverraum eingeplant werden. Das muss nicht
 gleich ein eigener Raum sein, sondern es darf sich auch um eine Ecke in einem
-Abstellraum handeln - sofern für genügend Belüftung für die Wärmeabfuhr gesorgt ist.
-Schon wegen der Geräuschentwicklung von Servern ist eine Absonderung notwendig
-(ich kenne Systeme, deren Lüftergeräusch es bestens mit einem Staubsauger
+Abstellraum handeln - sofern fÃ¼r genÃ¼gend BelÃ¼ftung fÃ¼r die WÃ¤rmeabfuhr gesorgt ist.
+Schon wegen der GerÃ¤uschentwicklung von Servern ist eine Absonderung notwendig
+(ich kenne Systeme, deren LÃ¼ftergerÃ¤usch es bestens mit einem Staubsauger
 aufnehmen kann). Hier findet auch eine eventuell installierte unterbrechungsfreie
 Stromversorgung (USV) Platz.
 <p>
-Der Serverraum sollte so plaziert sein, daß bei Netzerweiterungen die Verkabelung
+Der Serverraum sollte so plaziert sein, daÃŸ bei Netzerweiterungen die Verkabelung
 unproblematisch bleibt. Vom Serverraum zu den Verteilern (Switches) sollte
-aus Gründen der zukunftssicheren Verkabelung redundant ausgelegtes Cat-5-Kabel
-(optional Glasfaserkabel) verlegt werden. Das folgende Bild zeigt den Schnappschuß
-eines typischen Schaltschrank, der mit Switches bestückt ist.  Ein KVM-Switch
-(<b>K</b>eyboard, <b>V</b>ideo, <b>M</b>ouse) erlaubt es, die Server über
+aus GrÃ¼nden der zukunftssicheren Verkabelung redundant ausgelegtes Cat-5-Kabel
+(optional Glasfaserkabel) verlegt werden. Das folgende Bild zeigt den SchnappschuÃŸ
+eines typischen Schaltschrank, der mit Switches bestÃ¼ckt ist.  Ein KVM-Switch
+(<b>K</b>eyboard, <b>V</b>ideo, <b>M</b>ouse) erlaubt es, die Server Ã¼ber
 einen einzigen Monitor mit Tastatur und Maus zu bedienen. Viele KVM-Switches lassen sich
 per Netzwerkkabel expandieren, der Bedienmonitor kann dann sogar im Nebenzimmer stehen.
 <P>
-<CENTER><img src="images/Switch-Verkabelung.jpg"></CENTER>
+<CENTER><img src="images/Switch-Verkabelung.png"></CENTER>
 <P>
 Spannt man Kabel kreuz und quer durch einen Serverschrank, kann dies nicht nur schnell 
-unübersichtlich werden, sondern sogar die Klimatisierung der Server und Switche 
-beeinträchtigen. Denn effiziente Kühlkonzepte setzen eine strikte Trennung von kalten 
-und warmen Luftströmen voraus. Die Luftströme können senkrecht oder waagrecht durch 
-das Rack geleitet werden, je nach Art des Belüftungssystems. Transversale Kabelstränge 
-können jedoch Luftverwirbelungen verursachen und damit zu einer Vermischung von 
-kalter und warmer Luft führen.
+unÃ¼bersichtlich werden, sondern sogar die Klimatisierung der Server und Switche 
+beeintrÃ¤chtigen. Denn effiziente KÃ¼hlkonzepte setzen eine strikte Trennung von kalten 
+und warmen LuftstrÃ¶men voraus. Die LuftstrÃ¶me kÃ¶nnen senkrecht oder waagrecht durch 
+das Rack geleitet werden, je nach Art des BelÃ¼ftungssystems. Transversale KabelstrÃ¤nge 
+kÃ¶nnen jedoch Luftverwirbelungen verursachen und damit zu einer Vermischung von 
+kalter und warmer Luft fÃ¼hren.
 <p>
 Den Themen Verkabelung und Stromverteilung schenkt man meist weniger Aufmerksamkeit. 
 Dabei kann auch in diesem Bereich die Auswahl geeigneter Komponenten einen wichtigen 
 Beitrag zum ausfallsicheren Betrieb der IT-Anlagen leisten. Wie so oft ist auch bei 
-der Energieversorgung von Serverracks das Gesamtsystem nur so sicher wie das schwächste 
+der Energieversorgung von Serverracks das Gesamtsystem nur so sicher wie das schwÃ¤chste 
 Glied. Der Administrator vor Ort sollten daher auch vermeintlich unscheinbaren Dingen
 wie Steckdosen und Kabeln seine Aufmerksamkeit schenken.
 <P>
 Achten Sie auch auf die Wahl der geeigneten Steckdosenleiste. Obwohl der Schukostecker 
 auch in professionellen IT-Umgebungen sehr beliebt ist, kann es unter Sicherheitsaspekten 
-sinnvoll sein, sich für eine andere Steckverbindung zu entscheiden, beispielsweise C13
-(sog. Eurostecker). Schukostecker sind nämlich nicht phasenverdrehsicher. Falsch 
-gesteckte Verbindungen können sich speziell in einem großen Rechenzentrum mit vielen 
+sinnvoll sein, sich fÃ¼r eine andere Steckverbindung zu entscheiden, beispielsweise C13
+(sog. Eurostecker). Schukostecker sind nÃ¤mlich nicht phasenverdrehsicher. Falsch 
+gesteckte Verbindungen kÃ¶nnen sich speziell in einem groÃŸen Rechenzentrum mit vielen 
 hundert Steckern schnell zu einem echten Problem ausweiten. Ein Rasterschutz wie im Bild 
-kann dabei zusätzliche Sicherheit gegen die Unterbrechung durch lockere Kabel bieten. 
+kann dabei zusÃ¤tzliche Sicherheit gegen die Unterbrechung durch lockere Kabel bieten. 
 <P>
-<CENTER><img src="images/steckdosen.jpg"><br>
-<small>Ein Rasterschutz oder ein Bügel stellt sicher, 
+<CENTER><img src="images/steckdosen.png"><br>
+<small>Ein Rasterschutz oder ein BÃ¼gel stellt sicher, 
 dass sich ein Stromkabel nicht lockert.</small></CENTER>
 <P>
 Auch die richtige Dimensionierung der Steckerleisten ist von Bedeutung. Auch wenn 
 ein neu aufgestelltes Serverrack nicht von Anfang an voll mit Servern besetzt ist: 
-Den Platz für die Steckdosenleisten, die im Endausbau benötigt werden, sollte man 
-von vornherein mit einplanen. Nur so ist gewährleistet, dass die Sicherungen 
-ausreichend ausgelegt werden. Es versteht sich von selbst, das Qualitäts-Steckdosen
-für den 19-Zoll-Einbau verwendet werden. Mehrfachsteckdosen aus dem Baumarkt
+Den Platz fÃ¼r die Steckdosenleisten, die im Endausbau benÃ¶tigt werden, sollte man 
+von vornherein mit einplanen. Nur so ist gewÃ¤hrleistet, dass die Sicherungen 
+ausreichend ausgelegt werden. Es versteht sich von selbst, das QualitÃ¤ts-Steckdosen
+fÃ¼r den 19-Zoll-Einbau verwendet werden. Mehrfachsteckdosen aus dem Baumarkt
 haben im Netzwerkschrank nichts verloren.
 <p>
-Aber auch der Platzbedarf für die Steckdosenleisten spielt eine Rolle. Ein Rack, 
-das man im Lauf der Zeit unkontrolliert überall dort mit Steckdosenleisten und 
-Kabeln zubaut, "wo halt noch Platz ist", wird zunehmend luftundurchlässig. Einer 
-effizienten Kühlung der Server ist das nicht zuträglich.
+Aber auch der Platzbedarf fÃ¼r die Steckdosenleisten spielt eine Rolle. Ein Rack, 
+das man im Lauf der Zeit unkontrolliert Ã¼berall dort mit Steckdosenleisten und 
+Kabeln zubaut, "wo halt noch Platz ist", wird zunehmend luftundurchlÃ¤ssig. Einer 
+effizienten KÃ¼hlung der Server ist das nicht zutrÃ¤glich.
 <P>
-<CENTER><img src="images/dosenleiste.jpg"></CENTER>
+<CENTER><img src="images/dosenleiste.png"></CENTER>
 <P>
-Kann der Administrator das Rack nicht ständig direkt im Auge haben kann, empfiehlt 
+Kann der Administrator das Rack nicht stÃ¤ndig direkt im Auge haben kann, empfiehlt 
 sich ein professionelles Rack-Management-System (RMS). Solche Systeme messen vor 
-Ort etliche physikalische Größen wie Temperatur, Strombelastung oder Portbelastung 
-und übertragen sie an einen zentralen Rechner, mit dessen Hilfe sie von einem 
-einzigen Arbeitsplatz aus überwacht werden können. Auch eine SMS-Benachrichtigung 
-an den Administrator bei Erreichen kritischer Schwellenwerte ist möglich.
+Ort etliche physikalische GrÃ¶ÃŸen wie Temperatur, Strombelastung oder Portbelastung 
+und Ã¼bertragen sie an einen zentralen Rechner, mit dessen Hilfe sie von einem 
+einzigen Arbeitsplatz aus Ã¼berwacht werden kÃ¶nnen. Auch eine SMS-Benachrichtigung 
+an den Administrator bei Erreichen kritischer Schwellenwerte ist mÃ¶glich.
 <p>
 Die Kommunikation zwischen Rack-Management-System und Administrator muss aber keine 
-Einbahnstraße bleiben. Mit entsprechenden Steckdose, die per Ethernet ansprechbar
-sind, können Systeme manuell oder scriptgesteuert an- oder abgeschaltet werden. 
+EinbahnstraÃŸe bleiben. Mit entsprechenden Steckdose, die per Ethernet ansprechbar
+sind, kÃ¶nnen Systeme manuell oder scriptgesteuert an- oder abgeschaltet werden. 
 <p>
-Bei der Planung der Rackbestückung sollten die Aspekte Strom- und Datenverkabelung 
+Bei der Planung der RackbestÃ¼ckung sollten die Aspekte Strom- und Datenverkabelung 
 stets im Zusammenhang gesehen werden. So haben Kupfer- und Glasfaserkabel 
-unterschiedliche Biegeradien. Es muss also auch innerhalb des Racks stets genügend 
+unterschiedliche Biegeradien. Es muss also auch innerhalb des Racks stets genÃ¼gend 
 Platz bleiben, um ein Abknicken von Kabeln zu vermeiden. Bei Patchfeldern sollte 
-genügend Platz für das Hantieren mit den Steckern und für die Restkabellängen der 
+genÃ¼gend Platz fÃ¼r das Hantieren mit den Steckern und fÃ¼r die RestkabellÃ¤ngen der 
 Patchkabel vorgesehen werden. Zu enge Portbelegungen erschweren das Rangieren.
 <P>
 
@@ -556,98 +556,98 @@ Patchkabel vorgesehen werden. Zu enge Portbelegungen erschweren das Rangieren.
 
 <A NAME="t.5"></A>
 <H2>Netz-Dokumentation</H2>
-Bei vielen Administratoren gehört die Dokumentation des Netzwerkes
-zu den "unangenehmen" und vernachlässigten Aufgaben. Das
-Verkabelungspläne und Konfigurations-Beschreibungen sehr wichtig
-sind fällt den meisten erst dann auf, wenn die bestehende Leitungsführung
-verändert werden soll oder ein Fehler auftritt. Ohne ausreichende
+Bei vielen Administratoren gehÃ¶rt die Dokumentation des Netzwerkes
+zu den "unangenehmen" und vernachlÃ¤ssigten Aufgaben. Das
+VerkabelungsplÃ¤ne und Konfigurations-Beschreibungen sehr wichtig
+sind fÃ¤llt den meisten erst dann auf, wenn die bestehende LeitungsfÃ¼hrung
+verÃ¤ndert werden soll oder ein Fehler auftritt. Ohne ausreichende
 Dokumentation wird die Erweiterung und Fehlersuche zu einer sehr
 kostenintensiven und langwierigen Angelegenheit. Aber die Bedeutung einer
-kompletten und aktuellen Dokumentation für die schnelle Wiederherstellung des lokalen
-Netzes nach einem Unglück kann nicht hoch genug bewertet werden.Sie ermöglicht
-zudem den täglichen Überblick und bietet Hilfen bei der Fehlersuche.
+kompletten und aktuellen Dokumentation fÃ¼r die schnelle Wiederherstellung des lokalen
+Netzes nach einem UnglÃ¼ck kann nicht hoch genug bewertet werden.Sie ermÃ¶glicht
+zudem den tÃ¤glichen Ãœberblick und bietet Hilfen bei der Fehlersuche.
 <P>
-Zusammen mit der Planung wird das Netz dokumentiert. Neben Angaben über die
+Zusammen mit der Planung wird das Netz dokumentiert. Neben Angaben Ã¼ber die
 Topologie sind auch alle Kabelwege, Standorte von Netzkomponenten (Hub, Switches, Router,
-usw.),  Server und Peripheriegeräten zu dokumentieren.
-Die Praxis zeigt leider, daß die Dokumentation bei einer Neuistallation grade noch eben so
-klappt, nachträgliche Änderungen werden aber meist nicht mehr dokumentiert.
-Für kleine Netze genügt ein Gebäude- oder Raumplan, in den mit
+usw.),  Server und PeripheriegerÃ¤ten zu dokumentieren.
+Die Praxis zeigt leider, daÃŸ die Dokumentation bei einer Neuistallation grade noch eben so
+klappt, nachtrÃ¤gliche Ã„nderungen werden aber meist nicht mehr dokumentiert.
+FÃ¼r kleine Netze genÃ¼gt ein GebÃ¤ude- oder Raumplan, in den mit
 Bleistift und Lineal die Datenleitungen eingezeichnet werden.
-Dokumentiert werden Kabelführungen, Lage der Anschlußdosen, Standort
+Dokumentiert werden KabelfÃ¼hrungen, Lage der AnschluÃŸdosen, Standort
 der Stationen und Komponenten (Hubs, Switches, usw.).
-Für jedes eingezeichnete Element sollte eine sinnvolle Kurzbezeichnung
+FÃ¼r jedes eingezeichnete Element sollte eine sinnvolle Kurzbezeichnung
 vergeben werden, die die eindeutige Zuordnung erlaubt.
-Die Art der Bezeichnung sollte Raum für spätere Erweiterungen bieten.
-Soll ein bestehendes Netz in naher Zukunft in größerem Umfang erweitert
+Die Art der Bezeichnung sollte Raum fÃ¼r spÃ¤tere Erweiterungen bieten.
+Soll ein bestehendes Netz in naher Zukunft in grÃ¶ÃŸerem Umfang erweitert
 werden, dann sollte der Lageplan mit Hilfe eines einfachen Zeichen-Programmes
-erstellt werden. Diese Lösung benötigt zunächst mehr Zeit als das
-einfache Einzeichnen in den Gebäudeplan, ist aber durch die vielfältigen
-Editiermöglichkeiten flexibler. Übersichtsgrafiken lassen
+erstellt werden. Diese LÃ¶sung benÃ¶tigt zunÃ¤chst mehr Zeit als das
+einfache Einzeichnen in den GebÃ¤udeplan, ist aber durch die vielfÃ¤ltigen
+EditiermÃ¶glichkeiten flexibler. Ãœbersichtsgrafiken lassen
 sich recht schnell mit speziellen Tools wie Visio (Microsoft) oder Acrix (Autodesk)
-erstellen, für die Grafikbibliotheken mit speziellen Symbolen für die
-Netzkomponenten erhältlich sind. Unter UNIX gibt es ein Tool namen 'tkinetd', das
+erstellen, fÃ¼r die Grafikbibliotheken mit speziellen Symbolen fÃ¼r die
+Netzkomponenten erhÃ¤ltlich sind. Unter UNIX gibt es ein Tool namen 'tkinetd', das
 die Rechner im Netz sucht und automatisch eine Grafik erzeugt.
 <P>
-Die Kurzbezeichnungen der Elemente in den oben genannten Netzwerkplänen
-sind natürlich nur sinnvoll, wenn sie sich auf den entsprechenden Geräten
-und Anschlußpunkten wiederfinden. Dies wird über selbstklebene Etiketten
-erreicht. Alle Dosen, Hubs, Switches, Router und andere Geräte erhalten
+Die Kurzbezeichnungen der Elemente in den oben genannten NetzwerkplÃ¤nen
+sind natÃ¼rlich nur sinnvoll, wenn sie sich auf den entsprechenden GerÃ¤ten
+und AnschluÃŸpunkten wiederfinden. Dies wird Ã¼ber selbstklebene Etiketten
+erreicht. Alle Dosen, Hubs, Switches, Router und andere GerÃ¤te erhalten
 einen solchen Aufkleber. An den Stationen sollte das Etikett neben der
 Kurzbezeichnung auch den Netzwerk-Namen des Rechners, die Ethernet-(MAC-Adresse)
-und gegebenenfalls die IP-Adresse aufführen. Für Kabel
-benötigt man mindestens zwei Beschriftungs-Fahnen: Eine am Anfang
+und gegebenenfalls die IP-Adresse auffÃ¼hren. FÃ¼r Kabel
+benÃ¶tigt man mindestens zwei Beschriftungs-Fahnen: Eine am Anfang
 und eine am Ende der Leitung.
 <UL>
-<LI>Die Standorte der Komponenten und Dosen trägt man am besten auf der Kopie des
+<LI>Die Standorte der Komponenten und Dosen trÃ¤gt man am besten auf der Kopie des
 Bauplans ein. Zeichnen Sie auch den Kabelzug ein.
-<LI>Erstellen sie eine schematische Zeichnung über alle Kabelsegmente,
-und zeichnen Sie alle Verbindungspunkte, Verbindungsausrüstungen und
+<LI>Erstellen sie eine schematische Zeichnung Ã¼ber alle Kabelsegmente,
+und zeichnen Sie alle Verbindungspunkte, VerbindungsausrÃ¼stungen und
 angeschlossenen Einheiten ein.
-<LI>Entwickeln Sie mit Hilfe dieser Zeichnung ein logisches System für die
-Benennung (Ziffern, Buchstaben) der Kabelsegmente und Ausrüstungen. Denken Sie
-daran, daß das Netz in Zukunft expandieren kann. Tragen Sie die Namen in die
+<LI>Entwickeln Sie mit Hilfe dieser Zeichnung ein logisches System fÃ¼r die
+Benennung (Ziffern, Buchstaben) der Kabelsegmente und AusrÃ¼stungen. Denken Sie
+daran, daÃŸ das Netz in Zukunft expandieren kann. Tragen Sie die Namen in die
 Zeichnungen ein.
-<LI>Erstellen Sie eine Liste über alle Kabelsegmente. Notieren Sie für
-jedes Segment dessen Name, Länge und Kabeltyp.
+<LI>Erstellen Sie eine Liste Ã¼ber alle Kabelsegmente. Notieren Sie fÃ¼r
+jedes Segment dessen Name, LÃ¤nge und Kabeltyp.
 <LI>Managebare Komponenten des Netzes (Switches, Router) werden oft wie Stecker und Kabel
 angesehen und vor dem Austausch einer Komponente nicht daran gedacht, die Konfiguration
 zu speichern oder zu dokumentieren.
 <LI> Bei Patch-Feldern kann abgelesen werden, welche logischen
-Zuordnungen durch Umstecken der Patch-Kabel möglich sind.
-Es ist daher sinnvoll, eine Kopie des Planes in der Nähe jeder "Patch-Einheit"
+Zuordnungen durch Umstecken der Patch-Kabel mÃ¶glich sind.
+Es ist daher sinnvoll, eine Kopie des Planes in der NÃ¤he jeder "Patch-Einheit"
 aufzubewahren.
 </UL>
 <P>
-<img src="images/Kabel-Markierung.jpg" ALIGN=LEFT HSPACE=20>
-Es versteht sich von selbst, daß jedes Kabel eindeutig identifizierbar sein
-muß. Es gibt im Handel genügend Systeme zur Kabelidentifizierung, z. B.
-kleine Plastikringe mit eingeprägten Nummern, die sich um das Kabel legen und
-verschließen lassen oder Kabelbinder mit Beschriftungsfahne. Damit ist eine
-Numerierung mit beliebig vielen Stellen möglich. Man kann aber auch
-Schlüsselanhänger aus Plastik nehmen, das Schildchen beschriften und den
-Anhänger mittels eines Kabelbinders am Kabel befestigen. Notfalls kann das Kabel
-auch mit einem wasserfesten Filzstift markiert werden. Die Kabelsegmente müssen
-an mindestens zwei Punkten (nämlich an jedem Ende) gekennzeichnet werden. Das
-Bild links zeigt einen Ausschnitt, bei dem man die weißen Markierungen
+<img src="images/Kabel-Markierung.png" ALIGN=LEFT HSPACE=20>
+Es versteht sich von selbst, daÃŸ jedes Kabel eindeutig identifizierbar sein
+muÃŸ. Es gibt im Handel genÃ¼gend Systeme zur Kabelidentifizierung, z. B.
+kleine Plastikringe mit eingeprÃ¤gten Nummern, die sich um das Kabel legen und
+verschlieÃŸen lassen oder Kabelbinder mit Beschriftungsfahne. Damit ist eine
+Numerierung mit beliebig vielen Stellen mÃ¶glich. Man kann aber auch
+SchlÃ¼sselanhÃ¤nger aus Plastik nehmen, das Schildchen beschriften und den
+AnhÃ¤nger mittels eines Kabelbinders am Kabel befestigen. Notfalls kann das Kabel
+auch mit einem wasserfesten Filzstift markiert werden. Die Kabelsegmente mÃ¼ssen
+an mindestens zwei Punkten (nÃ¤mlich an jedem Ende) gekennzeichnet werden. Das
+Bild links zeigt einen Ausschnitt, bei dem man die weiÃŸen Markierungen
 gut erkennen kann.
 <P>
-Genauso wie die Kabel müssen
-auch alle Ports von Patchfeldern beschriftet werden. Wenn sich Portzuordnungen häufig
-ändern, kann man die Ports auch durchnumerieren und in einer Liste die Zuordnung
-handschriftlich festhalten. Die Liste kommt in eine Prospekthülle, die im oder am
+Genauso wie die Kabel mÃ¼ssen
+auch alle Ports von Patchfeldern beschriftet werden. Wenn sich Portzuordnungen hÃ¤ufig
+Ã¤ndern, kann man die Ports auch durchnumerieren und in einer Liste die Zuordnung
+handschriftlich festhalten. Die Liste kommt in eine ProspekthÃ¼lle, die im oder am
 Netzwerkschrank befestigt wird. Wenn man dann noch einen Stift an einer Schnur
-hängt, gibt es auch keine Ausreden mehr für fehlende Einträge.
+hÃ¤ngt, gibt es auch keine Ausreden mehr fÃ¼r fehlende EintrÃ¤ge.
 <BR CLEAR=ALL><P>
-Zusätzlich zu Plänen und Beschriftungen sind, je nach Netzgröße,
-Aufstellungen in tabellarischer Form nützlich:
+ZusÃ¤tzlich zu PlÃ¤nen und Beschriftungen sind, je nach NetzgrÃ¶ÃŸe,
+Aufstellungen in tabellarischer Form nÃ¼tzlich:
 <UL>
 <LI> Kabel-Tabelle: Hier wird jedes verlegte Kabel mit seiner Kurzbezeichnung
-und der aktuellen (gemessenen!) Länge aufgeführt. Es hat sich in der Praxis
-bewährt, die Längen bei Bus-Netzen von Zeit zu Zeit nachzumessen. So
-werden Leitungen entdeckt, deren Verlängerung nicht dokumentiert wurde,
+und der aktuellen (gemessenen!) LÃ¤nge aufgefÃ¼hrt. Es hat sich in der Praxis
+bewÃ¤hrt, die LÃ¤ngen bei Bus-Netzen von Zeit zu Zeit nachzumessen. So
+werden Leitungen entdeckt, deren VerlÃ¤ngerung nicht dokumentiert wurde,
 zum Beispiel weil sie nicht durch den Administrator, sondern durch die
-Anwender ausgeführt wurde.
+Anwender ausgefÃ¼hrt wurde.
 <LI> Patch-Tabelle: Diese Tabelle wird neben dem Patch-Feld ausgelegt
 und dokumentiert die aktuelle Zuordnung der einzelnen Leitungen.
 <LI> Stations-Konfiguration: In dieser Aufstellung wird die aktuelle
@@ -656,62 +656,62 @@ der Rechner im Netz kann sie entweder per Hand (zum Beispiel auf
 Kartei-Karten) oder mit einem Datenbank-Programm erzeugt werden.
 </UL>
 Die Dokumentation des lokalen Netzes legt am besten in Form eines Betriebshandbuches an.
-Das Betriebshandbuch muß in mehreren Exemplaren vorhanden und dem Systemverwalter,
-Superusern und dem Benutzerservice sowie deren nächsten Vorgesetzten zugänglich
+Das Betriebshandbuch muÃŸ in mehreren Exemplaren vorhanden und dem Systemverwalter,
+Superusern und dem Benutzerservice sowie deren nÃ¤chsten Vorgesetzten zugÃ¤nglich
 sein. Das Betriebshandbuch sollte enthalten:
 <UL>
 <LI>Die LAN-Policy<BR>
-Ein kurzer Abriß der LAN-Politik des Unternehmens kann Informationen über
-Benutzergruppen, Paßwortpolitik und Möglichkeiten des externen Zugangs
-(remote login) enthalten. Das Kapitel kann außerdem Regelungen für die
-Ausleihe von PC-Ausrüstung nach Hause und Maßnahmen gegen PC-Viren, Hacker
+Ein kurzer AbriÃŸ der LAN-Politik des Unternehmens kann Informationen Ã¼ber
+Benutzergruppen, PaÃŸwortpolitik und MÃ¶glichkeiten des externen Zugangs
+(remote login) enthalten. Das Kapitel kann auÃŸerdem Regelungen fÃ¼r die
+Ausleihe von PC-AusrÃ¼stung nach Hause und MaÃŸnahmen gegen PC-Viren, Hacker
 und das Kopieren von Software festlegen.
-<LI>Schlüsselpersonen<BR>
-Der Systemverwalter ist die absolute Schlüsselperson des lokalen Netzes. Außer
+<LI>SchlÃ¼sselpersonen<BR>
+Der Systemverwalter ist die absolute SchlÃ¼sselperson des lokalen Netzes. AuÃŸer
 diesem sind etwaige Benutzerservice-Mitarbeiter und Superuser wichtige Personen.
-<LI>Arbeitsgänge für Benutzerservice und -support<BR>
+<LI>ArbeitsgÃ¤nge fÃ¼r Benutzerservice und -support<BR>
 Dieser Abschnitt beschreibt die Vorgehensweise beim Auftreten von Fehlern, die Aufgaben
-des Benutzerservices und Richtlinien für den Einkauf von Hardware und Software.
+des Benutzerservices und Richtlinien fÃ¼r den Einkauf von Hardware und Software.
 <LI>Verwaltung von Hardware und Software<BR>
-Ein Hauptziel des Betriebshandbuches ist es, sicherzustellen, daß alle
-Standardkonfigurationsparameter dokumentiert sind, damit es möglich ist, Fehler
-und Unzweckmäßigkeiten zu berichtigen. Dieses Register ist auch für
-die Steuerung des Unternehmensbestandes an PCs und Zubehör sowie den Bestand an
+Ein Hauptziel des Betriebshandbuches ist es, sicherzustellen, daÃŸ alle
+Standardkonfigurationsparameter dokumentiert sind, damit es mÃ¶glich ist, Fehler
+und UnzweckmÃ¤ÃŸigkeiten zu berichtigen. Dieses Register ist auch fÃ¼r
+die Steuerung des Unternehmensbestandes an PCs und ZubehÃ¶r sowie den Bestand an
 in Form von Originaldisketten oder -CDs von Bedeutung.
-<LI>Tägliche und wöchentliche Routinen des lokalen Netzes<BR>
+<LI>TÃ¤gliche und wÃ¶chentliche Routinen des lokalen Netzes<BR>
 Das Betriebshandbuch kann Schulungs- und Anleitungsressourcen einsparen, indem es der
 Ort ist, wo alle administrativen Aufgaben beschrieben sind. Die wichtigsten
-Tätigkeiten sind das routinemäßige Backup und Restore, die Angaben der
-Verantwortlichen, Regeln für das Einrichten neuer Benutzer und die Erweiterung von
-Berechtigungen Sowie andere regelmäßige Tätigkeiten.
+TÃ¤tigkeiten sind das routinemÃ¤ÃŸige Backup und Restore, die Angaben der
+Verantwortlichen, Regeln fÃ¼r das Einrichten neuer Benutzer und die Erweiterung von
+Berechtigungen Sowie andere regelmÃ¤ÃŸige TÃ¤tigkeiten.
 <LI>Beschreibung der physischen Struktur des lokalen Netzes<BR>
-Die Dokumentation der Konfiguration von Servern und anderer zentraler Ausrüstung
-ist obligatorisch. Es ist besonders wichtig, daß Platten- und Volumenstrukturen
-des Fileservers sorgfältig dokumentiert werden, da diese Informationen entscheidend
-für ein problemloses Restore von Backups nach einem Systemausfall sind. Außer
-Fileservern umfaßt die zentrale Ausrüstung auch eventuell vorhandene
-Kommunikationsserver, E-Mail-Server, Testmaschinen und Netzdrucker.Die Kabelführung
-im lokalen Netz einschließlich der LAN-Struktur in Hauptzügen und eine etwaige
-Segmentierung muß ebenfalls gründlich dokumentiert sein.
+Die Dokumentation der Konfiguration von Servern und anderer zentraler AusrÃ¼stung
+ist obligatorisch. Es ist besonders wichtig, daÃŸ Platten- und Volumenstrukturen
+des Fileservers sorgfÃ¤ltig dokumentiert werden, da diese Informationen entscheidend
+fÃ¼r ein problemloses Restore von Backups nach einem Systemausfall sind. AuÃŸer
+Fileservern umfaÃŸt die zentrale AusrÃ¼stung auch eventuell vorhandene
+Kommunikationsserver, E-Mail-Server, Testmaschinen und Netzdrucker.Die KabelfÃ¼hrung
+im lokalen Netz einschlieÃŸlich der LAN-Struktur in HauptzÃ¼gen und eine etwaige
+Segmentierung muÃŸ ebenfalls grÃ¼ndlich dokumentiert sein.
 <LI>Beschreibung der logischen Struktur des lokalen Netzes<BR>
-Die Dokumentation der logischen Struktur des lokalen Netzes umfaßt die
+Die Dokumentation der logischen Struktur des lokalen Netzes umfaÃŸt die
 Zusammensetzung der Benutzergruppen, die Platten-, Verzeichnis- und Dateistruktur im Netz.
 <LI>Software des lokalen Netzes<BR>
-Für Programme auf dem Server kann es eine Hilfe sein, genau dokumentiert zu haben,
-was konfiguriert werden muß, wenn ein neuer Benutzer Zugang dazu haben soll. In
-vielen Fällen müssen außerdem Drucker, die Lage von Dateien und anderes
+FÃ¼r Programme auf dem Server kann es eine Hilfe sein, genau dokumentiert zu haben,
+was konfiguriert werden muÃŸ, wenn ein neuer Benutzer Zugang dazu haben soll. In
+vielen FÃ¤llen mÃ¼ssen auÃŸerdem Drucker, die Lage von Dateien und anderes
 konfiguriert werden. Es kann Zeit gespart werden, wenn diese Dinge in Form von Checklisten
 beschrieben sind. Gleichzeitig erhalten die verschiedenen Benutzer ein einheitliches Setup.
 </UL>
 <P>
-Scheinbar unwichtig ist die Dokumentation von aufgetretenen Fehlern und die Maßnahmen,
+Scheinbar unwichtig ist die Dokumentation von aufgetretenen Fehlern und die MaÃŸnahmen,
 die zur Fehlerbehebung getroffen wurden. Gerade diese Informationen sich jedoch oft
-äußerst wertvoll. Einerseits kann man später beim Auftreten desselben
-Fehlers zu einem späteren Zeitpunkt die zu treffenden Maßnahmen nachlesen.
+Ã¤uÃŸerst wertvoll. Einerseits kann man spÃ¤ter beim Auftreten desselben
+Fehlers zu einem spÃ¤teren Zeitpunkt die zu treffenden MaÃŸnahmen nachlesen.
 Zum anderen kann durch Protokollierung der Fehler das sporadische Auftreten des gleichen
-Fehlers präventiv gearbeitet werden. Zeigt z. B. ein Fileserver alle paar Wochen
-defekte Sektoren, dann geht so etwas als Einzelereignis oft im Tagesgeschäft unter.
-Bei regelmäßiger Dokumentation kann gegebenenfalls rechtzeitig die Festplatte
+Fehlers prÃ¤ventiv gearbeitet werden. Zeigt z. B. ein Fileserver alle paar Wochen
+defekte Sektoren, dann geht so etwas als Einzelereignis oft im TagesgeschÃ¤ft unter.
+Bei regelmÃ¤ÃŸiger Dokumentation kann gegebenenfalls rechtzeitig die Festplatte
 ausgetauscht werden.
 <P>
 Kostenlose  Software von Reichle &amp; De-Massari: 
@@ -720,145 +720,145 @@ Kostenlose  Software von Reichle &amp; De-Massari:
 <A NAME="t.6"></A>
 <H2>Fehlersuche/Belastungstest</H2>
 <H3>Fehlersuche</H3>
-Wenn man davon ausgeht, dass die reinen Harwaretest (Kabelanschlüsse,
-übersprechen, Dämpfung, usw.) erfolgreich verlaufen sind (siehe
+Wenn man davon ausgeht, dass die reinen Harwaretest (KabelanschlÃ¼sse,
+Ã¼bersprechen, DÃ¤mpfung, usw.) erfolgreich verlaufen sind (siehe
 <A HREF="twisted.html#t.3">Fehlerquellen und Fehlersuche bei der
-Verkabelung</A>), kann man u. a. folgende Massnahmen durchführen um
-die Funktionsfähigkeit des Netzes zu testen, wobei ich hauptsächlich
-Möglichkeiten anführe, die ohne besonderes Testequipment durchführbar 
-sind. Entsprechende Test-Hardware leistet ähnliches:
+Verkabelung</A>), kann man u. a. folgende Massnahmen durchfÃ¼hren um
+die FunktionsfÃ¤higkeit des Netzes zu testen, wobei ich hauptsÃ¤chlich
+MÃ¶glichkeiten anfÃ¼hre, die ohne besonderes Testequipment durchfÃ¼hrbar 
+sind. Entsprechende Test-Hardware leistet Ã¤hnliches:
 <OL>
 <LI>Test aller aktiven Komponenten (Switches, Router, Glasfaser-Modems)
 auf Funktion (geht - geht nicht). Sind alle Ports eines Switches
 erreichbar usw. 
 
-<LI>Überprüfen der Konfiguration managebarer Komponenten (Übertragungsmodus,
+<LI>ÃœberprÃ¼fen der Konfiguration managebarer Komponenten (Ãœbertragungsmodus,
 VLAN-Zuordnung, Aktivierung der Ports etc.).
 
-<LI>Die Erreichbarkeit aller Endpunkte auf TCP/IP-Ebene lässt sich mit
+<LI>Die Erreichbarkeit aller Endpunkte auf TCP/IP-Ebene lÃ¤sst sich mit
 den Programmen "ping" und "traceroute" (bei Windows "tracert")
-testen. Hier lassen sich auch grobe Anhaltspunkte für Transferzeiten
+testen. Hier lassen sich auch grobe Anhaltspunkte fÃ¼r Transferzeiten
 ermitteln.
 
 <LI>Bei managebaren Komponenten lassen sich statistische Daten
-(Datendurchsatz, Kollisionen etc.) über die Managementfunktion
+(Datendurchsatz, Kollisionen etc.) Ã¼ber die Managementfunktion
 (Webinterface, SNMP) abrufen.
-Verdächtig ist auf jeden Fall das Auftreten von Kollisionen.
+VerdÃ¤chtig ist auf jeden Fall das Auftreten von Kollisionen.
 
 <LI>Das Programm "iptraf" ist ein Linux-Programm, das umfassende Netzwerkstatistiken
 liefert, darunter transferierte Paket und Bytes, Interface-Statistik von IP, TCP, UDP, 
-ICMP. IP checksum errors usw. Dazu gibt es einen Service-Monitor für TCP und UDP,
+ICMP. IP checksum errors usw. Dazu gibt es einen Service-Monitor fÃ¼r TCP und UDP,
 der eine Port-Statistik liefert. Weitherhin liefert das Programm eine Statistik der
-Aktivitäten der verschiedenen Hosts. Filterfunktionen erlauben das Eingrenzen
+AktivitÃ¤ten der verschiedenen Hosts. Filterfunktionen erlauben das Eingrenzen
 der Daten. Zu beziehen unter <A HREF="http://iptraf.seul.org/">http://iptraf.seul.org/</A>.
 
 <LI>Das Programm "netio" (<A HREF="http://freshmeat.net/projects/netio/">
 http://freshmeat.net/projects/netio/</A>)
 gibt es als Windows- und Linux-Version. Es misst den Netto-Durchsatz auf
 der Verbindung, also ohne den Overhead, der durch Applikationen wie FTP
-oder dem für das Filesharing erzeugt wird. Auch hat die Geschwindigkeit
-der Festplatte keinerlei Einfluss auf die übertragungsraten. Daher
-liegen die Werte von netio-Messungen immer über den Werten, die in der
-Praxis erreicht werden, dafür sind sie miteinander vergleichbar.
+oder dem fÃ¼r das Filesharing erzeugt wird. Auch hat die Geschwindigkeit
+der Festplatte keinerlei Einfluss auf die Ã¼bertragungsraten. Daher
+liegen die Werte von netio-Messungen immer Ã¼ber den Werten, die in der
+Praxis erreicht werden, dafÃ¼r sind sie miteinander vergleichbar.
 
-Ein ähnliches Programm ist "iperf". Auch das Microsoft Tool "ttcp" kann
+Ein Ã¤hnliches Programm ist "iperf". Auch das Microsoft Tool "ttcp" kann
 verwendet werden (auf der Windows XP CD oder Service Pack CD unter 
 \VALUEADD\MSFT\NET\TOOLS).
 </OL>
 Weitere Test sollten im Probebetrieb des Netzes erfolgen (Server sind 
-online, zumindest einige Clients sind vorhanden). Dann können
+online, zumindest einige Clients sind vorhanden). Dann kÃ¶nnen
 folgende Tools eingesetzt werden.
 <OL>
 <LI>NTOP ist ein Tool zur Beobachtung und statistischen Auswertung des 
 Netzwerkverkehrs. Interessant ist das Einlesen und Auswerten von 
-gespeicherten Tracefiles mit der Option „-f“. Dann liest NTOP keine 
-Daten von der Netzwerkkarte, sondern erzeugt lediglich Auswertungen für 
+gespeicherten Tracefiles mit der Option â€-fâ€œ. Dann liest NTOP keine 
+Daten von der Netzwerkkarte, sondern erzeugt lediglich Auswertungen fÃ¼r 
 den vorhanden Trace. NTOP arbeitet auch mit NetFlow von Cisco zusammen. 
-Der Zugriff auf NTOP erfolgt über einen Webbroser.
-NTOP ist auch in Kombination mit Hardware als nBox erhältlich.
+Der Zugriff auf NTOP erfolgt Ã¼ber einen Webbroser.
+NTOP ist auch in Kombination mit Hardware als nBox erhÃ¤ltlich.
 (<A HREF="http://www.ntop.org">http://www.ntop.org</A>)
 
 <LI>"Etherape" kann seine Daten sowohl direkt vom Netz als auch aus einem
 gespeicherten Trace beziehen. Aus diesen Daten erstellt es eine Reihe
 von grafischen Auswertungen zu Kommunikationsbeziehungen und
 Protokollverteilung. Etherape befindet sich noch in der Entwicklung und
-läuft momentan nur unter Linux mit Gnome-Desktop.
+lÃ¤uft momentan nur unter Linux mit Gnome-Desktop.
 
 <LI>SmokePing ist spezialisiert auf die Messung der Round-Trip-Time. Es 
-gibt Probes für eine Reihe von Protokollen (ICMP, TCP, HTTP, etc.). Die 
-Zeiten werden in einer Datenbank festgehalten und können über ein 
+gibt Probes fÃ¼r eine Reihe von Protokollen (ICMP, TCP, HTTP, etc.). Die 
+Zeiten werden in einer Datenbank festgehalten und kÃ¶nnen Ã¼ber ein 
 Browserinterface visualisiert werden. SmokePing ist wie MRTG ein Tool 
-zum Baselining eines Netzwerkes. In Problemfällen kann man mit diesen 
-Tools sehr schnell Veränderungen und deren Auslöser erkennen.
+zum Baselining eines Netzwerkes. In ProblemfÃ¤llen kann man mit diesen 
+Tools sehr schnell VerÃ¤nderungen und deren AuslÃ¶ser erkennen.
 (<A HREF="http://oss.oetiker.ch/smokeping/">http://oss.oetiker.ch/smokeping/</A>)
 
-<LI>Für WLAN eignet sich der "network stumbler" (<A HREF="http://www.netstumbler.com">
+<LI>FÃ¼r WLAN eignet sich der "network stumbler" (<A HREF="http://www.netstumbler.com">
 http://www.netstumbler.com</A>).
 Mit diesem Windows-Programm kann die Reichweite und die Abdeckung der
-WLANs abgeschätzt werden.
+WLANs abgeschÃ¤tzt werden.
 </OL>
 
 <H3>Belastungstest</H3>
 Schwieriger sind Sicherheitstests bei den Servern und eine Vorhersage 
-über das Lastverhalten, wenn nicht nur ein paar Clients
-aktiv sind, sondern das Netz unter Vollast fährt. Ein Beispiel
+Ã¼ber das Lastverhalten, wenn nicht nur ein paar Clients
+aktiv sind, sondern das Netz unter Vollast fÃ¤hrt. Ein Beispiel
 aus der Praxis ist die Notenbekanntgabe am Semesterende, wenn kurz nach
 Freigabe der Informationen das Netz bzw. die Webserver unter der
 Last der Anfragen zusammenbrechen.
 <P>
 Das Belastungstest-Tool "Hammerhead" kann mehrere Verbindungen 
-gleichzeitig öffnen und dabei auch Anfragen von verschiedenen IP-Aliasen 
+gleichzeitig Ã¶ffnen und dabei auch Anfragen von verschiedenen IP-Aliasen 
 und bis zu 256 verschiedenen Usern generieren. Nach der voreingestellten 
-Testzeit liefert das Tool einen aussagekräftigen Report. Neben Anzahl 
+Testzeit liefert das Tool einen aussagekrÃ¤ftigen Report. Neben Anzahl 
 der Threads, Timeout-Schwellen, Test-Zeit, Usern lassen sich noch viele 
-weitere Parameter einstellen. Man kann sogar Erwartungswerte für 
+weitere Parameter einstellen. Man kann sogar Erwartungswerte fÃ¼r 
 Ergebnisse eingeben, die dann mit den realen Resultaten verglichen 
 werden. Hammerhead wartet bei jedem Request auf Antwort vom Server. 
-Ist der Server schlecht angebunden, kann es vorkommen, daß die 
+Ist der Server schlecht angebunden, kann es vorkommen, daÃŸ die 
 voreingestellte Request-Rate unterschritten wird. Auch kann das Programm 
-nur so schnell arbeiten, wie der Computer, auf dem es läuft. 
+nur so schnell arbeiten, wie der Computer, auf dem es lÃ¤uft. 
 (<A HREF="http://hammerhead.sourceforge.net">http://hammerhead.sourceforge.net</A>)
 <P>
 
 <H3>Einfacher Hardware-Netzwerktester</H3>
-Bei größeren Netzen muss man oft prüfen, welche Dose oder welches Kabel
-mit einem Switch verbunden ist. Dazu genügt eine Netzwerkkarte für 
-wenige Euro, die sich für die Wake-on-LAN-Funktion nicht nur aus dem PCI-Bus, 
-sondern auch über einen dreipoligen Stecker mit Strom versorgen kann. 
-Wenn an den richtigen Pins 5 Volt anliegen, genügt das der Karte, um eine 
+Bei grÃ¶ÃŸeren Netzen muss man oft prÃ¼fen, welche Dose oder welches Kabel
+mit einem Switch verbunden ist. Dazu genÃ¼gt eine Netzwerkkarte fÃ¼r 
+wenige Euro, die sich fÃ¼r die Wake-on-LAN-Funktion nicht nur aus dem PCI-Bus, 
+sondern auch Ã¼ber einen dreipoligen Stecker mit Strom versorgen kann. 
+Wenn an den richtigen Pins 5 Volt anliegen, genÃ¼gt das der Karte, um eine 
 Ethernet-Verbindung aufzubauen und dies mit ihren LEDs "Link-Status" und
 "10/100 MBit" anzuzeigen. Nur wenn am anderen Ende des Kabels keine aktive
-Komponente hängt, bleiben die LEDs dunkel. Man kann an den Wake-on-LAN-Stecker 
-einfach Batterien anschließen. Vier Akkus zu je 1,2 Volt liefern 4,8 V,
-was dem meisten Karten genügt. Oder man nimmt einfach vier Zink-Kohle-Batterien
+Komponente hÃ¤ngt, bleiben die LEDs dunkel. Man kann an den Wake-on-LAN-Stecker 
+einfach Batterien anschlieÃŸen. Vier Akkus zu je 1,2 Volt liefern 4,8 V,
+was dem meisten Karten genÃ¼gt. Oder man nimmt einfach vier Zink-Kohle-Batterien
 (4 x 1,5 V = 6 V) und schaltet eine Diode zwischen Karte und Batteriebox,
 dann wird die Karte mit ca. 5,4 V versorgt, was den meisten Karten auch nichts 
 ausmacht. Die ganz edle Variante ist ein 5-V-Low-Drop-Spannungsregler zwischen
 6-Volt-Batteriepack und Karte. 
 <P>
 <IMG ALIGN="RIGHT" SRC="tester.png">
-Der so entstandene Ethernetport-Tester zeigt zuverlässig an, ob eine Dose 
+Der so entstandene Ethernetport-Tester zeigt zuverlÃ¤ssig an, ob eine Dose 
 oder ein Kabel mit einer Ethernet-Gegenstelle verbunden ist und wie schnell 
 die Verbindung ist. Man darf ihn jedoch nicht mit einem Kabeltester verwechseln, 
 denn ein Link kann durchaus zustande kommen, wenn nicht alle Adernpaare korrekt 
 verbunden sind.
 <P>
-Das Bild zeigt die Pins des Steckers auf der Netzwerkkarte: An Pin 1 müssen 5 Volt 
+Das Bild zeigt die Pins des Steckers auf der Netzwerkkarte: An Pin 1 mÃ¼ssen 5 Volt 
 anliegen, an Pin 2 Masse. Pin 3 bleibt unverbunden, denn hier meldet die Karte,
 dass ein Wake-on-LAN-Paket eingegangen ist.
 <BR CLEAR="ALL">
 <P>
-<CENTER><img src="images/etherkiller.jpg"><br><H5>Universal-Netzkabel</H5></CENTER>
+<CENTER><img src="images/etherkiller.png"><br><H5>Universal-Netzkabel</H5></CENTER>
 <P>
 
 <CENTER><TABLE BORDER=0 WIDTH="100%">
 <TR>
 <TD ALIGN=LEFT VALIGN=BOTTOM><img src="images/left.png" BORDER=0> <A HREF="twisted.html">Zum vorhergehenden Abschnitt</A></TD>
 <TD ALIGN=CENTER VALIGN=BOTTOM><img src="images/up.png" BORDER=0> <A HREF="index.html">Zum Inhaltsverzeichnis</A></TD>
-<TD ALIGN=RIGHT VALIGN=BOTTOM><img src="images/right.png" BORDER=0> <A HREF="netz8.html">Zum nächsten Abschnitt</A></TD>
+<TD ALIGN=RIGHT VALIGN=BOTTOM><img src="images/right.png" BORDER=0> <A HREF="netz8.html">Zum nÃ¤chsten Abschnitt</A></TD>
 </TR></TABLE></CENTER>
 <P><HR>
-<H6><I>Copyright &copy; FH München, FB 04, Prof. Jürgen Plate</I></H6>
-<H6><I>Letzte Aktualisierung: 07. Mär 2012</I></H6>
+<H6><I>Copyright &copy; FH MÃ¼nchen, FB 04, Prof. JÃ¼rgen Plate</I></H6>
+<H6><I>Letzte Aktualisierung: 07. MÃ¤r 2012</I></H6>
 </BODY>
 </HTML>
